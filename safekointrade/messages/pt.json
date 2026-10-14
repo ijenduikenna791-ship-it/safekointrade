@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "Planos de investimento em cripto com prazo fixo",
+    "description": "Planos de investimento em cripto com prazo fixo, revisão manual de cada depósito e saque, e um registro que você pode auditar."
+  },
+  "common": {
+    "skipToContent": "Pular para o conteúdo",
+    "loading": "Carregando",
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar alterações",
+    "saving": "Salvando…",
+    "saved": "Alterações salvas",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "optional": "Opcional",
+    "required": "Obrigatório",
+    "retry": "Tentar novamente",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "viewAll": "Ver tudo",
+    "details": "Detalhes",
+    "page": "Página {page} de {total}",
+    "noResults": "Nada corresponde a esses filtros.",
+    "simulationTitle": "Modo demonstração",
+    "simulationNotice": "Os saldos e as movimentações nesta plataforma são simulados. Nenhum dinheiro real é movimentado até que um provedor de pagamentos licenciado seja conectado.",
+    "simulationShort": "Simulado",
+    "illustration": "Ilustração",
+    "sampleData": "Dados de exemplo",
+    "notConfiguredTitle": "Back-end não conectado",
+    "notConfigured": "Faltam as credenciais do Supabase. Adicione-as ao .env.local para ativar as contas (veja o README).",
+    "genericError": "Algo deu errado do nosso lado. Tente novamente em instantes.",
+    "networkError": "Não foi possível acessar o servidor. Verifique sua conexão e tente novamente.",
+    "rateLimited": "Muitas tentativas. Aguarde um minuto e tente novamente.",
+    "unauthorized": "Entre para continuar.",
+    "forbidden": "Sua conta não tem acesso a isto.",
+    "notFoundTitle": "Página não encontrada",
+    "notFoundBody": "A página que você procura não existe ou foi movida.",
+    "goHome": "Ir para a página inicial",
+    "errorTitle": "Não foi possível carregar esta página",
+    "errorBody": "Um erro inesperado impediu o carregamento desta página. Tente novamente ou volte mais tarde.",
+    "status": {
+      "pending": "Pendente",
+      "processing": "Em processamento",
+      "approved": "Aprovado",
+      "completed": "Concluído",
+      "active": "Ativo",
+      "matured": "Vencido",
+      "rejected": "Recusado",
+      "cancelled": "Cancelado",
+      "failed": "Falhou",
+      "open": "Aberto",
+      "answered": "Respondido",
+      "closed": "Fechado",
+      "suspended": "Suspenso",
+      "verified": "Verificado",
+      "unverified": "Não verificado"
+    },
+    "risk": {
+      "low": "Risco baixo",
+      "moderate": "Risco moderado",
+      "high": "Risco alto"
+    },
+    "photoCredit": "Foto: {name} / Pexels",
+    "apply": "Aplicar"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "label": "Idioma",
+    "change": "Mudar idioma"
+  },
+  "nav": {
+    "markets": "Mercados",
+    "plans": "Planos de investimento",
+    "how": "Como funciona",
+    "about": "Sobre",
+    "faq": "Perguntas frequentes",
+    "login": "Entrar",
+    "getStarted": "Começar",
+    "dashboard": "Painel",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "primary": "Principal",
+    "home": "Início",
+    "signUp": "Cadastre-se"
+  },
+  "startup": {
+    "loading": "Carregando {brand}"
+  },
+  "home": {
+    "hero": {
+      "title": "Planos cripto com prazo fixo e registro aberto.",
+      "body": "Escolha um plano de 30, 90 ou 180 dias e acompanhe cada movimento — depósitos, posições, vencimento — em um histórico que você pode auditar. Cada depósito e saque é revisado por uma pessoa, não por um script.",
+      "primary": "Criar uma conta",
+      "secondary": "Comparar planos",
+      "note": "Criptoativos são voláteis. Você pode perder parte ou todo o dinheiro investido.",
+      "headline": "Planos cripto que você pode auditar",
+      "learnMore": "Saiba mais"
+    },
+    "lifecycle": {
+      "label": "Como uma posição avança",
+      "plan": "Plano Growth",
+      "term": "prazo de 90 dias",
+      "amount": "Valor da posição",
+      "day": "Dia {day} de {total}",
+      "steps": {
+        "deposit": "Depósito revisado",
+        "opened": "Posição aberta",
+        "running": "Prazo em andamento",
+        "matures": "Vencimento"
+      },
+      "caption": "Cada etapa fica registrada no histórico da sua conta com um ID de referência."
+    },
+    "ticker": {
+      "label": "Preços de mercado ao vivo",
+      "unavailable": "Os preços ao vivo estão indisponíveis no momento.",
+      "source": "Preços da CoinGecko, atualizados a cada minuto."
+    },
+    "commitments": {
+      "title": "Compromissos embutidos na plataforma",
+      "items": {
+        "terms": {
+          "value": "30, 90, 180",
+          "label": "Dias de prazo, fixados no momento em que você abre uma posição"
+        },
+        "review": {
+          "value": "Cada solicitação",
+          "label": "Depósitos e saques são verificados por uma pessoa antes de o saldo mudar"
+        },
+        "audit": {
+          "value": "Trilha de auditoria completa",
+          "label": "Cada mudança de saldo é registrada com quem, o quê e quando"
+        },
+        "languages": {
+          "value": "8 idiomas",
+          "label": "Incluindo árabe com layout da direita para a esquerda, e iorubá"
+        }
+      }
+    },
+    "features": {
+      "title": "Feito para quem lê as letras miúdas",
+      "body": "Tudo o que você vê no painel vem dos registros da sua conta. Nada é estimado, arredondado ou inventado para parecer melhor.",
+      "items": {
+        "ledger": {
+          "title": "Um registro, não um placar",
+          "body": "Cada depósito, posição e saque tem um ID de referência, um status e um horário que você pode rastrear."
+        },
+        "terms": {
+          "title": "Planos com prazo fixo",
+          "body": "Escolha um plano e um valor dentro da faixa; o prazo fica travado desde o dia da abertura."
+        },
+        "review": {
+          "title": "Revisão humana das movimentações",
+          "body": "Revisores financeiros aprovam depósitos quando os fundos são confirmados e aprovam saques antes de qualquer saída."
+        },
+        "security": {
+          "title": "Proteção da conta",
+          "body": "E-mail verificado, regras fortes de senha e login opcional por aplicativo autenticador mantêm sua conta segura."
+        },
+        "languages": {
+          "title": "Seu idioma, seu formato",
+          "body": "Datas, números e moedas seguem suas configurações de idioma em toda a plataforma."
+        },
+        "support": {
+          "title": "Suporte com histórico",
+          "body": "Abra um chamado no painel e cada resposta fica vinculada a ele."
+        }
+      }
+    },
+    "plans": {
+      "title": "Compare os planos de investimento",
+      "body": "Cada plano tem sua faixa e seu prazo. Escolha o que combina com quanto você quer aplicar e por quanto tempo.",
+      "range": "Faixa de investimento",
+      "term": "Prazo",
+      "days": "{count} dias",
+      "asset": "Moeda",
+      "target": "Meta de retorno",
+      "noTarget": "Este plano não tem meta de retorno",
+      "cta": "Abrir este plano",
+      "sampleNote": "Exibindo as configurações padrão. As configurações reais carregam quando o banco de dados estiver conectado.",
+      "riskNote": "Os rótulos de risco descrevem a exposição à volatilidade do mercado cripto. Não são uma previsão."
+    },
+    "how": {
+      "title": "Como funciona",
+      "body": "Quatro etapas do cadastro ao saque. Cada uma deixa um registro na sua conta.",
+      "steps": {
+        "account": {
+          "title": "Crie e verifique sua conta",
+          "body": "Cadastre-se com seu e-mail e telefone e depois confirme seu endereço de e-mail."
+        },
+        "deposit": {
+          "title": "Solicite um depósito",
+          "body": "Envie uma solicitação de depósito com o ID de referência. Seu saldo só é atualizado depois que um revisor confirma os fundos."
+        },
+        "invest": {
+          "title": "Abra uma posição",
+          "body": "Transfira parte do seu saldo disponível para um plano. O prazo começa no momento em que a posição é aberta."
+        },
+        "withdraw": {
+          "title": "Chegue ao vencimento e saque",
+          "body": "Quando o prazo termina, a posição volta ao seu saldo disponível e você pode solicitar um saque."
+        }
+      },
+      "imageAlt": "Uma mão segurando uma moeda de Bitcoin dourada diante de uma tela com um gráfico de preços"
+    },
+    "analytics": {
+      "title": "Análise de mercado",
+      "body": "Trinta dias de histórico de preços dos ativos aceitos pela plataforma, com dados de mercado ao vivo.",
+      "range": "Preço em 30 dias, USD",
+      "change": "Variação em 30 dias",
+      "unavailable": "O histórico de preços está indisponível no momento. Volte em breve.",
+      "dashboardTitle": "Seu painel, num relance",
+      "dashboardBody": "Saldos disponível, investido e pendente, posições abertas e cada transação — direto dos seus registros."
+    },
+    "security": {
+      "title": "Segurança que mostra como funciona",
+      "body": "A proteção é feita em camadas a partir do banco de dados, e cada ação privilegiada é registrada.",
+      "items": {
+        "rls": {
+          "title": "Isolamento de dados",
+          "body": "A segurança em nível de linha garante que seus registros só possam ser lidos por você e pela equipe autorizada."
+        },
+        "mfa": {
+          "title": "Login em duas etapas",
+          "body": "Adicione um aplicativo autenticador para que só a senha não baste para acessar sua conta."
+        },
+        "review": {
+          "title": "Separação de funções",
+          "body": "Ninguém pode aprovar a própria solicitação, e ações financeiras são restritas às funções financeiras."
+        },
+        "audit": {
+          "title": "Histórico à prova de adulteração",
+          "body": "Ações administrativas e mudanças de saldo são gravadas em um log de auditoria somente de inclusão."
+        }
+      }
+    },
+    "assets": {
+      "title": "Ativos aceitos",
+      "body": "As posições são denominadas em dólares americanos. Estes são os ativos que a plataforma acompanha e aceita para depósitos.",
+      "price": "Preço",
+      "change24h": "24 h",
+      "noPrice": "—",
+      "network": "Rede"
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": {
+        "guaranteed": {
+          "q": "Os retornos são garantidos?",
+          "a": "Não. Criptoativos são voláteis e você pode perder parte ou todo o dinheiro investido. Um plano só mostra uma meta de retorno quando ela foi definida e publicada, e uma meta não é uma promessa."
+        },
+        "demo": {
+          "q": "Dinheiro real circula na plataforma hoje?",
+          "a": "Ainda não. Até que um provedor de pagamentos licenciado seja conectado, cada depósito, saque e posição é claramente marcado como simulado e nenhum dinheiro real circula."
+        },
+        "deposit": {
+          "q": "Quando meu depósito aparece no saldo?",
+          "a": "Depois que um revisor financeiro confirma que os fundos chegaram. Enviar uma solicitação ou um comprovante não altera seu saldo por si só."
+        },
+        "withdraw": {
+          "q": "Como funcionam os saques?",
+          "a": "Solicite um saque do seu saldo disponível. O valor fica retido enquanto um revisor confere, e só é marcado como concluído depois que o pagamento é confirmado."
+        },
+        "early": {
+          "q": "Posso encerrar uma posição antes do fim do prazo?",
+          "a": "As posições podem ser canceladas em até 24 horas após a abertura. Depois disso, seguem até o vencimento."
+        },
+        "security": {
+          "q": "Como minha conta é protegida?",
+          "a": "E-mail verificado, senhas fortes, login opcional em duas etapas, isolamento de dados em nível de linha e um log de auditoria completo das ações privilegiadas."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Novidades do produto, todo mês",
+      "body": "Novos planos, mudanças na plataforma e notas de mercado. Nada de propaganda disfarçada de conselho.",
+      "email": "Endereço de e-mail",
+      "placeholder": "voce@exemplo.com",
+      "consent": "Concordo em receber a newsletter mensal e posso cancelar a qualquer momento.",
+      "submit": "Assinar",
+      "success": "Inscrição feita. Fique de olho na próxima edição na sua caixa de entrada.",
+      "already": "Este e-mail já está inscrito.",
+      "invalidEmail": "Informe um e-mail válido.",
+      "consentRequired": "Marque a caixa para confirmar que deseja receber as novidades."
+    },
+    "cta": {
+      "title": "Abra uma conta em poucos minutos.",
+      "body": "Explore o painel, compare os planos e veja exatamente como cada solicitação é revisada.",
+      "primary": "Criar uma conta",
+      "secondary": "Ler o aviso de riscos"
+    },
+    "platform": {
+      "title": "Tudo em uma só conta",
+      "body": "Veja exatamente onde está seu dinheiro — disponível, investido ou a caminho — em um só painel.",
+      "items": {
+        "dashboard": {
+          "title": "Um painel claro",
+          "body": "Saldos disponíveis, investidos e pendentes, posições abertas e cada transação em um só lugar."
+        },
+        "plans": {
+          "title": "Planos de prazo fixo",
+          "body": "Escolha 30, 90 ou 180 dias. O prazo é fixado no dia em que você abre uma posição."
+        },
+        "money": {
+          "title": "Movimentações revisadas",
+          "body": "Os depósitos são creditados após um revisor confirmar os fundos. Os saques ficam retidos até serem pagos."
+        },
+        "support": {
+          "title": "Suporte registrado",
+          "body": "Abra um chamado pelo painel. Cada resposta fica vinculada a ele."
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "Produto",
+    "company": "Empresa",
+    "legal": "Jurídico",
+    "support": "Suporte",
+    "about": "Sobre",
+    "contact": "Contato",
+    "helpCentre": "Central de ajuda",
+    "terms": "Termos de serviço",
+    "privacy": "Política de privacidade",
+    "risk": "Aviso de riscos",
+    "cookies": "Política de cookies",
+    "riskWarning": "Criptoativos não são regulamentados em muitas jurisdições e são muito voláteis. O valor dos investimentos pode cair e subir, e você pode receber menos do que investiu. Nada neste site é consultoria financeira.",
+    "rights": "© {year} {company}. Todos os direitos reservados."
+  },
+  "about": {
+    "title": "Sobre a {brand}",
+    "lead": "Estamos construindo uma plataforma de investimento em cripto em que os números na sua tela sempre batem com os registros por trás deles.",
+    "principlesTitle": "Nossos compromissos",
+    "principles": {
+      "records": {
+        "title": "Registros antes do marketing",
+        "body": "Cada número mostrado vem de um registro que você pode rastrear. Se não conseguimos verificar um número, não o mostramos."
+      },
+      "people": {
+        "title": "Pessoas no processo",
+        "body": "O dinheiro não se move com o envio de um formulário. Revisores treinados confirmam depósitos e aprovam saques."
+      },
+      "plain": {
+        "title": "Linguagem clara sobre risco",
+        "body": "Dizemos claramente o que pode dar errado e nunca apresentamos uma meta como promessa."
+      }
+    },
+    "statusTitle": "Onde a plataforma está hoje",
+    "statusBody": "A plataforma funciona atualmente em modo demonstração. Contas, planos e fluxos de revisão funcionam de ponta a ponta, mas os saldos são simulados até que um provedor licenciado de pagamentos e custódia seja conectado.",
+    "imageAlt": "Colegas revisando documentos juntos em uma mesa"
+  },
+  "contact": {
+    "title": "Contato e suporte",
+    "lead": "Clientes conectados têm as respostas mais rápidas pelos chamados de suporte no painel.",
+    "ticketTitle": "Abrir um chamado de suporte",
+    "ticketBody": "Os chamados mantêm todas as mensagens em um só lugar e são respondidos pela nossa equipe de suporte.",
+    "ticketCta": "Ir para o suporte",
+    "emailTitle": "E-mail",
+    "complianceTitle": "Compliance e solicitações de dados",
+    "addressTitle": "Endereço registrado"
+  },
+  "legal": {
+    "updated": "Última atualização: {date}",
+    "draftNotice": "Este é um modelo para revisão por assessoria jurídica qualificada antes da publicação."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Visão geral",
+      "invest": "Investir",
+      "investments": "Posições",
+      "deposits": "Depósitos",
+      "withdrawals": "Saques",
+      "transactions": "Transações",
+      "notifications": "Notificações",
+      "support": "Suporte",
+      "settings": "Configurações",
+      "admin": "Console de administração",
+      "logout": "Sair",
+      "collapse": "Recolher barra lateral",
+      "expand": "Expandir barra lateral",
+      "menu": "Abrir navegação",
+      "closeMenu": "Fechar navegação",
+      "account": "Menu da conta",
+      "breadcrumb": "Trilha de navegação",
+      "home": "Painel",
+      "sections": {
+        "money": "Dinheiro",
+        "account": "Conta"
+      }
+    },
+    "overview": {
+      "title": "Visão geral",
+      "greeting": "Bem-vindo de volta, {name}",
+      "description": "Seus saldos e atividades recentes, direto dos registros da sua conta.",
+      "total": "Carteira total",
+      "totalHint": "Fundos disponíveis, investidos e retidos somados",
+      "available": "Saldo disponível",
+      "availableHint": "Pronto para investir ou sacar",
+      "invested": "Investido",
+      "investedHint": "Em {count, plural, =0 {nenhuma posição aberta} one {# posição aberta} other {# posições abertas}}",
+      "pending": "Pendente",
+      "pendingHint": "Retido para saques e depósitos aguardando revisão",
+      "historyTitle": "Valor da carteira",
+      "historyDescription": "Saldo total após cada movimento registrado",
+      "historyEmpty": "Seu histórico de saldo começa com o primeiro depósito confirmado.",
+      "flowsTitle": "Depósitos e saques",
+      "flowsDescription": "Valores confirmados por mês",
+      "depositsLabel": "Depósitos",
+      "withdrawalsLabel": "Saques",
+      "flowsEmpty": "Ainda não há depósitos ou saques confirmados.",
+      "summaryDeposited": "Total depositado",
+      "summaryWithdrawn": "Total sacado",
+      "recentTitle": "Transações recentes",
+      "recentEmpty": "Ainda não há transações. Solicite um depósito para começar.",
+      "positionsTitle": "Posições ativas",
+      "positionsEmpty": "Nenhuma posição aberta. Escolha um plano quando quiser.",
+      "quick": {
+        "deposit": "Solicitar depósito",
+        "invest": "Abrir uma posição",
+        "withdraw": "Solicitar saque"
+      },
+      "matured": "{count, plural, one {# posição venceu} other {# posições venceram}}. O capital voltou ao seu saldo disponível.",
+      "range": {
+        "label": "Período do gráfico",
+        "week": "7 d",
+        "month": "30 d",
+        "all": "Tudo"
+      },
+      "rangeChange": "Variação no período",
+      "breakdownTitle": "Composição do saldo",
+      "maturity": {
+        "title": "Próximo vencimento",
+        "daysLeft": "{count, plural, one {Falta # dia} other {Faltam # dias}}",
+        "maturesOn": "Vence em {date}",
+        "dayOf": "Dia {day} de {total}",
+        "empty": "Nenhuma posição aberta. Seu próximo vencimento aparecerá aqui."
+      },
+      "risk": {
+        "title": "Perfil de risco",
+        "description": "Ponderado pelo valor de cada posição aberta",
+        "low": "Conservador",
+        "moderate": "Equilibrado",
+        "high": "Agressivo",
+        "empty": "Abra uma posição para ver seu perfil de risco."
+      },
+      "markets": {
+        "title": "Mercados",
+        "description": "Preços ao vivo e tendência de 7 dias",
+        "trend": "tendência de preço de 7 dias"
+      },
+      "gettingStarted": {
+        "title": "Primeiros passos",
+        "description": "Três passos até a sua primeira posição.",
+        "done": "Concluído",
+        "steps": {
+          "request": "Solicitar um depósito",
+          "requestBody": "Informe quanto vai enviar e como.",
+          "confirmed": "Depósito confirmado",
+          "confirmedBody": "Um revisor confirma que os fundos chegaram.",
+          "invest": "Abrir sua primeira posição",
+          "investBody": "Escolha um plano e um valor."
+        }
+      }
+    },
+    "invest": {
+      "title": "Abrir uma posição",
+      "description": "Escolha um plano, informe um valor dentro da faixa e revise antes de confirmar.",
+      "choosePlan": "Escolha um plano",
+      "amount": "Valor",
+      "amountHint": "Entre {min} e {max}",
+      "available": "Disponível: {amount}",
+      "review": "Revisar posição",
+      "confirmTitle": "Confirmar esta posição",
+      "confirmBody": "O valor sai do seu saldo disponível para o plano. Você pode cancelar em até 24 horas após a abertura; depois, segue até o vencimento.",
+      "plan": "Plano",
+      "term": "Prazo",
+      "matures": "Vence em",
+      "returns": "Retorno",
+      "noReturnsNote": "Este plano não tem meta de retorno. No vencimento, o capital volta ao seu saldo disponível.",
+      "confirm": "Abrir posição",
+      "success": "Posição aberta",
+      "insufficient": "Seu saldo disponível é menor que o mínimo deste plano. Solicite um depósito primeiro.",
+      "noPlans": "Nenhum plano está aberto no momento. Volte em breve."
+    },
+    "positions": {
+      "title": "Posições",
+      "description": "Posições abertas, vencidas e canceladas.",
+      "tabs": {
+        "active": "Ativas",
+        "matured": "Vencidas",
+        "cancelled": "Canceladas"
+      },
+      "progress": "Dia {day} de {total}",
+      "opened": "Aberta",
+      "matures": "Vence",
+      "maturedOn": "Vencida",
+      "cancelledOn": "Cancelada",
+      "cancel": "Cancelar posição",
+      "cancelTitle": "Cancelar esta posição?",
+      "cancelBody": "O valor integral volta imediatamente ao seu saldo disponível. Não é possível desfazer.",
+      "cancelConfirm": "Cancelar posição",
+      "cancelled": "Posição cancelada",
+      "cancelUntil": "Cancelável até {time}",
+      "empty": {
+        "active": "Nenhuma posição ativa.",
+        "matured": "Ainda não há posições vencidas.",
+        "cancelled": "Nenhuma posição cancelada."
+      },
+      "openNew": "Abrir uma posição"
+    },
+    "deposits": {
+      "title": "Depósitos",
+      "description": "Solicite um depósito e depois envie os fundos. Seu saldo é atualizado quando um revisor os confirma.",
+      "formTitle": "Solicitar um depósito",
+      "amount": "Valor (USD)",
+      "asset": "Ativo",
+      "method": "Método",
+      "methods": {
+        "crypto_transfer": "Transferência cripto",
+        "bank_transfer": "Transferência bancária"
+      },
+      "txReference": "Hash ou referência da transação",
+      "txReferenceHint": "Ajuda o revisor a identificar sua transferência.",
+      "note": "Observação para o revisor",
+      "receipt": "Comprovante",
+      "receiptHint": "PNG, JPEG, WebP ou PDF, até 5 MB.",
+      "submit": "Solicitar depósito",
+      "success": "Depósito solicitado. Referência {reference}.",
+      "pendingNote": "Enviar uma solicitação ou um comprovante não altera seu saldo. Um revisor credita o valor depois de confirmar a chegada dos fundos.",
+      "historyTitle": "Histórico de depósitos",
+      "empty": "Ainda não há solicitações de depósito.",
+      "limits": "Mínimo {min}, máximo {max} por solicitação.",
+      "credited": "Creditado",
+      "uploadReceipt": "Enviar comprovante",
+      "receiptUploaded": "Comprovante enviado",
+      "viewReceipt": "Ver comprovante",
+      "instructionsTitle": "Instruções de pagamento",
+      "instructionsDemo": "Os dados de pagamento aparecerão aqui quando um provedor de pagamentos licenciado for conectado. No modo demonstração não é preciso transferir nada — um revisor aprova as solicitações para simular fundos confirmados.",
+      "requested": "Solicitado",
+      "receiptMissing": "Sem comprovante",
+      "instructionsLive": "Depois de enviar a solicitação, siga os dados de pagamento exibidos pelo nosso provedor e inclua seu ID de referência."
+    },
+    "withdrawals": {
+      "title": "Saques",
+      "description": "Saque do seu saldo disponível. O valor fica retido enquanto um revisor confere.",
+      "formTitle": "Solicitar um saque",
+      "amount": "Valor (USD)",
+      "asset": "Ativo",
+      "network": "Rede",
+      "destination": "Endereço da carteira de destino",
+      "destinationHint": "Confira duas vezes. Transferências para um endereço errado não podem ser revertidas.",
+      "fee": "Taxa",
+      "net": "Você recebe",
+      "submit": "Solicitar saque",
+      "confirmTitle": "Confirmar este saque",
+      "confirmBody": "{amount} ficará retido do seu saldo disponível até o saque ser concluído ou recusado.",
+      "success": "Saque solicitado. Referência {reference}.",
+      "historyTitle": "Histórico de saques",
+      "empty": "Ainda não há saques.",
+      "limits": "Mínimo {min}, máximo {max} por solicitação. Taxa: {flat} + {percent}.",
+      "cancel": "Cancelar solicitação",
+      "cancelTitle": "Cancelar este saque?",
+      "cancelBody": "O valor retido volta ao seu saldo disponível.",
+      "cancelled": "Saque cancelado",
+      "payoutReference": "Referência do pagamento",
+      "networkPlaceholder": "Por exemplo: Ethereum (ERC-20)",
+      "availableNow": "Disponível agora: {amount}",
+      "feePreview": "Taxa {fee} · você recebe {net}"
+    },
+    "transactions": {
+      "title": "Transações",
+      "description": "Cada movimento registrado na sua conta, do mais recente ao mais antigo.",
+      "filterType": "Tipo",
+      "all": "Todos os tipos",
+      "types": {
+        "deposit": "Depósito",
+        "withdrawal_hold": "Saque retido",
+        "withdrawal_release": "Saque liberado",
+        "withdrawal_payout": "Saque pago",
+        "investment_open": "Posição aberta",
+        "investment_cancel": "Posição cancelada",
+        "investment_maturity": "Posição vencida"
+      },
+      "empty": "Nenhuma transação corresponde.",
+      "detailTitle": "Transação {reference}",
+      "detailDescription": "Um lançamento permanente no registro da sua conta.",
+      "balanceAfter": "Saldos após este lançamento",
+      "change": "Variação",
+      "source": "Solicitação relacionada"
+    },
+    "table": {
+      "reference": "Referência",
+      "date": "Data",
+      "type": "Tipo",
+      "amount": "Valor",
+      "status": "Status",
+      "asset": "Ativo",
+      "plan": "Plano",
+      "description": "Descrição",
+      "available": "Disponível",
+      "held": "Retido",
+      "invested": "Investido",
+      "actions": "Ações",
+      "fee": "Taxa",
+      "net": "Líquido",
+      "destination": "Destino",
+      "user": "Usuário",
+      "subject": "Assunto",
+      "updated": "Atualizado",
+      "category": "Categoria",
+      "priority": "Prioridade"
+    },
+    "pagination": {
+      "label": "Paginação",
+      "previous": "Página anterior",
+      "next": "Próxima página",
+      "summary": "Exibindo {from}–{to} de {total}"
+    },
+    "notifications": {
+      "title": "Notificações",
+      "description": "Novidades sobre suas solicitações, posições e conta.",
+      "markAll": "Marcar todas como lidas",
+      "markRead": "Marcar como lida",
+      "delete": "Excluir",
+      "empty": "Tudo em dia.",
+      "bell": "Notificações",
+      "unread": "{count, plural, =0 {Nenhuma notificação não lida} one {# notificação não lida} other {# notificações não lidas}}",
+      "viewAll": "Ver todas as notificações",
+      "templates": {
+        "depositRequested": {
+          "title": "Solicitação de depósito recebida",
+          "body": "Sua solicitação de depósito {reference} está aguardando revisão. Seu saldo só muda depois que os fundos forem confirmados."
+        },
+        "depositCompleted": {
+          "title": "Depósito confirmado",
+          "body": "O depósito {reference} foi confirmado e creditado no seu saldo disponível."
+        },
+        "depositRejected": {
+          "title": "Depósito não confirmado",
+          "body": "Não foi possível confirmar o depósito {reference}. Abra um chamado de suporte se tiver dúvidas."
+        },
+        "withdrawalRequested": {
+          "title": "Solicitação de saque recebida",
+          "body": "O saque {reference} está aguardando revisão. O valor fica retido até ser concluído ou recusado."
+        },
+        "withdrawalApproved": {
+          "title": "Saque aprovado",
+          "body": "O saque {reference} foi aprovado e aguarda a confirmação do pagamento."
+        },
+        "withdrawalCompleted": {
+          "title": "Saque concluído",
+          "body": "O saque {reference} foi pago."
+        },
+        "withdrawalRejected": {
+          "title": "Saque recusado",
+          "body": "O saque {reference} foi recusado e os fundos voltaram ao seu saldo disponível."
+        },
+        "investmentOpened": {
+          "title": "Posição aberta",
+          "body": "A posição {plan} {reference} está ativa e vence em {date}."
+        },
+        "investmentMatured": {
+          "title": "Posição vencida",
+          "body": "A posição {reference} chegou ao fim do prazo. O capital voltou ao seu saldo disponível."
+        },
+        "supportReply": {
+          "title": "Nova resposta em {reference}",
+          "body": "Nossa equipe de suporte respondeu ao seu chamado."
+        },
+        "accountSuspended": {
+          "title": "Conta suspensa",
+          "body": "Sua conta foi suspensa. Fale com o suporte para mais detalhes."
+        },
+        "accountReactivated": {
+          "title": "Conta reativada",
+          "body": "Sua conta está ativa novamente."
+        }
+      }
+    },
+    "support": {
+      "title": "Suporte",
+      "description": "Abra um chamado e nossa equipe responde aqui. Cada mensagem fica no chamado.",
+      "new": "Novo chamado",
+      "newTitle": "Abrir um chamado de suporte",
+      "subject": "Assunto",
+      "category": "Categoria",
+      "categories": {
+        "account": "Conta",
+        "deposit": "Depósito",
+        "withdrawal": "Saque",
+        "investment": "Posições",
+        "security": "Segurança",
+        "other": "Outro assunto"
+      },
+      "message": "Mensagem",
+      "messageHint": "Inclua os IDs de referência (por exemplo DEP-…) para encontrarmos a solicitação.",
+      "submit": "Abrir chamado",
+      "created": "Chamado {reference} aberto",
+      "empty": "Ainda não há chamados. Abra um sempre que precisar de ajuda.",
+      "reply": "Responder",
+      "replyPlaceholder": "Escreva uma resposta…",
+      "send": "Enviar resposta",
+      "sent": "Resposta enviada",
+      "close": "Encerrar chamado",
+      "closed": "Chamado encerrado",
+      "closedNote": "Este chamado está encerrado. Abra um novo se ainda precisar de ajuda.",
+      "you": "Você",
+      "staff": "Equipe de suporte",
+      "back": "Todos os chamados",
+      "faqTitle": "Respostas rápidas",
+      "faqBody": "Muitas dúvidas sobre depósitos, saques e posições são respondidas nas perguntas frequentes.",
+      "faqLink": "Ler as perguntas frequentes"
+    },
+    "settings": {
+      "title": "Configurações",
+      "description": "Gerencie seu perfil, segurança, notificações e preferências.",
+      "tabs": {
+        "profile": "Perfil",
+        "security": "Segurança",
+        "notifications": "Notificações",
+        "preferences": "Preferências"
+      },
+      "profile": {
+        "title": "Perfil",
+        "description": "Seu nome e seus dados de contato.",
+        "email": "Endereço de e-mail",
+        "emailHint": "Fale com o suporte para alterar o e-mail da sua conta.",
+        "username": "Nome de usuário",
+        "referral": "Seu código de indicação",
+        "memberSince": "Membro desde",
+        "saved": "Perfil salvo",
+        "phoneUnverified": "Não verificado"
+      },
+      "security": {
+        "passwordTitle": "Senha",
+        "passwordDescription": "Alterar a senha encerra suas outras sessões.",
+        "newPassword": "Nova senha",
+        "updatePassword": "Atualizar senha",
+        "passwordUpdated": "Senha atualizada",
+        "mfaTitle": "Login em duas etapas",
+        "mfaDescription": "Pedir um código de um aplicativo autenticador a cada login.",
+        "mfaOn": "Ativado",
+        "mfaOff": "Desativado",
+        "mfaEnable": "Configurar autenticador",
+        "mfaDisable": "Desativar",
+        "mfaScan": "Escaneie este QR code com um aplicativo autenticador como 1Password, Google Authenticator ou Authy e digite o código de 6 dígitos exibido.",
+        "mfaSecret": "Não consegue escanear? Digite esta chave manualmente:",
+        "mfaVerify": "Verificar e ativar",
+        "mfaEnabled": "O login em duas etapas está ativado",
+        "mfaDisabled": "O login em duas etapas está desativado",
+        "mfaDisableTitle": "Desativar o login em duas etapas?",
+        "mfaDisableBody": "Sua conta ficará protegida apenas pela senha.",
+        "sessionsTitle": "Sessões",
+        "sessionsDescription": "Sair de todos os navegadores e dispositivos, incluindo este.",
+        "signOutAll": "Sair de todos os lugares"
+      },
+      "notifications": {
+        "title": "Notificações por e-mail",
+        "description": "As notificações no aplicativo estão sempre ativas. Escolha quais e-mails deseja receber.",
+        "email_deposits": "Atualizações de depósitos",
+        "email_withdrawals": "Atualizações de saques",
+        "email_investments": "Abertura e vencimento de posições",
+        "email_security": "Alertas de segurança",
+        "email_security_hint": "Mudanças de senha e proteção de login",
+        "email_product": "Newsletter mensal do produto",
+        "saved": "Preferências de notificação salvas"
+      },
+      "preferences": {
+        "title": "Preferências",
+        "description": "Idioma e aparência acompanham você em todos os dispositivos depois de salvos.",
+        "language": "Idioma",
+        "theme": "Tema",
+        "saved": "Preferências salvas"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "Cada número, registrado.",
+    "panelPoints": {
+      "review": "Depósitos e saques são verificados por uma pessoa antes de o saldo mudar.",
+      "ledger": "Cada movimento recebe um ID de referência que você rastreia no histórico.",
+      "security": "Login em duas etapas e isolamento de dados em nível de linha protegem sua conta."
+    },
+    "email": "Endereço de e-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar senha",
+    "fullName": "Nome completo",
+    "username": "Nome de usuário",
+    "usernameHint": "De 3 a 24 caracteres: letras minúsculas, números e sublinhados.",
+    "phone": "Número de telefone",
+    "phoneHint": "Usado para a segurança da conta. Vamos perguntar antes de enviar SMS.",
+    "referral": "Código de indicação",
+    "showPassword": "Mostrar senha",
+    "hidePassword": "Ocultar senha",
+    "acceptTerms": "Concordo com os <terms>Termos de serviço</terms> e a <privacy>Política de privacidade</privacy>, e li o <risk>Aviso de riscos</risk>.",
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Bem-vindo de volta. Informe seus dados para continuar.",
+      "submit": "Entrar",
+      "submitting": "Entrando…",
+      "forgot": "Esqueceu a senha?",
+      "noAccount": "Primeira vez aqui?",
+      "register": "Criar uma conta",
+      "signedOut": "Você saiu da sua conta.",
+      "notVerified": "Confirme seu e-mail antes de entrar. Podemos reenviar o link.",
+      "resend": "Reenviar o link"
+    },
+    "register": {
+      "title": "Crie sua conta",
+      "subtitle": "Leva poucos minutos. Você vai confirmar seu e-mail antes de poder entrar.",
+      "submit": "Criar conta",
+      "submitting": "Criando conta…",
+      "haveAccount": "Já tem uma conta?",
+      "login": "Entrar",
+      "closed": "Novos cadastros estão pausados no momento. Tente mais tarde."
+    },
+    "strength": {
+      "label": "Força da senha",
+      "levels": [
+        "Muito fraca",
+        "Fraca",
+        "Razoável",
+        "Boa",
+        "Forte"
+      ],
+      "rules": {
+        "length": "Pelo menos 10 caracteres",
+        "lower": "Uma letra minúscula",
+        "upper": "Uma letra maiúscula",
+        "number": "Um número",
+        "symbol": "Um símbolo, como ! ou #"
+      }
+    },
+    "verify": {
+      "title": "Confira sua caixa de entrada",
+      "body": "Enviamos um link de confirmação para {email}. Abra-o neste dispositivo para concluir a criação da conta.",
+      "bodyNoEmail": "Abra o link de confirmação que enviamos por e-mail para concluir a criação da conta.",
+      "duplicateNote": "Se já existir uma conta com este endereço, nenhum novo e-mail é enviado — entre ou redefina sua senha.",
+      "resend": "Reenviar o link",
+      "resent": "Se o endereço precisar de confirmação, um novo link está a caminho.",
+      "expiredTitle": "Esse link não funcionou",
+      "expiredBody": "Os links de confirmação e redefinição expiram rapidamente e só podem ser usados uma vez. Solicite um novo abaixo.",
+      "backToLogin": "Voltar para entrar"
+    },
+    "forgot": {
+      "title": "Redefina sua senha",
+      "subtitle": "Informe o e-mail do cadastro e enviaremos um link de redefinição.",
+      "submit": "Enviar link",
+      "sent": "Se existir uma conta com esse e-mail, um link de redefinição está a caminho. Ele expira em uma hora.",
+      "back": "Voltar para entrar"
+    },
+    "reset": {
+      "title": "Escolha uma nova senha",
+      "subtitle": "Use uma senha que você nunca usou aqui.",
+      "submit": "Atualizar senha",
+      "success": "Senha atualizada. Você está conectado.",
+      "expired": "Este link de redefinição expirou. Solicite um novo."
+    },
+    "logout": {
+      "title": "Sair?",
+      "body": "Você vai precisar do e-mail e da senha para entrar novamente.",
+      "confirm": "Sair",
+      "everywhere": "Sair em todos os dispositivos",
+      "cancel": "Continuar conectado"
+    },
+    "mfa": {
+      "title": "Verificação em duas etapas",
+      "subtitle": "Digite o código de 6 dígitos do seu aplicativo autenticador.",
+      "code": "Código de verificação",
+      "submit": "Verificar",
+      "invalid": "Esse código não confere. Verifique o aplicativo e tente novamente.",
+      "useAnother": "Sair e usar outra conta"
+    },
+    "admin": {
+      "title": "Acesso da equipe",
+      "subtitle": "Somente para equipe autorizada. O acesso é verificado conforme a função atribuída.",
+      "forbidden": "Esta conta não tem acesso de equipe.",
+      "customer": "Procurando sua conta? <link>Acesso de clientes</link>"
+    }
+  },
+  "phone": {
+    "country": "País ou região",
+    "search": "Buscar países",
+    "noMatch": "Nenhum país corresponde",
+    "number": "Número de telefone"
+  },
+  "validation": {
+    "required": "Este campo é obrigatório.",
+    "emailInvalid": "Informe um e-mail válido.",
+    "passwordWeak": "Use pelo menos 10 caracteres com letras maiúsculas e minúsculas, um número e um símbolo.",
+    "passwordTooLong": "Use no máximo 128 caracteres.",
+    "passwordMismatch": "As senhas não coincidem.",
+    "passwordBreached": "Esta senha apareceu em um vazamento de dados. Escolha outra.",
+    "passwordSame": "Escolha uma senha diferente da atual.",
+    "phoneInvalid": "Informe um número válido para o país selecionado.",
+    "usernameShort": "Use pelo menos 3 caracteres.",
+    "usernameLong": "Use no máximo 24 caracteres.",
+    "usernameChars": "Use apenas letras minúsculas, números e sublinhados.",
+    "usernameTaken": "Esse nome de usuário já está em uso. Tente outro.",
+    "nameShort": "Informe seu nome completo.",
+    "nameLong": "Use no máximo 100 caracteres.",
+    "termsRequired": "Você precisa aceitar os termos para criar uma conta.",
+    "consentRequired": "Marque a caixa para confirmar.",
+    "referralInvalid": "Códigos de indicação usam apenas letras e números.",
+    "amountInvalid": "Informe um valor com até 2 casas decimais.",
+    "amountPositive": "Informe um valor maior que zero.",
+    "methodInvalid": "Escolha um método de pagamento.",
+    "referenceLong": "Use no máximo 140 caracteres.",
+    "noteLong": "Use no máximo 500 caracteres.",
+    "destinationInvalid": "Informe um endereço de carteira válido (apenas letras e números).",
+    "planInvalid": "Escolha um plano.",
+    "invalidRequest": "Algo nesta solicitação não é válido. Atualize e tente novamente.",
+    "subjectShort": "Use pelo menos 4 caracteres.",
+    "subjectLong": "Use no máximo 140 caracteres.",
+    "messageShort": "Escreva pelo menos 10 caracteres.",
+    "messageLong": "Use no máximo 4.000 caracteres.",
+    "slugInvalid": "Use de 2 a 40 letras minúsculas, números e hífens.",
+    "descriptionShort": "Escreva pelo menos 10 caracteres.",
+    "descriptionLong": "Use no máximo 400 caracteres.",
+    "termInvalid": "Informe um prazo entre 1 e 3.650 dias.",
+    "rangeInvalid": "O máximo deve ser maior que o mínimo.",
+    "targetBasisRequired": "Uma meta de retorno precisa dos dois valores e de uma base publicada.",
+    "reasonRequired": "Informe um motivo (pelo menos 4 caracteres).",
+    "codeInvalid": "Digite o código de 6 dígitos."
+  },
+  "errors": {
+    "generic": "Algo deu errado do nosso lado. Tente novamente em instantes.",
+    "network": "Não foi possível acessar o servidor. Verifique sua conexão e tente novamente.",
+    "not_configured": "As contas ainda não estão disponíveis: o back-end não está conectado.",
+    "rate_limited": "Muitas tentativas. Aguarde alguns minutos e tente novamente.",
+    "validation": "Verifique os campos destacados.",
+    "unauthorized": "Sua sessão terminou. Entre novamente.",
+    "forbidden": "Sua conta não tem permissão para fazer isso.",
+    "mfa_required": "Confirme com seu aplicativo autenticador para continuar.",
+    "account_suspended": "Esta conta está suspensa. Fale com o suporte para obter ajuda.",
+    "maintenance": "Novas solicitações estão pausadas para manutenção. Tente mais tarde.",
+    "invalid_credentials": "E-mail e senha não conferem. Verifique e tente novamente.",
+    "email_not_confirmed": "Confirme seu e-mail antes de entrar.",
+    "registrations_closed": "Novos cadastros estão pausados no momento.",
+    "reset_link_expired": "Este link de redefinição expirou. Solicite um novo.",
+    "amount_invalid": "Informe um valor válido.",
+    "amount_below_min": "O valor está abaixo do mínimo.",
+    "amount_above_max": "O valor está acima do máximo.",
+    "amount_below_fee": "O valor precisa ser maior que a taxa de saque.",
+    "insufficient_funds": "Seu saldo disponível é insuficiente para este valor.",
+    "asset_invalid": "Esse ativo não está disponível para esta solicitação.",
+    "method_invalid": "Escolha um método de pagamento válido.",
+    "destination_invalid": "Confira o endereço de destino.",
+    "network_invalid": "Escolha uma rede.",
+    "too_many_pending": "Você tem solicitações abertas demais. Aguarde a revisão delas primeiro.",
+    "duplicate_request": "Uma solicitação idêntica acabou de ser enviada. Confira seu histórico antes de tentar novamente.",
+    "invalid_request": "Esta solicitação não é válida. Atualize a página e tente novamente.",
+    "invalid_status": "Este item já avançou e não pode ser alterado desta forma.",
+    "invalid_decision": "Escolha uma decisão válida.",
+    "not_found": "Não encontramos esse item.",
+    "plan_invalid": "Esse plano não está disponível.",
+    "cancel_window_closed": "As posições só podem ser canceladas em até 24 horas após a abertura.",
+    "self_review_forbidden": "Você não pode revisar a própria solicitação. Peça a outro revisor.",
+    "self_action_forbidden": "Você não pode alterar a própria conta desta forma.",
+    "reason_required": "Informe um motivo antes de continuar.",
+    "payout_reference_required": "Informe a referência do pagamento para marcar como concluído.",
+    "credit_exceeds_request": "O valor creditado não pode ser maior que o solicitado.",
+    "last_owner": "Você não pode remover o último proprietário.",
+    "slug_taken": "Outro plano já usa essa chave.",
+    "ticket_closed": "Este chamado está encerrado. Abra um novo se ainda precisar de ajuda.",
+    "message_invalid": "Escreva uma mensagem entre 10 e 4.000 caracteres.",
+    "email_invalid": "Informe um e-mail válido.",
+    "consent_required": "O consentimento é obrigatório.",
+    "balance_missing": "Sua conta não está totalmente configurada. Fale com o suporte.",
+    "upload_invalid": "Envie um PNG, JPEG, WebP ou PDF de até 5 MB."
+  },
+  "admin": {
+    "nav": {
+      "overview": "Visão geral",
+      "deposits": "Depósitos",
+      "withdrawals": "Saques",
+      "investments": "Posições",
+      "transactions": "Livro-razão",
+      "plans": "Planos",
+      "users": "Usuários",
+      "kyc": "Verificação de identidade",
+      "support": "Suporte",
+      "notifications": "Comunicados",
+      "audit": "Log de auditoria",
+      "settings": "Configurações",
+      "exit": "Visão do cliente",
+      "breadcrumb": "Trilha de navegação",
+      "sections": {
+        "money": "Dinheiro",
+        "people": "Pessoas",
+        "system": "Sistema"
+      }
+    },
+    "common": {
+      "search": "Buscar",
+      "searchPlaceholder": "Referência, e-mail ou nome",
+      "status": "Status",
+      "allStatuses": "Todos os status",
+      "apply": "Aplicar",
+      "reset": "Limpar",
+      "sort": "Ordenar",
+      "newest": "Mais recentes",
+      "oldest": "Mais antigos",
+      "largest": "Maior valor",
+      "view": "Ver",
+      "review": "Revisar",
+      "noPermission": "Sua função pode ver esta página, mas não alterá-la.",
+      "mfaEnrol": "Contas da equipe devem usar login em duas etapas. Configure em Configurações → Segurança.",
+      "simulatedLabel": "Movimentações simuladas — o modo demonstração está ativo."
+    },
+    "overview": {
+      "title": "Visão geral das operações",
+      "description": "Números ao vivo calculados a partir dos registros da plataforma.",
+      "usersTotal": "Usuários cadastrados",
+      "usersNew": "{count} novos nos últimos 7 dias",
+      "usersActive": "Ativos em 30 dias",
+      "usersSuspended": "{count} suspensos",
+      "depositsPending": "Depósitos a revisar",
+      "withdrawalsOpen": "Saques em aberto",
+      "investmentsActive": "Posições ativas",
+      "investmentsDue": "{count} vencidas",
+      "ticketsOpen": "Chamados abertos",
+      "balancesTitle": "Saldos mantidos para clientes",
+      "available": "Disponível",
+      "held": "Retido para saques",
+      "invested": "Em posições",
+      "flowsTitle": "Fluxos diários, últimos 30 dias",
+      "flowsDescription": "Depósitos confirmados e saques pagos",
+      "activityTitle": "Atividade recente da equipe e do sistema",
+      "activityEmpty": "Nenhuma atividade registrada ainda.",
+      "queueTitle": "Fila de revisão",
+      "queueDeposits": "Depósito pendente mais antigo",
+      "queueWithdrawals": "Saque em aberto mais antigo",
+      "queueEmpty": "Nada aguardando.",
+      "processMaturities": "Liquidar posições vencidas",
+      "processed": "{count, plural, =0 {Nenhuma posição estava vencida} one {# posição liquidada} other {# posições liquidadas}}"
+    },
+    "deposits": {
+      "title": "Revisão de depósitos",
+      "description": "Aprove apenas quando o recebimento dos fundos estiver confirmado. A aprovação credita o saldo disponível do cliente.",
+      "approve": "Aprovar e creditar",
+      "reject": "Recusar",
+      "approveTitle": "Aprovar o depósito {reference}?",
+      "approveBody": "Confirme que os fundos chegaram. O valor creditado pode ser menor que o solicitado se chegou menos, nunca maior.",
+      "creditedAmount": "Valor recebido",
+      "rejectTitle": "Recusar o depósito {reference}?",
+      "rejectBody": "Nada é creditado. O cliente verá o motivo informado.",
+      "reason": "Motivo",
+      "note": "Observação interna",
+      "approved": "Depósito aprovado e creditado",
+      "rejected": "Depósito recusado",
+      "selfReview": "É a sua própria solicitação — outro revisor precisa tratá-la.",
+      "receipt": "Comprovante",
+      "txReference": "Referência da transferência",
+      "customerNote": "Observação do cliente"
+    },
+    "withdrawals": {
+      "title": "Revisão de saques",
+      "description": "Aprove após as verificações e marque como concluído quando o pagamento for confirmado com sua referência.",
+      "processing": "Marcar em processamento",
+      "approve": "Aprovar",
+      "complete": "Marcar como concluído",
+      "reject": "Recusar e liberar",
+      "completeTitle": "Marcar {reference} como pago?",
+      "completeBody": "Só faça isso depois que o pagamento for confirmado. Informe a transação ou a referência do pagamento.",
+      "payoutReference": "Referência do pagamento",
+      "rejectTitle": "Recusar o saque {reference}?",
+      "rejectBody": "O valor retido volta ao saldo disponível do cliente.",
+      "approveTitle": "Aprovar o saque {reference}?",
+      "approveBody": "A aprovação autoriza o pagamento. Os fundos ficam retidos até você marcar como concluído.",
+      "updated": "Saque atualizado"
+    },
+    "investments": {
+      "title": "Posições",
+      "description": "Todas as posições dos clientes. O vencimento devolve apenas o capital.",
+      "due": "Vencida"
+    },
+    "plans": {
+      "title": "Planos de investimento",
+      "description": "As alterações valem apenas para novas posições. As posições abertas mantêm as condições iniciais.",
+      "new": "Novo plano",
+      "edit": "Editar",
+      "editTitle": "Editar plano",
+      "newTitle": "Novo plano",
+      "name": "Nome",
+      "slug": "Chave de URL",
+      "description_": "Descrição",
+      "min": "Valor mínimo",
+      "max": "Valor máximo",
+      "currency": "Moeda",
+      "term": "Prazo (dias)",
+      "risk": "Nível de risco",
+      "riskDescription": "Descrição do risco",
+      "targetMin": "Meta de retorno a partir de (%)",
+      "targetMax": "Meta de retorno até (%)",
+      "targetBasis": "Base da meta",
+      "targetHelp": "Deixe ambos vazios, a menos que você publique como a meta é calculada. A meta é mostrada aos clientes com sua base e nunca é uma garantia.",
+      "active": "Aberto a novas posições",
+      "order": "Ordem de exibição",
+      "saved": "Plano salvo",
+      "inactive": "Fechado",
+      "openPositions": "{count} abertas"
+    },
+    "users": {
+      "title": "Usuários",
+      "description": "Busque contas, veja a atividade e gerencie acessos.",
+      "joined": "Cadastro",
+      "roles": "Funções",
+      "balance": "Saldo total",
+      "detailTitle": "Conta",
+      "profile": "Perfil",
+      "activity": "Lançamentos recentes",
+      "requests": "Solicitações em aberto",
+      "suspend": "Suspender conta",
+      "reactivate": "Reativar conta",
+      "suspendTitle": "Suspender esta conta?",
+      "suspendBody": "O cliente não pode entrar nem movimentar dinheiro enquanto estiver suspenso. Informe um motivo para o log de auditoria.",
+      "reactivateTitle": "Reativar esta conta?",
+      "statusUpdated": "Status da conta atualizado",
+      "rolesTitle": "Funções da equipe",
+      "rolesHelp": "Proprietários gerenciam todas as funções. Administradores podem conceder finanças e suporte. Ninguém pode alterar as próprias funções.",
+      "grant": "Conceder",
+      "revoke": "Revogar",
+      "roleUpdated": "Funções atualizadas",
+      "roleNames": {
+        "owner": "Proprietário",
+        "admin": "Administrador",
+        "finance": "Revisor financeiro",
+        "support": "Suporte"
+      },
+      "noRoles": "Cliente",
+      "statusReason": "Motivo"
+    },
+    "kyc": {
+      "title": "Verificação de identidade",
+      "description": "A verificação de identidade é feita por um provedor de verificação em conformidade.",
+      "notConfigured": "Nenhum provedor de verificação de identidade está conectado. Os status abaixo só mudam quando um provedor informa resultados — não podem ser definidos manualmente.",
+      "counts": "Contas por status de verificação"
+    },
+    "support": {
+      "title": "Chamados de suporte",
+      "description": "Responda aos clientes e mantenha cada mensagem no chamado.",
+      "assigned": "Atribuído",
+      "unassigned": "Não atribuído",
+      "customer": "Cliente",
+      "setStatus": "Status",
+      "setPriority": "Prioridade",
+      "priorities": {
+        "low": "Baixa",
+        "normal": "Normal",
+        "high": "Alta"
+      },
+      "updated": "Chamado atualizado"
+    },
+    "notifications": {
+      "title": "Comunicados",
+      "description": "Envie uma notificação no aplicativo para todos os clientes ativos ou para uma conta.",
+      "audience": "Público",
+      "all": "Todos os clientes ativos",
+      "one": "Um cliente",
+      "userEmail": "E-mail do cliente",
+      "userNotFound": "Nenhuma conta corresponde a esse e-mail.",
+      "titleField": "Título",
+      "body": "Mensagem",
+      "send": "Enviar comunicado",
+      "sent": "{count, plural, one {Enviado para # cliente} other {Enviado para # clientes}}",
+      "recent": "Enviados recentemente"
+    },
+    "audit": {
+      "title": "Log de auditoria",
+      "description": "Registro somente de inclusão das ações da equipe e dos eventos que alteram saldos.",
+      "actor": "Autor",
+      "action": "Ação",
+      "entity": "Entidade",
+      "details": "Detalhes",
+      "system": "Sistema",
+      "filterAction": "A ação contém"
+    },
+    "settings": {
+      "title": "Configurações da plataforma",
+      "description": "Limites e opções usados pelas funções do banco de dados. Cada alteração é auditada.",
+      "limits": "Limites e taxas",
+      "switches": "Opções da plataforma",
+      "assets": "Ativos aceitos",
+      "keys": {
+        "deposit_min": "Depósito mínimo (USD)",
+        "deposit_max": "Depósito máximo (USD)",
+        "withdrawal_min": "Saque mínimo (USD)",
+        "withdrawal_max": "Saque máximo (USD)",
+        "withdrawal_fee_flat": "Taxa de saque fixa (USD)",
+        "withdrawal_fee_percent": "Taxa de saque (%)",
+        "maintenance_mode": "Modo de manutenção — pausar novas operações",
+        "registrations_open": "Permitir novos cadastros"
+      },
+      "assetActive": "Ativo",
+      "assetDeposits": "Depósitos",
+      "assetWithdrawals": "Saques",
+      "saved": "Configuração salva"
+    }
+  }
+}

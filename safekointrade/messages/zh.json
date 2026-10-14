@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "固定期限的加密资产投资计划",
+    "description": "固定期限的加密资产投资计划，每笔存款和提款都经人工审核，账本可供您审计。"
+  },
+  "common": {
+    "skipToContent": "跳到正文",
+    "loading": "正在加载",
+    "close": "关闭",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存更改",
+    "saving": "正在保存…",
+    "saved": "更改已保存",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "search": "搜索",
+    "optional": "选填",
+    "required": "必填",
+    "retry": "重试",
+    "copy": "复制",
+    "copied": "已复制",
+    "viewAll": "查看全部",
+    "details": "详情",
+    "page": "第 {page} 页，共 {total} 页",
+    "noResults": "没有符合筛选条件的结果。",
+    "simulationTitle": "演示模式",
+    "simulationNotice": "本平台上的余额和资金流动均为模拟。在接入持牌支付服务商之前，不会转移任何真实资金。",
+    "simulationShort": "模拟",
+    "illustration": "示意",
+    "sampleData": "示例数据",
+    "notConfiguredTitle": "后端未连接",
+    "notConfigured": "缺少 Supabase 凭据。请将其添加到 .env.local 以启用账户（参见 README）。",
+    "genericError": "我们这边出了点问题，请稍后重试。",
+    "networkError": "无法连接服务器。请检查网络连接后重试。",
+    "rateLimited": "尝试次数过多。请等待一分钟后再试。",
+    "unauthorized": "请登录后继续。",
+    "forbidden": "您的账户无权访问此内容。",
+    "notFoundTitle": "页面不存在",
+    "notFoundBody": "您要找的页面不存在或已被移动。",
+    "goHome": "返回首页",
+    "errorTitle": "此页面加载失败",
+    "errorBody": "意外错误导致此页面无法加载。请重试，或稍后再来。",
+    "status": {
+      "pending": "待处理",
+      "processing": "处理中",
+      "approved": "已批准",
+      "completed": "已完成",
+      "active": "进行中",
+      "matured": "已到期",
+      "rejected": "已拒绝",
+      "cancelled": "已取消",
+      "failed": "失败",
+      "open": "未解决",
+      "answered": "已回复",
+      "closed": "已关闭",
+      "suspended": "已停用",
+      "verified": "已验证",
+      "unverified": "未验证"
+    },
+    "risk": {
+      "low": "低风险",
+      "moderate": "中等风险",
+      "high": "高风险"
+    },
+    "photoCredit": "图片：{name} / Pexels",
+    "apply": "应用"
+  },
+  "theme": {
+    "label": "主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统"
+  },
+  "language": {
+    "label": "语言",
+    "change": "切换语言"
+  },
+  "nav": {
+    "markets": "市场",
+    "plans": "投资计划",
+    "how": "运作方式",
+    "about": "关于我们",
+    "faq": "常见问题",
+    "login": "登录",
+    "getStarted": "立即开始",
+    "dashboard": "控制台",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "primary": "主导航",
+    "home": "首页",
+    "signUp": "注册"
+  },
+  "startup": {
+    "loading": "正在加载 {brand}"
+  },
+  "home": {
+    "hero": {
+      "title": "期限固定、账本公开的加密资产计划。",
+      "body": "选择 30、90 或 180 天的计划，在可审计的记录中跟踪每一笔变动——存款、持仓、到期。每笔存款和提款都由人工审核，而非脚本。",
+      "primary": "创建账户",
+      "secondary": "比较计划",
+      "note": "加密资产波动剧烈。您可能损失部分或全部投资本金。",
+      "headline": "可审计的加密货币计划",
+      "learnMore": "了解更多"
+    },
+    "lifecycle": {
+      "label": "一笔持仓的流程",
+      "plan": "Growth 计划",
+      "term": "90 天期限",
+      "amount": "持仓金额",
+      "day": "第 {day} 天 / 共 {total} 天",
+      "steps": {
+        "deposit": "存款已审核",
+        "opened": "持仓已开立",
+        "running": "期限进行中",
+        "matures": "到期"
+      },
+      "caption": "每一步都会以参考编号记入您的账户历史。"
+    },
+    "ticker": {
+      "label": "实时行情",
+      "unavailable": "实时价格暂时无法获取。",
+      "source": "价格来自 CoinGecko，每分钟更新。"
+    },
+    "commitments": {
+      "title": "平台内置的承诺",
+      "items": {
+        "terms": {
+          "value": "30、90、180",
+          "label": "天的期限，在开立持仓时即固定"
+        },
+        "review": {
+          "value": "每一笔申请",
+          "label": "存款和提款在余额变动前均经人工核查"
+        },
+        "audit": {
+          "value": "完整审计记录",
+          "label": "每次余额变动都记录操作人、内容和时间"
+        },
+        "languages": {
+          "value": "8 种语言",
+          "label": "包括采用从右到左布局的阿拉伯语，以及约鲁巴语"
+        }
+      }
+    },
+    "features": {
+      "title": "为认真阅读细则的人打造",
+      "body": "控制台中的一切都来自您的账户记录。没有估算、没有凑整，也没有为了好看而编造的数字。",
+      "items": {
+        "ledger": {
+          "title": "是账本，不是记分牌",
+          "body": "每笔存款、持仓和提款都带有参考编号、状态和时间戳，可随时追溯。"
+        },
+        "terms": {
+          "title": "固定期限的计划",
+          "body": "选择计划和范围内的金额，期限自开立之日起锁定。"
+        },
+        "review": {
+          "title": "资金变动的人工审核",
+          "body": "财务审核员在确认资金到账后批准存款，并在资金转出前批准提款。"
+        },
+        "security": {
+          "title": "账户保护",
+          "body": "已验证的邮箱、严格的密码规则以及可选的身份验证器应用登录，保障您的账户安全。"
+        },
+        "languages": {
+          "title": "您的语言，您的格式",
+          "body": "日期、数字和货币在整个平台上均遵循您的语言设置。"
+        },
+        "support": {
+          "title": "有据可查的客服",
+          "body": "在控制台提交工单，每条回复都会保留在工单中。"
+        }
+      }
+    },
+    "plans": {
+      "title": "比较投资计划",
+      "body": "每个计划都有各自的金额范围和期限。请根据您想投入的金额和时长进行选择。",
+      "range": "投资范围",
+      "term": "期限",
+      "days": "{count} 天",
+      "asset": "计价货币",
+      "target": "收益目标",
+      "noTarget": "此计划未设定收益目标",
+      "cta": "开立此计划",
+      "sampleNote": "当前显示默认计划设置。连接数据库后将加载实际设置。",
+      "riskNote": "风险标签描述的是对加密市场波动的敞口，并非预测。"
+    },
+    "how": {
+      "title": "运作方式",
+      "body": "从注册到提款共四步，每一步都会在您的账户中留下记录。",
+      "steps": {
+        "account": {
+          "title": "创建并验证账户",
+          "body": "使用邮箱和手机号注册，然后确认您的邮箱地址。"
+        },
+        "deposit": {
+          "title": "申请存款",
+          "body": "提交带有参考编号的存款申请。审核员确认资金后，您的余额才会更新。"
+        },
+        "invest": {
+          "title": "开立持仓",
+          "body": "将部分可用余额转入计划。持仓开立时即开始计算期限。"
+        },
+        "withdraw": {
+          "title": "到期后提款",
+          "body": "期限结束后，持仓返回您的可用余额，您即可申请提款。"
+        }
+      },
+      "imageAlt": "一只手在显示价格走势图的屏幕前拿着一枚金色比特币"
+    },
+    "analytics": {
+      "title": "市场分析",
+      "body": "平台支持资产的三十天价格历史，来自实时市场数据。",
+      "range": "30 天价格（美元）",
+      "change": "30 天涨跌",
+      "unavailable": "价格历史暂时无法获取，请稍后再来。",
+      "dashboardTitle": "控制台一览",
+      "dashboardBody": "可用、已投资和待处理余额，未平持仓以及每一笔交易——都直接来自您的记录。"
+    },
+    "security": {
+      "title": "看得见的安全",
+      "body": "保护从数据库层层构建，每一项特权操作都有日志。",
+      "items": {
+        "rls": {
+          "title": "数据隔离",
+          "body": "行级安全确保您的记录只能由您本人和授权员工读取。"
+        },
+        "mfa": {
+          "title": "两步登录",
+          "body": "添加身份验证器应用，让仅凭密码无法登录您的账户。"
+        },
+        "review": {
+          "title": "职责分离",
+          "body": "任何人都不能批准自己的申请，财务操作仅限财务角色执行。"
+        },
+        "audit": {
+          "title": "防篡改历史",
+          "body": "管理操作和余额变动都写入只能追加的审计日志。"
+        }
+      }
+    },
+    "assets": {
+      "title": "支持的资产",
+      "body": "持仓以美元计价。以下是平台跟踪并接受存款的资产。",
+      "price": "价格",
+      "change24h": "24 小时",
+      "noPrice": "—",
+      "network": "网络"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": {
+        "guaranteed": {
+          "q": "收益有保证吗？",
+          "a": "没有。加密资产波动剧烈，您可能损失部分或全部投资本金。只有在收益目标已定义并公布时，计划才会显示该目标，而目标并非承诺。"
+        },
+        "demo": {
+          "q": "平台目前是否转移真实资金？",
+          "a": "还没有。在接入持牌支付服务商之前，每笔存款、提款和持仓都会明确标注为模拟，不会转移任何真实资金。"
+        },
+        "deposit": {
+          "q": "我的存款何时计入余额？",
+          "a": "在财务审核员确认资金到账之后。仅提交申请或上传凭证并不会改变您的余额。"
+        },
+        "withdraw": {
+          "q": "提款如何进行？",
+          "a": "从可用余额申请提款。审核期间该金额会被冻结，只有在确认付款后才会标记为已完成。"
+        },
+        "early": {
+          "q": "可以在期限结束前平仓吗？",
+          "a": "持仓可在开立后 24 小时内取消。此后将持续至到期。"
+        },
+        "security": {
+          "q": "我的账户如何受到保护？",
+          "a": "已验证的邮箱、强密码、可选的两步登录、行级数据隔离，以及完整的特权操作审计日志。"
+        }
+      }
+    },
+    "newsletter": {
+      "title": "每月产品动态",
+      "body": "新计划、平台变化和市场札记。不会有伪装成建议的推销。",
+      "email": "邮箱地址",
+      "placeholder": "you@example.com",
+      "consent": "我同意接收每月动态，并可随时退订。",
+      "submit": "订阅",
+      "success": "订阅成功。请留意下一期邮件。",
+      "already": "该邮箱已订阅。",
+      "invalidEmail": "请输入有效的邮箱地址。",
+      "consentRequired": "请勾选以确认您希望接收动态。"
+    },
+    "cta": {
+      "title": "几分钟即可开户。",
+      "body": "浏览控制台、比较计划，并清楚了解每笔申请如何被审核。",
+      "primary": "创建账户",
+      "secondary": "阅读风险披露"
+    },
+    "platform": {
+      "title": "一个账户，一目了然",
+      "body": "在一个仪表板中清楚看到资金所在——可用、已投资或在途。",
+      "items": {
+        "dashboard": {
+          "title": "清晰的仪表板",
+          "body": "可用、已投资和待处理余额、未平仓头寸以及每笔交易，集中在一处。"
+        },
+        "plans": {
+          "title": "固定期限计划",
+          "body": "选择 30、90 或 180 天。期限在开仓当天锁定。"
+        },
+        "money": {
+          "title": "经审核的资金流动",
+          "body": "审核人员确认到账后才会入账存款。提现在支付前保持冻结。"
+        },
+        "support": {
+          "title": "有记录的支持",
+          "body": "在仪表板中提交工单，每条回复都会保留在工单中。"
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "产品",
+    "company": "公司",
+    "legal": "法律",
+    "support": "支持",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "helpCentre": "帮助中心",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "risk": "风险披露",
+    "cookies": "Cookie 政策",
+    "riskWarning": "加密资产在许多司法管辖区不受监管，且波动剧烈。投资价值可能下跌也可能上涨，您收回的金额可能少于投入。本网站的任何内容均不构成财务建议。",
+    "rights": "© {year} {company}。保留所有权利。"
+  },
+  "about": {
+    "title": "关于 {brand}",
+    "lead": "我们正在打造一个加密投资平台，让您屏幕上的数字始终与背后的记录一致。",
+    "principlesTitle": "我们的原则",
+    "principles": {
+      "records": {
+        "title": "记录先于营销",
+        "body": "展示给您的每个数字都来自可追溯的数据库记录。无法核实的数字，我们不展示。"
+      },
+      "people": {
+        "title": "人工参与",
+        "body": "提交表单不会让资金流动。受过培训的审核员确认存款并批准提款。"
+      },
+      "plain": {
+        "title": "用直白的语言谈风险",
+        "body": "我们清楚说明可能出现的问题，绝不把目标说成承诺。"
+      }
+    },
+    "statusTitle": "平台现状",
+    "statusBody": "平台目前以演示模式运行。账户、计划和审核流程均可完整使用，但在接入持牌支付及托管服务商之前，余额均为模拟。",
+    "imageAlt": "同事们在办公桌前一起审阅文件"
+  },
+  "contact": {
+    "title": "联系与支持",
+    "lead": "已登录的客户通过控制台中的支持工单可获得最快的回复。",
+    "ticketTitle": "提交支持工单",
+    "ticketBody": "工单将所有消息集中在一处，由我们的支持团队回复。",
+    "ticketCta": "前往支持",
+    "emailTitle": "邮箱",
+    "complianceTitle": "合规与数据请求",
+    "addressTitle": "注册地址"
+  },
+  "legal": {
+    "updated": "最后更新：{date}",
+    "draftNotice": "本文为模板，发布前须经合格法律顾问审阅。"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "概览",
+      "invest": "投资",
+      "investments": "持仓",
+      "deposits": "存款",
+      "withdrawals": "提款",
+      "transactions": "交易记录",
+      "notifications": "通知",
+      "support": "支持",
+      "settings": "设置",
+      "admin": "管理后台",
+      "logout": "退出登录",
+      "collapse": "收起侧边栏",
+      "expand": "展开侧边栏",
+      "menu": "打开导航",
+      "closeMenu": "关闭导航",
+      "account": "账户菜单",
+      "breadcrumb": "面包屑导航",
+      "home": "控制台",
+      "sections": {
+        "money": "资金",
+        "account": "账户"
+      }
+    },
+    "overview": {
+      "title": "概览",
+      "greeting": "欢迎回来，{name}",
+      "description": "您的余额和近期活动，直接来自账户记录。",
+      "total": "总资产",
+      "totalHint": "可用、已投资和冻结资金合计",
+      "available": "可用余额",
+      "availableHint": "可用于投资或提款",
+      "invested": "已投资",
+      "investedHint": "{count, plural, =0 {暂无未平持仓} other {共 # 笔未平持仓}}",
+      "pending": "待处理",
+      "pendingHint": "为提款冻结的金额及待审核的存款",
+      "historyTitle": "资产价值",
+      "historyDescription": "每笔记录变动后的总余额",
+      "historyEmpty": "首笔存款确认后即开始记录余额历史。",
+      "flowsTitle": "存款与提款",
+      "flowsDescription": "按月统计的已确认金额",
+      "depositsLabel": "存款",
+      "withdrawalsLabel": "提款",
+      "flowsEmpty": "暂无已确认的存款或提款。",
+      "summaryDeposited": "累计存入",
+      "summaryWithdrawn": "累计提出",
+      "recentTitle": "最近交易",
+      "recentEmpty": "暂无交易。申请一笔存款即可开始。",
+      "positionsTitle": "进行中的持仓",
+      "positionsEmpty": "暂无持仓。准备好后选择一个计划。",
+      "quick": {
+        "deposit": "申请存款",
+        "invest": "开立持仓",
+        "withdraw": "申请提款"
+      },
+      "matured": "{count, plural, other {# 笔持仓}}已到期。本金已返还至您的可用余额。",
+      "range": {
+        "label": "图表时间范围",
+        "week": "7天",
+        "month": "30天",
+        "all": "全部"
+      },
+      "rangeChange": "该范围内的变化",
+      "breakdownTitle": "余额构成",
+      "maturity": {
+        "title": "下一个到期",
+        "daysLeft": "{count, plural, other {剩余 # 天}}",
+        "maturesOn": "{date} 到期",
+        "dayOf": "第 {day} 天，共 {total} 天",
+        "empty": "暂无持仓。下一个到期的头寸将显示在这里。"
+      },
+      "risk": {
+        "title": "风险构成",
+        "description": "按每个持仓的金额加权",
+        "low": "稳健",
+        "moderate": "均衡",
+        "high": "进取",
+        "empty": "开仓后即可查看风险构成。"
+      },
+      "markets": {
+        "title": "市场",
+        "description": "实时价格与 7 天走势",
+        "trend": "7 天价格走势"
+      },
+      "gettingStarted": {
+        "title": "开始使用",
+        "description": "三步开立您的第一个头寸。",
+        "done": "已完成",
+        "steps": {
+          "request": "申请存款",
+          "requestBody": "告诉我们您要转入的金额和方式。",
+          "confirmed": "存款已确认",
+          "confirmedBody": "审核人员确认资金已到账。",
+          "invest": "开立第一个头寸",
+          "investBody": "选择计划和金额。"
+        }
+      }
+    },
+    "invest": {
+      "title": "开立持仓",
+      "description": "选择计划，输入范围内的金额，确认前请核对。",
+      "choosePlan": "选择计划",
+      "amount": "金额",
+      "amountHint": "介于 {min} 和 {max} 之间",
+      "available": "可用：{amount}",
+      "review": "核对持仓",
+      "confirmTitle": "确认此持仓",
+      "confirmBody": "该金额将从可用余额转入计划。开立后 24 小时内可以取消，之后将持续至到期。",
+      "plan": "计划",
+      "term": "期限",
+      "matures": "到期日",
+      "returns": "收益",
+      "noReturnsNote": "此计划未设定收益目标。到期时，本金将返还至您的可用余额。",
+      "confirm": "开立持仓",
+      "success": "持仓已开立",
+      "insufficient": "您的可用余额低于此计划的最低金额。请先申请存款。",
+      "noPlans": "目前没有开放的计划，请稍后再来。"
+    },
+    "positions": {
+      "title": "持仓",
+      "description": "进行中、已到期和已取消的持仓。",
+      "tabs": {
+        "active": "进行中",
+        "matured": "已到期",
+        "cancelled": "已取消"
+      },
+      "progress": "第 {day} 天 / 共 {total} 天",
+      "opened": "开立于",
+      "matures": "到期",
+      "maturedOn": "已到期",
+      "cancelledOn": "已取消",
+      "cancel": "取消持仓",
+      "cancelTitle": "取消此持仓？",
+      "cancelBody": "全部金额将立即返还至您的可用余额。此操作无法撤销。",
+      "cancelConfirm": "取消持仓",
+      "cancelled": "持仓已取消",
+      "cancelUntil": "可取消至 {time}",
+      "empty": {
+        "active": "没有进行中的持仓。",
+        "matured": "暂无已到期的持仓。",
+        "cancelled": "没有已取消的持仓。"
+      },
+      "openNew": "开立持仓"
+    },
+    "deposits": {
+      "title": "存款",
+      "description": "先申请存款，再转入资金。审核员确认后，您的余额才会更新。",
+      "formTitle": "申请存款",
+      "amount": "金额（美元）",
+      "asset": "资产",
+      "method": "方式",
+      "methods": {
+        "crypto_transfer": "加密货币转账",
+        "bank_transfer": "银行转账"
+      },
+      "txReference": "交易哈希或参考号",
+      "txReferenceHint": "帮助审核员匹配您的转账。",
+      "note": "给审核员的备注",
+      "receipt": "凭证",
+      "receiptHint": "PNG、JPEG、WebP 或 PDF，最大 5 MB。",
+      "submit": "申请存款",
+      "success": "存款已申请。参考号 {reference}。",
+      "pendingNote": "提交申请或上传凭证不会改变您的余额。审核员确认资金到账后才会入账。",
+      "historyTitle": "存款记录",
+      "empty": "暂无存款申请。",
+      "limits": "每笔最低 {min}，最高 {max}。",
+      "credited": "已入账",
+      "uploadReceipt": "上传凭证",
+      "receiptUploaded": "凭证已上传",
+      "viewReceipt": "查看凭证",
+      "instructionsTitle": "付款说明",
+      "instructionsDemo": "接入持牌支付服务商后，付款信息将显示在此处。演示模式下无需转账——审核员通过批准申请来模拟资金到账。",
+      "requested": "申请时间",
+      "receiptMissing": "无凭证",
+      "instructionsLive": "提交申请后，请按照支付服务商提供的付款信息操作，并注明您的参考号。"
+    },
+    "withdrawals": {
+      "title": "提款",
+      "description": "从可用余额中提款。审核期间该金额会被冻结。",
+      "formTitle": "申请提款",
+      "amount": "金额（美元）",
+      "asset": "资产",
+      "network": "网络",
+      "destination": "目标钱包地址",
+      "destinationHint": "请仔细核对。转到错误地址的资金无法追回。",
+      "fee": "手续费",
+      "net": "实际到账",
+      "submit": "申请提款",
+      "confirmTitle": "确认此提款",
+      "confirmBody": "在提款完成或被拒绝之前，将从您的可用余额中冻结 {amount}。",
+      "success": "提款已申请。参考号 {reference}。",
+      "historyTitle": "提款记录",
+      "empty": "暂无提款。",
+      "limits": "每笔最低 {min}，最高 {max}。手续费：{flat} + {percent}。",
+      "cancel": "取消申请",
+      "cancelTitle": "取消此提款？",
+      "cancelBody": "冻结的金额将返还至您的可用余额。",
+      "cancelled": "提款已取消",
+      "payoutReference": "付款参考号",
+      "networkPlaceholder": "例如：Ethereum (ERC-20)",
+      "availableNow": "当前可用：{amount}",
+      "feePreview": "手续费 {fee} · 实际到账 {net}"
+    },
+    "transactions": {
+      "title": "交易记录",
+      "description": "账户中每一笔记录的变动，按时间从新到旧排列。",
+      "filterType": "类型",
+      "all": "全部类型",
+      "types": {
+        "deposit": "存款",
+        "withdrawal_hold": "提款冻结",
+        "withdrawal_release": "提款解冻",
+        "withdrawal_payout": "提款已付",
+        "investment_open": "持仓开立",
+        "investment_cancel": "持仓取消",
+        "investment_maturity": "持仓到期"
+      },
+      "empty": "没有匹配的交易。",
+      "detailTitle": "交易 {reference}",
+      "detailDescription": "您账户账本中的一条永久记录。",
+      "balanceAfter": "此记录后的余额",
+      "change": "变动",
+      "source": "关联申请"
+    },
+    "table": {
+      "reference": "参考号",
+      "date": "日期",
+      "type": "类型",
+      "amount": "金额",
+      "status": "状态",
+      "asset": "资产",
+      "plan": "计划",
+      "description": "说明",
+      "available": "可用",
+      "held": "冻结",
+      "invested": "已投资",
+      "actions": "操作",
+      "fee": "手续费",
+      "net": "净额",
+      "destination": "目标地址",
+      "user": "用户",
+      "subject": "主题",
+      "updated": "更新时间",
+      "category": "类别",
+      "priority": "优先级"
+    },
+    "pagination": {
+      "label": "分页",
+      "previous": "上一页",
+      "next": "下一页",
+      "summary": "第 {from}–{to} 条，共 {total} 条"
+    },
+    "notifications": {
+      "title": "通知",
+      "description": "关于您的申请、持仓和账户的最新消息。",
+      "markAll": "全部标为已读",
+      "markRead": "标为已读",
+      "delete": "删除",
+      "empty": "没有新通知。",
+      "bell": "通知",
+      "unread": "{count, plural, =0 {没有未读通知} other {# 条未读通知}}",
+      "viewAll": "查看全部通知",
+      "templates": {
+        "depositRequested": {
+          "title": "已收到存款申请",
+          "body": "您的存款申请 {reference} 正在等待审核。资金确认后余额才会变动。"
+        },
+        "depositCompleted": {
+          "title": "存款已确认",
+          "body": "存款 {reference} 已确认，并已计入您的可用余额。"
+        },
+        "depositRejected": {
+          "title": "存款未确认",
+          "body": "存款 {reference} 未能确认。如有疑问，请提交支持工单。"
+        },
+        "withdrawalRequested": {
+          "title": "已收到提款申请",
+          "body": "提款 {reference} 正在等待审核。完成或被拒绝前，该金额将保持冻结。"
+        },
+        "withdrawalApproved": {
+          "title": "提款已批准",
+          "body": "提款 {reference} 已批准，正在等待付款确认。"
+        },
+        "withdrawalCompleted": {
+          "title": "提款已完成",
+          "body": "提款 {reference} 已付款。"
+        },
+        "withdrawalRejected": {
+          "title": "提款被拒绝",
+          "body": "提款 {reference} 被拒绝，资金已返还至您的可用余额。"
+        },
+        "investmentOpened": {
+          "title": "持仓已开立",
+          "body": "{plan} 持仓 {reference} 已生效，将于 {date} 到期。"
+        },
+        "investmentMatured": {
+          "title": "持仓已到期",
+          "body": "持仓 {reference} 已到期。本金已返还至您的可用余额。"
+        },
+        "supportReply": {
+          "title": "{reference} 有新回复",
+          "body": "我们的支持团队已回复您的工单。"
+        },
+        "accountSuspended": {
+          "title": "账户已停用",
+          "body": "您的账户已被停用。详情请联系支持团队。"
+        },
+        "accountReactivated": {
+          "title": "账户已恢复",
+          "body": "您的账户已重新启用。"
+        }
+      }
+    },
+    "support": {
+      "title": "支持",
+      "description": "提交工单后，我们的团队会在这里回复。所有消息都保留在工单中。",
+      "new": "新建工单",
+      "newTitle": "提交支持工单",
+      "subject": "主题",
+      "category": "类别",
+      "categories": {
+        "account": "账户",
+        "deposit": "存款",
+        "withdrawal": "提款",
+        "investment": "持仓",
+        "security": "安全",
+        "other": "其他"
+      },
+      "message": "内容",
+      "messageHint": "请附上参考号（例如 DEP-…），方便我们查找对应申请。",
+      "submit": "提交工单",
+      "created": "工单 {reference} 已提交",
+      "empty": "暂无工单。需要帮助时随时提交。",
+      "reply": "回复",
+      "replyPlaceholder": "写下回复…",
+      "send": "发送回复",
+      "sent": "回复已发送",
+      "close": "关闭工单",
+      "closed": "工单已关闭",
+      "closedNote": "此工单已关闭。如仍需帮助，请新建工单。",
+      "you": "您",
+      "staff": "支持团队",
+      "back": "全部工单",
+      "faqTitle": "快速解答",
+      "faqBody": "关于存款、提款和持仓的许多问题，在常见问题中都有解答。",
+      "faqLink": "查看常见问题"
+    },
+    "settings": {
+      "title": "设置",
+      "description": "管理您的个人资料、安全、通知和偏好。",
+      "tabs": {
+        "profile": "个人资料",
+        "security": "安全",
+        "notifications": "通知",
+        "preferences": "偏好"
+      },
+      "profile": {
+        "title": "个人资料",
+        "description": "您的姓名和联系方式。",
+        "email": "邮箱地址",
+        "emailHint": "如需更改账户邮箱，请联系支持团队。",
+        "username": "用户名",
+        "referral": "您的推荐码",
+        "memberSince": "注册时间",
+        "saved": "个人资料已保存",
+        "phoneUnverified": "未验证"
+      },
+      "security": {
+        "passwordTitle": "密码",
+        "passwordDescription": "更改密码后，您在其他设备上的会话将被退出。",
+        "newPassword": "新密码",
+        "updatePassword": "更新密码",
+        "passwordUpdated": "密码已更新",
+        "mfaTitle": "两步登录",
+        "mfaDescription": "每次登录时要求输入身份验证器应用中的验证码。",
+        "mfaOn": "已开启",
+        "mfaOff": "已关闭",
+        "mfaEnable": "设置身份验证器",
+        "mfaDisable": "关闭",
+        "mfaScan": "使用 1Password、Google Authenticator 或 Authy 等身份验证器应用扫描此二维码，然后输入显示的 6 位验证码。",
+        "mfaSecret": "无法扫描？请手动输入此密钥：",
+        "mfaVerify": "验证并开启",
+        "mfaEnabled": "两步登录已开启",
+        "mfaDisabled": "两步登录已关闭",
+        "mfaDisableTitle": "关闭两步登录？",
+        "mfaDisableBody": "您的账户将仅受密码保护。",
+        "sessionsTitle": "会话",
+        "sessionsDescription": "退出所有浏览器和设备上的登录，包括当前设备。",
+        "signOutAll": "在所有设备上退出"
+      },
+      "notifications": {
+        "title": "邮件通知",
+        "description": "应用内通知始终开启。请选择您希望收到的邮件。",
+        "email_deposits": "存款动态",
+        "email_withdrawals": "提款动态",
+        "email_investments": "持仓开立与到期",
+        "email_security": "安全提醒",
+        "email_security_hint": "密码更改和登录保护",
+        "email_product": "每月产品动态",
+        "saved": "通知偏好已保存"
+      },
+      "preferences": {
+        "title": "偏好",
+        "description": "保存后，语言和外观设置将在您的所有设备上同步。",
+        "language": "语言",
+        "theme": "主题",
+        "saved": "偏好已保存"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "每个数字都有据可查。",
+    "panelPoints": {
+      "review": "存款和提款在余额变动前均经人工核查。",
+      "ledger": "每笔变动都有参考号，可在历史记录中追溯。",
+      "security": "两步登录和行级数据隔离保护您的账户。"
+    },
+    "email": "邮箱地址",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "fullName": "姓名",
+    "username": "用户名",
+    "usernameHint": "3–24 个字符：小写字母、数字和下划线。",
+    "phone": "手机号码",
+    "phoneHint": "用于账户安全。发送短信前我们会先征得您的同意。",
+    "referral": "推荐码",
+    "showPassword": "显示密码",
+    "hidePassword": "隐藏密码",
+    "acceptTerms": "我同意<terms>服务条款</terms>和<privacy>隐私政策</privacy>，并已阅读<risk>风险披露</risk>。",
+    "login": {
+      "title": "登录",
+      "subtitle": "欢迎回来。请输入您的信息以继续。",
+      "submit": "登录",
+      "submitting": "正在登录…",
+      "forgot": "忘记密码？",
+      "noAccount": "还没有账户？",
+      "register": "创建账户",
+      "signedOut": "您已退出登录。",
+      "notVerified": "登录前请先确认邮箱地址。我们可以重新发送链接。",
+      "resend": "重新发送链接"
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "只需几分钟。确认邮箱后即可登录。",
+      "submit": "创建账户",
+      "submitting": "正在创建账户…",
+      "haveAccount": "已有账户？",
+      "login": "登录",
+      "closed": "新用户注册暂时关闭，请稍后再试。"
+    },
+    "strength": {
+      "label": "密码强度",
+      "levels": [
+        "过弱",
+        "弱",
+        "一般",
+        "良好",
+        "强"
+      ],
+      "rules": {
+        "length": "至少 10 个字符",
+        "lower": "包含一个小写字母",
+        "upper": "包含一个大写字母",
+        "number": "包含一个数字",
+        "symbol": "包含一个符号，如 ! 或 #"
+      }
+    },
+    "verify": {
+      "title": "请查收邮件",
+      "body": "我们已向 {email} 发送确认链接。请在此设备上打开，完成账户创建。",
+      "bodyNoEmail": "请打开我们发送的确认链接，完成账户创建。",
+      "duplicateNote": "如果该地址已有账户，则不会发送新邮件——请直接登录或重置密码。",
+      "resend": "重新发送链接",
+      "resent": "如该地址需要确认，新的链接已在途中。",
+      "expiredTitle": "该链接无效",
+      "expiredBody": "确认和重置链接很快会过期，且只能使用一次。请在下方重新申请。",
+      "backToLogin": "返回登录"
+    },
+    "forgot": {
+      "title": "重置密码",
+      "subtitle": "输入注册时使用的邮箱，我们将发送重置链接。",
+      "submit": "发送重置链接",
+      "sent": "如果该邮箱对应有账户，重置链接已在途中。链接将在一小时后过期。",
+      "back": "返回登录"
+    },
+    "reset": {
+      "title": "设置新密码",
+      "subtitle": "请使用您在此从未用过的密码。",
+      "submit": "更新密码",
+      "success": "密码已更新，您已登录。",
+      "expired": "此重置链接已过期。请重新申请。"
+    },
+    "logout": {
+      "title": "退出登录？",
+      "body": "再次登录时需要您的邮箱和密码。",
+      "confirm": "退出登录",
+      "everywhere": "在所有设备上退出",
+      "cancel": "保持登录"
+    },
+    "mfa": {
+      "title": "两步验证",
+      "subtitle": "请输入身份验证器应用中的 6 位验证码。",
+      "code": "验证码",
+      "submit": "验证",
+      "invalid": "验证码不正确。请检查应用后重试。",
+      "useAnother": "退出并使用其他账户"
+    },
+    "admin": {
+      "title": "员工登录",
+      "subtitle": "仅限授权员工。访问权限将根据您被分配的角色进行核验。",
+      "forbidden": "此账户没有员工权限。",
+      "customer": "要登录您的客户账户？<link>客户登录</link>"
+    }
+  },
+  "phone": {
+    "country": "国家或地区",
+    "search": "搜索国家或地区",
+    "noMatch": "没有匹配的国家或地区",
+    "number": "手机号码"
+  },
+  "validation": {
+    "required": "此项为必填。",
+    "emailInvalid": "请输入有效的邮箱地址。",
+    "passwordWeak": "请至少使用 10 个字符，并包含大小写字母、数字和符号。",
+    "passwordTooLong": "最多 128 个字符。",
+    "passwordMismatch": "两次输入的密码不一致。",
+    "passwordBreached": "此密码曾出现在数据泄露中，请换一个。",
+    "passwordSame": "请选择与当前密码不同的密码。",
+    "phoneInvalid": "请输入所选国家或地区的有效号码。",
+    "usernameShort": "至少 3 个字符。",
+    "usernameLong": "最多 24 个字符。",
+    "usernameChars": "只能使用小写字母、数字和下划线。",
+    "usernameTaken": "该用户名已被占用，请换一个。",
+    "nameShort": "请输入您的姓名。",
+    "nameLong": "最多 100 个字符。",
+    "termsRequired": "您需要接受条款才能创建账户。",
+    "consentRequired": "请勾选以确认。",
+    "referralInvalid": "推荐码只包含字母和数字。",
+    "amountInvalid": "请输入最多 2 位小数的金额。",
+    "amountPositive": "请输入大于零的金额。",
+    "methodInvalid": "请选择付款方式。",
+    "referenceLong": "最多 140 个字符。",
+    "noteLong": "最多 500 个字符。",
+    "destinationInvalid": "请输入有效的钱包地址（仅限字母和数字）。",
+    "planInvalid": "请选择一个计划。",
+    "invalidRequest": "此请求存在无效内容。请刷新后重试。",
+    "subjectShort": "至少 4 个字符。",
+    "subjectLong": "最多 140 个字符。",
+    "messageShort": "至少写 10 个字符。",
+    "messageLong": "最多 4,000 个字符。",
+    "slugInvalid": "请使用 2–40 个小写字母、数字和连字符。",
+    "descriptionShort": "至少写 10 个字符。",
+    "descriptionLong": "最多 400 个字符。",
+    "termInvalid": "请输入 1 到 3,650 天之间的期限。",
+    "rangeInvalid": "最大值必须大于最小值。",
+    "targetBasisRequired": "收益目标需要同时填写两个数值，并附上公开的依据。",
+    "reasonRequired": "请填写原因（至少 4 个字符）。",
+    "codeInvalid": "请输入 6 位验证码。"
+  },
+  "errors": {
+    "generic": "我们这边出了点问题，请稍后重试。",
+    "network": "无法连接服务器。请检查网络连接后重试。",
+    "not_configured": "账户功能暂不可用：后端未连接。",
+    "rate_limited": "尝试次数过多。请等待几分钟后再试。",
+    "validation": "请检查标出的字段。",
+    "unauthorized": "您的会话已结束，请重新登录。",
+    "forbidden": "您的账户无权执行此操作。",
+    "mfa_required": "请使用身份验证器应用完成验证后继续。",
+    "account_suspended": "此账户已被停用。请联系支持团队获取帮助。",
+    "maintenance": "系统维护中，新申请已暂停。请稍后再试。",
+    "invalid_credentials": "邮箱和密码不匹配。请检查后重试。",
+    "email_not_confirmed": "登录前请先确认邮箱地址。",
+    "registrations_closed": "新用户注册暂时关闭。",
+    "reset_link_expired": "此重置链接已过期。请重新申请。",
+    "amount_invalid": "请输入有效金额。",
+    "amount_below_min": "金额低于最低限额。",
+    "amount_above_max": "金额高于最高限额。",
+    "amount_below_fee": "金额必须大于提款手续费。",
+    "insufficient_funds": "您的可用余额不足以支付此金额。",
+    "asset_invalid": "该资产不适用于此申请。",
+    "method_invalid": "请选择有效的付款方式。",
+    "destination_invalid": "请检查目标地址。",
+    "network_invalid": "请选择网络。",
+    "too_many_pending": "您未完成的申请过多。请等待它们审核完毕。",
+    "duplicate_request": "刚刚已提交过相同的申请。请先查看记录再重试。",
+    "invalid_request": "此请求无效。请刷新页面后重试。",
+    "invalid_status": "此项目已进入下一阶段，无法以这种方式更改。",
+    "invalid_decision": "请选择有效的处理结果。",
+    "not_found": "找不到该项目。",
+    "plan_invalid": "该计划不可用。",
+    "cancel_window_closed": "持仓只能在开立后 24 小时内取消。",
+    "self_review_forbidden": "您不能审核自己的申请。请交由其他审核员处理。",
+    "self_action_forbidden": "您不能以这种方式更改自己的账户。",
+    "reason_required": "请先填写原因再继续。",
+    "payout_reference_required": "请填写付款参考号后再标记为已完成。",
+    "credit_exceeds_request": "入账金额不能超过申请金额。",
+    "last_owner": "不能移除最后一位所有者。",
+    "slug_taken": "已有其他计划使用该标识。",
+    "ticket_closed": "此工单已关闭。如仍需帮助，请新建工单。",
+    "message_invalid": "请输入 10 到 4,000 个字符的内容。",
+    "email_invalid": "请输入有效的邮箱地址。",
+    "consent_required": "需要您的同意。",
+    "balance_missing": "您的账户尚未完全设置。请联系支持团队。",
+    "upload_invalid": "请上传不超过 5 MB 的 PNG、JPEG、WebP 或 PDF 文件。"
+  },
+  "admin": {
+    "nav": {
+      "overview": "概览",
+      "deposits": "存款",
+      "withdrawals": "提款",
+      "investments": "持仓",
+      "transactions": "账本",
+      "plans": "计划",
+      "users": "用户",
+      "kyc": "身份核验",
+      "support": "支持",
+      "notifications": "公告",
+      "audit": "审计日志",
+      "settings": "设置",
+      "exit": "客户视图",
+      "breadcrumb": "面包屑导航",
+      "sections": {
+        "money": "资金",
+        "people": "人员",
+        "system": "系统"
+      }
+    },
+    "common": {
+      "search": "搜索",
+      "searchPlaceholder": "参考号、邮箱或姓名",
+      "status": "状态",
+      "allStatuses": "全部状态",
+      "apply": "应用",
+      "reset": "重置",
+      "sort": "排序",
+      "newest": "最新优先",
+      "oldest": "最早优先",
+      "largest": "金额最大",
+      "view": "查看",
+      "review": "审核",
+      "noPermission": "您的角色可以查看此页面，但不能修改。",
+      "mfaEnrol": "员工账户应开启两步登录。请在 设置 → 安全 中设置。",
+      "simulatedLabel": "资金流动为模拟——演示模式已开启。"
+    },
+    "overview": {
+      "title": "运营概览",
+      "description": "根据平台记录实时计算的数据。",
+      "usersTotal": "注册用户",
+      "usersNew": "过去 7 天新增 {count} 人",
+      "usersActive": "30 天内活跃",
+      "usersSuspended": "{count} 人已停用",
+      "depositsPending": "待审核存款",
+      "withdrawalsOpen": "未完成提款",
+      "investmentsActive": "进行中的持仓",
+      "investmentsDue": "{count} 笔已过到期日",
+      "ticketsOpen": "未解决工单",
+      "balancesTitle": "为客户保管的余额",
+      "available": "可用",
+      "held": "为提款冻结",
+      "invested": "持仓中",
+      "flowsTitle": "每日资金流，最近 30 天",
+      "flowsDescription": "已确认的存款和已支付的提款",
+      "activityTitle": "员工与系统近期活动",
+      "activityEmpty": "暂无活动记录。",
+      "queueTitle": "审核队列",
+      "queueDeposits": "最早的待处理存款",
+      "queueWithdrawals": "最早的未完成提款",
+      "queueEmpty": "没有待处理事项。",
+      "processMaturities": "结算到期持仓",
+      "processed": "{count, plural, =0 {没有到期的持仓} other {已结算 # 笔持仓}}"
+    },
+    "deposits": {
+      "title": "存款审核",
+      "description": "仅在确认资金到账后批准。批准后将计入客户的可用余额。",
+      "approve": "批准并入账",
+      "reject": "拒绝",
+      "approveTitle": "批准存款 {reference}？",
+      "approveBody": "请确认资金已到账。若实际到账少于申请金额，入账金额可以较少，但绝不能多于申请金额。",
+      "creditedAmount": "实收金额",
+      "rejectTitle": "拒绝存款 {reference}？",
+      "rejectBody": "不会入账任何金额。客户将看到您填写的原因。",
+      "reason": "原因",
+      "note": "内部备注",
+      "approved": "存款已批准并入账",
+      "rejected": "存款已拒绝",
+      "selfReview": "这是您自己的申请——必须由其他审核员处理。",
+      "receipt": "凭证",
+      "txReference": "转账参考号",
+      "customerNote": "客户备注"
+    },
+    "withdrawals": {
+      "title": "提款审核",
+      "description": "核查后批准，并在付款确认后填写参考号标记为已完成。",
+      "processing": "标记为处理中",
+      "approve": "批准",
+      "complete": "标记为已完成",
+      "reject": "拒绝并解冻",
+      "completeTitle": "将 {reference} 标记为已付款？",
+      "completeBody": "请仅在付款确认后执行此操作。填写付款交易或参考号。",
+      "payoutReference": "付款参考号",
+      "rejectTitle": "拒绝提款 {reference}？",
+      "rejectBody": "冻结的金额将返还至客户的可用余额。",
+      "approveTitle": "批准提款 {reference}？",
+      "approveBody": "批准即授权付款。在您标记为已完成之前，资金保持冻结。",
+      "updated": "提款已更新"
+    },
+    "investments": {
+      "title": "持仓",
+      "description": "所有客户持仓。到期时仅返还本金。",
+      "due": "已过到期日"
+    },
+    "plans": {
+      "title": "投资计划",
+      "description": "更改仅适用于新持仓。已开立的持仓保留原有条款。",
+      "new": "新建计划",
+      "edit": "编辑",
+      "editTitle": "编辑计划",
+      "newTitle": "新建计划",
+      "name": "名称",
+      "slug": "URL 标识",
+      "description_": "说明",
+      "min": "最低金额",
+      "max": "最高金额",
+      "currency": "货币",
+      "term": "期限（天）",
+      "risk": "风险等级",
+      "riskDescription": "风险说明",
+      "targetMin": "收益目标下限（%）",
+      "targetMax": "收益目标上限（%）",
+      "targetBasis": "目标依据",
+      "targetHelp": "除非您公开目标的计算方法，否则请将两项留空。目标会连同依据一起展示给客户，且绝非保证。",
+      "active": "对新持仓开放",
+      "order": "显示顺序",
+      "saved": "计划已保存",
+      "inactive": "已关闭",
+      "openPositions": "{count} 笔进行中"
+    },
+    "users": {
+      "title": "用户",
+      "description": "搜索账户、查看活动并管理权限。",
+      "joined": "注册时间",
+      "roles": "角色",
+      "balance": "总余额",
+      "detailTitle": "账户",
+      "profile": "资料",
+      "activity": "近期账本记录",
+      "requests": "未完成的申请",
+      "suspend": "停用账户",
+      "reactivate": "恢复账户",
+      "suspendTitle": "停用此账户？",
+      "suspendBody": "停用期间，客户无法登录或转移资金。请为审计日志填写原因。",
+      "reactivateTitle": "恢复此账户？",
+      "statusUpdated": "账户状态已更新",
+      "rolesTitle": "员工角色",
+      "rolesHelp": "所有者可管理所有角色。管理员可授予财务和支持角色。任何人都不能更改自己的角色。",
+      "grant": "授予",
+      "revoke": "撤销",
+      "roleUpdated": "角色已更新",
+      "roleNames": {
+        "owner": "所有者",
+        "admin": "管理员",
+        "finance": "财务审核员",
+        "support": "支持"
+      },
+      "noRoles": "客户",
+      "statusReason": "原因"
+    },
+    "kyc": {
+      "title": "身份核验",
+      "description": "身份核验通过合规的核验服务商进行。",
+      "notConfigured": "尚未接入身份核验服务商。下方状态仅在服务商回传结果时变化——无法手动设置。",
+      "counts": "按核验状态统计的账户"
+    },
+    "support": {
+      "title": "支持工单",
+      "description": "回复客户，并将每条消息保留在工单中。",
+      "assigned": "已分配",
+      "unassigned": "未分配",
+      "customer": "客户",
+      "setStatus": "状态",
+      "setPriority": "优先级",
+      "priorities": {
+        "low": "低",
+        "normal": "普通",
+        "high": "高"
+      },
+      "updated": "工单已更新"
+    },
+    "notifications": {
+      "title": "公告",
+      "description": "向所有活跃客户或单个账户发送应用内通知。",
+      "audience": "接收对象",
+      "all": "所有活跃客户",
+      "one": "单个客户",
+      "userEmail": "客户邮箱",
+      "userNotFound": "没有与该邮箱匹配的账户。",
+      "titleField": "标题",
+      "body": "内容",
+      "send": "发送公告",
+      "sent": "{count, plural, other {已发送给 # 位客户}}",
+      "recent": "最近发送"
+    },
+    "audit": {
+      "title": "审计日志",
+      "description": "员工操作和余额变动事件的只追加记录。",
+      "actor": "操作人",
+      "action": "操作",
+      "entity": "对象",
+      "details": "详情",
+      "system": "系统",
+      "filterAction": "操作包含"
+    },
+    "settings": {
+      "title": "平台设置",
+      "description": "数据库函数使用的限额和开关。每次更改都会被审计。",
+      "limits": "限额与费用",
+      "switches": "平台开关",
+      "assets": "支持的资产",
+      "keys": {
+        "deposit_min": "最低存款（美元）",
+        "deposit_max": "最高存款（美元）",
+        "withdrawal_min": "最低提款（美元）",
+        "withdrawal_max": "最高提款（美元）",
+        "withdrawal_fee_flat": "固定提款手续费（美元）",
+        "withdrawal_fee_percent": "提款手续费（%）",
+        "maintenance_mode": "维护模式——暂停新的资金操作",
+        "registrations_open": "允许新用户注册"
+      },
+      "assetActive": "启用",
+      "assetDeposits": "存款",
+      "assetWithdrawals": "提款",
+      "saved": "设置已保存"
+    }
+  }
+}

@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "Term-based crypto investment plans",
+    "description": "Fixed-term crypto investment plans with manual review on every deposit and withdrawal, and a ledger you can audit."
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "loading": "Loading",
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Changes saved",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "optional": "Optional",
+    "required": "Required",
+    "retry": "Try again",
+    "copy": "Copy",
+    "copied": "Copied",
+    "viewAll": "View all",
+    "details": "Details",
+    "page": "Page {page} of {total}",
+    "noResults": "Nothing matches these filters.",
+    "simulationTitle": "Demo mode",
+    "simulationNotice": "Balances and money flows on this platform are simulated. No real funds are moved until a licensed payment provider is connected.",
+    "simulationShort": "Simulated",
+    "illustration": "Illustration",
+    "sampleData": "Sample data",
+    "notConfiguredTitle": "Backend not connected",
+    "notConfigured": "Supabase credentials are missing. Add them to .env.local to enable accounts (see README).",
+    "genericError": "Something went wrong on our side. Try again in a moment.",
+    "networkError": "We couldn't reach the server. Check your connection and try again.",
+    "rateLimited": "Too many attempts. Wait a minute, then try again.",
+    "unauthorized": "Sign in to continue.",
+    "forbidden": "Your account doesn't have access to this.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you're looking for doesn't exist or has moved.",
+    "goHome": "Go to the homepage",
+    "errorTitle": "This page failed to load",
+    "errorBody": "An unexpected error stopped this page from loading. Try again, or come back later.",
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "approved": "Approved",
+      "completed": "Completed",
+      "active": "Active",
+      "matured": "Matured",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled",
+      "failed": "Failed",
+      "open": "Open",
+      "answered": "Answered",
+      "closed": "Closed",
+      "suspended": "Suspended",
+      "verified": "Verified",
+      "unverified": "Unverified"
+    },
+    "risk": {
+      "low": "Low risk",
+      "moderate": "Moderate risk",
+      "high": "High risk"
+    },
+    "photoCredit": "Photo: {name} / Pexels",
+    "apply": "Apply"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "change": "Change language"
+  },
+  "nav": {
+    "markets": "Markets",
+    "plans": "Investment plans",
+    "how": "How it works",
+    "about": "About",
+    "faq": "FAQ",
+    "login": "Log in",
+    "getStarted": "Get started",
+    "dashboard": "Dashboard",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Primary",
+    "home": "Home",
+    "signUp": "Sign up"
+  },
+  "startup": {
+    "loading": "Loading {brand}"
+  },
+  "home": {
+    "hero": {
+      "title": "Crypto plans with a fixed term and an open ledger.",
+      "body": "Choose a 30, 90 or 180-day plan and follow every movement — deposits, positions, maturity — on a record you can audit. People, not scripts, review every deposit and withdrawal.",
+      "primary": "Create an account",
+      "secondary": "Compare plans",
+      "note": "Crypto assets are volatile. You can lose some or all of the money you invest.",
+      "headline": "Crypto plans you can audit",
+      "learnMore": "Learn more"
+    },
+    "lifecycle": {
+      "label": "How a position moves",
+      "plan": "Growth plan",
+      "term": "90-day term",
+      "amount": "Position size",
+      "day": "Day {day} of {total}",
+      "steps": {
+        "deposit": "Deposit reviewed",
+        "opened": "Position opened",
+        "running": "Term running",
+        "matures": "Matures"
+      },
+      "caption": "Every step is written to your account history with a reference ID."
+    },
+    "ticker": {
+      "label": "Live market prices",
+      "unavailable": "Live prices are unavailable right now.",
+      "source": "Prices from CoinGecko, refreshed every minute."
+    },
+    "commitments": {
+      "title": "Commitments built into the platform",
+      "items": {
+        "terms": {
+          "value": "30, 90, 180",
+          "label": "Day terms, fixed at the moment you open a position"
+        },
+        "review": {
+          "value": "Every request",
+          "label": "Deposits and withdrawals are checked by a person before balances change"
+        },
+        "audit": {
+          "value": "Full audit trail",
+          "label": "Balance changes are recorded with who, what and when"
+        },
+        "languages": {
+          "value": "8 languages",
+          "label": "Including Arabic with right-to-left layout, and Yorùbá"
+        }
+      }
+    },
+    "features": {
+      "title": "Built for people who read the fine print",
+      "body": "Everything you see in your dashboard comes from your account records. Nothing is estimated, rounded up or invented to look good.",
+      "items": {
+        "ledger": {
+          "title": "A ledger, not a scoreboard",
+          "body": "Each deposit, position and withdrawal carries a reference ID, a status and a timestamp you can trace."
+        },
+        "terms": {
+          "title": "Plans with a fixed term",
+          "body": "Pick a plan, choose an amount within its range, and the term is locked in from the day it opens."
+        },
+        "review": {
+          "title": "Human review on money movement",
+          "body": "Finance reviewers approve deposits once funds are confirmed, and approve withdrawals before anything leaves."
+        },
+        "security": {
+          "title": "Account protection",
+          "body": "Verified email, strong password rules and optional authenticator-app sign-in keep your account yours."
+        },
+        "languages": {
+          "title": "Your language, your format",
+          "body": "Dates, numbers and currencies follow your language settings across the whole platform."
+        },
+        "support": {
+          "title": "Support with a paper trail",
+          "body": "Open a ticket from your dashboard and every reply stays attached to it."
+        }
+      }
+    },
+    "plans": {
+      "title": "Compare investment plans",
+      "body": "Ranges and terms are set per plan. Choose the one that matches how much you want to commit and for how long.",
+      "range": "Investment range",
+      "term": "Term",
+      "days": "{count} days",
+      "asset": "Denomination",
+      "target": "Return target",
+      "noTarget": "No return target is set for this plan",
+      "cta": "Open this plan",
+      "sampleNote": "Showing default plan settings. Live plan settings load once the database is connected.",
+      "riskNote": "Risk labels describe exposure to crypto market volatility. They are not a forecast."
+    },
+    "how": {
+      "title": "How it works",
+      "body": "Four steps from sign-up to withdrawal. Each one leaves a record in your account.",
+      "steps": {
+        "account": {
+          "title": "Create and verify your account",
+          "body": "Sign up with your email and phone number, then confirm your email address."
+        },
+        "deposit": {
+          "title": "Request a deposit",
+          "body": "Submit a deposit request with its reference ID. Your balance updates only after a reviewer confirms the funds."
+        },
+        "invest": {
+          "title": "Open a plan position",
+          "body": "Move part of your available balance into a plan. The term starts the moment the position opens."
+        },
+        "withdraw": {
+          "title": "Reach maturity and withdraw",
+          "body": "When the term ends, the position returns to your available balance and you can request a withdrawal."
+        }
+      },
+      "imageAlt": "A hand holding a gold-coloured Bitcoin coin in front of a screen showing a price chart"
+    },
+    "analytics": {
+      "title": "Market analytics",
+      "body": "Thirty days of price history for the assets the platform supports, drawn from live market data.",
+      "range": "30-day price, USD",
+      "change": "30-day change",
+      "unavailable": "Price history is unavailable right now. Check back shortly.",
+      "dashboardTitle": "Your dashboard, at a glance",
+      "dashboardBody": "Available, invested and pending balances, open positions and every transaction — straight from your records."
+    },
+    "security": {
+      "title": "Security that shows its work",
+      "body": "Protection is layered from the database up, and every privileged action is logged.",
+      "items": {
+        "rls": {
+          "title": "Data isolation",
+          "body": "Row-level security means your records can only be read by you and authorised staff."
+        },
+        "mfa": {
+          "title": "Two-step sign-in",
+          "body": "Add an authenticator app so a password alone isn't enough to reach your account."
+        },
+        "review": {
+          "title": "Separation of duties",
+          "body": "No one can approve their own request, and finance actions are limited to finance roles."
+        },
+        "audit": {
+          "title": "Tamper-evident history",
+          "body": "Admin actions and balance changes are written to an append-only audit log."
+        }
+      }
+    },
+    "assets": {
+      "title": "Supported assets",
+      "body": "Positions are denominated in US dollars. These are the assets the platform tracks and accepts for deposits.",
+      "price": "Price",
+      "change24h": "24h",
+      "noPrice": "—",
+      "network": "Network"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
+        "guaranteed": {
+          "q": "Are returns guaranteed?",
+          "a": "No. Crypto assets are volatile and you can lose some or all of the money you invest. Plans show a return target only when one has been defined and published, and a target is not a promise."
+        },
+        "demo": {
+          "q": "Is real money moved on the platform today?",
+          "a": "Not yet. Until a licensed payment provider is connected, every deposit, withdrawal and position is clearly labelled as simulated and no real funds move."
+        },
+        "deposit": {
+          "q": "When does my deposit show in my balance?",
+          "a": "After a finance reviewer confirms the funds have arrived. Submitting a request or uploading a receipt does not change your balance on its own."
+        },
+        "withdraw": {
+          "q": "How do withdrawals work?",
+          "a": "Request a withdrawal from your available balance. The amount is held while a reviewer checks it, and it's marked completed only once the payout is confirmed."
+        },
+        "early": {
+          "q": "Can I close a position before the term ends?",
+          "a": "Positions can be cancelled within 24 hours of opening. After that, they run until maturity."
+        },
+        "security": {
+          "q": "How is my account protected?",
+          "a": "Verified email, strong passwords, optional two-step sign-in, row-level data isolation and a full audit log of privileged actions."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Product updates, monthly",
+      "body": "New plans, platform changes and market notes. No promotions dressed up as advice.",
+      "email": "Email address",
+      "placeholder": "you@example.com",
+      "consent": "I agree to receive the monthly update and can unsubscribe at any time.",
+      "submit": "Subscribe",
+      "success": "Subscribed. Look out for the next update in your inbox.",
+      "already": "This email is already subscribed.",
+      "invalidEmail": "Enter a valid email address.",
+      "consentRequired": "Tick the box to confirm you want to receive updates."
+    },
+    "cta": {
+      "title": "Open an account in a few minutes.",
+      "body": "Explore the dashboard, compare plans and see exactly how each request is reviewed.",
+      "primary": "Create an account",
+      "secondary": "Read the risk disclosure"
+    },
+    "platform": {
+      "title": "Everything in one account",
+      "body": "See exactly where your money is — available, invested or on its way — from one dashboard.",
+      "items": {
+        "dashboard": {
+          "title": "One clear dashboard",
+          "body": "Available, invested and pending balances, open positions and every transaction in one place."
+        },
+        "plans": {
+          "title": "Fixed-term plans",
+          "body": "Choose 30, 90 or 180 days. The term is locked the day you open a position."
+        },
+        "money": {
+          "title": "Reviewed money movement",
+          "body": "Deposits are credited after a reviewer confirms the funds. Withdrawals are held until they're paid."
+        },
+        "support": {
+          "title": "Support on the record",
+          "body": "Open a ticket from your dashboard. Every reply stays attached to it."
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "support": "Support",
+    "about": "About",
+    "contact": "Contact",
+    "helpCentre": "Help centre",
+    "terms": "Terms of service",
+    "privacy": "Privacy policy",
+    "risk": "Risk disclosure",
+    "cookies": "Cookie policy",
+    "riskWarning": "Crypto assets are unregulated in many jurisdictions and highly volatile. The value of investments can fall as well as rise, and you may get back less than you put in. Nothing on this site is financial advice.",
+    "rights": "© {year} {company}. All rights reserved."
+  },
+  "about": {
+    "title": "About {brand}",
+    "lead": "We're building a crypto investment platform where the numbers on your screen always match the records behind them.",
+    "principlesTitle": "What we hold ourselves to",
+    "principles": {
+      "records": {
+        "title": "Records before marketing",
+        "body": "Every figure shown to you comes from a database record you can trace. If we can't verify a number, we don't show it."
+      },
+      "people": {
+        "title": "People in the loop",
+        "body": "Money doesn't move on a form submission. Trained reviewers confirm deposits and approve withdrawals."
+      },
+      "plain": {
+        "title": "Plain language about risk",
+        "body": "We say clearly what can go wrong, and we never present a target as a promise."
+      }
+    },
+    "statusTitle": "Where the platform stands today",
+    "statusBody": "The platform currently runs in demo mode. Accounts, plans and review workflows work end to end, but balances are simulated until a licensed payment and custody provider is connected.",
+    "imageAlt": "Team members reviewing documents together at a desk"
+  },
+  "contact": {
+    "title": "Contact and support",
+    "lead": "Signed-in customers get the fastest answers through support tickets in the dashboard.",
+    "ticketTitle": "Open a support ticket",
+    "ticketBody": "Tickets keep every message in one place and are answered by our support team.",
+    "ticketCta": "Go to support",
+    "emailTitle": "Email",
+    "complianceTitle": "Compliance and data requests",
+    "addressTitle": "Registered address"
+  },
+  "legal": {
+    "updated": "Last updated {date}",
+    "draftNotice": "This is a template prepared for review by qualified legal counsel before publication."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "invest": "Invest",
+      "investments": "Positions",
+      "deposits": "Deposits",
+      "withdrawals": "Withdrawals",
+      "transactions": "Transactions",
+      "notifications": "Notifications",
+      "support": "Support",
+      "settings": "Settings",
+      "admin": "Admin console",
+      "logout": "Log out",
+      "collapse": "Collapse sidebar",
+      "expand": "Expand sidebar",
+      "menu": "Open navigation",
+      "closeMenu": "Close navigation",
+      "account": "Account menu",
+      "breadcrumb": "Breadcrumb",
+      "home": "Dashboard",
+      "sections": {
+        "money": "Money",
+        "account": "Account"
+      }
+    },
+    "overview": {
+      "title": "Overview",
+      "greeting": "Welcome back, {name}",
+      "description": "Your balances and recent activity, straight from your account records.",
+      "total": "Total portfolio",
+      "totalHint": "Available, invested and held funds combined",
+      "available": "Available balance",
+      "availableHint": "Ready to invest or withdraw",
+      "invested": "Invested",
+      "investedHint": "In {count, plural, =0 {no open positions} one {# open position} other {# open positions}}",
+      "pending": "Pending",
+      "pendingHint": "Held for withdrawals and deposits awaiting review",
+      "historyTitle": "Portfolio value",
+      "historyDescription": "Total balance after each recorded movement",
+      "historyEmpty": "Your balance history starts with your first confirmed deposit.",
+      "flowsTitle": "Deposits and withdrawals",
+      "flowsDescription": "Confirmed amounts by month",
+      "depositsLabel": "Deposits",
+      "withdrawalsLabel": "Withdrawals",
+      "flowsEmpty": "No confirmed deposits or withdrawals yet.",
+      "summaryDeposited": "Total deposited",
+      "summaryWithdrawn": "Total withdrawn",
+      "recentTitle": "Recent transactions",
+      "recentEmpty": "No transactions yet. Request a deposit to get started.",
+      "positionsTitle": "Active positions",
+      "positionsEmpty": "No open positions. Choose a plan when you're ready.",
+      "quick": {
+        "deposit": "Request deposit",
+        "invest": "Open a position",
+        "withdraw": "Request withdrawal"
+      },
+      "matured": "{count, plural, one {# position} other {# positions}} reached maturity. The principal is back in your available balance.",
+      "range": {
+        "label": "Chart range",
+        "week": "7D",
+        "month": "30D",
+        "all": "All"
+      },
+      "rangeChange": "Change in this range",
+      "breakdownTitle": "Balance breakdown",
+      "maturity": {
+        "title": "Next maturity",
+        "daysLeft": "{count, plural, one {# day left} other {# days left}}",
+        "maturesOn": "Matures {date}",
+        "dayOf": "Day {day} of {total}",
+        "empty": "No open positions. Your next maturity will appear here."
+      },
+      "risk": {
+        "title": "Risk mix",
+        "description": "Weighted by the amount in each open position",
+        "low": "Conservative",
+        "moderate": "Balanced",
+        "high": "Aggressive",
+        "empty": "Open a position to see your risk mix."
+      },
+      "markets": {
+        "title": "Markets",
+        "description": "Live prices and 7-day trend",
+        "trend": "7-day price trend"
+      },
+      "gettingStarted": {
+        "title": "Get started",
+        "description": "Three steps to your first position.",
+        "done": "Done",
+        "steps": {
+          "request": "Request a deposit",
+          "requestBody": "Tell us how much you're sending and how.",
+          "confirmed": "Deposit confirmed",
+          "confirmedBody": "A reviewer confirms your funds arrived.",
+          "invest": "Open your first position",
+          "investBody": "Choose a plan and an amount."
+        }
+      }
+    },
+    "invest": {
+      "title": "Open a position",
+      "description": "Choose a plan, enter an amount within its range, and review before confirming.",
+      "choosePlan": "Choose a plan",
+      "amount": "Amount",
+      "amountHint": "Between {min} and {max}",
+      "available": "Available: {amount}",
+      "review": "Review position",
+      "confirmTitle": "Confirm this position",
+      "confirmBody": "The amount moves from your available balance into the plan. You can cancel within 24 hours of opening; after that it runs until maturity.",
+      "plan": "Plan",
+      "term": "Term",
+      "matures": "Matures on",
+      "returns": "Returns",
+      "noReturnsNote": "No return target is set for this plan. At maturity, the principal returns to your available balance.",
+      "confirm": "Open position",
+      "success": "Position opened",
+      "insufficient": "Your available balance is lower than this plan's minimum. Request a deposit first.",
+      "noPlans": "No plans are open right now. Check back soon."
+    },
+    "positions": {
+      "title": "Positions",
+      "description": "Open, matured and cancelled positions.",
+      "tabs": {
+        "active": "Active",
+        "matured": "Matured",
+        "cancelled": "Cancelled"
+      },
+      "progress": "Day {day} of {total}",
+      "opened": "Opened",
+      "matures": "Matures",
+      "maturedOn": "Matured",
+      "cancelledOn": "Cancelled",
+      "cancel": "Cancel position",
+      "cancelTitle": "Cancel this position?",
+      "cancelBody": "The full amount returns to your available balance straight away. This can't be undone.",
+      "cancelConfirm": "Cancel position",
+      "cancelled": "Position cancelled",
+      "cancelUntil": "Cancellable until {time}",
+      "empty": {
+        "active": "No active positions.",
+        "matured": "No matured positions yet.",
+        "cancelled": "No cancelled positions."
+      },
+      "openNew": "Open a position"
+    },
+    "deposits": {
+      "title": "Deposits",
+      "description": "Request a deposit, then send the funds. Your balance updates once a reviewer confirms them.",
+      "formTitle": "Request a deposit",
+      "amount": "Amount (USD)",
+      "asset": "Asset",
+      "method": "Method",
+      "methods": {
+        "crypto_transfer": "Crypto transfer",
+        "bank_transfer": "Bank transfer"
+      },
+      "txReference": "Transaction hash or reference",
+      "txReferenceHint": "Helps the reviewer match your transfer.",
+      "note": "Note for the reviewer",
+      "receipt": "Receipt",
+      "receiptHint": "PNG, JPEG, WebP or PDF, up to 5 MB.",
+      "submit": "Request deposit",
+      "success": "Deposit requested. Reference {reference}.",
+      "pendingNote": "Submitting a request or uploading a receipt doesn't change your balance. A reviewer credits it after confirming the funds arrived.",
+      "historyTitle": "Deposit history",
+      "empty": "No deposit requests yet.",
+      "limits": "Minimum {min}, maximum {max} per request.",
+      "credited": "Credited",
+      "uploadReceipt": "Upload receipt",
+      "receiptUploaded": "Receipt uploaded",
+      "viewReceipt": "View receipt",
+      "instructionsTitle": "Payment instructions",
+      "instructionsDemo": "Payment details appear here once a licensed payment provider is connected. In demo mode no transfer is needed — a reviewer approves requests to simulate confirmed funds.",
+      "requested": "Requested",
+      "receiptMissing": "No receipt",
+      "instructionsLive": "After you submit the request, follow the payment details shown by our payment provider and include your reference ID."
+    },
+    "withdrawals": {
+      "title": "Withdrawals",
+      "description": "Withdraw from your available balance. The amount is held while a reviewer checks it.",
+      "formTitle": "Request a withdrawal",
+      "amount": "Amount (USD)",
+      "asset": "Asset",
+      "network": "Network",
+      "destination": "Destination wallet address",
+      "destinationHint": "Double-check it. Transfers to a wrong address can't be reversed.",
+      "fee": "Fee",
+      "net": "You receive",
+      "submit": "Request withdrawal",
+      "confirmTitle": "Confirm this withdrawal",
+      "confirmBody": "{amount} will be held from your available balance until the withdrawal is completed or rejected.",
+      "success": "Withdrawal requested. Reference {reference}.",
+      "historyTitle": "Withdrawal history",
+      "empty": "No withdrawals yet.",
+      "limits": "Minimum {min}, maximum {max} per request. Fee: {flat} + {percent}.",
+      "cancel": "Cancel request",
+      "cancelTitle": "Cancel this withdrawal?",
+      "cancelBody": "The held amount returns to your available balance.",
+      "cancelled": "Withdrawal cancelled",
+      "payoutReference": "Payout reference",
+      "networkPlaceholder": "For example: Ethereum (ERC-20)",
+      "availableNow": "Available now: {amount}",
+      "feePreview": "Fee {fee} · you receive {net}"
+    },
+    "transactions": {
+      "title": "Transactions",
+      "description": "Every recorded movement on your account, newest first.",
+      "filterType": "Type",
+      "all": "All types",
+      "types": {
+        "deposit": "Deposit",
+        "withdrawal_hold": "Withdrawal held",
+        "withdrawal_release": "Withdrawal released",
+        "withdrawal_payout": "Withdrawal paid out",
+        "investment_open": "Position opened",
+        "investment_cancel": "Position cancelled",
+        "investment_maturity": "Position matured"
+      },
+      "empty": "No transactions match.",
+      "detailTitle": "Transaction {reference}",
+      "detailDescription": "A permanent entry in your account ledger.",
+      "balanceAfter": "Balances after this entry",
+      "change": "Change",
+      "source": "Related request"
+    },
+    "table": {
+      "reference": "Reference",
+      "date": "Date",
+      "type": "Type",
+      "amount": "Amount",
+      "status": "Status",
+      "asset": "Asset",
+      "plan": "Plan",
+      "description": "Description",
+      "available": "Available",
+      "held": "Held",
+      "invested": "Invested",
+      "actions": "Actions",
+      "fee": "Fee",
+      "net": "Net",
+      "destination": "Destination",
+      "user": "User",
+      "subject": "Subject",
+      "updated": "Updated",
+      "category": "Category",
+      "priority": "Priority"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous page",
+      "next": "Next page",
+      "summary": "Showing {from}–{to} of {total}"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Updates about your requests, positions and account.",
+      "markAll": "Mark all as read",
+      "markRead": "Mark as read",
+      "delete": "Delete",
+      "empty": "You're all caught up.",
+      "bell": "Notifications",
+      "unread": "{count, plural, =0 {No unread notifications} one {# unread notification} other {# unread notifications}}",
+      "viewAll": "View all notifications",
+      "templates": {
+        "depositRequested": {
+          "title": "Deposit request received",
+          "body": "Your deposit request {reference} is pending review. Your balance changes only after the funds are confirmed."
+        },
+        "depositCompleted": {
+          "title": "Deposit confirmed",
+          "body": "Deposit {reference} was confirmed and credited to your available balance."
+        },
+        "depositRejected": {
+          "title": "Deposit not confirmed",
+          "body": "Deposit {reference} could not be confirmed. Open a support ticket if you have questions."
+        },
+        "withdrawalRequested": {
+          "title": "Withdrawal request received",
+          "body": "Withdrawal {reference} is pending review. The amount is held until it is completed or rejected."
+        },
+        "withdrawalApproved": {
+          "title": "Withdrawal approved",
+          "body": "Withdrawal {reference} was approved and is waiting for payout confirmation."
+        },
+        "withdrawalCompleted": {
+          "title": "Withdrawal completed",
+          "body": "Withdrawal {reference} was paid out."
+        },
+        "withdrawalRejected": {
+          "title": "Withdrawal rejected",
+          "body": "Withdrawal {reference} was rejected and the funds returned to your available balance."
+        },
+        "investmentOpened": {
+          "title": "Position opened",
+          "body": "{plan} position {reference} is active and matures on {date}."
+        },
+        "investmentMatured": {
+          "title": "Position matured",
+          "body": "Position {reference} reached the end of its term. The principal is back in your available balance."
+        },
+        "supportReply": {
+          "title": "New reply on {reference}",
+          "body": "Our support team replied to your ticket."
+        },
+        "accountSuspended": {
+          "title": "Account suspended",
+          "body": "Your account has been suspended. Contact support for details."
+        },
+        "accountReactivated": {
+          "title": "Account reactivated",
+          "body": "Your account is active again."
+        }
+      }
+    },
+    "support": {
+      "title": "Support",
+      "description": "Open a ticket and our team replies here. Every message stays on the ticket.",
+      "new": "New ticket",
+      "newTitle": "Open a support ticket",
+      "subject": "Subject",
+      "category": "Category",
+      "categories": {
+        "account": "Account",
+        "deposit": "Deposit",
+        "withdrawal": "Withdrawal",
+        "investment": "Positions",
+        "security": "Security",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "messageHint": "Include any reference IDs (for example DEP-…) so we can find the request.",
+      "submit": "Open ticket",
+      "created": "Ticket {reference} opened",
+      "empty": "No tickets yet. Open one whenever you need help.",
+      "reply": "Reply",
+      "replyPlaceholder": "Write a reply…",
+      "send": "Send reply",
+      "sent": "Reply sent",
+      "close": "Close ticket",
+      "closed": "Ticket closed",
+      "closedNote": "This ticket is closed. Open a new one if you still need help.",
+      "you": "You",
+      "staff": "Support team",
+      "back": "All tickets",
+      "faqTitle": "Quick answers",
+      "faqBody": "Many questions about deposits, withdrawals and positions are answered in the FAQ.",
+      "faqLink": "Read the FAQ"
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Manage your profile, security, notifications and preferences.",
+      "tabs": {
+        "profile": "Profile",
+        "security": "Security",
+        "notifications": "Notifications",
+        "preferences": "Preferences"
+      },
+      "profile": {
+        "title": "Profile",
+        "description": "Your name and contact details.",
+        "email": "Email address",
+        "emailHint": "Contact support to change the email on your account.",
+        "username": "Username",
+        "referral": "Your referral code",
+        "memberSince": "Member since",
+        "saved": "Profile saved",
+        "phoneUnverified": "Not verified"
+      },
+      "security": {
+        "passwordTitle": "Password",
+        "passwordDescription": "Changing your password signs out your other sessions.",
+        "newPassword": "New password",
+        "updatePassword": "Update password",
+        "passwordUpdated": "Password updated",
+        "mfaTitle": "Two-step sign-in",
+        "mfaDescription": "Ask for a code from an authenticator app each time you sign in.",
+        "mfaOn": "On",
+        "mfaOff": "Off",
+        "mfaEnable": "Set up authenticator",
+        "mfaDisable": "Turn off",
+        "mfaScan": "Scan this QR code with an authenticator app such as 1Password, Google Authenticator or Authy, then enter the 6-digit code it shows.",
+        "mfaSecret": "Can't scan? Enter this key manually:",
+        "mfaVerify": "Verify and turn on",
+        "mfaEnabled": "Two-step sign-in is on",
+        "mfaDisabled": "Two-step sign-in is off",
+        "mfaDisableTitle": "Turn off two-step sign-in?",
+        "mfaDisableBody": "Your account will be protected by your password only.",
+        "sessionsTitle": "Sessions",
+        "sessionsDescription": "Sign out of every browser and device, including this one.",
+        "signOutAll": "Log out everywhere"
+      },
+      "notifications": {
+        "title": "Email notifications",
+        "description": "In-app notifications are always on. Choose which emails you'd like.",
+        "email_deposits": "Deposit updates",
+        "email_withdrawals": "Withdrawal updates",
+        "email_investments": "Position openings and maturity",
+        "email_security": "Security alerts",
+        "email_security_hint": "Password changes and sign-in protection",
+        "email_product": "Monthly product update",
+        "saved": "Notification preferences saved"
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "Language and appearance follow you across devices once saved.",
+        "language": "Language",
+        "theme": "Theme",
+        "saved": "Preferences saved"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "Every figure on the record.",
+    "panelPoints": {
+      "review": "Deposits and withdrawals are checked by a person before balances change.",
+      "ledger": "Each movement gets a reference ID you can trace in your history.",
+      "security": "Two-step sign-in and row-level data isolation protect your account."
+    },
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "fullName": "Full name",
+    "username": "Username",
+    "usernameHint": "3–24 characters: lowercase letters, numbers and underscores.",
+    "phone": "Phone number",
+    "phoneHint": "Used for account security. We'll ask before sending any texts.",
+    "referral": "Referral code",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "acceptTerms": "I agree to the <terms>Terms of service</terms> and <privacy>Privacy policy</privacy>, and I've read the <risk>Risk disclosure</risk>.",
+    "login": {
+      "title": "Log in",
+      "subtitle": "Welcome back. Enter your details to continue.",
+      "submit": "Log in",
+      "submitting": "Logging in…",
+      "forgot": "Forgot password?",
+      "noAccount": "New here?",
+      "register": "Create an account",
+      "signedOut": "You've been signed out.",
+      "notVerified": "Confirm your email address before logging in. We can send the link again.",
+      "resend": "Send the link again"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "It takes a few minutes. You'll confirm your email before you can sign in.",
+      "submit": "Create account",
+      "submitting": "Creating account…",
+      "haveAccount": "Already have an account?",
+      "login": "Log in",
+      "closed": "New registrations are paused right now. Try again later."
+    },
+    "strength": {
+      "label": "Password strength",
+      "levels": [
+        "Too weak",
+        "Weak",
+        "Fair",
+        "Good",
+        "Strong"
+      ],
+      "rules": {
+        "length": "At least 10 characters",
+        "lower": "A lowercase letter",
+        "upper": "An uppercase letter",
+        "number": "A number",
+        "symbol": "A symbol, such as ! or #"
+      }
+    },
+    "verify": {
+      "title": "Check your inbox",
+      "body": "We sent a confirmation link to {email}. Open it on this device to finish creating your account.",
+      "bodyNoEmail": "Open the confirmation link we emailed you to finish creating your account.",
+      "duplicateNote": "If an account already exists for this address, no new email is sent — log in or reset your password instead.",
+      "resend": "Send the link again",
+      "resent": "If the address needs confirming, a new link is on its way.",
+      "expiredTitle": "That link didn't work",
+      "expiredBody": "Confirmation and reset links expire after a short time and can be used once. Request a new one below.",
+      "backToLogin": "Back to log in"
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "subtitle": "Enter the email you signed up with and we'll send a reset link.",
+      "submit": "Send reset link",
+      "sent": "If an account exists for that email, a reset link is on its way. It expires in one hour.",
+      "back": "Back to log in"
+    },
+    "reset": {
+      "title": "Choose a new password",
+      "subtitle": "Use a password you haven't used here before.",
+      "submit": "Update password",
+      "success": "Password updated. You're signed in.",
+      "expired": "This reset link has expired. Request a new one."
+    },
+    "logout": {
+      "title": "Log out?",
+      "body": "You'll need your email and password to sign in again.",
+      "confirm": "Log out",
+      "everywhere": "Log out on all devices",
+      "cancel": "Stay signed in"
+    },
+    "mfa": {
+      "title": "Two-step verification",
+      "subtitle": "Enter the 6-digit code from your authenticator app.",
+      "code": "Verification code",
+      "submit": "Verify",
+      "invalid": "That code didn't match. Check your app and try again.",
+      "useAnother": "Sign out and use a different account"
+    },
+    "admin": {
+      "title": "Staff sign-in",
+      "subtitle": "For authorised staff only. Access is checked against your assigned role.",
+      "forbidden": "This account doesn't have staff access.",
+      "customer": "Looking for your account? <link>Customer log in</link>"
+    }
+  },
+  "phone": {
+    "country": "Country or region",
+    "search": "Search countries",
+    "noMatch": "No countries match",
+    "number": "Phone number"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "passwordWeak": "Use at least 10 characters with upper and lowercase letters, a number and a symbol.",
+    "passwordTooLong": "Use 128 characters or fewer.",
+    "passwordMismatch": "Passwords don't match.",
+    "passwordBreached": "This password has appeared in a data breach. Choose a different one.",
+    "passwordSame": "Choose a password different from your current one.",
+    "phoneInvalid": "Enter a valid phone number for the selected country.",
+    "usernameShort": "Use at least 3 characters.",
+    "usernameLong": "Use 24 characters or fewer.",
+    "usernameChars": "Use only lowercase letters, numbers and underscores.",
+    "usernameTaken": "That username is taken. Try another.",
+    "nameShort": "Enter your full name.",
+    "nameLong": "Use 100 characters or fewer.",
+    "termsRequired": "You need to accept the terms to create an account.",
+    "consentRequired": "Tick the box to confirm.",
+    "referralInvalid": "Referral codes use letters and numbers only.",
+    "amountInvalid": "Enter an amount with up to 2 decimal places.",
+    "amountPositive": "Enter an amount greater than zero.",
+    "methodInvalid": "Choose a payment method.",
+    "referenceLong": "Use 140 characters or fewer.",
+    "noteLong": "Use 500 characters or fewer.",
+    "destinationInvalid": "Enter a valid wallet address (letters and numbers only).",
+    "planInvalid": "Choose a plan.",
+    "invalidRequest": "Something about this request isn't valid. Refresh and try again.",
+    "subjectShort": "Use at least 4 characters.",
+    "subjectLong": "Use 140 characters or fewer.",
+    "messageShort": "Write at least 10 characters.",
+    "messageLong": "Use 4,000 characters or fewer.",
+    "slugInvalid": "Use 2–40 lowercase letters, numbers and hyphens.",
+    "descriptionShort": "Write at least 10 characters.",
+    "descriptionLong": "Use 400 characters or fewer.",
+    "termInvalid": "Enter a term between 1 and 3,650 days.",
+    "rangeInvalid": "The maximum must be greater than the minimum.",
+    "targetBasisRequired": "A return target needs both values and a published basis.",
+    "reasonRequired": "Give a reason (at least 4 characters).",
+    "codeInvalid": "Enter the 6-digit code."
+  },
+  "errors": {
+    "generic": "Something went wrong on our side. Try again in a moment.",
+    "network": "We couldn't reach the server. Check your connection and try again.",
+    "not_configured": "Accounts aren't available yet: the backend isn't connected.",
+    "rate_limited": "Too many attempts. Wait a few minutes, then try again.",
+    "validation": "Check the highlighted fields.",
+    "unauthorized": "Your session has ended. Log in again.",
+    "forbidden": "Your account doesn't have permission to do that.",
+    "mfa_required": "Verify with your authenticator app to continue.",
+    "account_suspended": "This account is suspended. Contact support for help.",
+    "maintenance": "New requests are paused for maintenance. Try again later.",
+    "invalid_credentials": "That email and password don't match. Check them and try again.",
+    "email_not_confirmed": "Confirm your email address before logging in.",
+    "registrations_closed": "New registrations are paused right now.",
+    "reset_link_expired": "This reset link has expired. Request a new one.",
+    "amount_invalid": "Enter a valid amount.",
+    "amount_below_min": "The amount is below the minimum.",
+    "amount_above_max": "The amount is above the maximum.",
+    "amount_below_fee": "The amount must be larger than the withdrawal fee.",
+    "insufficient_funds": "Your available balance is too low for this amount.",
+    "asset_invalid": "That asset isn't available for this request.",
+    "method_invalid": "Choose a valid payment method.",
+    "destination_invalid": "Check the destination address.",
+    "network_invalid": "Choose a network.",
+    "too_many_pending": "You have too many open requests. Wait for them to be reviewed first.",
+    "duplicate_request": "An identical request was just submitted. Check your history before trying again.",
+    "invalid_request": "This request isn't valid. Refresh the page and try again.",
+    "invalid_status": "This item has already moved on and can't be changed this way.",
+    "invalid_decision": "Choose a valid decision.",
+    "not_found": "We couldn't find that item.",
+    "plan_invalid": "That plan isn't available.",
+    "cancel_window_closed": "Positions can only be cancelled within 24 hours of opening.",
+    "self_review_forbidden": "You can't review your own request. Ask another reviewer.",
+    "self_action_forbidden": "You can't change your own account this way.",
+    "reason_required": "Add a reason before continuing.",
+    "payout_reference_required": "Add the payout reference to mark this as completed.",
+    "credit_exceeds_request": "The credited amount can't be more than the requested amount.",
+    "last_owner": "You can't remove the last owner.",
+    "slug_taken": "Another plan already uses that slug.",
+    "ticket_closed": "This ticket is closed. Open a new one if you still need help.",
+    "message_invalid": "Write a message between 10 and 4,000 characters.",
+    "email_invalid": "Enter a valid email address.",
+    "consent_required": "Consent is required.",
+    "balance_missing": "Your account isn't fully set up. Contact support.",
+    "upload_invalid": "Upload a PNG, JPEG, WebP or PDF up to 5 MB."
+  },
+  "admin": {
+    "nav": {
+      "overview": "Overview",
+      "deposits": "Deposits",
+      "withdrawals": "Withdrawals",
+      "investments": "Positions",
+      "transactions": "Ledger",
+      "plans": "Plans",
+      "users": "Users",
+      "kyc": "Identity checks",
+      "support": "Support",
+      "notifications": "Announcements",
+      "audit": "Audit log",
+      "settings": "Settings",
+      "exit": "Customer view",
+      "breadcrumb": "Breadcrumb",
+      "sections": {
+        "money": "Money",
+        "people": "People",
+        "system": "System"
+      }
+    },
+    "common": {
+      "search": "Search",
+      "searchPlaceholder": "Reference, email or name",
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "apply": "Apply",
+      "reset": "Reset",
+      "sort": "Sort",
+      "newest": "Newest first",
+      "oldest": "Oldest first",
+      "largest": "Largest amount",
+      "view": "View",
+      "review": "Review",
+      "noPermission": "Your role can view this page but not change it.",
+      "mfaEnrol": "Staff accounts should use two-step sign-in. Set it up in Settings → Security.",
+      "simulatedLabel": "Simulated money flows — demo mode is on."
+    },
+    "overview": {
+      "title": "Operations overview",
+      "description": "Live figures computed from platform records.",
+      "usersTotal": "Registered users",
+      "usersNew": "{count} new in the last 7 days",
+      "usersActive": "Active in 30 days",
+      "usersSuspended": "{count} suspended",
+      "depositsPending": "Deposits to review",
+      "withdrawalsOpen": "Withdrawals open",
+      "investmentsActive": "Active positions",
+      "investmentsDue": "{count} past maturity",
+      "ticketsOpen": "Open tickets",
+      "balancesTitle": "Balances held for customers",
+      "available": "Available",
+      "held": "Held for withdrawals",
+      "invested": "In positions",
+      "flowsTitle": "Daily flows, last 30 days",
+      "flowsDescription": "Confirmed deposits and paid-out withdrawals",
+      "activityTitle": "Recent staff and system activity",
+      "activityEmpty": "No activity recorded yet.",
+      "queueTitle": "Review queue",
+      "queueDeposits": "Oldest pending deposit",
+      "queueWithdrawals": "Oldest open withdrawal",
+      "queueEmpty": "Nothing waiting.",
+      "processMaturities": "Settle due positions",
+      "processed": "{count, plural, =0 {No positions were due} one {# position settled} other {# positions settled}}"
+    },
+    "deposits": {
+      "title": "Deposit review",
+      "description": "Approve only when the funds are confirmed received. Approval credits the customer's available balance.",
+      "approve": "Approve and credit",
+      "reject": "Reject",
+      "approveTitle": "Approve deposit {reference}?",
+      "approveBody": "Confirm the funds arrived. The credited amount can be less than requested if less arrived, never more.",
+      "creditedAmount": "Amount received",
+      "rejectTitle": "Reject deposit {reference}?",
+      "rejectBody": "Nothing is credited. The customer sees the reason you give.",
+      "reason": "Reason",
+      "note": "Internal note",
+      "approved": "Deposit approved and credited",
+      "rejected": "Deposit rejected",
+      "selfReview": "Your own request — another reviewer must handle it.",
+      "receipt": "Receipt",
+      "txReference": "Transfer reference",
+      "customerNote": "Customer note"
+    },
+    "withdrawals": {
+      "title": "Withdrawal review",
+      "description": "Approve after checks, then mark completed once the payout is confirmed with its reference.",
+      "processing": "Mark processing",
+      "approve": "Approve",
+      "complete": "Mark completed",
+      "reject": "Reject and release",
+      "completeTitle": "Mark {reference} as paid out?",
+      "completeBody": "Only do this after the payout has been confirmed. Enter the payout transaction or reference.",
+      "payoutReference": "Payout reference",
+      "rejectTitle": "Reject withdrawal {reference}?",
+      "rejectBody": "The held amount returns to the customer's available balance.",
+      "approveTitle": "Approve withdrawal {reference}?",
+      "approveBody": "Approval authorises the payout. Funds stay held until you mark it completed.",
+      "updated": "Withdrawal updated"
+    },
+    "investments": {
+      "title": "Positions",
+      "description": "All customer positions. Maturity returns principal only.",
+      "due": "Past maturity"
+    },
+    "plans": {
+      "title": "Investment plans",
+      "description": "Changes apply to new positions only. Open positions keep the terms they started with.",
+      "new": "New plan",
+      "edit": "Edit",
+      "editTitle": "Edit plan",
+      "newTitle": "New plan",
+      "name": "Name",
+      "slug": "URL key",
+      "description_": "Description",
+      "min": "Minimum amount",
+      "max": "Maximum amount",
+      "currency": "Currency",
+      "term": "Term (days)",
+      "risk": "Risk level",
+      "riskDescription": "Risk description",
+      "targetMin": "Target return from (%)",
+      "targetMax": "Target return to (%)",
+      "targetBasis": "Basis for the target",
+      "targetHelp": "Leave both empty unless you publish how the target is calculated. A target is shown to customers with its basis and is never a guarantee.",
+      "active": "Open to new positions",
+      "order": "Display order",
+      "saved": "Plan saved",
+      "inactive": "Closed",
+      "openPositions": "{count} open"
+    },
+    "users": {
+      "title": "Users",
+      "description": "Search accounts, inspect activity and manage access.",
+      "joined": "Joined",
+      "roles": "Roles",
+      "balance": "Total balance",
+      "detailTitle": "Account",
+      "profile": "Profile",
+      "activity": "Recent ledger entries",
+      "requests": "Open requests",
+      "suspend": "Suspend account",
+      "reactivate": "Reactivate account",
+      "suspendTitle": "Suspend this account?",
+      "suspendBody": "The customer can't sign in or move money while suspended. Give a reason for the audit log.",
+      "reactivateTitle": "Reactivate this account?",
+      "statusUpdated": "Account status updated",
+      "rolesTitle": "Staff roles",
+      "rolesHelp": "Owners manage all roles. Admins can grant finance and support. Nobody can change their own roles.",
+      "grant": "Grant",
+      "revoke": "Revoke",
+      "roleUpdated": "Roles updated",
+      "roleNames": {
+        "owner": "Owner",
+        "admin": "Administrator",
+        "finance": "Finance reviewer",
+        "support": "Support"
+      },
+      "noRoles": "Customer",
+      "statusReason": "Reason"
+    },
+    "kyc": {
+      "title": "Identity checks",
+      "description": "Identity verification runs through a compliant verification provider.",
+      "notConfigured": "No identity verification provider is connected. Statuses below change only when a provider reports results — they can't be set by hand.",
+      "counts": "Accounts by verification status"
+    },
+    "support": {
+      "title": "Support tickets",
+      "description": "Answer customers and keep every message on the ticket.",
+      "assigned": "Assigned",
+      "unassigned": "Unassigned",
+      "customer": "Customer",
+      "setStatus": "Status",
+      "setPriority": "Priority",
+      "priorities": {
+        "low": "Low",
+        "normal": "Normal",
+        "high": "High"
+      },
+      "updated": "Ticket updated"
+    },
+    "notifications": {
+      "title": "Announcements",
+      "description": "Send an in-app notification to every active customer or to one account.",
+      "audience": "Audience",
+      "all": "All active customers",
+      "one": "One customer",
+      "userEmail": "Customer email",
+      "userNotFound": "No account matches that email.",
+      "titleField": "Title",
+      "body": "Message",
+      "send": "Send announcement",
+      "sent": "{count, plural, one {Sent to # customer} other {Sent to # customers}}",
+      "recent": "Recently sent"
+    },
+    "audit": {
+      "title": "Audit log",
+      "description": "Append-only record of staff actions and balance-changing events.",
+      "actor": "Actor",
+      "action": "Action",
+      "entity": "Entity",
+      "details": "Details",
+      "system": "System",
+      "filterAction": "Action contains"
+    },
+    "settings": {
+      "title": "Platform settings",
+      "description": "Limits and switches used by the database functions. Every change is audited.",
+      "limits": "Limits and fees",
+      "switches": "Platform switches",
+      "assets": "Supported assets",
+      "keys": {
+        "deposit_min": "Minimum deposit (USD)",
+        "deposit_max": "Maximum deposit (USD)",
+        "withdrawal_min": "Minimum withdrawal (USD)",
+        "withdrawal_max": "Maximum withdrawal (USD)",
+        "withdrawal_fee_flat": "Withdrawal fee, flat (USD)",
+        "withdrawal_fee_percent": "Withdrawal fee (%)",
+        "maintenance_mode": "Maintenance mode — pause new money operations",
+        "registrations_open": "Allow new registrations"
+      },
+      "assetActive": "Active",
+      "assetDeposits": "Deposits",
+      "assetWithdrawals": "Withdrawals",
+      "saved": "Setting saved"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { StartupScreen } from "@/components/animations/startup-screen";
+import { Hero } from "@/components/marketing/hero";
+import { MarketTicker } from "@/components/marketing/market-ticker";
+import { Features } from "@/components/marketing/features";
+import { PlansComparison } from "@/components/marketing/plans-comparison";
+import { HowItWorks } from "@/components/marketing/how-it-works";
+import { MarketAnalytics } from "@/components/marketing/market-analytics";
+import { SecuritySection } from "@/components/marketing/security-section";
+import { SupportedAssets } from "@/components/marketing/supported-assets";
+import { Faq } from "@/components/marketing/faq";
+import { Newsletter } from "@/components/marketing/newsletter";
+import { FinalCta } from "@/components/marketing/final-cta";
+import { PlatformCards } from "@/components/marketing/platform-cards";
+import { getPublicPlans } from "@/lib/database/public-data";
+import { getPrices } from "@/lib/market/coingecko";
+import { brand } from "@/lib/config/brand";
+
+// Market data and plans refresh at most once a minute.
+export const revalidate = 60;
+
+export default async function HomePage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("startup");
+  const [{ plans, isDefault }, prices] = await Promise.all([getPublicPlans(), getPrices(["bitcoin", "ethereum"])]);
+  // Hero cards show live prices or an "unavailable" note — never placeholder numbers.
+  const coins = [
+    { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
+    { id: "ethereum", symbol: "ETH", name: "Ethereum" },
+  ].map((c) => ({ ...c, price: prices?.[c.id]?.usd ?? null, change: prices?.[c.id]?.usd_24h_change ?? null }));
+
+  return (
+    <>
+      <StartupScreen loadingLabel={t("loading", { brand: brand.name })} />
+      <Hero coins={coins} />
+      <MarketTicker />
+      <PlatformCards />
+      <Features />
+      <PlansComparison plans={plans} isDefault={isDefault} />
+      <HowItWorks />
+      <MarketAnalytics />
+      <SecuritySection />
+      <SupportedAssets />
+      <Faq />
+      <Newsletter />
+      <FinalCta />
+    </>
+  );
+}

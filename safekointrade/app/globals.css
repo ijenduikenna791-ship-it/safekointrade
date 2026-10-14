@@ -1,0 +1,323 @@
+@import "./fonts.css";
+@import "tailwindcss";
+
+/* Class-based dark mode, driven by next-themes on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens — "minted metal"
+   petrol ink · porcelain · brass (accent) · verdigris (gain) · oxide (loss)
+   Change brand colours here; every component reads these variables.
+--------------------------------------------------------------------------- */
+:root {
+  /* SafeKoinTrade brand — used by the public site, logo and CTAs */
+  --brand-orange: #cf4a0b; /* white text passes 4.5:1 */
+  --brand-orange-hover: #b5400a;
+  --brand-mint: #3ce3a3;
+  --brand-mint-hover: #5eeab5;
+  --brand-mint-ink: #0f7a55; /* mint as text on light */
+  --brand-teal: #14403b;
+  --brand-teal-hover: #1c544e;
+  --brand-night: #050f0d;
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --surface-2: #edf1ef;
+  --surface-3: #e3e9e7;
+  --line: #d8e0dd;
+  --line-strong: #bfcbc7;
+  --ink: #0f1e26;
+  --ink-muted: #4a5b62;
+  --ink-subtle: #6f8086;
+  --inverse: #f4f6f5;
+
+  --primary: #0f1e26; /* solid buttons */
+  --primary-ink: #f4f6f5;
+  --primary-hover: #1d3340;
+  --brass: #8a6524; /* text-safe brass on light */
+  --brass-soft: #f3ead9;
+  --brass-line: #d9c39a;
+  --gain: #2a7a70;
+  --gain-soft: #dff0ec;
+  --loss: #b04b39;
+  --loss-soft: #f8e4df;
+  --warn: #8f6510;
+  --warn-soft: #f8eed5;
+  --info: #2f5f8a;
+  --info-soft: #e1ebf4;
+  --focus: #c8a15a;
+
+  /* Categorical chart order (validated: dataviz validate_palette.js, light/#fff) */
+  --chart-1: #b07a12;
+  --chart-2: #3b5fd0;
+  --chart-3: #16907c;
+  --chart-4: #cc4a3a;
+  --chart-grid: #e1e7e5;
+
+  --shadow-sm: 0 1px 2px rgb(15 30 38 / 0.06);
+  --shadow-md: 0 1px 2px rgb(15 30 38 / 0.05), 0 8px 24px -12px rgb(15 30 38 / 0.18);
+  --shadow-lg: 0 2px 4px rgb(15 30 38 / 0.04), 0 24px 48px -20px rgb(15 30 38 / 0.28);
+
+  color-scheme: light;
+}
+
+.dark {
+  --brand-mint-ink: #3ce3a3;
+  --bg: #0c1a22;
+  --surface: #11232c;
+  --surface-2: #162c36;
+  --surface-3: #1d3641;
+  --line: #22404b;
+  --line-strong: #2f5260;
+  --ink: #e8eeec;
+  --ink-muted: #a7b7b9;
+  --ink-subtle: #7d9195;
+  --inverse: #0c1a22;
+
+  --primary: #c8a15a;
+  --primary-ink: #0c1a22;
+  --primary-hover: #d6b273;
+  --brass: #d2ad68;
+  --brass-soft: #2a2a1f;
+  --brass-line: #6b5631;
+  --gain: #62b9ad;
+  --gain-soft: #12332f;
+  --loss: #e48370;
+  --loss-soft: #3a211d;
+  --warn: #e2b55a;
+  --warn-soft: #33291a;
+  --info: #7fb0dc;
+  --info-soft: #182c3d;
+  --focus: #d6b273;
+
+  /* validated against dark surface #11232c */
+  --chart-1: #bb852a;
+  --chart-2: #6b85e3;
+  --chart-3: #2aa38d;
+  --chart-4: #de6650;
+  --chart-grid: #1d3641;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.25), 0 10px 28px -14px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.2), 0 28px 56px -24px rgb(0 0 0 / 0.75);
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-inverse: var(--inverse);
+  --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
+  --color-primary-hover: var(--primary-hover);
+  --color-brass: var(--brass);
+  --color-brass-soft: var(--brass-soft);
+  --color-brass-line: var(--brass-line);
+  --color-gain: var(--gain);
+  --color-gain-soft: var(--gain-soft);
+  --color-loss: var(--loss);
+  --color-loss-soft: var(--loss-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-focus: var(--focus);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-hover: var(--brand-orange-hover);
+  --color-brand-mint: var(--brand-mint);
+  --color-brand-mint-hover: var(--brand-mint-hover);
+  --color-brand-mint-ink: var(--brand-mint-ink);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-teal-hover: var(--brand-teal-hover);
+  --color-brand-night: var(--brand-night);
+
+  --font-display: "Schibsted Grotesk", "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, "PingFang SC",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --animate-ticker: ticker 60s linear infinite;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection { background: var(--brass-soft); color: var(--ink); }
+  [dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+}
+
+@layer utilities {
+  .tabular { font-variant-numeric: tabular-nums; }
+  .container-page {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) { .container-page { padding-inline: 1.5rem; } }
+  @media (min-width: 1024px) { .container-page { padding-inline: 2rem; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Startup screen: hidden before paint for returning visitors, and a
+   CSS-only safety net that removes it after 4s if JavaScript never runs. */
+html[data-splash="seen"] #startup-screen { display: none; }
+#startup-screen { animation: splash-failsafe 0s linear 4s forwards; }
+@keyframes splash-failsafe { to { visibility: hidden; pointer-events: none; opacity: 0; } }
+
+/* Hero aurora drift (public site) */
+@keyframes aurora-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.9; }
+  50% { transform: translate3d(6%, 4%, 0) scale(1.08); opacity: 1; }
+}
+@keyframes aurora-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.05); opacity: 0.8; }
+  50% { transform: translate3d(-5%, 6%, 0) scale(0.95); opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-a { animation: aurora-drift-a 18s ease-in-out infinite; }
+  .aurora-b { animation: aurora-drift-b 22s ease-in-out infinite; }
+}
+
+/* Public site + auth pages: re-point the accent tokens at the SafeKoinTrade brand.
+   Dashboards keep the original palette. */
+.site-public {
+  --brass: var(--brand-mint-ink);
+  --brass-soft: #ddf7ec;
+  --brass-line: #a4e8cb;
+  --primary: var(--brand-teal);
+  --primary-ink: #ffffff;
+  --primary-hover: var(--brand-teal-hover);
+  --focus: #1fbf86;
+}
+.dark .site-public,
+.site-public .dark,
+.site-public.dark {
+  --brass: #3ce3a3;
+  --brass-soft: #0e2a22;
+  --brass-line: #1f5a46;
+  --primary: #3ce3a3;
+  --primary-ink: #0b3b33;
+  --primary-hover: #5eeab5;
+  --focus: #3ce3a3;
+}
+
+/* Floating coin bob (public site hero) */
+@keyframes coin-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .float-a { animation: coin-float 6s ease-in-out infinite; }
+  .float-b { animation: coin-float 7.5s ease-in-out -2s infinite; }
+  .float-c { animation: coin-float 5.2s ease-in-out -1s infinite; }
+}
+
+/* Admin console: orange accent so staff always know where they are. */
+.admin-console {
+  --brass: #a8470b; /* text-safe on light surfaces */
+  --brass-soft: #fcebdd;
+  --brass-line: #f1c3a0;
+  --focus: #e0732b;
+}
+.dark .admin-console,
+.admin-console .dark,
+.admin-console.dark {
+  --primary: #ff9d5c;
+  --primary-ink: #1d0e04;
+  --primary-hover: #ffb27f;
+  --brass: #ff9d5c;
+  --brass-soft: #3a2214;
+  --brass-line: #7a4220;
+  --focus: #ff9d5c;
+}
+
+/* Customer dashboard glow (reads as depth in dark mode, a soft tint in light). */
+.dash-glow {
+  background-image:
+    radial-gradient(120% 90% at 85% -10%, color-mix(in oklab, var(--brass) 16%, transparent), transparent 60%),
+    radial-gradient(80% 70% at 0% 110%, color-mix(in oklab, var(--chart-2) 10%, transparent), transparent 60%);
+}
+.dark .dash-glow {
+  background-image:
+    radial-gradient(120% 90% at 85% -10%, color-mix(in oklab, var(--brass) 26%, transparent), transparent 60%),
+    radial-gradient(80% 70% at 0% 110%, color-mix(in oklab, var(--chart-2) 22%, transparent), transparent 60%);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--brass) 18%, transparent), 0 30px 60px -30px color-mix(in oklab, var(--brass) 35%, transparent);
+}
+.dark .dash-card-glow {
+  background-image: linear-gradient(180deg, color-mix(in oklab, var(--brass) 7%, transparent), transparent 55%);
+}
+.chart-glow path.recharts-area-curve {
+  filter: drop-shadow(0 0 6px color-mix(in oklab, var(--brass) 70%, transparent));
+}
+
+/* Per-coin tint on market cards (stronger in dark mode). */
+.coin-glow {
+  background: radial-gradient(90% 70% at 100% 100%, color-mix(in oklab, var(--tint) 14%, transparent), transparent 70%);
+}
+.dark .coin-glow {
+  background:
+    radial-gradient(90% 75% at 100% 100%, color-mix(in oklab, var(--tint) 30%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--tint) 8%, transparent), transparent 50%);
+}
+
+/* Scrollable but without a visible scrollbar (sidebar navigation). */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

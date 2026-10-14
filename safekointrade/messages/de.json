@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "Krypto-Anlagepläne mit fester Laufzeit",
+    "description": "Krypto-Anlagepläne mit fester Laufzeit, manueller Prüfung jeder Ein- und Auszahlung und einem Kontobuch, das Sie prüfen können."
+  },
+  "common": {
+    "skipToContent": "Zum Inhalt springen",
+    "loading": "Wird geladen",
+    "close": "Schließen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Änderungen speichern",
+    "saving": "Wird gespeichert…",
+    "saved": "Änderungen gespeichert",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "search": "Suchen",
+    "optional": "Optional",
+    "required": "Pflichtfeld",
+    "retry": "Erneut versuchen",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "viewAll": "Alle anzeigen",
+    "details": "Details",
+    "page": "Seite {page} von {total}",
+    "noResults": "Keine Treffer für diese Filter.",
+    "simulationTitle": "Demo-Modus",
+    "simulationNotice": "Guthaben und Geldbewegungen auf dieser Plattform sind simuliert. Es wird kein echtes Geld bewegt, bis ein lizenzierter Zahlungsdienstleister angebunden ist.",
+    "simulationShort": "Simuliert",
+    "illustration": "Illustration",
+    "sampleData": "Beispieldaten",
+    "notConfiguredTitle": "Backend nicht verbunden",
+    "notConfigured": "Supabase-Zugangsdaten fehlen. Tragen Sie sie in .env.local ein, um Konten zu aktivieren (siehe README).",
+    "genericError": "Bei uns ist etwas schiefgelaufen. Versuchen Sie es gleich noch einmal.",
+    "networkError": "Der Server ist nicht erreichbar. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "rateLimited": "Zu viele Versuche. Warten Sie eine Minute und versuchen Sie es dann erneut.",
+    "unauthorized": "Melden Sie sich an, um fortzufahren.",
+    "forbidden": "Ihr Konto hat darauf keinen Zugriff.",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundBody": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Zur Startseite",
+    "errorTitle": "Diese Seite konnte nicht geladen werden",
+    "errorBody": "Ein unerwarteter Fehler hat das Laden dieser Seite verhindert. Versuchen Sie es erneut oder kommen Sie später wieder.",
+    "status": {
+      "pending": "Ausstehend",
+      "processing": "In Bearbeitung",
+      "approved": "Genehmigt",
+      "completed": "Abgeschlossen",
+      "active": "Aktiv",
+      "matured": "Fällig geworden",
+      "rejected": "Abgelehnt",
+      "cancelled": "Storniert",
+      "failed": "Fehlgeschlagen",
+      "open": "Offen",
+      "answered": "Beantwortet",
+      "closed": "Geschlossen",
+      "suspended": "Gesperrt",
+      "verified": "Verifiziert",
+      "unverified": "Nicht verifiziert"
+    },
+    "risk": {
+      "low": "Geringes Risiko",
+      "moderate": "Mittleres Risiko",
+      "high": "Hohes Risiko"
+    },
+    "photoCredit": "Foto: {name} / Pexels",
+    "apply": "Anwenden"
+  },
+  "theme": {
+    "label": "Design",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "language": {
+    "label": "Sprache",
+    "change": "Sprache ändern"
+  },
+  "nav": {
+    "markets": "Märkte",
+    "plans": "Anlagepläne",
+    "how": "So funktioniert's",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "getStarted": "Loslegen",
+    "dashboard": "Dashboard",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "primary": "Hauptnavigation",
+    "home": "Startseite",
+    "signUp": "Registrieren"
+  },
+  "startup": {
+    "loading": "{brand} wird geladen"
+  },
+  "home": {
+    "hero": {
+      "title": "Krypto-Pläne mit fester Laufzeit und offenem Kontobuch.",
+      "body": "Wählen Sie einen Plan über 30, 90 oder 180 Tage und verfolgen Sie jede Bewegung — Einzahlungen, Positionen, Fälligkeit — in einem Verlauf, den Sie prüfen können. Jede Ein- und Auszahlung prüft ein Mensch, kein Skript.",
+      "primary": "Konto eröffnen",
+      "secondary": "Pläne vergleichen",
+      "note": "Krypto-Assets sind volatil. Sie können einen Teil oder Ihr gesamtes investiertes Geld verlieren.",
+      "headline": "Krypto-Pläne, die Sie prüfen können",
+      "learnMore": "Mehr erfahren"
+    },
+    "lifecycle": {
+      "label": "So verläuft eine Position",
+      "plan": "Growth-Plan",
+      "term": "90 Tage Laufzeit",
+      "amount": "Positionsgröße",
+      "day": "Tag {day} von {total}",
+      "steps": {
+        "deposit": "Einzahlung geprüft",
+        "opened": "Position eröffnet",
+        "running": "Laufzeit aktiv",
+        "matures": "Fällig"
+      },
+      "caption": "Jeder Schritt wird mit einer Referenz-ID im Verlauf Ihres Kontos festgehalten."
+    },
+    "ticker": {
+      "label": "Live-Marktpreise",
+      "unavailable": "Live-Preise sind derzeit nicht verfügbar.",
+      "source": "Preise von CoinGecko, jede Minute aktualisiert."
+    },
+    "commitments": {
+      "title": "Verpflichtungen, die in die Plattform eingebaut sind",
+      "items": {
+        "terms": {
+          "value": "30, 90, 180",
+          "label": "Tage Laufzeit, festgelegt in dem Moment, in dem Sie eine Position eröffnen"
+        },
+        "review": {
+          "value": "Jeder Auftrag",
+          "label": "Ein- und Auszahlungen prüft ein Mensch, bevor sich Guthaben ändern"
+        },
+        "audit": {
+          "value": "Lückenloser Prüfpfad",
+          "label": "Jede Guthabenänderung wird mit Wer, Was und Wann erfasst"
+        },
+        "languages": {
+          "value": "8 Sprachen",
+          "label": "Darunter Arabisch mit Rechts-nach-links-Layout und Yoruba"
+        }
+      }
+    },
+    "features": {
+      "title": "Für Menschen, die das Kleingedruckte lesen",
+      "body": "Alles in Ihrem Dashboard stammt aus Ihren Kontodaten. Nichts wird geschätzt, aufgerundet oder erfunden, um gut auszusehen.",
+      "items": {
+        "ledger": {
+          "title": "Ein Kontobuch, keine Anzeigetafel",
+          "body": "Jede Einzahlung, Position und Auszahlung trägt eine Referenz-ID, einen Status und einen Zeitstempel, die Sie nachverfolgen können."
+        },
+        "terms": {
+          "title": "Pläne mit fester Laufzeit",
+          "body": "Wählen Sie einen Plan und einen Betrag innerhalb seiner Spanne – die Laufzeit steht ab dem Eröffnungstag fest."
+        },
+        "review": {
+          "title": "Menschliche Prüfung bei Geldbewegungen",
+          "body": "Finanzprüfer geben Einzahlungen frei, sobald die Mittel bestätigt sind, und genehmigen Auszahlungen, bevor etwas abfließt."
+        },
+        "security": {
+          "title": "Kontoschutz",
+          "body": "Bestätigte E-Mail, strenge Passwortregeln und optionale Anmeldung per Authenticator-App schützen Ihr Konto."
+        },
+        "languages": {
+          "title": "Ihre Sprache, Ihr Format",
+          "body": "Datum, Zahlen und Währungen richten sich auf der ganzen Plattform nach Ihren Spracheinstellungen."
+        },
+        "support": {
+          "title": "Support mit Verlauf",
+          "body": "Eröffnen Sie ein Ticket im Dashboard – jede Antwort bleibt daran gebunden."
+        }
+      }
+    },
+    "plans": {
+      "title": "Anlagepläne vergleichen",
+      "body": "Spannen und Laufzeiten gelten je Plan. Wählen Sie den Plan, der zu Ihrem Betrag und Ihrem Zeithorizont passt.",
+      "range": "Anlagespanne",
+      "term": "Laufzeit",
+      "days": "{count} Tage",
+      "asset": "Währung",
+      "target": "Renditeziel",
+      "noTarget": "Für diesen Plan ist kein Renditeziel festgelegt",
+      "cta": "Diesen Plan eröffnen",
+      "sampleNote": "Es werden Standard-Planeinstellungen angezeigt. Die echten Einstellungen laden, sobald die Datenbank verbunden ist.",
+      "riskNote": "Risikostufen beschreiben das Ausmaß der Krypto-Marktschwankungen. Sie sind keine Prognose."
+    },
+    "how": {
+      "title": "So funktioniert's",
+      "body": "Vier Schritte von der Registrierung bis zur Auszahlung. Jeder hinterlässt einen Eintrag in Ihrem Konto.",
+      "steps": {
+        "account": {
+          "title": "Konto erstellen und bestätigen",
+          "body": "Registrieren Sie sich mit E-Mail und Telefonnummer und bestätigen Sie anschließend Ihre E-Mail-Adresse."
+        },
+        "deposit": {
+          "title": "Einzahlung anfordern",
+          "body": "Senden Sie einen Einzahlungsauftrag mit Referenz-ID. Ihr Guthaben ändert sich erst, wenn ein Prüfer die Mittel bestätigt."
+        },
+        "invest": {
+          "title": "Position eröffnen",
+          "body": "Verschieben Sie einen Teil Ihres verfügbaren Guthabens in einen Plan. Die Laufzeit beginnt mit der Eröffnung."
+        },
+        "withdraw": {
+          "title": "Fälligkeit erreichen und auszahlen",
+          "body": "Am Ende der Laufzeit fließt die Position in Ihr verfügbares Guthaben zurück, und Sie können eine Auszahlung anfordern."
+        }
+      },
+      "imageAlt": "Eine Hand hält eine goldfarbene Bitcoin-Münze vor einen Bildschirm mit Kursdiagramm"
+    },
+    "analytics": {
+      "title": "Marktanalyse",
+      "body": "Dreißig Tage Kursverlauf der unterstützten Assets, basierend auf Live-Marktdaten.",
+      "range": "Kurs über 30 Tage, USD",
+      "change": "Änderung über 30 Tage",
+      "unavailable": "Der Kursverlauf ist derzeit nicht verfügbar. Schauen Sie bald wieder vorbei.",
+      "dashboardTitle": "Ihr Dashboard auf einen Blick",
+      "dashboardBody": "Verfügbares, investiertes und ausstehendes Guthaben, offene Positionen und jede Transaktion – direkt aus Ihren Daten."
+    },
+    "security": {
+      "title": "Sicherheit, die nachvollziehbar ist",
+      "body": "Der Schutz ist ab der Datenbank in Schichten aufgebaut, und jede privilegierte Aktion wird protokolliert.",
+      "items": {
+        "rls": {
+          "title": "Datentrennung",
+          "body": "Dank Sicherheit auf Zeilenebene können nur Sie und berechtigte Mitarbeitende Ihre Daten lesen."
+        },
+        "mfa": {
+          "title": "Zwei-Schritt-Anmeldung",
+          "body": "Fügen Sie eine Authenticator-App hinzu, damit ein Passwort allein nicht für den Zugang reicht."
+        },
+        "review": {
+          "title": "Funktionstrennung",
+          "body": "Niemand kann den eigenen Auftrag genehmigen, und Finanzaktionen sind auf Finanzrollen beschränkt."
+        },
+        "audit": {
+          "title": "Manipulationssicherer Verlauf",
+          "body": "Admin-Aktionen und Guthabenänderungen landen in einem Prüfprotokoll, das nur ergänzt werden kann."
+        }
+      }
+    },
+    "assets": {
+      "title": "Unterstützte Assets",
+      "body": "Positionen lauten auf US-Dollar. Diese Assets verfolgt die Plattform und akzeptiert sie für Einzahlungen.",
+      "price": "Kurs",
+      "change24h": "24 Std.",
+      "noPrice": "—",
+      "network": "Netzwerk"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": {
+        "guaranteed": {
+          "q": "Sind Renditen garantiert?",
+          "a": "Nein. Krypto-Assets sind volatil, und Sie können einen Teil oder Ihr gesamtes investiertes Geld verlieren. Ein Plan zeigt nur dann ein Renditeziel, wenn es festgelegt und veröffentlicht wurde – und ein Ziel ist kein Versprechen."
+        },
+        "demo": {
+          "q": "Wird auf der Plattform heute echtes Geld bewegt?",
+          "a": "Noch nicht. Bis ein lizenzierter Zahlungsdienstleister angebunden ist, ist jede Einzahlung, Auszahlung und Position deutlich als simuliert gekennzeichnet, und es fließt kein echtes Geld."
+        },
+        "deposit": {
+          "q": "Wann erscheint meine Einzahlung im Guthaben?",
+          "a": "Sobald ein Finanzprüfer den Eingang der Mittel bestätigt hat. Ein Auftrag oder ein hochgeladener Beleg allein ändert Ihr Guthaben nicht."
+        },
+        "withdraw": {
+          "q": "Wie funktionieren Auszahlungen?",
+          "a": "Fordern Sie eine Auszahlung aus Ihrem verfügbaren Guthaben an. Der Betrag wird während der Prüfung reserviert und erst als abgeschlossen markiert, wenn die Zahlung bestätigt ist."
+        },
+        "early": {
+          "q": "Kann ich eine Position vor Laufzeitende schließen?",
+          "a": "Positionen können innerhalb von 24 Stunden nach Eröffnung storniert werden. Danach laufen sie bis zur Fälligkeit."
+        },
+        "security": {
+          "q": "Wie ist mein Konto geschützt?",
+          "a": "Bestätigte E-Mail, starke Passwörter, optionale Zwei-Schritt-Anmeldung, Datentrennung auf Zeilenebene und ein vollständiges Prüfprotokoll privilegierter Aktionen."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Produkt-Neuigkeiten, monatlich",
+      "body": "Neue Pläne, Änderungen an der Plattform und Marktnotizen. Keine Werbung, die sich als Rat tarnt.",
+      "email": "E-Mail-Adresse",
+      "placeholder": "sie@beispiel.de",
+      "consent": "Ich möchte den monatlichen Newsletter erhalten und kann mich jederzeit abmelden.",
+      "submit": "Abonnieren",
+      "success": "Abonniert. Achten Sie auf die nächste Ausgabe in Ihrem Postfach.",
+      "already": "Diese E-Mail-Adresse ist bereits angemeldet.",
+      "invalidEmail": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "consentRequired": "Setzen Sie das Häkchen, um den Erhalt zu bestätigen."
+    },
+    "cta": {
+      "title": "Eröffnen Sie in wenigen Minuten ein Konto.",
+      "body": "Entdecken Sie das Dashboard, vergleichen Sie Pläne und sehen Sie genau, wie jeder Auftrag geprüft wird.",
+      "primary": "Konto eröffnen",
+      "secondary": "Risikohinweise lesen"
+    },
+    "platform": {
+      "title": "Alles in einem Konto",
+      "body": "Sehen Sie genau, wo Ihr Geld ist — verfügbar, investiert oder unterwegs — in einem Dashboard.",
+      "items": {
+        "dashboard": {
+          "title": "Ein klares Dashboard",
+          "body": "Verfügbare, investierte und ausstehende Guthaben, offene Positionen und jede Transaktion an einem Ort."
+        },
+        "plans": {
+          "title": "Pläne mit fester Laufzeit",
+          "body": "Wählen Sie 30, 90 oder 180 Tage. Die Laufzeit wird am Tag der Eröffnung festgelegt."
+        },
+        "money": {
+          "title": "Geprüfte Geldbewegungen",
+          "body": "Einzahlungen werden gutgeschrieben, nachdem ein Prüfer den Eingang bestätigt. Auszahlungen bleiben bis zur Zahlung reserviert."
+        },
+        "support": {
+          "title": "Nachvollziehbarer Support",
+          "body": "Eröffnen Sie ein Ticket im Dashboard. Jede Antwort bleibt daran gebunden."
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "support": "Support",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "helpCentre": "Hilfe-Center",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "risk": "Risikohinweise",
+    "cookies": "Cookie-Richtlinie",
+    "riskWarning": "Krypto-Assets sind in vielen Rechtsordnungen nicht reguliert und stark schwankend. Der Wert von Anlagen kann fallen und steigen, und Sie erhalten möglicherweise weniger zurück, als Sie eingesetzt haben. Nichts auf dieser Website ist Finanzberatung.",
+    "rights": "© {year} {company}. Alle Rechte vorbehalten."
+  },
+  "about": {
+    "title": "Über {brand}",
+    "lead": "Wir bauen eine Krypto-Anlageplattform, bei der die Zahlen auf Ihrem Bildschirm immer mit den Einträgen dahinter übereinstimmen.",
+    "principlesTitle": "Woran wir uns messen lassen",
+    "principles": {
+      "records": {
+        "title": "Daten vor Marketing",
+        "body": "Jede angezeigte Zahl stammt aus einem nachverfolgbaren Datensatz. Was wir nicht belegen können, zeigen wir nicht."
+      },
+      "people": {
+        "title": "Menschen im Prozess",
+        "body": "Geld bewegt sich nicht durch das Absenden eines Formulars. Geschulte Prüfer bestätigen Einzahlungen und genehmigen Auszahlungen."
+      },
+      "plain": {
+        "title": "Klare Sprache zum Risiko",
+        "body": "Wir sagen deutlich, was schiefgehen kann, und stellen ein Ziel nie als Versprechen dar."
+      }
+    },
+    "statusTitle": "Wo die Plattform heute steht",
+    "statusBody": "Die Plattform läuft derzeit im Demo-Modus. Konten, Pläne und Prüfabläufe funktionieren durchgängig, doch Guthaben sind simuliert, bis ein lizenzierter Zahlungs- und Verwahrdienstleister angebunden ist.",
+    "imageAlt": "Kolleginnen und Kollegen prüfen gemeinsam Unterlagen an einem Schreibtisch"
+  },
+  "contact": {
+    "title": "Kontakt und Support",
+    "lead": "Angemeldete Kundinnen und Kunden erhalten die schnellsten Antworten über Support-Tickets im Dashboard.",
+    "ticketTitle": "Support-Ticket eröffnen",
+    "ticketBody": "Tickets halten alle Nachrichten an einem Ort und werden von unserem Support-Team beantwortet.",
+    "ticketCta": "Zum Support",
+    "emailTitle": "E-Mail",
+    "complianceTitle": "Compliance und Datenanfragen",
+    "addressTitle": "Eingetragene Anschrift"
+  },
+  "legal": {
+    "updated": "Zuletzt aktualisiert: {date}",
+    "draftNotice": "Dies ist eine Vorlage, die vor der Veröffentlichung von qualifizierter Rechtsberatung geprüft werden muss."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Übersicht",
+      "invest": "Investieren",
+      "investments": "Positionen",
+      "deposits": "Einzahlungen",
+      "withdrawals": "Auszahlungen",
+      "transactions": "Transaktionen",
+      "notifications": "Benachrichtigungen",
+      "support": "Support",
+      "settings": "Einstellungen",
+      "admin": "Admin-Konsole",
+      "logout": "Abmelden",
+      "collapse": "Seitenleiste einklappen",
+      "expand": "Seitenleiste ausklappen",
+      "menu": "Navigation öffnen",
+      "closeMenu": "Navigation schließen",
+      "account": "Kontomenü",
+      "breadcrumb": "Brotkrumen-Navigation",
+      "home": "Dashboard",
+      "sections": {
+        "money": "Geld",
+        "account": "Konto"
+      }
+    },
+    "overview": {
+      "title": "Übersicht",
+      "greeting": "Willkommen zurück, {name}",
+      "description": "Ihre Guthaben und letzten Aktivitäten, direkt aus Ihren Kontodaten.",
+      "total": "Gesamtportfolio",
+      "totalHint": "Verfügbare, investierte und reservierte Mittel zusammen",
+      "available": "Verfügbares Guthaben",
+      "availableHint": "Bereit zum Investieren oder Auszahlen",
+      "invested": "Investiert",
+      "investedHint": "In {count, plural, =0 {keiner offenen Position} one {# offenen Position} other {# offenen Positionen}}",
+      "pending": "Ausstehend",
+      "pendingHint": "Reserviert für Auszahlungen und Einzahlungen in Prüfung",
+      "historyTitle": "Portfoliowert",
+      "historyDescription": "Gesamtguthaben nach jeder erfassten Bewegung",
+      "historyEmpty": "Ihr Guthabenverlauf beginnt mit Ihrer ersten bestätigten Einzahlung.",
+      "flowsTitle": "Ein- und Auszahlungen",
+      "flowsDescription": "Bestätigte Beträge pro Monat",
+      "depositsLabel": "Einzahlungen",
+      "withdrawalsLabel": "Auszahlungen",
+      "flowsEmpty": "Noch keine bestätigten Ein- oder Auszahlungen.",
+      "summaryDeposited": "Insgesamt eingezahlt",
+      "summaryWithdrawn": "Insgesamt ausgezahlt",
+      "recentTitle": "Letzte Transaktionen",
+      "recentEmpty": "Noch keine Transaktionen. Fordern Sie eine Einzahlung an, um zu starten.",
+      "positionsTitle": "Aktive Positionen",
+      "positionsEmpty": "Keine offenen Positionen. Wählen Sie einen Plan, wenn Sie bereit sind.",
+      "quick": {
+        "deposit": "Einzahlung anfordern",
+        "invest": "Position eröffnen",
+        "withdraw": "Auszahlung anfordern"
+      },
+      "matured": "{count, plural, one {# Position ist} other {# Positionen sind}} fällig geworden. Das Kapital ist wieder in Ihrem verfügbaren Guthaben.",
+      "range": {
+        "label": "Diagrammzeitraum",
+        "week": "7 T",
+        "month": "30 T",
+        "all": "Alle"
+      },
+      "rangeChange": "Veränderung im Zeitraum",
+      "breakdownTitle": "Guthabenaufteilung",
+      "maturity": {
+        "title": "Nächste Fälligkeit",
+        "daysLeft": "{count, plural, one {Noch # Tag} other {Noch # Tage}}",
+        "maturesOn": "Fällig am {date}",
+        "dayOf": "Tag {day} von {total}",
+        "empty": "Keine offenen Positionen. Ihre nächste Fälligkeit erscheint hier."
+      },
+      "risk": {
+        "title": "Risikomix",
+        "description": "Gewichtet nach dem Betrag jeder offenen Position",
+        "low": "Konservativ",
+        "moderate": "Ausgewogen",
+        "high": "Offensiv",
+        "empty": "Eröffnen Sie eine Position, um Ihren Risikomix zu sehen."
+      },
+      "markets": {
+        "title": "Märkte",
+        "description": "Live-Preise und 7-Tage-Trend",
+        "trend": "Preistrend über 7 Tage"
+      },
+      "gettingStarted": {
+        "title": "Erste Schritte",
+        "description": "Drei Schritte zu Ihrer ersten Position.",
+        "done": "Erledigt",
+        "steps": {
+          "request": "Einzahlung anfordern",
+          "requestBody": "Geben Sie Betrag und Zahlungsweg an.",
+          "confirmed": "Einzahlung bestätigt",
+          "confirmedBody": "Ein Prüfer bestätigt den Geldeingang.",
+          "invest": "Erste Position eröffnen",
+          "investBody": "Wählen Sie einen Plan und einen Betrag."
+        }
+      }
+    },
+    "invest": {
+      "title": "Position eröffnen",
+      "description": "Wählen Sie einen Plan, geben Sie einen Betrag innerhalb der Spanne ein und prüfen Sie vor dem Bestätigen.",
+      "choosePlan": "Plan wählen",
+      "amount": "Betrag",
+      "amountHint": "Zwischen {min} und {max}",
+      "available": "Verfügbar: {amount}",
+      "review": "Position prüfen",
+      "confirmTitle": "Diese Position bestätigen",
+      "confirmBody": "Der Betrag wird von Ihrem verfügbaren Guthaben in den Plan verschoben. Sie können innerhalb von 24 Stunden nach Eröffnung stornieren; danach läuft die Position bis zur Fälligkeit.",
+      "plan": "Plan",
+      "term": "Laufzeit",
+      "matures": "Fällig am",
+      "returns": "Rendite",
+      "noReturnsNote": "Für diesen Plan ist kein Renditeziel festgelegt. Bei Fälligkeit fließt das Kapital in Ihr verfügbares Guthaben zurück.",
+      "confirm": "Position eröffnen",
+      "success": "Position eröffnet",
+      "insufficient": "Ihr verfügbares Guthaben liegt unter dem Mindestbetrag dieses Plans. Fordern Sie zuerst eine Einzahlung an.",
+      "noPlans": "Derzeit sind keine Pläne geöffnet. Schauen Sie bald wieder vorbei."
+    },
+    "positions": {
+      "title": "Positionen",
+      "description": "Offene, fällig gewordene und stornierte Positionen.",
+      "tabs": {
+        "active": "Aktiv",
+        "matured": "Fällig geworden",
+        "cancelled": "Storniert"
+      },
+      "progress": "Tag {day} von {total}",
+      "opened": "Eröffnet",
+      "matures": "Fällig",
+      "maturedOn": "Fällig geworden",
+      "cancelledOn": "Storniert",
+      "cancel": "Position stornieren",
+      "cancelTitle": "Diese Position stornieren?",
+      "cancelBody": "Der volle Betrag fließt sofort in Ihr verfügbares Guthaben zurück. Das lässt sich nicht rückgängig machen.",
+      "cancelConfirm": "Position stornieren",
+      "cancelled": "Position storniert",
+      "cancelUntil": "Stornierbar bis {time}",
+      "empty": {
+        "active": "Keine aktiven Positionen.",
+        "matured": "Noch keine fällig gewordenen Positionen.",
+        "cancelled": "Keine stornierten Positionen."
+      },
+      "openNew": "Position eröffnen"
+    },
+    "deposits": {
+      "title": "Einzahlungen",
+      "description": "Fordern Sie eine Einzahlung an und überweisen Sie dann die Mittel. Ihr Guthaben ändert sich, sobald ein Prüfer sie bestätigt.",
+      "formTitle": "Einzahlung anfordern",
+      "amount": "Betrag (USD)",
+      "asset": "Asset",
+      "method": "Methode",
+      "methods": {
+        "crypto_transfer": "Krypto-Überweisung",
+        "bank_transfer": "Banküberweisung"
+      },
+      "txReference": "Transaktions-Hash oder Referenz",
+      "txReferenceHint": "Hilft dem Prüfer, Ihre Überweisung zuzuordnen.",
+      "note": "Hinweis für den Prüfer",
+      "receipt": "Beleg",
+      "receiptHint": "PNG, JPEG, WebP oder PDF, bis 5 MB.",
+      "submit": "Einzahlung anfordern",
+      "success": "Einzahlung angefordert. Referenz {reference}.",
+      "pendingNote": "Ein Auftrag oder ein hochgeladener Beleg ändert Ihr Guthaben nicht. Ein Prüfer schreibt den Betrag gut, sobald der Eingang bestätigt ist.",
+      "historyTitle": "Einzahlungsverlauf",
+      "empty": "Noch keine Einzahlungsaufträge.",
+      "limits": "Mindestens {min}, höchstens {max} pro Auftrag.",
+      "credited": "Gutgeschrieben",
+      "uploadReceipt": "Beleg hochladen",
+      "receiptUploaded": "Beleg hochgeladen",
+      "viewReceipt": "Beleg ansehen",
+      "instructionsTitle": "Zahlungsanweisungen",
+      "instructionsDemo": "Zahlungsdetails erscheinen hier, sobald ein lizenzierter Zahlungsdienstleister angebunden ist. Im Demo-Modus ist keine Überweisung nötig – ein Prüfer genehmigt Aufträge, um bestätigte Mittel zu simulieren.",
+      "requested": "Angefordert",
+      "receiptMissing": "Kein Beleg",
+      "instructionsLive": "Folgen Sie nach dem Absenden den Zahlungsdetails unseres Zahlungsdienstleisters und geben Sie Ihre Referenz-ID an."
+    },
+    "withdrawals": {
+      "title": "Auszahlungen",
+      "description": "Zahlen Sie aus Ihrem verfügbaren Guthaben aus. Der Betrag wird reserviert, während ein Prüfer ihn kontrolliert.",
+      "formTitle": "Auszahlung anfordern",
+      "amount": "Betrag (USD)",
+      "asset": "Asset",
+      "network": "Netzwerk",
+      "destination": "Ziel-Wallet-Adresse",
+      "destinationHint": "Prüfen Sie sie doppelt. Überweisungen an eine falsche Adresse lassen sich nicht rückgängig machen.",
+      "fee": "Gebühr",
+      "net": "Sie erhalten",
+      "submit": "Auszahlung anfordern",
+      "confirmTitle": "Diese Auszahlung bestätigen",
+      "confirmBody": "{amount} wird von Ihrem verfügbaren Guthaben reserviert, bis die Auszahlung abgeschlossen oder abgelehnt ist.",
+      "success": "Auszahlung angefordert. Referenz {reference}.",
+      "historyTitle": "Auszahlungsverlauf",
+      "empty": "Noch keine Auszahlungen.",
+      "limits": "Mindestens {min}, höchstens {max} pro Auftrag. Gebühr: {flat} + {percent}.",
+      "cancel": "Auftrag stornieren",
+      "cancelTitle": "Diese Auszahlung stornieren?",
+      "cancelBody": "Der reservierte Betrag fließt in Ihr verfügbares Guthaben zurück.",
+      "cancelled": "Auszahlung storniert",
+      "payoutReference": "Auszahlungsreferenz",
+      "networkPlaceholder": "Zum Beispiel: Ethereum (ERC-20)",
+      "availableNow": "Jetzt verfügbar: {amount}",
+      "feePreview": "Gebühr {fee} · Sie erhalten {net}"
+    },
+    "transactions": {
+      "title": "Transaktionen",
+      "description": "Jede erfasste Bewegung auf Ihrem Konto, neueste zuerst.",
+      "filterType": "Art",
+      "all": "Alle Arten",
+      "types": {
+        "deposit": "Einzahlung",
+        "withdrawal_hold": "Auszahlung reserviert",
+        "withdrawal_release": "Auszahlung freigegeben",
+        "withdrawal_payout": "Auszahlung ausgezahlt",
+        "investment_open": "Position eröffnet",
+        "investment_cancel": "Position storniert",
+        "investment_maturity": "Position fällig geworden"
+      },
+      "empty": "Keine passenden Transaktionen.",
+      "detailTitle": "Transaktion {reference}",
+      "detailDescription": "Ein dauerhafter Eintrag im Kontobuch Ihres Kontos.",
+      "balanceAfter": "Guthaben nach diesem Eintrag",
+      "change": "Änderung",
+      "source": "Zugehöriger Auftrag"
+    },
+    "table": {
+      "reference": "Referenz",
+      "date": "Datum",
+      "type": "Art",
+      "amount": "Betrag",
+      "status": "Status",
+      "asset": "Asset",
+      "plan": "Plan",
+      "description": "Beschreibung",
+      "available": "Verfügbar",
+      "held": "Reserviert",
+      "invested": "Investiert",
+      "actions": "Aktionen",
+      "fee": "Gebühr",
+      "net": "Netto",
+      "destination": "Ziel",
+      "user": "Nutzer",
+      "subject": "Betreff",
+      "updated": "Aktualisiert",
+      "category": "Kategorie",
+      "priority": "Priorität"
+    },
+    "pagination": {
+      "label": "Seitennavigation",
+      "previous": "Vorherige Seite",
+      "next": "Nächste Seite",
+      "summary": "{from}–{to} von {total}"
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "description": "Neuigkeiten zu Ihren Aufträgen, Positionen und Ihrem Konto.",
+      "markAll": "Alle als gelesen markieren",
+      "markRead": "Als gelesen markieren",
+      "delete": "Löschen",
+      "empty": "Sie sind auf dem neuesten Stand.",
+      "bell": "Benachrichtigungen",
+      "unread": "{count, plural, =0 {Keine ungelesenen Benachrichtigungen} one {# ungelesene Benachrichtigung} other {# ungelesene Benachrichtigungen}}",
+      "viewAll": "Alle Benachrichtigungen ansehen",
+      "templates": {
+        "depositRequested": {
+          "title": "Einzahlungsauftrag eingegangen",
+          "body": "Ihr Einzahlungsauftrag {reference} wird geprüft. Ihr Guthaben ändert sich erst, wenn die Mittel bestätigt sind."
+        },
+        "depositCompleted": {
+          "title": "Einzahlung bestätigt",
+          "body": "Die Einzahlung {reference} wurde bestätigt und Ihrem verfügbaren Guthaben gutgeschrieben."
+        },
+        "depositRejected": {
+          "title": "Einzahlung nicht bestätigt",
+          "body": "Die Einzahlung {reference} konnte nicht bestätigt werden. Eröffnen Sie bei Fragen ein Support-Ticket."
+        },
+        "withdrawalRequested": {
+          "title": "Auszahlungsauftrag eingegangen",
+          "body": "Die Auszahlung {reference} wird geprüft. Der Betrag bleibt reserviert, bis sie abgeschlossen oder abgelehnt ist."
+        },
+        "withdrawalApproved": {
+          "title": "Auszahlung genehmigt",
+          "body": "Die Auszahlung {reference} wurde genehmigt und wartet auf die Zahlungsbestätigung."
+        },
+        "withdrawalCompleted": {
+          "title": "Auszahlung abgeschlossen",
+          "body": "Die Auszahlung {reference} wurde ausgezahlt."
+        },
+        "withdrawalRejected": {
+          "title": "Auszahlung abgelehnt",
+          "body": "Die Auszahlung {reference} wurde abgelehnt, und die Mittel sind wieder in Ihrem verfügbaren Guthaben."
+        },
+        "investmentOpened": {
+          "title": "Position eröffnet",
+          "body": "Die {plan}-Position {reference} ist aktiv und wird am {date} fällig."
+        },
+        "investmentMatured": {
+          "title": "Position fällig geworden",
+          "body": "Die Position {reference} hat das Ende ihrer Laufzeit erreicht. Das Kapital ist wieder in Ihrem verfügbaren Guthaben."
+        },
+        "supportReply": {
+          "title": "Neue Antwort zu {reference}",
+          "body": "Unser Support-Team hat auf Ihr Ticket geantwortet."
+        },
+        "accountSuspended": {
+          "title": "Konto gesperrt",
+          "body": "Ihr Konto wurde gesperrt. Wenden Sie sich für Details an den Support."
+        },
+        "accountReactivated": {
+          "title": "Konto reaktiviert",
+          "body": "Ihr Konto ist wieder aktiv."
+        }
+      }
+    },
+    "support": {
+      "title": "Support",
+      "description": "Eröffnen Sie ein Ticket – unser Team antwortet hier. Jede Nachricht bleibt im Ticket.",
+      "new": "Neues Ticket",
+      "newTitle": "Support-Ticket eröffnen",
+      "subject": "Betreff",
+      "category": "Kategorie",
+      "categories": {
+        "account": "Konto",
+        "deposit": "Einzahlung",
+        "withdrawal": "Auszahlung",
+        "investment": "Positionen",
+        "security": "Sicherheit",
+        "other": "Etwas anderes"
+      },
+      "message": "Nachricht",
+      "messageHint": "Nennen Sie Referenz-IDs (zum Beispiel DEP-…), damit wir den Auftrag finden.",
+      "submit": "Ticket eröffnen",
+      "created": "Ticket {reference} eröffnet",
+      "empty": "Noch keine Tickets. Eröffnen Sie eines, wann immer Sie Hilfe brauchen.",
+      "reply": "Antworten",
+      "replyPlaceholder": "Antwort schreiben…",
+      "send": "Antwort senden",
+      "sent": "Antwort gesendet",
+      "close": "Ticket schließen",
+      "closed": "Ticket geschlossen",
+      "closedNote": "Dieses Ticket ist geschlossen. Eröffnen Sie ein neues, wenn Sie weiterhin Hilfe brauchen.",
+      "you": "Sie",
+      "staff": "Support-Team",
+      "back": "Alle Tickets",
+      "faqTitle": "Schnelle Antworten",
+      "faqBody": "Viele Fragen zu Ein- und Auszahlungen sowie Positionen beantworten die FAQ.",
+      "faqLink": "FAQ lesen"
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "description": "Verwalten Sie Profil, Sicherheit, Benachrichtigungen und Präferenzen.",
+      "tabs": {
+        "profile": "Profil",
+        "security": "Sicherheit",
+        "notifications": "Benachrichtigungen",
+        "preferences": "Präferenzen"
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Ihr Name und Ihre Kontaktdaten.",
+        "email": "E-Mail-Adresse",
+        "emailHint": "Wenden Sie sich an den Support, um die E-Mail-Adresse Ihres Kontos zu ändern.",
+        "username": "Benutzername",
+        "referral": "Ihr Empfehlungscode",
+        "memberSince": "Mitglied seit",
+        "saved": "Profil gespeichert",
+        "phoneUnverified": "Nicht verifiziert"
+      },
+      "security": {
+        "passwordTitle": "Passwort",
+        "passwordDescription": "Eine Passwortänderung meldet Ihre anderen Sitzungen ab.",
+        "newPassword": "Neues Passwort",
+        "updatePassword": "Passwort aktualisieren",
+        "passwordUpdated": "Passwort aktualisiert",
+        "mfaTitle": "Zwei-Schritt-Anmeldung",
+        "mfaDescription": "Bei jeder Anmeldung einen Code aus einer Authenticator-App abfragen.",
+        "mfaOn": "An",
+        "mfaOff": "Aus",
+        "mfaEnable": "Authenticator einrichten",
+        "mfaDisable": "Ausschalten",
+        "mfaScan": "Scannen Sie diesen QR-Code mit einer Authenticator-App wie 1Password, Google Authenticator oder Authy und geben Sie den angezeigten 6-stelligen Code ein.",
+        "mfaSecret": "Scannen nicht möglich? Geben Sie diesen Schlüssel manuell ein:",
+        "mfaVerify": "Bestätigen und einschalten",
+        "mfaEnabled": "Zwei-Schritt-Anmeldung ist an",
+        "mfaDisabled": "Zwei-Schritt-Anmeldung ist aus",
+        "mfaDisableTitle": "Zwei-Schritt-Anmeldung ausschalten?",
+        "mfaDisableBody": "Ihr Konto wird dann nur noch durch Ihr Passwort geschützt.",
+        "sessionsTitle": "Sitzungen",
+        "sessionsDescription": "Von allen Browsern und Geräten abmelden, auch von diesem.",
+        "signOutAll": "Überall abmelden"
+      },
+      "notifications": {
+        "title": "E-Mail-Benachrichtigungen",
+        "description": "Benachrichtigungen in der App sind immer aktiv. Wählen Sie, welche E-Mails Sie erhalten möchten.",
+        "email_deposits": "Neuigkeiten zu Einzahlungen",
+        "email_withdrawals": "Neuigkeiten zu Auszahlungen",
+        "email_investments": "Eröffnung und Fälligkeit von Positionen",
+        "email_security": "Sicherheitswarnungen",
+        "email_security_hint": "Passwortänderungen und Anmeldeschutz",
+        "email_product": "Monatlicher Produkt-Newsletter",
+        "saved": "Benachrichtigungseinstellungen gespeichert"
+      },
+      "preferences": {
+        "title": "Präferenzen",
+        "description": "Sprache und Darstellung folgen Ihnen nach dem Speichern auf alle Geräte.",
+        "language": "Sprache",
+        "theme": "Design",
+        "saved": "Präferenzen gespeichert"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "Jede Zahl ist belegt.",
+    "panelPoints": {
+      "review": "Ein- und Auszahlungen prüft ein Mensch, bevor sich Guthaben ändern.",
+      "ledger": "Jede Bewegung erhält eine Referenz-ID, die Sie im Verlauf nachverfolgen können.",
+      "security": "Zwei-Schritt-Anmeldung und Datentrennung auf Zeilenebene schützen Ihr Konto."
+    },
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "fullName": "Vollständiger Name",
+    "username": "Benutzername",
+    "usernameHint": "3–24 Zeichen: Kleinbuchstaben, Ziffern und Unterstriche.",
+    "phone": "Telefonnummer",
+    "phoneHint": "Dient der Kontosicherheit. Wir fragen, bevor wir SMS senden.",
+    "referral": "Empfehlungscode",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "acceptTerms": "Ich akzeptiere die <terms>Nutzungsbedingungen</terms> und die <privacy>Datenschutzerklärung</privacy> und habe die <risk>Risikohinweise</risk> gelesen.",
+    "login": {
+      "title": "Anmelden",
+      "subtitle": "Willkommen zurück. Geben Sie Ihre Daten ein, um fortzufahren.",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung läuft…",
+      "forgot": "Passwort vergessen?",
+      "noAccount": "Neu hier?",
+      "register": "Konto eröffnen",
+      "signedOut": "Sie wurden abgemeldet.",
+      "notVerified": "Bestätigen Sie Ihre E-Mail-Adresse, bevor Sie sich anmelden. Wir können den Link erneut senden.",
+      "resend": "Link erneut senden"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Es dauert nur wenige Minuten. Sie bestätigen Ihre E-Mail, bevor Sie sich anmelden können.",
+      "submit": "Konto erstellen",
+      "submitting": "Konto wird erstellt…",
+      "haveAccount": "Sie haben bereits ein Konto?",
+      "login": "Anmelden",
+      "closed": "Neue Registrierungen sind derzeit pausiert. Versuchen Sie es später erneut."
+    },
+    "strength": {
+      "label": "Passwortstärke",
+      "levels": [
+        "Zu schwach",
+        "Schwach",
+        "Mittel",
+        "Gut",
+        "Stark"
+      ],
+      "rules": {
+        "length": "Mindestens 10 Zeichen",
+        "lower": "Ein Kleinbuchstabe",
+        "upper": "Ein Großbuchstabe",
+        "number": "Eine Ziffer",
+        "symbol": "Ein Sonderzeichen, etwa ! oder #"
+      }
+    },
+    "verify": {
+      "title": "Prüfen Sie Ihr Postfach",
+      "body": "Wir haben einen Bestätigungslink an {email} gesendet. Öffnen Sie ihn auf diesem Gerät, um Ihr Konto fertig einzurichten.",
+      "bodyNoEmail": "Öffnen Sie den Bestätigungslink aus unserer E-Mail, um Ihr Konto fertig einzurichten.",
+      "duplicateNote": "Wenn für diese Adresse bereits ein Konto besteht, wird keine neue E-Mail gesendet – melden Sie sich an oder setzen Sie Ihr Passwort zurück.",
+      "resend": "Link erneut senden",
+      "resent": "Falls die Adresse bestätigt werden muss, ist ein neuer Link unterwegs.",
+      "expiredTitle": "Dieser Link hat nicht funktioniert",
+      "expiredBody": "Bestätigungs- und Zurücksetzungslinks laufen schnell ab und gelten nur einmal. Fordern Sie unten einen neuen an.",
+      "backToLogin": "Zurück zur Anmeldung"
+    },
+    "forgot": {
+      "title": "Passwort zurücksetzen",
+      "subtitle": "Geben Sie die E-Mail-Adresse Ihrer Registrierung ein, und wir senden einen Link zum Zurücksetzen.",
+      "submit": "Link senden",
+      "sent": "Falls ein Konto mit dieser E-Mail-Adresse existiert, ist ein Link zum Zurücksetzen unterwegs. Er läuft nach einer Stunde ab.",
+      "back": "Zurück zur Anmeldung"
+    },
+    "reset": {
+      "title": "Neues Passwort wählen",
+      "subtitle": "Verwenden Sie ein Passwort, das Sie hier noch nicht benutzt haben.",
+      "submit": "Passwort aktualisieren",
+      "success": "Passwort aktualisiert. Sie sind angemeldet.",
+      "expired": "Dieser Link ist abgelaufen. Fordern Sie einen neuen an."
+    },
+    "logout": {
+      "title": "Abmelden?",
+      "body": "Für die nächste Anmeldung brauchen Sie Ihre E-Mail-Adresse und Ihr Passwort.",
+      "confirm": "Abmelden",
+      "everywhere": "Auf allen Geräten abmelden",
+      "cancel": "Angemeldet bleiben"
+    },
+    "mfa": {
+      "title": "Zwei-Schritt-Bestätigung",
+      "subtitle": "Geben Sie den 6-stelligen Code aus Ihrer Authenticator-App ein.",
+      "code": "Bestätigungscode",
+      "submit": "Bestätigen",
+      "invalid": "Dieser Code stimmt nicht. Prüfen Sie Ihre App und versuchen Sie es erneut.",
+      "useAnother": "Abmelden und ein anderes Konto verwenden"
+    },
+    "admin": {
+      "title": "Anmeldung für Mitarbeitende",
+      "subtitle": "Nur für berechtigte Mitarbeitende. Der Zugriff wird anhand Ihrer zugewiesenen Rolle geprüft.",
+      "forbidden": "Dieses Konto hat keinen Mitarbeiterzugang.",
+      "customer": "Suchen Sie Ihr Konto? <link>Kundenanmeldung</link>"
+    }
+  },
+  "phone": {
+    "country": "Land oder Region",
+    "search": "Länder suchen",
+    "noMatch": "Kein Land gefunden",
+    "number": "Telefonnummer"
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich.",
+    "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "passwordWeak": "Verwenden Sie mindestens 10 Zeichen mit Groß- und Kleinbuchstaben, einer Ziffer und einem Sonderzeichen.",
+    "passwordTooLong": "Verwenden Sie höchstens 128 Zeichen.",
+    "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+    "passwordBreached": "Dieses Passwort tauchte in einem Datenleck auf. Wählen Sie ein anderes.",
+    "passwordSame": "Wählen Sie ein anderes Passwort als Ihr aktuelles.",
+    "phoneInvalid": "Geben Sie eine gültige Nummer für das gewählte Land ein.",
+    "usernameShort": "Verwenden Sie mindestens 3 Zeichen.",
+    "usernameLong": "Verwenden Sie höchstens 24 Zeichen.",
+    "usernameChars": "Verwenden Sie nur Kleinbuchstaben, Ziffern und Unterstriche.",
+    "usernameTaken": "Dieser Benutzername ist vergeben. Versuchen Sie einen anderen.",
+    "nameShort": "Geben Sie Ihren vollständigen Namen ein.",
+    "nameLong": "Verwenden Sie höchstens 100 Zeichen.",
+    "termsRequired": "Sie müssen die Bedingungen akzeptieren, um ein Konto zu erstellen.",
+    "consentRequired": "Setzen Sie das Häkchen zur Bestätigung.",
+    "referralInvalid": "Empfehlungscodes bestehen nur aus Buchstaben und Ziffern.",
+    "amountInvalid": "Geben Sie einen Betrag mit höchstens 2 Nachkommastellen ein.",
+    "amountPositive": "Geben Sie einen Betrag größer als null ein.",
+    "methodInvalid": "Wählen Sie eine Zahlungsmethode.",
+    "referenceLong": "Verwenden Sie höchstens 140 Zeichen.",
+    "noteLong": "Verwenden Sie höchstens 500 Zeichen.",
+    "destinationInvalid": "Geben Sie eine gültige Wallet-Adresse ein (nur Buchstaben und Ziffern).",
+    "planInvalid": "Wählen Sie einen Plan.",
+    "invalidRequest": "Etwas an dieser Anfrage ist ungültig. Laden Sie neu und versuchen Sie es erneut.",
+    "subjectShort": "Verwenden Sie mindestens 4 Zeichen.",
+    "subjectLong": "Verwenden Sie höchstens 140 Zeichen.",
+    "messageShort": "Schreiben Sie mindestens 10 Zeichen.",
+    "messageLong": "Verwenden Sie höchstens 4.000 Zeichen.",
+    "slugInvalid": "Verwenden Sie 2–40 Kleinbuchstaben, Ziffern und Bindestriche.",
+    "descriptionShort": "Schreiben Sie mindestens 10 Zeichen.",
+    "descriptionLong": "Verwenden Sie höchstens 400 Zeichen.",
+    "termInvalid": "Geben Sie eine Laufzeit zwischen 1 und 3.650 Tagen ein.",
+    "rangeInvalid": "Das Maximum muss größer als das Minimum sein.",
+    "targetBasisRequired": "Ein Renditeziel braucht beide Werte und eine veröffentlichte Grundlage.",
+    "reasonRequired": "Geben Sie einen Grund an (mindestens 4 Zeichen).",
+    "codeInvalid": "Geben Sie den 6-stelligen Code ein."
+  },
+  "errors": {
+    "generic": "Bei uns ist etwas schiefgelaufen. Versuchen Sie es gleich noch einmal.",
+    "network": "Der Server ist nicht erreichbar. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "not_configured": "Konten sind noch nicht verfügbar: Das Backend ist nicht verbunden.",
+    "rate_limited": "Zu viele Versuche. Warten Sie einige Minuten und versuchen Sie es dann erneut.",
+    "validation": "Prüfen Sie die markierten Felder.",
+    "unauthorized": "Ihre Sitzung ist abgelaufen. Melden Sie sich erneut an.",
+    "forbidden": "Ihr Konto ist dazu nicht berechtigt.",
+    "mfa_required": "Bestätigen Sie mit Ihrer Authenticator-App, um fortzufahren.",
+    "account_suspended": "Dieses Konto ist gesperrt. Wenden Sie sich an den Support.",
+    "maintenance": "Neue Aufträge sind wegen Wartung pausiert. Versuchen Sie es später erneut.",
+    "invalid_credentials": "E-Mail-Adresse und Passwort passen nicht zusammen. Prüfen Sie Ihre Eingaben und versuchen Sie es erneut.",
+    "email_not_confirmed": "Bestätigen Sie Ihre E-Mail-Adresse, bevor Sie sich anmelden.",
+    "registrations_closed": "Neue Registrierungen sind derzeit pausiert.",
+    "reset_link_expired": "Dieser Link ist abgelaufen. Fordern Sie einen neuen an.",
+    "amount_invalid": "Geben Sie einen gültigen Betrag ein.",
+    "amount_below_min": "Der Betrag liegt unter dem Minimum.",
+    "amount_above_max": "Der Betrag liegt über dem Maximum.",
+    "amount_below_fee": "Der Betrag muss größer als die Auszahlungsgebühr sein.",
+    "insufficient_funds": "Ihr verfügbares Guthaben reicht für diesen Betrag nicht aus.",
+    "asset_invalid": "Dieses Asset ist für diesen Auftrag nicht verfügbar.",
+    "method_invalid": "Wählen Sie eine gültige Zahlungsmethode.",
+    "destination_invalid": "Prüfen Sie die Zieladresse.",
+    "network_invalid": "Wählen Sie ein Netzwerk.",
+    "too_many_pending": "Sie haben zu viele offene Aufträge. Warten Sie zuerst deren Prüfung ab.",
+    "duplicate_request": "Ein identischer Auftrag wurde gerade gesendet. Prüfen Sie Ihren Verlauf, bevor Sie es erneut versuchen.",
+    "invalid_request": "Diese Anfrage ist ungültig. Laden Sie die Seite neu und versuchen Sie es erneut.",
+    "invalid_status": "Dieser Eintrag ist bereits weiter fortgeschritten und lässt sich so nicht mehr ändern.",
+    "invalid_decision": "Wählen Sie eine gültige Entscheidung.",
+    "not_found": "Dieser Eintrag wurde nicht gefunden.",
+    "plan_invalid": "Dieser Plan ist nicht verfügbar.",
+    "cancel_window_closed": "Positionen können nur innerhalb von 24 Stunden nach Eröffnung storniert werden.",
+    "self_review_forbidden": "Sie können Ihren eigenen Auftrag nicht prüfen. Bitten Sie einen anderen Prüfer.",
+    "self_action_forbidden": "Sie können Ihr eigenes Konto auf diese Weise nicht ändern.",
+    "reason_required": "Geben Sie einen Grund an, bevor Sie fortfahren.",
+    "payout_reference_required": "Geben Sie die Auszahlungsreferenz an, um den Auftrag als abgeschlossen zu markieren.",
+    "credit_exceeds_request": "Der gutgeschriebene Betrag darf den angeforderten Betrag nicht übersteigen.",
+    "last_owner": "Der letzte Eigentümer kann nicht entfernt werden.",
+    "slug_taken": "Ein anderer Plan verwendet diesen Schlüssel bereits.",
+    "ticket_closed": "Dieses Ticket ist geschlossen. Eröffnen Sie ein neues, wenn Sie weiterhin Hilfe brauchen.",
+    "message_invalid": "Schreiben Sie eine Nachricht mit 10 bis 4.000 Zeichen.",
+    "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "consent_required": "Eine Einwilligung ist erforderlich.",
+    "balance_missing": "Ihr Konto ist nicht vollständig eingerichtet. Wenden Sie sich an den Support.",
+    "upload_invalid": "Laden Sie ein PNG, JPEG, WebP oder PDF bis 5 MB hoch."
+  },
+  "admin": {
+    "nav": {
+      "overview": "Übersicht",
+      "deposits": "Einzahlungen",
+      "withdrawals": "Auszahlungen",
+      "investments": "Positionen",
+      "transactions": "Kontobuch",
+      "plans": "Pläne",
+      "users": "Nutzer",
+      "kyc": "Identitätsprüfung",
+      "support": "Support",
+      "notifications": "Mitteilungen",
+      "audit": "Prüfprotokoll",
+      "settings": "Einstellungen",
+      "exit": "Kundenansicht",
+      "breadcrumb": "Brotkrumen-Navigation",
+      "sections": {
+        "money": "Geld",
+        "people": "Personen",
+        "system": "System"
+      }
+    },
+    "common": {
+      "search": "Suchen",
+      "searchPlaceholder": "Referenz, E-Mail oder Name",
+      "status": "Status",
+      "allStatuses": "Alle Status",
+      "apply": "Anwenden",
+      "reset": "Zurücksetzen",
+      "sort": "Sortierung",
+      "newest": "Neueste zuerst",
+      "oldest": "Älteste zuerst",
+      "largest": "Höchster Betrag",
+      "view": "Ansehen",
+      "review": "Prüfen",
+      "noPermission": "Ihre Rolle darf diese Seite ansehen, aber nicht ändern.",
+      "mfaEnrol": "Mitarbeiterkonten sollten die Zwei-Schritt-Anmeldung nutzen. Richten Sie sie unter Einstellungen → Sicherheit ein.",
+      "simulatedLabel": "Simulierte Geldbewegungen – der Demo-Modus ist aktiv."
+    },
+    "overview": {
+      "title": "Betriebsübersicht",
+      "description": "Live-Werte, berechnet aus den Daten der Plattform.",
+      "usersTotal": "Registrierte Nutzer",
+      "usersNew": "{count} neu in den letzten 7 Tagen",
+      "usersActive": "Aktiv in 30 Tagen",
+      "usersSuspended": "{count} gesperrt",
+      "depositsPending": "Zu prüfende Einzahlungen",
+      "withdrawalsOpen": "Offene Auszahlungen",
+      "investmentsActive": "Aktive Positionen",
+      "investmentsDue": "{count} überfällig",
+      "ticketsOpen": "Offene Tickets",
+      "balancesTitle": "Für Kunden gehaltene Guthaben",
+      "available": "Verfügbar",
+      "held": "Für Auszahlungen reserviert",
+      "invested": "In Positionen",
+      "flowsTitle": "Tägliche Flüsse, letzte 30 Tage",
+      "flowsDescription": "Bestätigte Einzahlungen und ausgezahlte Auszahlungen",
+      "activityTitle": "Letzte Aktivitäten von Team und System",
+      "activityEmpty": "Noch keine Aktivität erfasst.",
+      "queueTitle": "Prüfwarteschlange",
+      "queueDeposits": "Älteste ausstehende Einzahlung",
+      "queueWithdrawals": "Älteste offene Auszahlung",
+      "queueEmpty": "Nichts in der Warteschlange.",
+      "processMaturities": "Fällige Positionen abrechnen",
+      "processed": "{count, plural, =0 {Keine Position war fällig} one {# Position abgerechnet} other {# Positionen abgerechnet}}"
+    },
+    "deposits": {
+      "title": "Einzahlungsprüfung",
+      "description": "Genehmigen Sie erst, wenn der Eingang der Mittel bestätigt ist. Die Genehmigung schreibt dem verfügbaren Guthaben des Kunden gut.",
+      "approve": "Genehmigen und gutschreiben",
+      "reject": "Ablehnen",
+      "approveTitle": "Einzahlung {reference} genehmigen?",
+      "approveBody": "Bestätigen Sie den Eingang der Mittel. Der gutgeschriebene Betrag darf niedriger sein als angefordert, falls weniger eingegangen ist – nie höher.",
+      "creditedAmount": "Eingegangener Betrag",
+      "rejectTitle": "Einzahlung {reference} ablehnen?",
+      "rejectBody": "Es wird nichts gutgeschrieben. Der Kunde sieht den angegebenen Grund.",
+      "reason": "Grund",
+      "note": "Interne Notiz",
+      "approved": "Einzahlung genehmigt und gutgeschrieben",
+      "rejected": "Einzahlung abgelehnt",
+      "selfReview": "Ihr eigener Auftrag – ein anderer Prüfer muss ihn bearbeiten.",
+      "receipt": "Beleg",
+      "txReference": "Überweisungsreferenz",
+      "customerNote": "Hinweis des Kunden"
+    },
+    "withdrawals": {
+      "title": "Auszahlungsprüfung",
+      "description": "Nach den Prüfungen genehmigen, dann als abgeschlossen markieren, sobald die Zahlung mit Referenz bestätigt ist.",
+      "processing": "Als in Bearbeitung markieren",
+      "approve": "Genehmigen",
+      "complete": "Als abgeschlossen markieren",
+      "reject": "Ablehnen und freigeben",
+      "completeTitle": "{reference} als ausgezahlt markieren?",
+      "completeBody": "Nur nach bestätigter Zahlung. Geben Sie die Zahlungstransaktion oder -referenz ein.",
+      "payoutReference": "Auszahlungsreferenz",
+      "rejectTitle": "Auszahlung {reference} ablehnen?",
+      "rejectBody": "Der reservierte Betrag fließt in das verfügbare Guthaben des Kunden zurück.",
+      "approveTitle": "Auszahlung {reference} genehmigen?",
+      "approveBody": "Die Genehmigung gibt die Zahlung frei. Die Mittel bleiben reserviert, bis Sie sie als abgeschlossen markieren.",
+      "updated": "Auszahlung aktualisiert"
+    },
+    "investments": {
+      "title": "Positionen",
+      "description": "Alle Kundenpositionen. Bei Fälligkeit wird nur das Kapital zurückgegeben.",
+      "due": "Überfällig"
+    },
+    "plans": {
+      "title": "Anlagepläne",
+      "description": "Änderungen gelten nur für neue Positionen. Offene Positionen behalten ihre ursprünglichen Bedingungen.",
+      "new": "Neuer Plan",
+      "edit": "Bearbeiten",
+      "editTitle": "Plan bearbeiten",
+      "newTitle": "Neuer Plan",
+      "name": "Name",
+      "slug": "URL-Schlüssel",
+      "description_": "Beschreibung",
+      "min": "Mindestbetrag",
+      "max": "Höchstbetrag",
+      "currency": "Währung",
+      "term": "Laufzeit (Tage)",
+      "risk": "Risikostufe",
+      "riskDescription": "Risikobeschreibung",
+      "targetMin": "Renditeziel ab (%)",
+      "targetMax": "Renditeziel bis (%)",
+      "targetBasis": "Grundlage des Ziels",
+      "targetHelp": "Lassen Sie beide Felder leer, sofern Sie die Berechnung des Ziels nicht veröffentlichen. Ein Ziel wird Kunden mit seiner Grundlage angezeigt und ist nie eine Garantie.",
+      "active": "Für neue Positionen geöffnet",
+      "order": "Anzeigereihenfolge",
+      "saved": "Plan gespeichert",
+      "inactive": "Geschlossen",
+      "openPositions": "{count} offen"
+    },
+    "users": {
+      "title": "Nutzer",
+      "description": "Konten suchen, Aktivitäten prüfen und Zugänge verwalten.",
+      "joined": "Registriert",
+      "roles": "Rollen",
+      "balance": "Gesamtguthaben",
+      "detailTitle": "Konto",
+      "profile": "Profil",
+      "activity": "Letzte Kontobucheinträge",
+      "requests": "Offene Aufträge",
+      "suspend": "Konto sperren",
+      "reactivate": "Konto reaktivieren",
+      "suspendTitle": "Dieses Konto sperren?",
+      "suspendBody": "Während der Sperre kann sich der Kunde weder anmelden noch Geld bewegen. Geben Sie einen Grund für das Prüfprotokoll an.",
+      "reactivateTitle": "Dieses Konto reaktivieren?",
+      "statusUpdated": "Kontostatus aktualisiert",
+      "rolesTitle": "Mitarbeiterrollen",
+      "rolesHelp": "Eigentümer verwalten alle Rollen. Admins können Finanz- und Support-Rollen vergeben. Niemand kann die eigenen Rollen ändern.",
+      "grant": "Vergeben",
+      "revoke": "Entziehen",
+      "roleUpdated": "Rollen aktualisiert",
+      "roleNames": {
+        "owner": "Eigentümer",
+        "admin": "Administrator",
+        "finance": "Finanzprüfer",
+        "support": "Support"
+      },
+      "noRoles": "Kunde",
+      "statusReason": "Grund"
+    },
+    "kyc": {
+      "title": "Identitätsprüfung",
+      "description": "Die Identitätsprüfung läuft über einen konformen Prüfdienstleister.",
+      "notConfigured": "Es ist kein Dienstleister für Identitätsprüfung angebunden. Die Status unten ändern sich nur, wenn ein Dienstleister Ergebnisse meldet – sie lassen sich nicht manuell setzen.",
+      "counts": "Konten nach Prüfstatus"
+    },
+    "support": {
+      "title": "Support-Tickets",
+      "description": "Antworten Sie Kunden und halten Sie jede Nachricht im Ticket fest.",
+      "assigned": "Zugewiesen",
+      "unassigned": "Nicht zugewiesen",
+      "customer": "Kunde",
+      "setStatus": "Status",
+      "setPriority": "Priorität",
+      "priorities": {
+        "low": "Niedrig",
+        "normal": "Normal",
+        "high": "Hoch"
+      },
+      "updated": "Ticket aktualisiert"
+    },
+    "notifications": {
+      "title": "Mitteilungen",
+      "description": "Senden Sie eine In-App-Benachrichtigung an alle aktiven Kunden oder an ein einzelnes Konto.",
+      "audience": "Empfänger",
+      "all": "Alle aktiven Kunden",
+      "one": "Ein Kunde",
+      "userEmail": "E-Mail des Kunden",
+      "userNotFound": "Kein Konto passt zu dieser E-Mail-Adresse.",
+      "titleField": "Titel",
+      "body": "Nachricht",
+      "send": "Mitteilung senden",
+      "sent": "{count, plural, one {An # Kunden gesendet} other {An # Kunden gesendet}}",
+      "recent": "Zuletzt gesendet"
+    },
+    "audit": {
+      "title": "Prüfprotokoll",
+      "description": "Nur ergänzbares Protokoll der Mitarbeiteraktionen und guthabenrelevanten Ereignisse.",
+      "actor": "Akteur",
+      "action": "Aktion",
+      "entity": "Objekt",
+      "details": "Details",
+      "system": "System",
+      "filterAction": "Aktion enthält"
+    },
+    "settings": {
+      "title": "Plattformeinstellungen",
+      "description": "Grenzen und Schalter, die die Datenbankfunktionen verwenden. Jede Änderung wird protokolliert.",
+      "limits": "Grenzen und Gebühren",
+      "switches": "Plattformschalter",
+      "assets": "Unterstützte Assets",
+      "keys": {
+        "deposit_min": "Mindesteinzahlung (USD)",
+        "deposit_max": "Höchsteinzahlung (USD)",
+        "withdrawal_min": "Mindestauszahlung (USD)",
+        "withdrawal_max": "Höchstauszahlung (USD)",
+        "withdrawal_fee_flat": "Feste Auszahlungsgebühr (USD)",
+        "withdrawal_fee_percent": "Auszahlungsgebühr (%)",
+        "maintenance_mode": "Wartungsmodus – neue Geldvorgänge pausieren",
+        "registrations_open": "Neue Registrierungen erlauben"
+      },
+      "assetActive": "Aktiv",
+      "assetDeposits": "Einzahlungen",
+      "assetWithdrawals": "Auszahlungen",
+      "saved": "Einstellung gespeichert"
+    }
+  }
+}

@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "Àwọn ètò ìdókòwò crypto onígbà-pàtó",
+    "description": "Àwọn ètò ìdókòwò crypto onígbà-pàtó, pẹ̀lú àyẹ̀wò ọwọ́ fún gbogbo owó tí a fi sílẹ̀ àti tí a gbà jáde, àti àkọsílẹ̀ tí o lè ṣàyẹ̀wò."
+  },
+  "common": {
+    "skipToContent": "Fò lọ sí àkóónú",
+    "loading": "Ó ń gbéra",
+    "close": "Pa á dé",
+    "cancel": "Fagilé",
+    "confirm": "Jẹ́rìí sí i",
+    "save": "Fi àwọn àyípadà pamọ́",
+    "saving": "Ó ń fi pamọ́…",
+    "saved": "A ti fi àwọn àyípadà pamọ́",
+    "back": "Padà",
+    "next": "Èyí tó kàn",
+    "previous": "Èyí tó ṣáájú",
+    "search": "Wá",
+    "optional": "Kò pọn dandan",
+    "required": "Ó pọn dandan",
+    "retry": "Tún gbìyànjú",
+    "copy": "Ṣe ẹ̀dà",
+    "copied": "A ti ṣe ẹ̀dà",
+    "viewAll": "Wo gbogbo rẹ̀",
+    "details": "Àlàyé",
+    "page": "Ojú-ìwé {page} nínú {total}",
+    "noResults": "Kò sí èsì tó bá àwọn àlẹ̀mọ́ wọ̀nyí mu.",
+    "simulationTitle": "Ipò àfihàn",
+    "simulationNotice": "Àfarawé ni àwọn iye owó àti ìgbésẹ̀ owó lórí pèpéle yìí. Kò sí owó gidi tí ó ń yí ọwọ́ padà títí a ó fi so olùpèsè ìsanwó tó ní ìwé-àṣẹ pọ̀.",
+    "simulationShort": "Àfarawé",
+    "illustration": "Àpèjúwe",
+    "sampleData": "Dátà àpẹẹrẹ",
+    "notConfiguredTitle": "A kò tíì so ẹ̀rọ ìpèsè pọ̀",
+    "notConfigured": "Àwọn ìwé-ẹ̀rí Supabase kò sí. Fi wọ́n kún ‎.env.local láti mú àwọn àkáǹtì ṣiṣẹ́ (wo README).",
+    "genericError": "Nǹkan kan kò lọ dáadáa ní ẹ̀gbẹ́ wa. Tún gbìyànjú láìpẹ́.",
+    "networkError": "A kò lè dé ọ̀dọ̀ ẹ̀rọ ìpèsè. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì tún gbìyànjú.",
+    "rateLimited": "Ìgbìyànjú ti pọ̀ jù. Dúró fún ìṣẹ́jú kan kí o tó tún gbìyànjú.",
+    "unauthorized": "Wọlé láti máa bá a lọ.",
+    "forbidden": "Àkáǹtì rẹ kò ní àṣẹ láti wọlé síbí.",
+    "notFoundTitle": "A kò rí ojú-ìwé náà",
+    "notFoundBody": "Ojú-ìwé tí ò ń wá kò sí, tàbí a ti gbé e lọ síbòmíràn.",
+    "goHome": "Lọ sí ojú-ìwé àkọ́kọ́",
+    "errorTitle": "Ojú-ìwé yìí kò lè gbéra",
+    "errorBody": "Àṣìṣe àìròtẹ́lẹ̀ kan dí ojú-ìwé yìí lọ́wọ́. Tún gbìyànjú, tàbí padà wá nígbà mìíràn.",
+    "status": {
+      "pending": "Ó ń dúró",
+      "processing": "A ń ṣiṣẹ́ lé e lórí",
+      "approved": "A ti fọwọ́ sí i",
+      "completed": "Ó ti parí",
+      "active": "Ó ń ṣiṣẹ́",
+      "matured": "Ó ti pé",
+      "rejected": "A kọ̀ ọ́",
+      "cancelled": "A ti fagilé e",
+      "failed": "Kò yọrí",
+      "open": "Ó ṣí sílẹ̀",
+      "answered": "A ti dáhùn",
+      "closed": "A ti tì í",
+      "suspended": "A ti dá a dúró",
+      "verified": "A ti fìdí rẹ̀ múlẹ̀",
+      "unverified": "A kò tíì fìdí rẹ̀ múlẹ̀"
+    },
+    "risk": {
+      "low": "Ewu kékeré",
+      "moderate": "Ewu àárín",
+      "high": "Ewu gíga"
+    },
+    "photoCredit": "Fọ́tò: {name} / Pexels",
+    "apply": "Lò ó"
+  },
+  "theme": {
+    "label": "Ìrísí",
+    "light": "Ìmọ́lẹ̀",
+    "dark": "Òkùnkùn",
+    "system": "Ti ẹ̀rọ"
+  },
+  "language": {
+    "label": "Èdè",
+    "change": "Yí èdè padà"
+  },
+  "nav": {
+    "markets": "Àwọn ọjà",
+    "plans": "Àwọn ètò ìdókòwò",
+    "how": "Bí ó ṣe ń ṣiṣẹ́",
+    "about": "Nípa wa",
+    "faq": "Ìbéèrè tí a sábà máa ń béèrè",
+    "login": "Wọlé",
+    "getStarted": "Bẹ̀rẹ̀",
+    "dashboard": "Pátákó ìṣàkóso",
+    "openMenu": "Ṣí àkójọ",
+    "closeMenu": "Pa àkójọ dé",
+    "primary": "Ìtọ́sọ́nà àkọ́kọ́",
+    "home": "Ilé",
+    "signUp": "Forúkọ sílẹ̀"
+  },
+  "startup": {
+    "loading": "Ó ń gbé {brand} wá"
+  },
+  "home": {
+    "hero": {
+      "title": "Àwọn ètò crypto onígbà-pàtó pẹ̀lú àkọsílẹ̀ tó ṣí sílẹ̀.",
+      "body": "Yan ètò ọjọ́ 30, 90 tàbí 180, kí o sì tẹ̀lé gbogbo ìgbésẹ̀ — owó tí o fi sílẹ̀, ipò ìdókòwò, àti ìgbà tí ó pé — nínú àkọsílẹ̀ tí o lè ṣàyẹ̀wò. Ènìyàn gidi ló ń ṣàyẹ̀wò gbogbo owó tí a fi sílẹ̀ àti tí a gbà jáde, kì í ṣe ẹ̀rọ àdáṣe.",
+      "primary": "Ṣí àkáǹtì",
+      "secondary": "Fi àwọn ètò wéra",
+      "note": "Crypto máa ń yí padà gidigidi. O lè pàdánù díẹ̀ tàbí gbogbo owó tí o fi dókòwò.",
+      "headline": "Àwọn ètò crypto tí o lè ṣàyẹ̀wò",
+      "learnMore": "Kọ́ síi"
+    },
+    "lifecycle": {
+      "label": "Bí ipò ìdókòwò ṣe ń tẹ̀síwájú",
+      "plan": "Ètò Growth",
+      "term": "Àkókò ọjọ́ 90",
+      "amount": "Iye ipò ìdókòwò",
+      "day": "Ọjọ́ {day} nínú {total}",
+      "steps": {
+        "deposit": "A ti ṣàyẹ̀wò owó tí a fi sílẹ̀",
+        "opened": "A ti ṣí ipò ìdókòwò",
+        "running": "Àkókò ń lọ",
+        "matures": "Ó pé"
+      },
+      "caption": "A ń kọ gbogbo ìgbésẹ̀ sínú àkọsílẹ̀ àkáǹtì rẹ pẹ̀lú nọ́mbà ìtọ́kasí."
+    },
+    "ticker": {
+      "label": "Iye owó ọjà lọ́wọ́lọ́wọ́",
+      "unavailable": "Iye owó lọ́wọ́lọ́wọ́ kò sí báyìí.",
+      "source": "Iye owó láti CoinGecko, a ń sọ ọ́ dọ̀tun ní ìṣẹ́jú kọ̀ọ̀kan."
+    },
+    "commitments": {
+      "title": "Àwọn ìlérí tí a kọ́ sínú pèpéle",
+      "items": {
+        "terms": {
+          "value": "30, 90, 180",
+          "label": "ọjọ́ ni àkókò àwọn ètò, a sì ń dì í mú nígbà tí o bá ṣí ipò ìdókòwò"
+        },
+        "review": {
+          "value": "Gbogbo ìbéèrè",
+          "label": "Ènìyàn ń ṣàyẹ̀wò owó tí a fi sílẹ̀ àti tí a gbà jáde kí iye owó tó yí padà"
+        },
+        "audit": {
+          "value": "Àkọsílẹ̀ àyẹ̀wò kíkún",
+          "label": "A ń kọ gbogbo àyípadà iye owó sílẹ̀ pẹ̀lú ẹni, ohun, àti ìgbà"
+        },
+        "languages": {
+          "value": "Èdè 8",
+          "label": "Pẹ̀lú Lárúbáwá láti ọ̀tún sí òsì, àti Yorùbá"
+        }
+      }
+    },
+    "features": {
+      "title": "A kọ́ ọ fún àwọn tó ń ka àlàyé kékeré",
+      "body": "Gbogbo ohun tí o rí lórí pátákó ìṣàkóso wá láti inú àkọsílẹ̀ àkáǹtì rẹ. A kò fojú díwọ̀n ohunkóhun, a kò yí i sí iye tó rọrùn, a kò sì hùmọ̀ rẹ̀ kí ó lè dára lójú.",
+      "items": {
+        "ledger": {
+          "title": "Ìwé àkọsílẹ̀ owó, kì í ṣe pátákó àmì",
+          "body": "Gbogbo owó tí a fi sílẹ̀, ipò ìdókòwò àti owó tí a gbà jáde ní nọ́mbà ìtọ́kasí, ipò àti àkókò tí o lè tọpa."
+        },
+        "terms": {
+          "title": "Àwọn ètò onígbà-pàtó",
+          "body": "Yan ètò kan àti iye owó tó wà nínú ààlà rẹ̀. Àkókò náà dúró ṣinṣin láti ọjọ́ tí o ṣí i."
+        },
+        "review": {
+          "title": "Ènìyàn ń ṣàyẹ̀wò ìgbésẹ̀ owó",
+          "body": "Àwọn olùṣàyẹ̀wò ìnáwó ń fọwọ́ sí owó tí a fi sílẹ̀ lẹ́yìn tí owó bá dé, wọ́n sì ń fọwọ́ sí owó tí a gbà jáde kí ohunkóhun tó jáde."
+        },
+        "security": {
+          "title": "Ààbò àkáǹtì",
+          "body": "Ímeèlì tí a ti fìdí rẹ̀ múlẹ̀, òfin ọ̀rọ̀ aṣínà tó lágbára, àti ìwọlé aláfikún pẹ̀lú áàpù ìjẹ́rìí ń dáàbò bo àkáǹtì rẹ."
+        },
+        "languages": {
+          "title": "Èdè rẹ, ọ̀nà ìkọ̀wé rẹ",
+          "body": "Ọjọ́, nọ́mbà àti owó ń tẹ̀lé ètò èdè rẹ jákèjádò pèpéle."
+        },
+        "support": {
+          "title": "Ìrànlọ́wọ́ tí a kọ sílẹ̀",
+          "body": "Ṣí tíkẹ́ẹ̀tì láti pátákó ìṣàkóso rẹ. Gbogbo èsì ń dúró pẹ̀lú rẹ̀."
+        }
+      }
+    },
+    "plans": {
+      "title": "Fi àwọn ètò ìdókòwò wéra",
+      "body": "Ètò kọ̀ọ̀kan ní ààlà àti àkókò tirẹ̀. Yan èyí tó bá iye owó tí o fẹ́ fi sí i àti bí ó ṣe pẹ́ tó mu.",
+      "range": "Ààlà ìdókòwò",
+      "term": "Àkókò",
+      "days": "Ọjọ́ {count}",
+      "asset": "Owó ìdíyelé",
+      "target": "Èrè àfojúsùn",
+      "noTarget": "A kò ṣètò èrè àfojúsùn fún ètò yìí",
+      "cta": "Ṣí ètò yìí",
+      "sampleNote": "Àwọn ètò àtìbẹ̀rẹ̀ là ń fihàn. Àwọn ètò gidi yóò fara hàn lẹ́yìn tí a bá so ibi ìpamọ́ dátà pọ̀.",
+      "riskNote": "Ìpele ewu ń ṣàpèjúwe bí ọjà crypto ṣe lè yí padà, kì í ṣe àsọtẹ́lẹ̀."
+    },
+    "how": {
+      "title": "Bí ó ṣe ń ṣiṣẹ́",
+      "body": "Ìgbésẹ̀ mẹ́rin láti ìforúkọsílẹ̀ dé ìgbà tí o gba owó jáde, ọ̀kọ̀ọ̀kan sì ń fi àmì sílẹ̀ nínú àkáǹtì rẹ.",
+      "steps": {
+        "account": {
+          "title": "Ṣí àkáǹtì kí o sì fìdí rẹ̀ múlẹ̀",
+          "body": "Forúkọ sílẹ̀ pẹ̀lú ímeèlì àti nọ́mbà fóònù rẹ, lẹ́yìn náà jẹ́rìí sí àdírẹ́sì ímeèlì rẹ."
+        },
+        "deposit": {
+          "title": "Béèrè láti fi owó sílẹ̀",
+          "body": "Fi ìbéèrè ìfowópamọ́ ránṣẹ́ pẹ̀lú nọ́mbà ìtọ́kasí rẹ̀. Iye owó rẹ kò ní yí padà títí olùṣàyẹ̀wò yóò fi jẹ́rìí pé owó ti dé."
+        },
+        "invest": {
+          "title": "Ṣí ipò ìdókòwò",
+          "body": "Gbé apá kan owó tó wà lọ́wọ́ rẹ sínú ètò kan. Àkókò ń bẹ̀rẹ̀ ní ìṣẹ́jú tí o ṣí i."
+        },
+        "withdraw": {
+          "title": "Gba owó jáde nígbà tí ó bá pé",
+          "body": "Nígbà tí àkókò bá parí, ipò ìdókòwò padà sí owó tó wà lọ́wọ́ rẹ, o sì lè béèrè láti gba owó jáde."
+        }
+      },
+      "imageAlt": "Ọwọ́ tó di owó-ẹyọ Bitcoin aláwọ̀ wúrà mú níwájú ojú-ẹ̀rọ tó ń fi àwòrán iye owó hàn"
+    },
+    "analytics": {
+      "title": "Ìtúpalẹ̀ ọjà",
+      "body": "Ìtàn iye owó ọgbọ̀n ọjọ́ fún àwọn dúkìá tí pèpéle ń ṣàtìlẹ́yìn, láti inú dátà ọjà lọ́wọ́lọ́wọ́.",
+      "range": "Iye owó ọjọ́ 30 ní USD",
+      "change": "Àyípadà ọjọ́ 30",
+      "unavailable": "Ìtàn iye owó kò sí báyìí. Padà wá láìpẹ́.",
+      "dashboardTitle": "Pátákó ìṣàkóso ní ìwòye kan",
+      "dashboardBody": "Owó tó wà lọ́wọ́, tí a dókòwò, àti tó ń dúró; àwọn ipò ìdókòwò tó ṣí sílẹ̀ àti gbogbo ìṣòwò — tààrà láti inú àkọsílẹ̀ rẹ."
+    },
+    "security": {
+      "title": "Ààbò tí o lè ṣàyẹ̀wò",
+      "body": "Ààbò wà ní ìpele-ìpele láti ibi ìpamọ́ dátà sókè, a sì ń kọ gbogbo ìgbésẹ̀ aláṣẹ sílẹ̀.",
+      "items": {
+        "rls": {
+          "title": "Ìyàsọ́tọ̀ dátà",
+          "body": "Ààbò ní ìpele ìlà túmọ̀ sí pé ìwọ àti òṣìṣẹ́ tí a fún láṣẹ nìkan ló lè ka àkọsílẹ̀ rẹ."
+        },
+        "mfa": {
+          "title": "Ìwọlé onígbésẹ̀-méjì",
+          "body": "Fi áàpù ìjẹ́rìí kún un kí ọ̀rọ̀ aṣínà nìkan má bàa tó láti wọ àkáǹtì rẹ."
+        },
+        "review": {
+          "title": "Ìpínyà iṣẹ́",
+          "body": "Kò sí ẹni tó lè fọwọ́ sí ìbéèrè ara rẹ̀, àwọn ìgbésẹ̀ owó sì wà fún ipa ìnáwó nìkan."
+        },
+        "audit": {
+          "title": "Àkọsílẹ̀ tó ń fi àyípadà hàn",
+          "body": "A ń kọ àwọn ìgbésẹ̀ alákòóso àti àyípadà iye owó sínú àkọsílẹ̀ àyẹ̀wò tí a kàn lè fi kún nìkan."
+        }
+      }
+    },
+    "assets": {
+      "title": "Àwọn dúkìá tí a ṣàtìlẹ́yìn",
+      "body": "Dọ́là Amẹ́ríkà la fi ń díwọ̀n àwọn ipò ìdókòwò. Àwọn dúkìá wọ̀nyí ni pèpéle ń tọpa, tí ó sì ń gbà fún ìfowópamọ́.",
+      "price": "Iye owó",
+      "change24h": "Wákàtí 24",
+      "noPrice": "—",
+      "network": "Nẹ́tíwọ́ọ̀kì"
+    },
+    "faq": {
+      "title": "Àwọn ìbéèrè tí a sábà máa ń béèrè",
+      "items": {
+        "guaranteed": {
+          "q": "Ṣé èrè dájú?",
+          "a": "Rárá. Crypto máa ń yí padà gidigidi, o sì lè pàdánù díẹ̀ tàbí gbogbo owó tí o fi dókòwò. Ètò kan máa ń fi èrè àfojúsùn hàn nìkan tí a bá ti ṣètò rẹ̀ tí a sì ti tẹ̀ ẹ́ jáde, èrè àfojúsùn kì í sì í ṣe ìlérí."
+        },
+        "demo": {
+          "q": "Ṣé owó gidi ń yí ọwọ́ padà lórí pèpéle lónìí?",
+          "a": "Kò tíì rí bẹ́ẹ̀. Títí a ó fi so olùpèsè ìsanwó tó ní ìwé-àṣẹ pọ̀, a ń sàmì sí gbogbo ìfowópamọ́, ìgbowójáde àti ipò ìdókòwò ní kedere gẹ́gẹ́ bí àfarawé, kò sì sí owó gidi tó ń yí ọwọ́ padà."
+        },
+        "deposit": {
+          "q": "Ìgbà wo ni owó tí mo fi sílẹ̀ yóò fara hàn nínú iye owó mi?",
+          "a": "Lẹ́yìn tí olùṣàyẹ̀wò ìnáwó bá jẹ́rìí pé owó ti dé. Fífi ìbéèrè ránṣẹ́ tàbí gbígbé ìwé-ẹ̀rí ìsanwó sókè nìkan kò ní yí iye owó rẹ padà."
+        },
+        "withdraw": {
+          "q": "Báwo ni gbígba owó jáde ṣe ń ṣiṣẹ́?",
+          "a": "Béèrè láti gba owó jáde láti inú owó tó wà lọ́wọ́ rẹ. A ó dì iye náà mú nígbà tí à ń ṣàyẹ̀wò rẹ̀, a ó sì sàmì sí i pé ó ti parí lẹ́yìn tí a bá jẹ́rìí sí ìsanwó nìkan."
+        },
+        "early": {
+          "q": "Ṣé mo lè ti ipò ìdókòwò kan kí àkókò rẹ̀ tó parí?",
+          "a": "O lè fagilé ipò ìdókòwò láàárín wákàtí 24 lẹ́yìn tí o ṣí i. Lẹ́yìn ìgbà náà, yóò máa lọ títí yóò fi pé."
+        },
+        "security": {
+          "q": "Báwo ni a ṣe ń dáàbò bo àkáǹtì mi?",
+          "a": "Ímeèlì tí a ti fìdí rẹ̀ múlẹ̀, ọ̀rọ̀ aṣínà tó lágbára, ìwọlé onígbésẹ̀-méjì aláfikún, ìyàsọ́tọ̀ dátà ní ìpele ìlà, àti àkọsílẹ̀ àyẹ̀wò kíkún fún àwọn ìgbésẹ̀ aláṣẹ."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Ìròyìn ọjà wa, lóṣooṣù",
+      "body": "Àwọn ètò tuntun, àyípadà pèpéle àti àkíyèsí nípa ọjà. Kò sí ìpolówó tí a para dà bí ìmọ̀ràn.",
+      "email": "Àdírẹ́sì ímeèlì",
+      "placeholder": "you@example.com",
+      "consent": "Mo gbà láti máa gba ìwé ìròyìn oṣooṣù, mo sì lè yọ ara mi kúrò nígbàkigbà.",
+      "submit": "Forúkọ sílẹ̀",
+      "success": "O ti forúkọ sílẹ̀. Wo àpótí ímeèlì rẹ fún ẹ̀dà tó kàn.",
+      "already": "Ímeèlì yìí ti forúkọ sílẹ̀ tẹ́lẹ̀.",
+      "invalidEmail": "Tẹ àdírẹ́sì ímeèlì tó tọ́.",
+      "consentRequired": "Sàmì sí àpótí náà láti jẹ́rìí pé o fẹ́ máa gba ìròyìn."
+    },
+    "cta": {
+      "title": "Ṣí àkáǹtì láàárín ìṣẹ́jú díẹ̀.",
+      "body": "Wo pátákó ìṣàkóso yíká, fi àwọn ètò wéra, kí o sì rí bí a ṣe ń ṣàyẹ̀wò gbogbo ìbéèrè gan-an.",
+      "primary": "Ṣí àkáǹtì",
+      "secondary": "Ka ìkéde ewu"
+    },
+    "platform": {
+      "title": "Gbogbo rẹ̀ nínú àkáǹtì kan",
+      "body": "Wo ibi tí owó rẹ wà gan-an — ó wà lọ́wọ́, a ti dókòwò rẹ̀, tàbí ó ń bọ̀ — láti pátákó ìṣàkóso kan.",
+      "items": {
+        "dashboard": {
+          "title": "Pátákó ìṣàkóso tó ṣe kedere",
+          "body": "Owó tó wà lọ́wọ́, tí a dókòwò àti tó ń dúró, àwọn ipò ìdókòwò tó ṣí sílẹ̀ àti gbogbo ìṣòwò ní ibì kan."
+        },
+        "plans": {
+          "title": "Àwọn ètò onígbà-pàtó",
+          "body": "Yan ọjọ́ 30, 90 tàbí 180. Àkókò náà dúró ṣinṣin láti ọjọ́ tí o ṣí ipò ìdókòwò."
+        },
+        "money": {
+          "title": "Ìgbésẹ̀ owó tí a ṣàyẹ̀wò",
+          "body": "A ń fi ìfowópamọ́ kún un lẹ́yìn tí olùṣàyẹ̀wò bá jẹ́rìí pé owó ti dé. A ń dì ìgbowójáde mú títí a ó fi san án."
+        },
+        "support": {
+          "title": "Ìrànlọ́wọ́ tí a kọ sílẹ̀",
+          "body": "Ṣí tíkẹ́ẹ̀tì láti pátákó ìṣàkóso rẹ. Gbogbo èsì ń dúró pẹ̀lú rẹ̀."
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "Ọjà",
+    "company": "Ilé-iṣẹ́",
+    "legal": "Òfin",
+    "support": "Ìrànlọ́wọ́",
+    "about": "Nípa wa",
+    "contact": "Kàn sí wa",
+    "helpCentre": "Ibùdó ìrànlọ́wọ́",
+    "terms": "Òfin iṣẹ́",
+    "privacy": "Ìlànà ìpamọ́",
+    "risk": "Ìkéde ewu",
+    "cookies": "Ìlànà kúkì",
+    "riskWarning": "Kò sí ìlànà ìjọba fún crypto ní ọ̀pọ̀ orílẹ̀-èdè, ó sì máa ń yí padà gidigidi. Iye ìdókòwò lè lọ sílẹ̀ bí ó ṣe lè lọ sókè, o sì lè gba kéré sí ohun tí o fi sí i. Kò sí ohunkóhun lórí ojú-òpó yìí tó jẹ́ ìmọ̀ràn ìnáwó.",
+    "rights": "© {year} {company}. Gbogbo ẹ̀tọ́ wà ní ìpamọ́."
+  },
+  "about": {
+    "title": "Nípa {brand}",
+    "lead": "À ń kọ́ pèpéle ìdókòwò crypto níbi tí àwọn nọ́mbà lójú-ẹ̀rọ rẹ yóò máa bá àkọsílẹ̀ tó wà lẹ́yìn wọn mu nígbà gbogbo.",
+    "principlesTitle": "Ohun tí a dúró lé",
+    "principles": {
+      "records": {
+        "title": "Àkọsílẹ̀ ṣáájú ìpolówó",
+        "body": "Gbogbo nọ́mbà tí a fi hàn ọ́ wá láti inú àkọsílẹ̀ ibi ìpamọ́ dátà tí o lè tọpa. Tí a kò bá lè fìdí nọ́mbà kan múlẹ̀, a kò ní fi hàn."
+      },
+      "people": {
+        "title": "Ènìyàn wà nínú ìlànà náà",
+        "body": "Owó kì í yí ọwọ́ padà nítorí pé a fi fọ́ọ̀mù kan ránṣẹ́. Àwọn olùṣàyẹ̀wò tí a kọ́ ń jẹ́rìí sí ìfowópamọ́, wọ́n sì ń fọwọ́ sí ìgbowójáde."
+      },
+      "plain": {
+        "title": "Ọ̀rọ̀ tó yé nípa ewu",
+        "body": "A ń sọ ohun tó lè ṣẹlẹ̀ ní kedere, a kì í sì í gbé èrè àfojúsùn kalẹ̀ bí ìlérí."
+      }
+    },
+    "statusTitle": "Ibi tí pèpéle wà lónìí",
+    "statusBody": "Pèpéle ń ṣiṣẹ́ ní ipò àfihàn báyìí. Àkáǹtì, ètò àti ọ̀nà àyẹ̀wò ń ṣiṣẹ́ ní kíkún, ṣùgbọ́n àfarawé ni iye owó títí a ó fi so olùpèsè ìsanwó àti ìpamọ́ tó ní ìwé-àṣẹ pọ̀.",
+    "imageAlt": "Àwọn alábàáṣiṣẹ́pọ̀ tí wọ́n jọ ń ṣàyẹ̀wò ìwé lórí tábìlì"
+  },
+  "contact": {
+    "title": "Kàn sí wa àti ìrànlọ́wọ́",
+    "lead": "Àwọn oníbàárà tó ti forúkọ sílẹ̀ máa ń rí èsì kíákíá jùlọ nípasẹ̀ tíkẹ́ẹ̀tì ìrànlọ́wọ́ lórí pátákó ìṣàkóso.",
+    "ticketTitle": "Ṣí tíkẹ́ẹ̀tì ìrànlọ́wọ́",
+    "ticketBody": "Tíkẹ́ẹ̀tì ń kó gbogbo ìfiránṣẹ́ pọ̀ sí ibì kan, ẹgbẹ́ ìrànlọ́wọ́ wa sì ń dá a lóhùn.",
+    "ticketCta": "Lọ sí ìrànlọ́wọ́",
+    "emailTitle": "Ímeèlì",
+    "complianceTitle": "Ìbámu òfin àti ìbéèrè dátà",
+    "addressTitle": "Àdírẹ́sì tí a forúkọ sílẹ̀"
+  },
+  "legal": {
+    "updated": "Ìgbà tí a ṣe àtúnṣe kẹ́yìn: {date}",
+    "draftNotice": "Àwòṣe ni èyí, agbẹjọ́rò tó kúnjú òṣùwọ̀n gbọ́dọ̀ ṣàyẹ̀wò rẹ̀ kí a tó tẹ̀ ẹ́ jáde."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Àkópọ̀",
+      "invest": "Dókòwò",
+      "investments": "Àwọn ipò ìdókòwò",
+      "deposits": "Ìfowópamọ́",
+      "withdrawals": "Ìgbowójáde",
+      "transactions": "Àwọn ìṣòwò",
+      "notifications": "Ìfitónilétí",
+      "support": "Ìrànlọ́wọ́",
+      "settings": "Ètò",
+      "admin": "Ìṣàkóso",
+      "logout": "Jáde",
+      "collapse": "Ká ẹ̀gbẹ́ dé",
+      "expand": "Ṣí ẹ̀gbẹ́ sílẹ̀",
+      "menu": "Ṣí ìtọ́sọ́nà",
+      "closeMenu": "Pa ìtọ́sọ́nà dé",
+      "account": "Àkójọ àkáǹtì",
+      "breadcrumb": "Ipa ọ̀nà",
+      "home": "Pátákó ìṣàkóso",
+      "sections": {
+        "money": "Owó",
+        "account": "Àkáǹtì"
+      }
+    },
+    "overview": {
+      "title": "Àkópọ̀",
+      "greeting": "Káàbọ̀ padà, {name}",
+      "description": "Iye owó rẹ àti ìgbésẹ̀ tuntun, tààrà láti inú àkọsílẹ̀ àkáǹtì rẹ.",
+      "total": "Àpapọ̀ àpò ìdókòwò",
+      "totalHint": "Owó tó wà lọ́wọ́, tí a dókòwò àti tí a dì mú lápapọ̀",
+      "available": "Owó tó wà lọ́wọ́",
+      "availableHint": "Ó ṣetán fún ìdókòwò tàbí ìgbowójáde",
+      "invested": "Tí a dókòwò",
+      "investedHint": "{count, plural, =0 {Kò sí ipò ìdókòwò tó ṣí sílẹ̀} other {Nínú ipò ìdókòwò # tó ṣí sílẹ̀}}",
+      "pending": "Ó ń dúró",
+      "pendingHint": "Tí a dì mú fún ìgbowójáde àti ìfowópamọ́ tó ń dúró de àyẹ̀wò",
+      "historyTitle": "Iye àpò ìdókòwò",
+      "historyDescription": "Àpapọ̀ iye owó lẹ́yìn ìgbésẹ̀ kọ̀ọ̀kan tí a kọ sílẹ̀",
+      "historyEmpty": "Ìtàn iye owó rẹ yóò bẹ̀rẹ̀ pẹ̀lú ìfowópamọ́ àkọ́kọ́ tí a jẹ́rìí sí.",
+      "flowsTitle": "Ìfowópamọ́ àti ìgbowójáde",
+      "flowsDescription": "Iye tí a jẹ́rìí sí lóṣooṣù",
+      "depositsLabel": "Ìfowópamọ́",
+      "withdrawalsLabel": "Ìgbowójáde",
+      "flowsEmpty": "Kò tíì sí ìfowópamọ́ tàbí ìgbowójáde tí a jẹ́rìí sí.",
+      "summaryDeposited": "Àpapọ̀ owó tí a fi sílẹ̀",
+      "summaryWithdrawn": "Àpapọ̀ owó tí a gbà jáde",
+      "recentTitle": "Àwọn ìṣòwò tuntun",
+      "recentEmpty": "Kò tíì sí ìṣòwò. Béèrè láti fi owó sílẹ̀ láti bẹ̀rẹ̀.",
+      "positionsTitle": "Àwọn ipò ìdókòwò tó ń ṣiṣẹ́",
+      "positionsEmpty": "Kò sí ipò ìdókòwò tó ṣí sílẹ̀. Yan ètò kan nígbà tí o bá ṣetán.",
+      "quick": {
+        "deposit": "Béèrè láti fi owó sílẹ̀",
+        "invest": "Ṣí ipò ìdókòwò",
+        "withdraw": "Béèrè láti gba owó jáde"
+      },
+      "matured": "{count, plural, =0 {Kò sí ipò ìdókòwò tó pé} other {Ipò ìdókòwò # ti pé}}. Owó-ìpìlẹ̀ ti padà sí owó tó wà lọ́wọ́ rẹ.",
+      "range": {
+        "label": "Àkókò àwòrán",
+        "week": "Ọjọ́ 7",
+        "month": "Ọjọ́ 30",
+        "all": "Gbogbo"
+      },
+      "rangeChange": "Àyípadà nínú àkókò yìí",
+      "breakdownTitle": "Ìpín owó rẹ",
+      "maturity": {
+        "title": "Ìpé tó kàn",
+        "daysLeft": "{count, plural, other {Ọjọ́ # ló kù}}",
+        "maturesOn": "Yóò pé ní {date}",
+        "dayOf": "Ọjọ́ {day} nínú {total}",
+        "empty": "Kò sí ipò ìdókòwò tó ṣí sílẹ̀. Ìpé tó kàn yóò fara hàn níbí."
+      },
+      "risk": {
+        "title": "Àdàlú ewu",
+        "description": "A wọ̀n ọ́n gẹ́gẹ́ bí iye owó inú ipò ìdókòwò kọ̀ọ̀kan",
+        "low": "Ìṣọ́ra",
+        "moderate": "Ìwọ́ntúnwọ̀nsì",
+        "high": "Ìgboyà",
+        "empty": "Ṣí ipò ìdókòwò kan láti rí àdàlú ewu rẹ."
+      },
+      "markets": {
+        "title": "Àwọn ọjà",
+        "description": "Iye owó lọ́wọ́lọ́wọ́ àti ìtẹ̀sí ọjọ́ 7",
+        "trend": "ìtẹ̀sí iye owó ọjọ́ 7"
+      },
+      "gettingStarted": {
+        "title": "Bẹ̀rẹ̀",
+        "description": "Ìgbésẹ̀ mẹ́ta sí ipò ìdókòwò àkọ́kọ́ rẹ.",
+        "done": "Ó ti parí",
+        "steps": {
+          "request": "Béèrè láti fi owó sílẹ̀",
+          "requestBody": "Sọ fún wa iye tí o fẹ́ fi ránṣẹ́ àti bí o ṣe máa fi ránṣẹ́.",
+          "confirmed": "A ti jẹ́rìí sí ìfowópamọ́",
+          "confirmedBody": "Olùṣàyẹ̀wò jẹ́rìí pé owó rẹ ti dé.",
+          "invest": "Ṣí ipò ìdókòwò àkọ́kọ́ rẹ",
+          "investBody": "Yan ètò kan àti iye owó."
+        }
+      }
+    },
+    "invest": {
+      "title": "Ṣí ipò ìdókòwò",
+      "description": "Yan ètò kan, tẹ iye owó tó wà nínú ààlà rẹ̀, kí o sì ṣàyẹ̀wò kí o tó jẹ́rìí sí i.",
+      "choosePlan": "Yan ètò kan",
+      "amount": "Iye owó",
+      "amountHint": "Láàárín {min} àti {max}",
+      "available": "Ó wà lọ́wọ́: {amount}",
+      "review": "Ṣàyẹ̀wò ipò ìdókòwò",
+      "confirmTitle": "Jẹ́rìí sí ipò ìdókòwò yìí",
+      "confirmBody": "Iye owó náà yóò kúrò nínú owó tó wà lọ́wọ́ rẹ lọ sínú ètò náà. O lè fagilé e láàárín wákàtí 24 lẹ́yìn tí o ṣí i; lẹ́yìn náà, yóò máa lọ títí yóò fi pé.",
+      "plan": "Ètò",
+      "term": "Àkókò",
+      "matures": "Yóò pé ní",
+      "returns": "Èrè",
+      "noReturnsNote": "A kò ṣètò èrè àfojúsùn fún ètò yìí. Nígbà tí ó bá pé, owó-ìpìlẹ̀ rẹ yóò padà sí owó tó wà lọ́wọ́ rẹ.",
+      "confirm": "Ṣí ipò ìdókòwò",
+      "success": "A ti ṣí ipò ìdókòwò",
+      "insufficient": "Owó tó wà lọ́wọ́ rẹ kéré sí iye tó kéré jùlọ fún ètò yìí. Béèrè láti fi owó sílẹ̀ ná.",
+      "noPlans": "Kò sí ètò tó wà báyìí. Padà wá láìpẹ́."
+    },
+    "positions": {
+      "title": "Àwọn ipò ìdókòwò",
+      "description": "Àwọn ipò ìdókòwò tó ṣí sílẹ̀, tó ti pé, àti tí a fagilé.",
+      "tabs": {
+        "active": "Ó ń ṣiṣẹ́",
+        "matured": "Ó ti pé",
+        "cancelled": "A fagilé"
+      },
+      "progress": "Ọjọ́ {day} nínú {total}",
+      "opened": "Ọjọ́ ìṣí",
+      "matures": "Yóò pé",
+      "maturedOn": "Ó pé",
+      "cancelledOn": "A fagilé",
+      "cancel": "Fagilé ipò ìdókòwò",
+      "cancelTitle": "Fagilé ipò ìdókòwò yìí?",
+      "cancelBody": "Gbogbo iye owó náà yóò padà sí owó tó wà lọ́wọ́ rẹ lẹ́sẹ̀kẹsẹ̀. A kò lè dá èyí padà.",
+      "cancelConfirm": "Fagilé ipò ìdókòwò",
+      "cancelled": "A ti fagilé ipò ìdókòwò",
+      "cancelUntil": "O lè fagilé e títí di {time}",
+      "empty": {
+        "active": "Kò sí ipò ìdókòwò tó ń ṣiṣẹ́.",
+        "matured": "Kò tíì sí ipò ìdókòwò tó pé.",
+        "cancelled": "Kò sí ipò ìdókòwò tí a fagilé."
+      },
+      "openNew": "Ṣí ipò ìdókòwò"
+    },
+    "deposits": {
+      "title": "Ìfowópamọ́",
+      "description": "Béèrè láti fi owó sílẹ̀, lẹ́yìn náà fi owó ránṣẹ́. Iye owó rẹ yóò yí padà lẹ́yìn tí olùṣàyẹ̀wò bá jẹ́rìí sí i.",
+      "formTitle": "Béèrè láti fi owó sílẹ̀",
+      "amount": "Iye owó (USD)",
+      "asset": "Dúkìá",
+      "method": "Ọ̀nà",
+      "methods": {
+        "crypto_transfer": "Ìfiránṣẹ́ crypto",
+        "bank_transfer": "Ìfiránṣẹ́ báǹkì"
+      },
+      "txReference": "Hash ìṣòwò tàbí ìtọ́kasí",
+      "txReferenceHint": "Ó ń ran olùṣàyẹ̀wò lọ́wọ́ láti so ìfiránṣẹ́ rẹ pọ̀.",
+      "note": "Àkíyèsí fún olùṣàyẹ̀wò",
+      "receipt": "Ìwé-ẹ̀rí ìsanwó",
+      "receiptHint": "PNG, JPEG, WebP tàbí PDF, tí kò ju 5 MB lọ.",
+      "submit": "Béèrè láti fi owó sílẹ̀",
+      "success": "A ti gba ìbéèrè ìfowópamọ́. Ìtọ́kasí {reference}.",
+      "pendingNote": "Fífi ìbéèrè ránṣẹ́ tàbí gbígbé ìwé-ẹ̀rí sókè kò ní yí iye owó rẹ padà. Olùṣàyẹ̀wò yóò fi iye náà kún un lẹ́yìn tí ó bá jẹ́rìí pé owó ti dé.",
+      "historyTitle": "Ìtàn ìfowópamọ́",
+      "empty": "Kò tíì sí ìbéèrè ìfowópamọ́.",
+      "limits": "Ó kéré jù {min}, ó pọ̀ jù {max} fún ìbéèrè kọ̀ọ̀kan.",
+      "credited": "Tí a fi kún un",
+      "uploadReceipt": "Gbé ìwé-ẹ̀rí sókè",
+      "receiptUploaded": "A ti gbé ìwé-ẹ̀rí sókè",
+      "viewReceipt": "Wo ìwé-ẹ̀rí",
+      "instructionsTitle": "Ìtọ́sọ́nà ìsanwó",
+      "instructionsDemo": "Àlàyé ìsanwó yóò fara hàn níbí lẹ́yìn tí a bá so olùpèsè ìsanwó tó ní ìwé-àṣẹ pọ̀. Ní ipò àfihàn, kò sí ìfiránṣẹ́ kankan tí ó pọn dandan — olùṣàyẹ̀wò ń fọwọ́ sí ìbéèrè láti ṣe àfarawé owó tí a jẹ́rìí sí.",
+      "requested": "Ọjọ́ ìbéèrè",
+      "receiptMissing": "Kò sí ìwé-ẹ̀rí",
+      "instructionsLive": "Lẹ́yìn tí o bá fi ìbéèrè ránṣẹ́, tẹ̀lé àlàyé ìsanwó tí olùpèsè ìsanwó wa fi hàn, kí o sì fi nọ́mbà ìtọ́kasí rẹ kún un."
+    },
+    "withdrawals": {
+      "title": "Ìgbowójáde",
+      "description": "Gba owó jáde láti inú owó tó wà lọ́wọ́ rẹ. A ó dì iye náà mú nígbà tí à ń ṣàyẹ̀wò rẹ̀.",
+      "formTitle": "Béèrè láti gba owó jáde",
+      "amount": "Iye owó (USD)",
+      "asset": "Dúkìá",
+      "network": "Nẹ́tíwọ́ọ̀kì",
+      "destination": "Àdírẹ́sì àpamọ́wọ́ tó máa gbà á",
+      "destinationHint": "Ṣàyẹ̀wò rẹ̀ lẹ́ẹ̀mejì. A kò lè gba ìfiránṣẹ́ sí àdírẹ́sì tí kò tọ́ padà.",
+      "fee": "Owó iṣẹ́",
+      "net": "Ìwọ yóò gbà",
+      "submit": "Béèrè láti gba owó jáde",
+      "confirmTitle": "Jẹ́rìí sí ìgbowójáde yìí",
+      "confirmBody": "A ó dì {amount} mú láti inú owó tó wà lọ́wọ́ rẹ títí ìgbowójáde yóò fi parí tàbí tí a ó fi kọ̀ ọ́.",
+      "success": "A ti gba ìbéèrè ìgbowójáde. Ìtọ́kasí {reference}.",
+      "historyTitle": "Ìtàn ìgbowójáde",
+      "empty": "Kò tíì sí ìgbowójáde.",
+      "limits": "Ó kéré jù {min}, ó pọ̀ jù {max} fún ìbéèrè kọ̀ọ̀kan. Owó iṣẹ́: {flat} + {percent}.",
+      "cancel": "Fagilé ìbéèrè",
+      "cancelTitle": "Fagilé ìgbowójáde yìí?",
+      "cancelBody": "Iye tí a dì mú yóò padà sí owó tó wà lọ́wọ́ rẹ.",
+      "cancelled": "A ti fagilé ìgbowójáde",
+      "payoutReference": "Ìtọ́kasí ìsanwó",
+      "networkPlaceholder": "fún àpẹẹrẹ Ethereum (ERC-20)",
+      "availableNow": "Ó wà lọ́wọ́ báyìí: {amount}",
+      "feePreview": "Owó iṣẹ́ {fee} · ìwọ yóò gbà {net}"
+    },
+    "transactions": {
+      "title": "Àwọn ìṣòwò",
+      "description": "Gbogbo ìgbésẹ̀ tí a kọ sílẹ̀ lórí àkáǹtì rẹ, èyí tuntun jùlọ ní àkọ́kọ́.",
+      "filterType": "Irú",
+      "all": "Gbogbo irú",
+      "types": {
+        "deposit": "Ìfowópamọ́",
+        "withdrawal_hold": "Ìdìmú ìgbowójáde",
+        "withdrawal_release": "Ìtúsílẹ̀ ìgbowójáde",
+        "withdrawal_payout": "Ìsanwó ìgbowójáde",
+        "investment_open": "Ìṣí ipò ìdókòwò",
+        "investment_cancel": "Ìfagilé ipò ìdókòwò",
+        "investment_maturity": "Ìpé ipò ìdókòwò"
+      },
+      "empty": "Kò sí ìṣòwò tó bá a mu.",
+      "detailTitle": "Ìṣòwò {reference}",
+      "detailDescription": "Àkọsílẹ̀ àìyípadà nínú ìwé owó àkáǹtì rẹ.",
+      "balanceAfter": "Iye owó lẹ́yìn àkọsílẹ̀ yìí",
+      "change": "Àyípadà",
+      "source": "Ìbéèrè tó jẹ mọ́ ọn"
+    },
+    "table": {
+      "reference": "Ìtọ́kasí",
+      "date": "Ọjọ́",
+      "type": "Irú",
+      "amount": "Iye owó",
+      "status": "Ipò",
+      "asset": "Dúkìá",
+      "plan": "Ètò",
+      "description": "Àpèjúwe",
+      "available": "Ó wà lọ́wọ́",
+      "held": "Tí a dì mú",
+      "invested": "Tí a dókòwò",
+      "actions": "Àwọn ìgbésẹ̀",
+      "fee": "Owó iṣẹ́",
+      "net": "Àpapọ̀ àṣẹ́kù",
+      "destination": "Ibi tó ń lọ",
+      "user": "Oníṣe",
+      "subject": "Kókó ọ̀rọ̀",
+      "updated": "Ìgbà tí a ṣe àtúnṣe",
+      "category": "Ẹ̀ka",
+      "priority": "Ìṣáájú"
+    },
+    "pagination": {
+      "label": "Ìpín ojú-ìwé",
+      "previous": "Ojú-ìwé tó ṣáájú",
+      "next": "Ojú-ìwé tó kàn",
+      "summary": "À ń fi {from}–{to} hàn nínú {total}"
+    },
+    "notifications": {
+      "title": "Ìfitónilétí",
+      "description": "Ìròyìn nípa àwọn ìbéèrè, ipò ìdókòwò àti àkáǹtì rẹ.",
+      "markAll": "Sàmì sí gbogbo rẹ̀ pé o ti kà á",
+      "markRead": "Sàmì sí i pé o ti kà á",
+      "delete": "Pa á rẹ́",
+      "empty": "O ti ka gbogbo rẹ̀ tán.",
+      "bell": "Ìfitónilétí",
+      "unread": "{count, plural, =0 {Kò sí ìfitónilétí tí o kò tíì kà} other {Ìfitónilétí # tí o kò tíì kà}}",
+      "viewAll": "Wo gbogbo ìfitónilétí",
+      "templates": {
+        "depositRequested": {
+          "title": "A ti gba ìbéèrè ìfowópamọ́",
+          "body": "Ìbéèrè ìfowópamọ́ {reference} ń dúró de àyẹ̀wò. Iye owó rẹ kò ní yí padà títí a ó fi jẹ́rìí sí owó náà."
+        },
+        "depositCompleted": {
+          "title": "A ti jẹ́rìí sí ìfowópamọ́",
+          "body": "A ti jẹ́rìí sí ìfowópamọ́ {reference}, a sì ti fi kún owó tó wà lọ́wọ́ rẹ."
+        },
+        "depositRejected": {
+          "title": "A kò jẹ́rìí sí ìfowópamọ́",
+          "body": "A kò lè jẹ́rìí sí ìfowópamọ́ {reference}. Ṣí tíkẹ́ẹ̀tì ìrànlọ́wọ́ tí o bá ní ìbéèrè."
+        },
+        "withdrawalRequested": {
+          "title": "A ti gba ìbéèrè ìgbowójáde",
+          "body": "Ìgbowójáde {reference} ń dúró de àyẹ̀wò. A ó dì iye náà mú títí yóò fi parí tàbí tí a ó fi kọ̀ ọ́."
+        },
+        "withdrawalApproved": {
+          "title": "A ti fọwọ́ sí ìgbowójáde",
+          "body": "A ti fọwọ́ sí ìgbowójáde {reference}, ó sì ń dúró de ìjẹ́rìí ìsanwó."
+        },
+        "withdrawalCompleted": {
+          "title": "Ìgbowójáde ti parí",
+          "body": "A ti san ìgbowójáde {reference}."
+        },
+        "withdrawalRejected": {
+          "title": "A kọ ìgbowójáde",
+          "body": "A kọ ìgbowójáde {reference}, owó náà sì ti padà sí owó tó wà lọ́wọ́ rẹ."
+        },
+        "investmentOpened": {
+          "title": "A ti ṣí ipò ìdókòwò",
+          "body": "Ipò ìdókòwò {plan} {reference} ń ṣiṣẹ́, yóò sì pé ní {date}."
+        },
+        "investmentMatured": {
+          "title": "Ipò ìdókòwò ti pé",
+          "body": "Ipò ìdókòwò {reference} ti parí àkókò rẹ̀. Owó-ìpìlẹ̀ ti padà sí owó tó wà lọ́wọ́ rẹ."
+        },
+        "supportReply": {
+          "title": "Èsì tuntun lórí {reference}",
+          "body": "Ẹgbẹ́ ìrànlọ́wọ́ ti dá tíkẹ́ẹ̀tì rẹ lóhùn."
+        },
+        "accountSuspended": {
+          "title": "A ti dá àkáǹtì dúró",
+          "body": "A ti dá àkáǹtì rẹ dúró. Kàn sí ìrànlọ́wọ́ fún àlàyé."
+        },
+        "accountReactivated": {
+          "title": "A ti mú àkáǹtì padà ṣiṣẹ́",
+          "body": "Àkáǹtì rẹ ti ń ṣiṣẹ́ padà."
+        }
+      }
+    },
+    "support": {
+      "title": "Ìrànlọ́wọ́",
+      "description": "Ṣí tíkẹ́ẹ̀tì, ẹgbẹ́ wa yóò sì dáhùn níbí. Gbogbo ìfiránṣẹ́ ń dúró sínú tíkẹ́ẹ̀tì náà.",
+      "new": "Tíkẹ́ẹ̀tì tuntun",
+      "newTitle": "Ṣí tíkẹ́ẹ̀tì ìrànlọ́wọ́",
+      "subject": "Kókó ọ̀rọ̀",
+      "category": "Ẹ̀ka",
+      "categories": {
+        "account": "Àkáǹtì",
+        "deposit": "Ìfowópamọ́",
+        "withdrawal": "Ìgbowójáde",
+        "investment": "Àwọn ipò ìdókòwò",
+        "security": "Ààbò",
+        "other": "Nǹkan mìíràn"
+      },
+      "message": "Ìfiránṣẹ́",
+      "messageHint": "Fi àwọn nọ́mbà ìtọ́kasí (bíi DEP-…) kún un kí a lè rí ìbéèrè náà.",
+      "submit": "Ṣí tíkẹ́ẹ̀tì",
+      "created": "A ti ṣí tíkẹ́ẹ̀tì {reference}",
+      "empty": "Kò tíì sí tíkẹ́ẹ̀tì. Ṣí ọ̀kan nígbàkigbà tí o bá nílò ìrànlọ́wọ́.",
+      "reply": "Dáhùn",
+      "replyPlaceholder": "Kọ èsì…",
+      "send": "Fi èsì ránṣẹ́",
+      "sent": "A ti fi èsì ránṣẹ́",
+      "close": "Ti tíkẹ́ẹ̀tì",
+      "closed": "A ti ti tíkẹ́ẹ̀tì",
+      "closedNote": "A ti ti tíkẹ́ẹ̀tì yìí. Ṣí tuntun tí o bá ṣì nílò ìrànlọ́wọ́.",
+      "you": "Ìwọ",
+      "staff": "Ẹgbẹ́ ìrànlọ́wọ́",
+      "back": "Gbogbo tíkẹ́ẹ̀tì",
+      "faqTitle": "Ìdáhùn kíákíá",
+      "faqBody": "Ọ̀pọ̀ ìbéèrè nípa ìfowópamọ́, ìgbowójáde àti ipò ìdókòwò ló ní ìdáhùn nínú FAQ.",
+      "faqLink": "Ka FAQ"
+    },
+    "settings": {
+      "title": "Ètò",
+      "description": "Ṣàkóso àkọsílẹ̀ ara rẹ, ààbò, ìfitónilétí àti àwọn àṣàyàn rẹ.",
+      "tabs": {
+        "profile": "Àkọsílẹ̀ ara ẹni",
+        "security": "Ààbò",
+        "notifications": "Ìfitónilétí",
+        "preferences": "Àṣàyàn"
+      },
+      "profile": {
+        "title": "Àkọsílẹ̀ ara ẹni",
+        "description": "Orúkọ rẹ àti àlàyé ìbánisọ̀rọ̀.",
+        "email": "Ímeèlì",
+        "emailHint": "Kàn sí ìrànlọ́wọ́ láti yí ímeèlì àkáǹtì rẹ padà.",
+        "username": "Orúkọ oníṣe",
+        "referral": "Kóòdù ìtọ́kasí rẹ",
+        "memberSince": "Ọmọ ẹgbẹ́ láti",
+        "saved": "A ti fi àkọsílẹ̀ ara ẹni pamọ́",
+        "phoneUnverified": "A kò tíì fìdí rẹ̀ múlẹ̀"
+      },
+      "security": {
+        "passwordTitle": "Ọ̀rọ̀ aṣínà",
+        "passwordDescription": "Yíyí ọ̀rọ̀ aṣínà padà yóò mú ọ jáde kúrò nínú àwọn ìgbà ìwọlé mìíràn.",
+        "newPassword": "Ọ̀rọ̀ aṣínà tuntun",
+        "updatePassword": "Ṣe àtúnṣe ọ̀rọ̀ aṣínà",
+        "passwordUpdated": "A ti ṣe àtúnṣe ọ̀rọ̀ aṣínà",
+        "mfaTitle": "Ìwọlé onígbésẹ̀-méjì",
+        "mfaDescription": "Béèrè kóòdù láti inú áàpù ìjẹ́rìí ní gbogbo ìgbà tí o bá wọlé.",
+        "mfaOn": "Ó tàn",
+        "mfaOff": "Ó kú",
+        "mfaEnable": "Ṣètò áàpù ìjẹ́rìí",
+        "mfaDisable": "Pa á",
+        "mfaScan": "Ṣàyẹ̀wò kóòdù QR yìí pẹ̀lú áàpù ìjẹ́rìí bíi 1Password, Google Authenticator tàbí Authy, lẹ́yìn náà tẹ kóòdù oní-nọ́mbà 6 tí ó fi hàn.",
+        "mfaSecret": "Kò lè ṣàyẹ̀wò rẹ̀? Tẹ kọ́kọ́rọ́ yìí fúnra rẹ:",
+        "mfaVerify": "Jẹ́rìí kí o sì tàn án",
+        "mfaEnabled": "Ìwọlé onígbésẹ̀-méjì ti tàn",
+        "mfaDisabled": "Ìwọlé onígbésẹ̀-méjì ti kú",
+        "mfaDisableTitle": "Pa ìwọlé onígbésẹ̀-méjì?",
+        "mfaDisableBody": "Ọ̀rọ̀ aṣínà rẹ nìkan ni yóò dáàbò bo àkáǹtì rẹ.",
+        "sessionsTitle": "Àwọn ìgbà ìwọlé",
+        "sessionsDescription": "Jáde kúrò ní gbogbo aṣàwákiri àti ẹ̀rọ, títí kan èyí.",
+        "signOutAll": "Jáde níbi gbogbo"
+      },
+      "notifications": {
+        "title": "Ìfitónilétí ímeèlì",
+        "description": "Ìfitónilétí inú áàpù máa ń tàn nígbà gbogbo. Yan àwọn ímeèlì tí o fẹ́.",
+        "email_deposits": "Ìròyìn ìfowópamọ́",
+        "email_withdrawals": "Ìròyìn ìgbowójáde",
+        "email_investments": "Ìṣí àti ìpé ipò ìdókòwò",
+        "email_security": "Ìkìlọ̀ ààbò",
+        "email_security_hint": "Àyípadà ọ̀rọ̀ aṣínà àti ààbò ìwọlé",
+        "email_product": "Ìwé ìròyìn ọjà oṣooṣù",
+        "saved": "A ti fi àṣàyàn ìfitónilétí pamọ́"
+      },
+      "preferences": {
+        "title": "Àṣàyàn",
+        "description": "Lẹ́yìn tí o bá fi pamọ́, èdè àti ìrísí yóò tẹ̀lé ọ lórí gbogbo ẹ̀rọ rẹ.",
+        "language": "Èdè",
+        "theme": "Ìrísí",
+        "saved": "A ti fi àṣàyàn pamọ́"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "A kọ gbogbo nọ́mbà sínú ìwé àkọsílẹ̀.",
+    "panelPoints": {
+      "review": "Ènìyàn ń ṣàyẹ̀wò ìfowópamọ́ àti ìgbowójáde kí iye owó tó yí padà.",
+      "ledger": "Gbogbo ìgbésẹ̀ ní nọ́mbà ìtọ́kasí tí o lè tọpa nínú ìtàn rẹ.",
+      "security": "Ìwọlé onígbésẹ̀-méjì àti ìyàsọ́tọ̀ dátà ní ìpele ìlà ń dáàbò bo àkáǹtì rẹ."
+    },
+    "email": "Ímeèlì",
+    "password": "Ọ̀rọ̀ aṣínà",
+    "confirmPassword": "Jẹ́rìí sí ọ̀rọ̀ aṣínà",
+    "fullName": "Orúkọ kíkún",
+    "username": "Orúkọ oníṣe",
+    "usernameHint": "Lẹ́tà 3 sí 24: lẹ́tà kékeré, nọ́mbà àti ìlà-ìsàlẹ̀.",
+    "phone": "Nọ́mbà fóònù",
+    "phoneHint": "A ń lò ó fún ààbò àkáǹtì. A ó béèrè lọ́wọ́ rẹ kí a tó fi ọ̀rọ̀ ránṣẹ́ sí ọ.",
+    "referral": "Kóòdù ìtọ́kasí",
+    "showPassword": "Fi ọ̀rọ̀ aṣínà hàn",
+    "hidePassword": "Fi ọ̀rọ̀ aṣínà pamọ́",
+    "acceptTerms": "Mo gba <terms>Òfin iṣẹ́</terms> àti <privacy>Ìlànà ìpamọ́</privacy>, mo sì ti ka <risk>Ìkéde ewu</risk>.",
+    "login": {
+      "title": "Wọlé",
+      "subtitle": "Káàbọ̀ padà. Tẹ àlàyé rẹ láti máa bá a lọ.",
+      "submit": "Wọlé",
+      "submitting": "Ó ń wọlé…",
+      "forgot": "Ṣé o gbàgbé ọ̀rọ̀ aṣínà?",
+      "noAccount": "Ṣé o jẹ́ tuntun níbí?",
+      "register": "Ṣí àkáǹtì",
+      "signedOut": "O ti jáde.",
+      "notVerified": "Jẹ́rìí sí ímeèlì rẹ kí o tó wọlé. A lè tún ọ̀nà ìjápọ̀ náà ránṣẹ́.",
+      "resend": "Tún ọ̀nà ìjápọ̀ ránṣẹ́"
+    },
+    "register": {
+      "title": "Ṣí àkáǹtì rẹ",
+      "subtitle": "Ó gba ìṣẹ́jú díẹ̀. Ìwọ yóò jẹ́rìí sí ímeèlì rẹ kí o tó lè wọlé.",
+      "submit": "Ṣí àkáǹtì",
+      "submitting": "Ó ń ṣí àkáǹtì…",
+      "haveAccount": "Ṣé o ti ní àkáǹtì?",
+      "login": "Wọlé",
+      "closed": "A dá ìforúkọsílẹ̀ tuntun dúró fún ìgbà díẹ̀. Tún gbìyànjú nígbà mìíràn."
+    },
+    "strength": {
+      "label": "Agbára ọ̀rọ̀ aṣínà",
+      "levels": [
+        "Ó ṣe aláìlágbára púpọ̀",
+        "Ó ṣe aláìlágbára",
+        "Ó tó",
+        "Ó dára",
+        "Ó lágbára"
+      ],
+      "rules": {
+        "length": "Ó kéré tán, lẹ́tà 10",
+        "lower": "Lẹ́tà kékeré kan",
+        "upper": "Lẹ́tà ńlá kan",
+        "number": "Nọ́mbà kan",
+        "symbol": "Àmì bíi ! tàbí #"
+      }
+    },
+    "verify": {
+      "title": "Ṣàyẹ̀wò àpótí ímeèlì rẹ",
+      "body": "A fi ọ̀nà ìjápọ̀ ìjẹ́rìí ránṣẹ́ sí {email}. Ṣí i lórí ẹ̀rọ yìí láti parí ṣíṣí àkáǹtì rẹ.",
+      "bodyNoEmail": "Ṣí ọ̀nà ìjápọ̀ ìjẹ́rìí tí a fi ránṣẹ́ sí ímeèlì rẹ láti parí ṣíṣí àkáǹtì rẹ.",
+      "duplicateNote": "Tí àdírẹ́sì yìí bá ti ní àkáǹtì, a kò ní fi ímeèlì tuntun ránṣẹ́ — wọlé tàbí tún ọ̀rọ̀ aṣínà rẹ ṣe.",
+      "resend": "Tún ọ̀nà ìjápọ̀ ránṣẹ́",
+      "resent": "Tí àdírẹ́sì náà bá nílò ìjẹ́rìí, ọ̀nà ìjápọ̀ tuntun ti ń bọ̀.",
+      "expiredTitle": "Ọ̀nà ìjápọ̀ yẹn kò ṣiṣẹ́",
+      "expiredBody": "Ọ̀nà ìjápọ̀ ìjẹ́rìí àti àtúnṣe máa ń parí lọ́gán, a sì lè lò wọ́n lẹ́ẹ̀kan ṣoṣo. Béèrè tuntun ní ìsàlẹ̀.",
+      "backToLogin": "Padà sí ìwọlé"
+    },
+    "forgot": {
+      "title": "Tún ọ̀rọ̀ aṣínà ṣe",
+      "subtitle": "Tẹ ímeèlì tí o fi forúkọ sílẹ̀, a ó sì fi ọ̀nà ìjápọ̀ àtúnṣe ránṣẹ́ sí ọ.",
+      "submit": "Fi ọ̀nà ìjápọ̀ ránṣẹ́",
+      "sent": "Tí àkáǹtì bá wà pẹ̀lú ímeèlì yẹn, ọ̀nà ìjápọ̀ àtúnṣe ti ń bọ̀. Yóò parí lẹ́yìn wákàtí kan.",
+      "back": "Padà sí ìwọlé"
+    },
+    "reset": {
+      "title": "Yan ọ̀rọ̀ aṣínà tuntun",
+      "subtitle": "Lo ọ̀rọ̀ aṣínà tí o kò tíì lò níbí rí.",
+      "submit": "Ṣe àtúnṣe ọ̀rọ̀ aṣínà",
+      "success": "A ti ṣe àtúnṣe ọ̀rọ̀ aṣínà, o sì ti wọlé.",
+      "expired": "Ọ̀nà ìjápọ̀ àtúnṣe ti parí. Béèrè tuntun."
+    },
+    "logout": {
+      "title": "Jáde?",
+      "body": "Ìwọ yóò nílò ímeèlì àti ọ̀rọ̀ aṣínà rẹ láti wọlé padà.",
+      "confirm": "Jáde",
+      "everywhere": "Jáde lórí gbogbo ẹ̀rọ",
+      "cancel": "Dúró sínú rẹ̀"
+    },
+    "mfa": {
+      "title": "Ìjẹ́rìí onígbésẹ̀-méjì",
+      "subtitle": "Tẹ kóòdù oní-nọ́mbà 6 láti inú áàpù ìjẹ́rìí rẹ.",
+      "code": "Kóòdù ìjẹ́rìí",
+      "submit": "Jẹ́rìí",
+      "invalid": "Kóòdù yẹn kò bá a mu. Ṣàyẹ̀wò áàpù rẹ kí o sì tún gbìyànjú.",
+      "useAnother": "Jáde kí o sì lo àkáǹtì mìíràn"
+    },
+    "admin": {
+      "title": "Ìwọlé òṣìṣẹ́",
+      "subtitle": "Fún òṣìṣẹ́ tí a fún láṣẹ nìkan. A ń ṣàyẹ̀wò ìwọlé gẹ́gẹ́ bí ipa tí a fún ọ.",
+      "forbidden": "Àkáǹtì yìí kò ní àṣẹ òṣìṣẹ́.",
+      "customer": "Ṣé àkáǹtì rẹ lò ń wá? <link>Ìwọlé oníbàárà</link>"
+    }
+  },
+  "phone": {
+    "country": "Orílẹ̀-èdè tàbí agbègbè",
+    "search": "Wá orílẹ̀-èdè",
+    "noMatch": "Kò sí orílẹ̀-èdè tó bá a mu",
+    "number": "Nọ́mbà fóònù"
+  },
+  "validation": {
+    "required": "Àyè yìí pọn dandan.",
+    "emailInvalid": "Tẹ àdírẹ́sì ímeèlì tó tọ́.",
+    "passwordWeak": "Lo ó kéré tán lẹ́tà 10 pẹ̀lú lẹ́tà ńlá, lẹ́tà kékeré, nọ́mbà àti àmì.",
+    "passwordTooLong": "Má ṣe lo ju lẹ́tà 128 lọ.",
+    "passwordMismatch": "Àwọn ọ̀rọ̀ aṣínà kò bá ara wọn mu.",
+    "passwordBreached": "Ọ̀rọ̀ aṣínà yìí ti fara hàn nínú dátà tí ó jò. Yan òmíràn.",
+    "passwordSame": "Yan ọ̀rọ̀ aṣínà tó yàtọ̀ sí èyí tí o ń lò báyìí.",
+    "phoneInvalid": "Tẹ nọ́mbà tó tọ́ fún orílẹ̀-èdè tí o yàn.",
+    "usernameShort": "Lo ó kéré tán lẹ́tà 3.",
+    "usernameLong": "Má ṣe lo ju lẹ́tà 24 lọ.",
+    "usernameChars": "Lo lẹ́tà kékeré, nọ́mbà àti ìlà-ìsàlẹ̀ nìkan.",
+    "usernameTaken": "Ẹlòmíràn ti ń lo orúkọ oníṣe yìí. Gbìyànjú òmíràn.",
+    "nameShort": "Tẹ orúkọ kíkún rẹ.",
+    "nameLong": "Má ṣe lo ju lẹ́tà 100 lọ.",
+    "termsRequired": "O gbọ́dọ̀ gba òfin náà láti ṣí àkáǹtì.",
+    "consentRequired": "Sàmì sí àpótí náà láti jẹ́rìí.",
+    "referralInvalid": "Lẹ́tà àti nọ́mbà nìkan ló wà nínú kóòdù ìtọ́kasí.",
+    "amountInvalid": "Tẹ iye owó tí kò ní ju ààyè-ìdá méjì lọ.",
+    "amountPositive": "Tẹ iye owó tó ju òdo lọ.",
+    "methodInvalid": "Yan ọ̀nà ìsanwó.",
+    "referenceLong": "Má ṣe lo ju lẹ́tà 140 lọ.",
+    "noteLong": "Má ṣe lo ju lẹ́tà 500 lọ.",
+    "destinationInvalid": "Tẹ àdírẹ́sì àpamọ́wọ́ tó tọ́ (lẹ́tà àti nọ́mbà nìkan).",
+    "planInvalid": "Yan ètò kan.",
+    "invalidRequest": "Nǹkan kan kò tọ́ nínú ìbéèrè yìí. Sọ ojú-ìwé dọ̀tun kí o sì tún gbìyànjú.",
+    "subjectShort": "Lo ó kéré tán lẹ́tà 4.",
+    "subjectLong": "Má ṣe lo ju lẹ́tà 140 lọ.",
+    "messageShort": "Kọ ó kéré tán lẹ́tà 10.",
+    "messageLong": "Má ṣe lo ju lẹ́tà 4000 lọ.",
+    "slugInvalid": "Lo lẹ́tà kékeré, nọ́mbà àti àmì-ìlà, láti 2 sí 40.",
+    "descriptionShort": "Kọ ó kéré tán lẹ́tà 10.",
+    "descriptionLong": "Má ṣe lo ju lẹ́tà 400 lọ.",
+    "termInvalid": "Tẹ àkókò láàárín ọjọ́ 1 sí 3650.",
+    "rangeInvalid": "Iye tó pọ̀ jù gbọ́dọ̀ ju iye tó kéré jù lọ.",
+    "targetBasisRequired": "Èrè àfojúsùn nílò iye méjèèjì àti ìpìlẹ̀ tí a tẹ̀ jáde.",
+    "reasonRequired": "Fi ìdí kan sílẹ̀ (ó kéré tán lẹ́tà 4).",
+    "codeInvalid": "Tẹ kóòdù oní-nọ́mbà 6."
+  },
+  "errors": {
+    "generic": "Nǹkan kan kò lọ dáadáa ní ẹ̀gbẹ́ wa. Tún gbìyànjú láìpẹ́.",
+    "network": "A kò lè dé ọ̀dọ̀ ẹ̀rọ ìpèsè. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì tún gbìyànjú.",
+    "not_configured": "Àkáǹtì kò tíì wà: a kò tíì so ẹ̀rọ ìpèsè pọ̀.",
+    "rate_limited": "Ìgbìyànjú ti pọ̀ jù. Dúró fún ìṣẹ́jú díẹ̀ kí o tó tún gbìyànjú.",
+    "validation": "Ṣàyẹ̀wò àwọn àyè tí a sàmì sí.",
+    "unauthorized": "Ìgbà ìwọlé rẹ ti parí. Tún wọlé.",
+    "forbidden": "Àkáǹtì rẹ kò ní àṣẹ láti ṣe èyí.",
+    "mfa_required": "Jẹ́rìí pẹ̀lú áàpù ìjẹ́rìí rẹ láti máa bá a lọ.",
+    "account_suspended": "A ti dá àkáǹtì yìí dúró. Kàn sí ìrànlọ́wọ́ fún ìrànwọ́.",
+    "maintenance": "A dá ìbéèrè tuntun dúró fún àtúnṣe. Tún gbìyànjú nígbà mìíràn.",
+    "invalid_credentials": "Ímeèlì àti ọ̀rọ̀ aṣínà náà kò bá ara wọn mu. Ṣàyẹ̀wò wọn kí o sì tún gbìyànjú.",
+    "email_not_confirmed": "Jẹ́rìí sí ímeèlì rẹ kí o tó wọlé.",
+    "registrations_closed": "A dá ìforúkọsílẹ̀ tuntun dúró fún ìgbà díẹ̀.",
+    "reset_link_expired": "Ọ̀nà ìjápọ̀ àtúnṣe ti parí. Béèrè tuntun.",
+    "amount_invalid": "Tẹ iye owó tó tọ́.",
+    "amount_below_min": "Iye owó náà kéré sí iye tó kéré jùlọ.",
+    "amount_above_max": "Iye owó náà ju iye tó pọ̀ jùlọ lọ.",
+    "amount_below_fee": "Iye owó náà gbọ́dọ̀ ju owó iṣẹ́ ìgbowójáde lọ.",
+    "insufficient_funds": "Owó tó wà lọ́wọ́ rẹ kò tó fún iye yìí.",
+    "asset_invalid": "Dúkìá yẹn kò sí fún ìbéèrè yìí.",
+    "method_invalid": "Yan ọ̀nà ìsanwó tó tọ́.",
+    "destination_invalid": "Ṣàyẹ̀wò àdírẹ́sì ibi tó ń lọ.",
+    "network_invalid": "Yan nẹ́tíwọ́ọ̀kì kan.",
+    "too_many_pending": "Ìbéèrè tó ṣí sílẹ̀ rẹ ti pọ̀ jù. Dúró kí a ṣàyẹ̀wò wọn ná.",
+    "duplicate_request": "A ṣẹ̀ṣẹ̀ gba ìbéèrè tó jọ èyí. Ṣàyẹ̀wò ìtàn rẹ kí o tó tún gbìyànjú.",
+    "invalid_request": "Ìbéèrè yìí kò tọ́. Sọ ojú-ìwé dọ̀tun kí o sì tún gbìyànjú.",
+    "invalid_status": "Nǹkan yìí ti tẹ̀síwájú, a kò sì lè yí i padà lọ́nà yìí.",
+    "invalid_decision": "Yan ìpinnu tó tọ́.",
+    "not_found": "A kò rí nǹkan yẹn.",
+    "plan_invalid": "Ètò yẹn kò sí.",
+    "cancel_window_closed": "A lè fagilé ipò ìdókòwò láàárín wákàtí 24 lẹ́yìn ìṣí rẹ̀ nìkan.",
+    "self_review_forbidden": "O kò lè ṣàyẹ̀wò ìbéèrè ara rẹ. Ní kí olùṣàyẹ̀wò mìíràn ṣe é.",
+    "self_action_forbidden": "O kò lè yí àkáǹtì ara rẹ padà lọ́nà yìí.",
+    "reason_required": "Fi ìdí kan kún un kí o tó máa bá a lọ.",
+    "payout_reference_required": "Fi ìtọ́kasí ìsanwó kún un láti sàmì sí i pé ó ti parí.",
+    "credit_exceeds_request": "Iye tí a fi kún un kò lè ju iye tí a béèrè lọ.",
+    "last_owner": "O kò lè yọ olùní tó kẹ́yìn kúrò.",
+    "slug_taken": "Ètò mìíràn ti ń lo ìdámọ̀ yẹn.",
+    "ticket_closed": "A ti ti tíkẹ́ẹ̀tì yìí. Ṣí tuntun tí o bá ṣì nílò ìrànlọ́wọ́.",
+    "message_invalid": "Kọ ìfiránṣẹ́ láàárín lẹ́tà 10 sí 4000.",
+    "email_invalid": "Tẹ àdírẹ́sì ímeèlì tó tọ́.",
+    "consent_required": "Ìfọwọ́sí pọn dandan.",
+    "balance_missing": "A kò tíì ṣètò àkáǹtì rẹ ní kíkún. Kàn sí ìrànlọ́wọ́.",
+    "upload_invalid": "Gbé fáìlì PNG, JPEG, WebP tàbí PDF tí kò ju 5 MB lọ sókè."
+  },
+  "admin": {
+    "nav": {
+      "overview": "Àkópọ̀",
+      "deposits": "Ìfowópamọ́",
+      "withdrawals": "Ìgbowójáde",
+      "investments": "Àwọn ipò ìdókòwò",
+      "transactions": "Ìwé àkọsílẹ̀ owó",
+      "plans": "Àwọn ètò",
+      "users": "Àwọn oníṣe",
+      "kyc": "Ìjẹ́rìí ìdánimọ̀",
+      "support": "Ìrànlọ́wọ́",
+      "notifications": "Ìkéde",
+      "audit": "Àkọsílẹ̀ àyẹ̀wò",
+      "settings": "Ètò",
+      "exit": "Ìwòye oníbàárà",
+      "breadcrumb": "Ipa ọ̀nà",
+      "sections": {
+        "money": "Owó",
+        "people": "Ènìyàn",
+        "system": "Ẹ̀rọ"
+      }
+    },
+    "common": {
+      "search": "Wá",
+      "searchPlaceholder": "Ìtọ́kasí, ímeèlì tàbí orúkọ",
+      "status": "Ipò",
+      "allStatuses": "Gbogbo ipò",
+      "apply": "Lò ó",
+      "reset": "Tún ṣe",
+      "sort": "Ètò ìtòlẹ́sẹẹsẹ",
+      "newest": "Tuntun jùlọ ní àkọ́kọ́",
+      "oldest": "Àtijọ́ jùlọ ní àkọ́kọ́",
+      "largest": "Iye tó pọ̀ jùlọ",
+      "view": "Wò ó",
+      "review": "Ṣàyẹ̀wò",
+      "noPermission": "Ipa rẹ lè wo ojú-ìwé yìí ṣùgbọ́n kò lè yí i padà.",
+      "mfaEnrol": "Àkáǹtì òṣìṣẹ́ gbọ́dọ̀ lo ìwọlé onígbésẹ̀-méjì. Tàn án ní Ètò → Ààbò.",
+      "simulatedLabel": "Ìgbésẹ̀ owó àfarawé — ipò àfihàn ń ṣiṣẹ́."
+    },
+    "overview": {
+      "title": "Àkópọ̀ iṣẹ́",
+      "description": "Àwọn nọ́mbà lọ́wọ́lọ́wọ́ tí a ṣírò láti inú àkọsílẹ̀ pèpéle.",
+      "usersTotal": "Àwọn oníṣe tó forúkọ sílẹ̀",
+      "usersNew": "{count} tuntun ní ọjọ́ 7 sẹ́yìn",
+      "usersActive": "Tó ṣiṣẹ́ ní ọjọ́ 30",
+      "usersSuspended": "{count} tí a dá dúró",
+      "depositsPending": "Ìfowópamọ́ láti ṣàyẹ̀wò",
+      "withdrawalsOpen": "Ìgbowójáde tó ṣí sílẹ̀",
+      "investmentsActive": "Àwọn ipò ìdókòwò tó ń ṣiṣẹ́",
+      "investmentsDue": "{count} ti kọjá ìgbà ìpé",
+      "ticketsOpen": "Tíkẹ́ẹ̀tì tó ṣí sílẹ̀",
+      "balancesTitle": "Owó oníbàárà tí a ń tọ́jú",
+      "available": "Ó wà lọ́wọ́",
+      "held": "Tí a dì mú fún ìgbowójáde",
+      "invested": "Nínú ipò ìdókòwò",
+      "flowsTitle": "Ìṣàn owó ojoojúmọ́, ọjọ́ 30 sẹ́yìn",
+      "flowsDescription": "Ìfowópamọ́ tí a jẹ́rìí sí àti ìgbowójáde tí a san",
+      "activityTitle": "Ìgbésẹ̀ òṣìṣẹ́ àti ẹ̀rọ tuntun",
+      "activityEmpty": "Kò tíì sí ìgbésẹ̀ tí a kọ sílẹ̀.",
+      "queueTitle": "Ìlà àyẹ̀wò",
+      "queueDeposits": "Ìfowópamọ́ tó ti ń dúró pẹ́ jùlọ",
+      "queueWithdrawals": "Ìgbowójáde tó ti ṣí sílẹ̀ pẹ́ jùlọ",
+      "queueEmpty": "Kò sí ohun tó ń dúró.",
+      "processMaturities": "Yanjú àwọn ipò ìdókòwò tó ti pé",
+      "processed": "{count, plural, =0 {Kò sí ipò ìdókòwò tó tó àkókò} other {A ti yanjú ipò ìdókòwò #}}"
+    },
+    "deposits": {
+      "title": "Àyẹ̀wò ìfowópamọ́",
+      "description": "Fọwọ́ sí i nìkan lẹ́yìn tí o bá jẹ́rìí pé owó ti dé. Ìfọwọ́sí ń fi iye náà kún owó tó wà lọ́wọ́ oníbàárà.",
+      "approve": "Fọwọ́ sí i kí o sì fi kún un",
+      "reject": "Kọ̀ ọ́",
+      "approveTitle": "Fọwọ́ sí ìfowópamọ́ {reference}?",
+      "approveBody": "Jẹ́rìí pé owó ti dé. Iye tí a fi kún un lè kéré sí èyí tí a béèrè tí owó tó dé bá kéré, ṣùgbọ́n kò lè pọ̀ jù ú lọ.",
+      "creditedAmount": "Iye tí a gbà",
+      "rejectTitle": "Kọ ìfowópamọ́ {reference}?",
+      "rejectBody": "A kò ní fi ohunkóhun kún un. Oníbàárà yóò rí ìdí tí o fún un.",
+      "reason": "Ìdí",
+      "note": "Àkíyèsí inú",
+      "approved": "A ti fọwọ́ sí ìfowópamọ́, a sì ti fi kún un",
+      "rejected": "A ti kọ ìfowópamọ́",
+      "selfReview": "Ìbéèrè tìrẹ ni èyí — olùṣàyẹ̀wò mìíràn gbọ́dọ̀ bójú tó o.",
+      "receipt": "Ìwé-ẹ̀rí ìsanwó",
+      "txReference": "Ìtọ́kasí ìfiránṣẹ́",
+      "customerNote": "Àkíyèsí oníbàárà"
+    },
+    "withdrawals": {
+      "title": "Àyẹ̀wò ìgbowójáde",
+      "description": "Fọwọ́ sí i lẹ́yìn ìṣàyẹ̀wò, lẹ́yìn náà sàmì sí i pé ó ti parí nígbà tí a bá jẹ́rìí sí ìsanwó pẹ̀lú ìtọ́kasí rẹ̀.",
+      "processing": "Sàmì sí i pé a ń ṣiṣẹ́ lé e lórí",
+      "approve": "Fọwọ́ sí i",
+      "complete": "Sàmì sí i pé ó ti parí",
+      "reject": "Kọ̀ ọ́ kí o sì tú u sílẹ̀",
+      "completeTitle": "Sàmì sí {reference} pé a ti san án?",
+      "completeBody": "Ṣe èyí nìkan lẹ́yìn tí a bá jẹ́rìí sí ìsanwó. Tẹ ìṣòwò tàbí ìtọ́kasí ìsanwó.",
+      "payoutReference": "Ìtọ́kasí ìsanwó",
+      "rejectTitle": "Kọ ìgbowójáde {reference}?",
+      "rejectBody": "Iye tí a dì mú yóò padà sí owó tó wà lọ́wọ́ oníbàárà.",
+      "approveTitle": "Fọwọ́ sí ìgbowójáde {reference}?",
+      "approveBody": "Ìfọwọ́sí ń fún ìsanwó láṣẹ. Owó náà yóò wà ní ìdìmú títí o ó fi sàmì sí i pé ó ti parí.",
+      "updated": "A ti ṣe àtúnṣe ìgbowójáde"
+    },
+    "investments": {
+      "title": "Àwọn ipò ìdókòwò",
+      "description": "Gbogbo ipò ìdókòwò oníbàárà. Nígbà ìpé, owó-ìpìlẹ̀ nìkan ni a ń dá padà.",
+      "due": "Ó ti kọjá ìgbà ìpé"
+    },
+    "plans": {
+      "title": "Àwọn ètò ìdókòwò",
+      "description": "Àyípadà kan ipò ìdókòwò tuntun nìkan. Àwọn ipò tó ṣí sílẹ̀ ń pa òfin àtètèkọ́ṣe wọn mọ́.",
+      "new": "Ètò tuntun",
+      "edit": "Ṣàtúnṣe",
+      "editTitle": "Ṣàtúnṣe ètò",
+      "newTitle": "Ètò tuntun",
+      "name": "Orúkọ",
+      "slug": "Ìdámọ̀ URL",
+      "description_": "Àpèjúwe",
+      "min": "Iye tó kéré jùlọ",
+      "max": "Iye tó pọ̀ jùlọ",
+      "currency": "Owó",
+      "term": "Àkókò (ọjọ́)",
+      "risk": "Ìpele ewu",
+      "riskDescription": "Àpèjúwe ewu",
+      "targetMin": "Èrè àfojúsùn láti (%)",
+      "targetMax": "Èrè àfojúsùn dé (%)",
+      "targetBasis": "Ìpìlẹ̀ èrè àfojúsùn",
+      "targetHelp": "Fi méjèèjì sílẹ̀ ní òfo àyàfi tí o bá ti tẹ ọ̀nà ìṣírò èrè àfojúsùn jáde. A ń fi èrè àfojúsùn hàn oníbàárà pẹ̀lú ìpìlẹ̀ rẹ̀, kì í sì í ṣe ìdánilójú rárá.",
+      "active": "Ó wà fún ipò ìdókòwò tuntun",
+      "order": "Ìtòlẹ́sẹẹsẹ ìfihàn",
+      "saved": "A ti fi ètò pamọ́",
+      "inactive": "A ti tì í",
+      "openPositions": "{count} tó ṣí sílẹ̀"
+    },
+    "users": {
+      "title": "Àwọn oníṣe",
+      "description": "Wá àkáǹtì, ṣàyẹ̀wò ìgbésẹ̀, kí o sì ṣàkóso ìwọlé.",
+      "joined": "Ọjọ́ tó dara pọ̀",
+      "roles": "Àwọn ipa",
+      "balance": "Àpapọ̀ iye owó",
+      "detailTitle": "Àkáǹtì",
+      "profile": "Àkọsílẹ̀ ara ẹni",
+      "activity": "Àkọsílẹ̀ ìwé owó tuntun",
+      "requests": "Ìbéèrè tó ṣí sílẹ̀",
+      "suspend": "Dá àkáǹtì dúró",
+      "reactivate": "Mú àkáǹtì padà ṣiṣẹ́",
+      "suspendTitle": "Dá àkáǹtì yìí dúró?",
+      "suspendBody": "Oníbàárà kò ní lè wọlé tàbí gbé owó nígbà tí a bá dá a dúró. Fi ìdí sílẹ̀ fún àkọsílẹ̀ àyẹ̀wò.",
+      "reactivateTitle": "Mú àkáǹtì yìí padà ṣiṣẹ́?",
+      "statusUpdated": "A ti ṣe àtúnṣe ipò àkáǹtì",
+      "rolesTitle": "Ipa òṣìṣẹ́",
+      "rolesHelp": "Àwọn olùní ń ṣàkóso gbogbo ipa. Alákòóso lè fún ni ní ipa ìnáwó àti ìrànlọ́wọ́. Kò sí ẹni tó lè yí ipa ara rẹ̀ padà.",
+      "grant": "Fún un",
+      "revoke": "Gbà á padà",
+      "roleUpdated": "A ti ṣe àtúnṣe àwọn ipa",
+      "roleNames": {
+        "owner": "Olùní",
+        "admin": "Alákòóso",
+        "finance": "Olùṣàyẹ̀wò ìnáwó",
+        "support": "Ìrànlọ́wọ́"
+      },
+      "noRoles": "Oníbàárà",
+      "statusReason": "Ìdí"
+    },
+    "kyc": {
+      "title": "Ìjẹ́rìí ìdánimọ̀",
+      "description": "A ń ṣe ìjẹ́rìí ìdánimọ̀ nípasẹ̀ olùpèsè ìjẹ́rìí tó bá òfin mu.",
+      "notConfigured": "A kò tíì so olùpèsè ìjẹ́rìí ìdánimọ̀ pọ̀. Àwọn ipò ìsàlẹ̀ yóò yí padà nìkan nígbà tí olùpèsè bá fi èsì ránṣẹ́ — a kò lè ṣètò wọn fúnra wa.",
+      "counts": "Àkáǹtì gẹ́gẹ́ bí ipò ìjẹ́rìí"
+    },
+    "support": {
+      "title": "Tíkẹ́ẹ̀tì ìrànlọ́wọ́",
+      "description": "Dá oníbàárà lóhùn kí o sì pa gbogbo ìfiránṣẹ́ mọ́ sínú tíkẹ́ẹ̀tì.",
+      "assigned": "Tí a yàn fún ẹnìkan",
+      "unassigned": "Tí a kò yàn fún ẹnikẹ́ni",
+      "customer": "Oníbàárà",
+      "setStatus": "Ipò",
+      "setPriority": "Ìṣáájú",
+      "priorities": {
+        "low": "Kékeré",
+        "normal": "Àárín",
+        "high": "Gíga"
+      },
+      "updated": "A ti ṣe àtúnṣe tíkẹ́ẹ̀tì"
+    },
+    "notifications": {
+      "title": "Ìkéde",
+      "description": "Fi ìfitónilétí inú áàpù ránṣẹ́ sí gbogbo oníbàárà tó ń ṣiṣẹ́ tàbí sí àkáǹtì kan.",
+      "audience": "Àwọn olùgbọ́",
+      "all": "Gbogbo oníbàárà tó ń ṣiṣẹ́",
+      "one": "Oníbàárà kan",
+      "userEmail": "Ímeèlì oníbàárà",
+      "userNotFound": "Kò sí àkáǹtì pẹ̀lú ímeèlì yẹn.",
+      "titleField": "Àkọlé",
+      "body": "Ìfiránṣẹ́",
+      "send": "Fi ìkéde ránṣẹ́",
+      "sent": "{count, plural, =0 {A kò fi ránṣẹ́ sí ẹnikẹ́ni} other {A fi ránṣẹ́ sí oníbàárà #}}",
+      "recent": "Tí a fi ránṣẹ́ láìpẹ́"
+    },
+    "audit": {
+      "title": "Àkọsílẹ̀ àyẹ̀wò",
+      "description": "Àkọsílẹ̀ tí a kàn lè fi kún nìkan, ti àwọn ìgbésẹ̀ òṣìṣẹ́ àti ìṣẹ̀lẹ̀ tó ń yí iye owó padà.",
+      "actor": "Olùṣe",
+      "action": "Ìgbésẹ̀",
+      "entity": "Nǹkan",
+      "details": "Àlàyé",
+      "system": "Ẹ̀rọ",
+      "filterAction": "Ìgbésẹ̀ ní nínú"
+    },
+    "settings": {
+      "title": "Ètò pèpéle",
+      "description": "Ààlà àti ìyípadà tí àwọn iṣẹ́ ibi ìpamọ́ dátà ń lò. A ń ṣàyẹ̀wò gbogbo àyípadà.",
+      "limits": "Ààlà àti owó iṣẹ́",
+      "switches": "Ìyípadà pèpéle",
+      "assets": "Àwọn dúkìá tí a ṣàtìlẹ́yìn",
+      "keys": {
+        "deposit_min": "Ìfowópamọ́ tó kéré jùlọ (USD)",
+        "deposit_max": "Ìfowópamọ́ tó pọ̀ jùlọ (USD)",
+        "withdrawal_min": "Ìgbowójáde tó kéré jùlọ (USD)",
+        "withdrawal_max": "Ìgbowójáde tó pọ̀ jùlọ (USD)",
+        "withdrawal_fee_flat": "Owó iṣẹ́ ìgbowójáde tó dúró (USD)",
+        "withdrawal_fee_percent": "Owó iṣẹ́ ìgbowójáde (%)",
+        "maintenance_mode": "Ipò àtúnṣe — dá iṣẹ́ owó tuntun dúró",
+        "registrations_open": "Gba ìforúkọsílẹ̀ tuntun láàyè"
+      },
+      "assetActive": "Ó ń ṣiṣẹ́",
+      "assetDeposits": "Ìfowópamọ́",
+      "assetWithdrawals": "Ìgbowójáde",
+      "saved": "A ti fi ètò pamọ́"
+    }
+  }
+}
