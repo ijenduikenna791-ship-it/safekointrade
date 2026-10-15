@@ -79,10 +79,10 @@
   },
   "nav": {
     "markets": "Mercados",
-    "plans": "Planes de inversión",
+    "plans": "Planes",
     "how": "Cómo funciona",
-    "about": "Sobre nosotros",
-    "faq": "Preguntas frecuentes",
+    "about": "Nosotros",
+    "faq": "FAQ",
     "login": "Iniciar sesión",
     "getStarted": "Empezar",
     "dashboard": "Panel",
@@ -90,7 +90,7 @@
     "closeMenu": "Cerrar menú",
     "primary": "Principal",
     "home": "Inicio",
-    "signUp": "Registrarse"
+    "signUp": "Regístrate"
   },
   "startup": {
     "loading": "Cargando {brand}"
