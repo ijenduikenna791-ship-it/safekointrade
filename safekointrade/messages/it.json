@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "Piani di investimento in cripto a durata fissa",
+    "description": "Piani di investimento in cripto a durata fissa, con verifica manuale di ogni deposito e prelievo e un registro che puoi controllare."
+  },
+  "common": {
+    "skipToContent": "Vai al contenuto",
+    "loading": "Caricamento",
+    "close": "Chiudi",
+    "cancel": "Annulla",
+    "confirm": "Conferma",
+    "save": "Salva modifiche",
+    "saving": "Salvataggio…",
+    "saved": "Modifiche salvate",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "search": "Cerca",
+    "optional": "Facoltativo",
+    "required": "Obbligatorio",
+    "retry": "Riprova",
+    "copy": "Copia",
+    "copied": "Copiato",
+    "viewAll": "Vedi tutto",
+    "details": "Dettagli",
+    "page": "Pagina {page} di {total}",
+    "noResults": "Nessun risultato con questi filtri.",
+    "simulationTitle": "Modalità demo",
+    "simulationNotice": "Saldi e movimenti di denaro su questa piattaforma sono simulati. Nessun fondo reale viene trasferito finché non è collegato un fornitore di pagamenti autorizzato.",
+    "simulationShort": "Simulato",
+    "illustration": "Illustrazione",
+    "sampleData": "Dati di esempio",
+    "notConfiguredTitle": "Backend non collegato",
+    "notConfigured": "Mancano le credenziali Supabase. Aggiungile a .env.local per attivare gli account (vedi README).",
+    "genericError": "Si è verificato un problema da parte nostra. Riprova tra poco.",
+    "networkError": "Impossibile raggiungere il server. Controlla la connessione e riprova.",
+    "rateLimited": "Troppi tentativi. Attendi un minuto e riprova.",
+    "unauthorized": "Accedi per continuare.",
+    "forbidden": "Il tuo account non ha accesso a questa sezione.",
+    "notFoundTitle": "Pagina non trovata",
+    "notFoundBody": "La pagina che cerchi non esiste o è stata spostata.",
+    "goHome": "Vai alla home page",
+    "errorTitle": "Impossibile caricare questa pagina",
+    "errorBody": "Un errore imprevisto ha impedito il caricamento della pagina. Riprova o torna più tardi.",
+    "status": {
+      "pending": "In attesa",
+      "processing": "In lavorazione",
+      "approved": "Approvato",
+      "completed": "Completato",
+      "active": "Attivo",
+      "matured": "Scaduto",
+      "rejected": "Rifiutato",
+      "cancelled": "Annullato",
+      "failed": "Non riuscito",
+      "open": "Aperto",
+      "answered": "Risposto",
+      "closed": "Chiuso",
+      "suspended": "Sospeso",
+      "verified": "Verificato",
+      "unverified": "Non verificato"
+    },
+    "risk": {
+      "low": "Rischio basso",
+      "moderate": "Rischio moderato",
+      "high": "Rischio alto"
+    },
+    "photoCredit": "Foto: {name} / Pexels",
+    "apply": "Applica"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "label": "Lingua",
+    "change": "Cambia lingua"
+  },
+  "nav": {
+    "markets": "Mercati",
+    "plans": "Piani di investimento",
+    "how": "Come funziona",
+    "about": "Chi siamo",
+    "faq": "FAQ",
+    "login": "Accedi",
+    "getStarted": "Inizia",
+    "dashboard": "Dashboard",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "primary": "Principale",
+    "home": "Home",
+    "signUp": "Registrati"
+  },
+  "startup": {
+    "loading": "Caricamento di {brand}"
+  },
+  "home": {
+    "hero": {
+      "title": "Piani cripto a durata fissa con un registro aperto.",
+      "body": "Scegli un piano da 30, 90 o 180 giorni e segui ogni movimento — depositi, posizioni, scadenza — in un registro che puoi verificare. Ogni deposito e prelievo è controllato da persone, non da script.",
+      "primary": "Crea un account",
+      "secondary": "Confronta i piani",
+      "note": "Le cripto-attività sono volatili. Puoi perdere in parte o del tutto il denaro che investi.",
+      "headline": "Piani cripto che puoi verificare",
+      "learnMore": "Scopri di più"
+    },
+    "lifecycle": {
+      "label": "Come evolve una posizione",
+      "plan": "Piano Growth",
+      "term": "Durata di 90 giorni",
+      "amount": "Importo della posizione",
+      "day": "Giorno {day} di {total}",
+      "steps": {
+        "deposit": "Deposito verificato",
+        "opened": "Posizione aperta",
+        "running": "Durata in corso",
+        "matures": "Scadenza"
+      },
+      "caption": "Ogni passaggio viene registrato nella cronologia del tuo account con un ID di riferimento."
+    },
+    "ticker": {
+      "label": "Prezzi di mercato in tempo reale",
+      "unavailable": "I prezzi in tempo reale non sono disponibili al momento.",
+      "source": "Prezzi da CoinGecko, aggiornati ogni minuto."
+    },
+    "commitments": {
+      "title": "Impegni integrati nella piattaforma",
+      "items": {
+        "terms": {
+          "value": "30, 90, 180",
+          "label": "Giorni di durata, fissati quando apri una posizione"
+        },
+        "review": {
+          "value": "Ogni richiesta",
+          "label": "Depositi e prelievi sono controllati da una persona prima che i saldi cambino"
+        },
+        "audit": {
+          "value": "Traccia completa",
+          "label": "Le variazioni di saldo sono registrate con chi, cosa e quando"
+        },
+        "languages": {
+          "value": "11 lingue",
+          "label": "Tra cui l'arabo con impaginazione da destra a sinistra, il giapponese e l'hindi"
+        }
+      }
+    },
+    "features": {
+      "title": "Pensato per chi legge le clausole",
+      "body": "Tutto ciò che vedi nella dashboard proviene dai registri del tuo account. Niente è stimato, arrotondato o inventato per fare bella figura.",
+      "items": {
+        "ledger": {
+          "title": "Un registro, non un tabellone",
+          "body": "Ogni deposito, posizione e prelievo ha un ID di riferimento, uno stato e un orario che puoi tracciare."
+        },
+        "terms": {
+          "title": "Piani a durata fissa",
+          "body": "Scegli un piano e un importo entro il suo intervallo: la durata è fissata dal giorno di apertura."
+        },
+        "review": {
+          "title": "Verifica umana dei movimenti",
+          "body": "I revisori finanziari approvano i depositi una volta confermati i fondi e approvano i prelievi prima che qualcosa esca."
+        },
+        "security": {
+          "title": "Protezione dell'account",
+          "body": "Email verificata, regole rigorose per le password e accesso facoltativo con app di autenticazione proteggono il tuo account."
+        },
+        "languages": {
+          "title": "La tua lingua, il tuo formato",
+          "body": "Date, numeri e valute seguono le impostazioni della tua lingua su tutta la piattaforma."
+        },
+        "support": {
+          "title": "Assistenza tracciata",
+          "body": "Apri un ticket dalla dashboard: ogni risposta resta collegata a esso."
+        }
+      }
+    },
+    "plans": {
+      "title": "Confronta i piani di investimento",
+      "body": "Intervalli e durate sono definiti per ogni piano. Scegli quello adatto a quanto vuoi impegnare e per quanto tempo.",
+      "range": "Intervallo di investimento",
+      "term": "Durata",
+      "days": "{count} giorni",
+      "asset": "Valuta di riferimento",
+      "target": "Rendimento obiettivo",
+      "noTarget": "Nessun rendimento obiettivo per questo piano",
+      "cta": "Apri questo piano",
+      "sampleNote": "Sono mostrate le impostazioni predefinite. Quelle reali si caricano una volta collegato il database.",
+      "riskNote": "Le etichette di rischio descrivono l'esposizione alla volatilità del mercato cripto. Non sono una previsione."
+    },
+    "how": {
+      "title": "Come funziona",
+      "body": "Quattro passaggi dalla registrazione al prelievo. Ognuno lascia una traccia nel tuo account.",
+      "steps": {
+        "account": {
+          "title": "Crea e verifica il tuo account",
+          "body": "Registrati con email e numero di telefono, poi conferma il tuo indirizzo email."
+        },
+        "deposit": {
+          "title": "Richiedi un deposito",
+          "body": "Invia una richiesta di deposito con il suo ID di riferimento. Il saldo si aggiorna solo dopo che un revisore conferma i fondi."
+        },
+        "invest": {
+          "title": "Apri una posizione",
+          "body": "Sposta parte del saldo disponibile in un piano. La durata inizia nel momento in cui la posizione si apre."
+        },
+        "withdraw": {
+          "title": "Arriva a scadenza e preleva",
+          "body": "Al termine della durata, la posizione torna nel saldo disponibile e puoi richiedere un prelievo."
+        }
+      },
+      "imageAlt": "Una mano che regge una moneta Bitcoin dorata davanti a uno schermo con un grafico dei prezzi"
+    },
+    "analytics": {
+      "title": "Analisi di mercato",
+      "body": "Trenta giorni di storico dei prezzi degli asset supportati, da dati di mercato in tempo reale.",
+      "range": "Prezzo a 30 giorni, USD",
+      "change": "Variazione a 30 giorni",
+      "unavailable": "Lo storico dei prezzi non è disponibile al momento. Riprova tra poco.",
+      "dashboardTitle": "La tua dashboard in sintesi",
+      "dashboardBody": "Saldi disponibili, investiti e in attesa, posizioni aperte e ogni transazione — direttamente dai tuoi registri."
+    },
+    "security": {
+      "title": "Una sicurezza che si può verificare",
+      "body": "La protezione è costruita a strati partendo dal database, e ogni azione privilegiata viene registrata.",
+      "items": {
+        "rls": {
+          "title": "Isolamento dei dati",
+          "body": "La sicurezza a livello di riga fa sì che i tuoi dati siano leggibili solo da te e dal personale autorizzato."
+        },
+        "mfa": {
+          "title": "Accesso in due passaggi",
+          "body": "Aggiungi un'app di autenticazione così che la sola password non basti per entrare nel tuo account."
+        },
+        "review": {
+          "title": "Separazione dei compiti",
+          "body": "Nessuno può approvare la propria richiesta e le azioni finanziarie sono riservate ai ruoli finanziari."
+        },
+        "audit": {
+          "title": "Cronologia a prova di manomissione",
+          "body": "Le azioni amministrative e le variazioni di saldo vengono scritte in un registro di controllo non modificabile."
+        }
+      }
+    },
+    "assets": {
+      "title": "Asset supportati",
+      "body": "Le posizioni sono espresse in dollari USA. Questi sono gli asset che la piattaforma monitora e accetta per i depositi.",
+      "price": "Prezzo",
+      "change24h": "24h",
+      "noPrice": "—",
+      "network": "Rete"
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "items": {
+        "guaranteed": {
+          "q": "I rendimenti sono garantiti?",
+          "a": "No. Le cripto-attività sono volatili e puoi perdere in parte o del tutto il denaro investito. I piani mostrano un rendimento obiettivo solo se è stato definito e pubblicato, e un obiettivo non è una promessa."
+        },
+        "demo": {
+          "q": "Oggi sulla piattaforma si muove denaro reale?",
+          "a": "Non ancora. Finché non è collegato un fornitore di pagamenti autorizzato, ogni deposito, prelievo e posizione è chiaramente indicato come simulato e non si muovono fondi reali."
+        },
+        "deposit": {
+          "q": "Quando compare il mio deposito nel saldo?",
+          "a": "Dopo che un revisore finanziario conferma l'arrivo dei fondi. Inviare una richiesta o caricare una ricevuta non modifica da solo il saldo."
+        },
+        "withdraw": {
+          "q": "Come funzionano i prelievi?",
+          "a": "Richiedi un prelievo dal saldo disponibile. L'importo viene trattenuto mentre un revisore lo controlla e risulta completato solo quando il pagamento è confermato."
+        },
+        "early": {
+          "q": "Posso chiudere una posizione prima della scadenza?",
+          "a": "Le posizioni si possono annullare entro 24 ore dall'apertura. Dopo, proseguono fino alla scadenza."
+        },
+        "security": {
+          "q": "Come è protetto il mio account?",
+          "a": "Email verificata, password robuste, accesso facoltativo in due passaggi, isolamento dei dati a livello di riga e un registro completo delle azioni privilegiate."
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Novità di prodotto, ogni mese",
+      "body": "Nuovi piani, modifiche alla piattaforma e note di mercato. Nessuna promozione travestita da consiglio.",
+      "email": "Indirizzo email",
+      "placeholder": "tu@esempio.com",
+      "consent": "Accetto di ricevere l'aggiornamento mensile e posso annullare l'iscrizione in qualsiasi momento.",
+      "submit": "Iscriviti",
+      "success": "Iscrizione completata. Troverai il prossimo aggiornamento nella tua casella di posta.",
+      "already": "Questa email è già iscritta.",
+      "invalidEmail": "Inserisci un indirizzo email valido.",
+      "consentRequired": "Spunta la casella per confermare che vuoi ricevere gli aggiornamenti."
+    },
+    "cta": {
+      "title": "Apri un account in pochi minuti.",
+      "body": "Esplora la dashboard, confronta i piani e scopri esattamente come viene verificata ogni richiesta.",
+      "primary": "Crea un account",
+      "secondary": "Leggi l'informativa sui rischi"
+    },
+    "platform": {
+      "title": "Tutto in un unico account",
+      "body": "Vedi esattamente dove si trova il tuo denaro — disponibile, investito o in arrivo — da un'unica dashboard.",
+      "items": {
+        "dashboard": {
+          "title": "Una dashboard chiara",
+          "body": "Saldi disponibili, investiti e in attesa, posizioni aperte e ogni transazione in un unico posto."
+        },
+        "plans": {
+          "title": "Piani a durata fissa",
+          "body": "Scegli 30, 90 o 180 giorni. La durata viene fissata il giorno in cui apri una posizione."
+        },
+        "money": {
+          "title": "Movimenti verificati",
+          "body": "I depositi vengono accreditati dopo che un revisore conferma i fondi. I prelievi restano trattenuti finché non vengono pagati."
+        },
+        "support": {
+          "title": "Assistenza documentata",
+          "body": "Apri un ticket dalla dashboard. Ogni risposta resta collegata a esso."
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "Prodotto",
+    "company": "Azienda",
+    "legal": "Note legali",
+    "support": "Assistenza",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "helpCentre": "Centro assistenza",
+    "terms": "Termini di servizio",
+    "privacy": "Informativa sulla privacy",
+    "risk": "Informativa sui rischi",
+    "cookies": "Informativa sui cookie",
+    "riskWarning": "Le cripto-attività non sono regolamentate in molte giurisdizioni e sono molto volatili. Il valore degli investimenti può scendere oltre che salire e potresti riavere meno di quanto hai investito. Nulla su questo sito costituisce consulenza finanziaria.",
+    "rights": "© {year} {company}. Tutti i diritti riservati."
+  },
+  "about": {
+    "title": "Chi è {brand}",
+    "lead": "Stiamo costruendo una piattaforma di investimento in cripto in cui i numeri sul tuo schermo corrispondono sempre ai registri che li sostengono.",
+    "principlesTitle": "I nostri principi",
+    "principles": {
+      "records": {
+        "title": "Prima i registri, poi il marketing",
+        "body": "Ogni cifra che ti mostriamo proviene da un record del database che puoi tracciare. Se non possiamo verificare un numero, non lo mostriamo."
+      },
+      "people": {
+        "title": "Persone nel processo",
+        "body": "Il denaro non si muove con l'invio di un modulo. Revisori formati confermano i depositi e approvano i prelievi."
+      },
+      "plain": {
+        "title": "Parole chiare sul rischio",
+        "body": "Diciamo chiaramente cosa può andare storto e non presentiamo mai un obiettivo come una promessa."
+      }
+    },
+    "statusTitle": "Lo stato attuale della piattaforma",
+    "statusBody": "La piattaforma funziona attualmente in modalità demo. Account, piani e flussi di verifica funzionano dall'inizio alla fine, ma i saldi sono simulati finché non è collegato un fornitore autorizzato di pagamenti e custodia.",
+    "imageAlt": "Colleghi che esaminano insieme dei documenti a una scrivania"
+  },
+  "contact": {
+    "title": "Contatti e assistenza",
+    "lead": "I clienti che hanno effettuato l'accesso ricevono risposte più rapide tramite i ticket di assistenza nella dashboard.",
+    "ticketTitle": "Apri un ticket di assistenza",
+    "ticketBody": "I ticket tengono ogni messaggio in un unico posto e ricevono risposta dal nostro team di assistenza.",
+    "ticketCta": "Vai all'assistenza",
+    "emailTitle": "Email",
+    "complianceTitle": "Conformità e richieste sui dati",
+    "addressTitle": "Sede legale"
+  },
+  "legal": {
+    "updated": "Ultimo aggiornamento: {date}",
+    "draftNotice": "Questo è un modello da far esaminare a un consulente legale qualificato prima della pubblicazione."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Panoramica",
+      "invest": "Investi",
+      "investments": "Posizioni",
+      "deposits": "Depositi",
+      "withdrawals": "Prelievi",
+      "transactions": "Transazioni",
+      "notifications": "Notifiche",
+      "support": "Assistenza",
+      "settings": "Impostazioni",
+      "admin": "Console di amministrazione",
+      "logout": "Esci",
+      "collapse": "Comprimi barra laterale",
+      "expand": "Espandi barra laterale",
+      "menu": "Apri navigazione",
+      "closeMenu": "Chiudi navigazione",
+      "account": "Menu account",
+      "breadcrumb": "Percorso",
+      "home": "Dashboard",
+      "sections": {
+        "money": "Denaro",
+        "account": "Account"
+      }
+    },
+    "overview": {
+      "title": "Panoramica",
+      "greeting": "Bentornato, {name}",
+      "description": "I tuoi saldi e le attività recenti, direttamente dai registri del tuo account.",
+      "total": "Portafoglio totale",
+      "totalHint": "Fondi disponibili, investiti e trattenuti insieme",
+      "available": "Saldo disponibile",
+      "availableHint": "Pronto da investire o prelevare",
+      "invested": "Investito",
+      "investedHint": "In {count, plural, =0 {nessuna posizione aperta} one {# posizione aperta} other {# posizioni aperte}}",
+      "pending": "In attesa",
+      "pendingHint": "Trattenuto per prelievi e depositi in attesa di verifica",
+      "historyTitle": "Valore del portafoglio",
+      "historyDescription": "Saldo totale dopo ogni movimento registrato",
+      "historyEmpty": "La cronologia del saldo inizia con il tuo primo deposito confermato.",
+      "flowsTitle": "Depositi e prelievi",
+      "flowsDescription": "Importi confermati per mese",
+      "depositsLabel": "Depositi",
+      "withdrawalsLabel": "Prelievi",
+      "flowsEmpty": "Ancora nessun deposito o prelievo confermato.",
+      "summaryDeposited": "Totale depositato",
+      "summaryWithdrawn": "Totale prelevato",
+      "recentTitle": "Transazioni recenti",
+      "recentEmpty": "Ancora nessuna transazione. Richiedi un deposito per iniziare.",
+      "positionsTitle": "Posizioni attive",
+      "positionsEmpty": "Nessuna posizione aperta. Scegli un piano quando sei pronto.",
+      "quick": {
+        "deposit": "Richiedi deposito",
+        "invest": "Apri una posizione",
+        "withdraw": "Richiedi prelievo"
+      },
+      "matured": "{count, plural, one {# posizione è giunta} other {# posizioni sono giunte}} a scadenza. Il capitale è tornato nel saldo disponibile.",
+      "range": {
+        "label": "Intervallo del grafico",
+        "week": "7G",
+        "month": "30G",
+        "all": "Tutto"
+      },
+      "rangeChange": "Variazione nell'intervallo",
+      "breakdownTitle": "Ripartizione del saldo",
+      "maturity": {
+        "title": "Prossima scadenza",
+        "daysLeft": "{count, plural, one {Manca # giorno} other {Mancano # giorni}}",
+        "maturesOn": "Scade il {date}",
+        "dayOf": "Giorno {day} di {total}",
+        "empty": "Nessuna posizione aperta. La tua prossima scadenza apparirà qui."
+      },
+      "risk": {
+        "title": "Profilo di rischio",
+        "description": "Ponderato sull'importo di ogni posizione aperta",
+        "low": "Prudente",
+        "moderate": "Bilanciato",
+        "high": "Aggressivo",
+        "empty": "Apri una posizione per vedere il tuo profilo di rischio."
+      },
+      "markets": {
+        "title": "Mercati",
+        "description": "Prezzi in tempo reale e andamento a 7 giorni",
+        "trend": "andamento del prezzo a 7 giorni"
+      },
+      "gettingStarted": {
+        "title": "Per iniziare",
+        "description": "Tre passaggi verso la tua prima posizione.",
+        "done": "Fatto",
+        "steps": {
+          "request": "Richiedi un deposito",
+          "requestBody": "Indicaci quanto invii e come.",
+          "confirmed": "Deposito confermato",
+          "confirmedBody": "Un revisore conferma l'arrivo dei fondi.",
+          "invest": "Apri la tua prima posizione",
+          "investBody": "Scegli un piano e un importo."
+        }
+      }
+    },
+    "invest": {
+      "title": "Apri una posizione",
+      "description": "Scegli un piano, inserisci un importo entro il suo intervallo e verifica prima di confermare.",
+      "choosePlan": "Scegli un piano",
+      "amount": "Importo",
+      "amountHint": "Tra {min} e {max}",
+      "available": "Disponibile: {amount}",
+      "review": "Verifica la posizione",
+      "confirmTitle": "Conferma questa posizione",
+      "confirmBody": "L'importo passa dal saldo disponibile al piano. Puoi annullare entro 24 ore dall'apertura; dopo, prosegue fino alla scadenza.",
+      "plan": "Piano",
+      "term": "Durata",
+      "matures": "Scade il",
+      "returns": "Rendimento",
+      "noReturnsNote": "Per questo piano non è previsto un rendimento obiettivo. Alla scadenza, il capitale torna nel saldo disponibile.",
+      "confirm": "Apri posizione",
+      "success": "Posizione aperta",
+      "insufficient": "Il saldo disponibile è inferiore al minimo di questo piano. Richiedi prima un deposito.",
+      "noPlans": "Al momento non ci sono piani aperti. Riprova presto."
+    },
+    "positions": {
+      "title": "Posizioni",
+      "description": "Posizioni aperte, scadute e annullate.",
+      "tabs": {
+        "active": "Attive",
+        "matured": "Scadute",
+        "cancelled": "Annullate"
+      },
+      "progress": "Giorno {day} di {total}",
+      "opened": "Aperta",
+      "matures": "Scade",
+      "maturedOn": "Scaduta",
+      "cancelledOn": "Annullata",
+      "cancel": "Annulla posizione",
+      "cancelTitle": "Annullare questa posizione?",
+      "cancelBody": "L'intero importo torna subito nel saldo disponibile. L'operazione non può essere annullata.",
+      "cancelConfirm": "Annulla posizione",
+      "cancelled": "Posizione annullata",
+      "cancelUntil": "Annullabile fino al {time}",
+      "empty": {
+        "active": "Nessuna posizione attiva.",
+        "matured": "Ancora nessuna posizione scaduta.",
+        "cancelled": "Nessuna posizione annullata."
+      },
+      "openNew": "Apri una posizione"
+    },
+    "deposits": {
+      "title": "Depositi",
+      "description": "Richiedi un deposito, poi invia i fondi. Il saldo si aggiorna quando un revisore li conferma.",
+      "formTitle": "Richiedi un deposito",
+      "amount": "Importo (USD)",
+      "asset": "Asset",
+      "method": "Metodo",
+      "methods": {
+        "crypto_transfer": "Trasferimento cripto",
+        "bank_transfer": "Bonifico bancario"
+      },
+      "txReference": "Hash o riferimento della transazione",
+      "txReferenceHint": "Aiuta il revisore ad abbinare il tuo trasferimento.",
+      "note": "Nota per il revisore",
+      "receipt": "Ricevuta",
+      "receiptHint": "PNG, JPEG, WebP o PDF, fino a 5 MB.",
+      "submit": "Richiedi deposito",
+      "success": "Deposito richiesto. Riferimento {reference}.",
+      "pendingNote": "Inviare una richiesta o caricare una ricevuta non modifica il saldo. Un revisore lo accredita dopo aver confermato l'arrivo dei fondi.",
+      "historyTitle": "Cronologia depositi",
+      "empty": "Ancora nessuna richiesta di deposito.",
+      "limits": "Minimo {min}, massimo {max} per richiesta.",
+      "credited": "Accreditato",
+      "uploadReceipt": "Carica ricevuta",
+      "receiptUploaded": "Ricevuta caricata",
+      "viewReceipt": "Vedi ricevuta",
+      "instructionsTitle": "Istruzioni di pagamento",
+      "instructionsDemo": "I dati di pagamento compariranno qui quando sarà collegato un fornitore di pagamenti autorizzato. In modalità demo non serve alcun trasferimento: un revisore approva le richieste per simulare fondi confermati.",
+      "requested": "Richiesto",
+      "receiptMissing": "Nessuna ricevuta",
+      "instructionsLive": "Dopo aver inviato la richiesta, segui i dati di pagamento mostrati dal nostro fornitore e indica il tuo ID di riferimento."
+    },
+    "withdrawals": {
+      "title": "Prelievi",
+      "description": "Preleva dal saldo disponibile. L'importo viene trattenuto mentre un revisore lo controlla.",
+      "formTitle": "Richiedi un prelievo",
+      "amount": "Importo (USD)",
+      "asset": "Asset",
+      "network": "Rete",
+      "destination": "Indirizzo del wallet di destinazione",
+      "destinationHint": "Controllalo due volte. I trasferimenti a un indirizzo errato non possono essere annullati.",
+      "fee": "Commissione",
+      "net": "Riceverai",
+      "submit": "Richiedi prelievo",
+      "confirmTitle": "Conferma questo prelievo",
+      "confirmBody": "{amount} sarà trattenuto dal saldo disponibile finché il prelievo non sarà completato o rifiutato.",
+      "success": "Prelievo richiesto. Riferimento {reference}.",
+      "historyTitle": "Cronologia prelievi",
+      "empty": "Ancora nessun prelievo.",
+      "limits": "Minimo {min}, massimo {max} per richiesta. Commissione: {flat} + {percent}.",
+      "cancel": "Annulla richiesta",
+      "cancelTitle": "Annullare questo prelievo?",
+      "cancelBody": "L'importo trattenuto torna nel saldo disponibile.",
+      "cancelled": "Prelievo annullato",
+      "payoutReference": "Riferimento del pagamento",
+      "networkPlaceholder": "Ad esempio: Ethereum (ERC-20)",
+      "availableNow": "Disponibile ora: {amount}",
+      "feePreview": "Commissione {fee} · riceverai {net}"
+    },
+    "transactions": {
+      "title": "Transazioni",
+      "description": "Ogni movimento registrato sul tuo account, dal più recente.",
+      "filterType": "Tipo",
+      "all": "Tutti i tipi",
+      "types": {
+        "deposit": "Deposito",
+        "withdrawal_hold": "Prelievo trattenuto",
+        "withdrawal_release": "Prelievo sbloccato",
+        "withdrawal_payout": "Prelievo pagato",
+        "investment_open": "Posizione aperta",
+        "investment_cancel": "Posizione annullata",
+        "investment_maturity": "Posizione scaduta"
+      },
+      "empty": "Nessuna transazione corrispondente.",
+      "detailTitle": "Transazione {reference}",
+      "detailDescription": "Una registrazione permanente nel registro del tuo account.",
+      "balanceAfter": "Saldi dopo questa registrazione",
+      "change": "Variazione",
+      "source": "Richiesta collegata"
+    },
+    "table": {
+      "reference": "Riferimento",
+      "date": "Data",
+      "type": "Tipo",
+      "amount": "Importo",
+      "status": "Stato",
+      "asset": "Asset",
+      "plan": "Piano",
+      "description": "Descrizione",
+      "available": "Disponibile",
+      "held": "Trattenuto",
+      "invested": "Investito",
+      "actions": "Azioni",
+      "fee": "Commissione",
+      "net": "Netto",
+      "destination": "Destinazione",
+      "user": "Utente",
+      "subject": "Oggetto",
+      "updated": "Aggiornato",
+      "category": "Categoria",
+      "priority": "Priorità"
+    },
+    "pagination": {
+      "label": "Paginazione",
+      "previous": "Pagina precedente",
+      "next": "Pagina successiva",
+      "summary": "Da {from} a {to} di {total}"
+    },
+    "notifications": {
+      "title": "Notifiche",
+      "description": "Aggiornamenti su richieste, posizioni e account.",
+      "markAll": "Segna tutte come lette",
+      "markRead": "Segna come letta",
+      "delete": "Elimina",
+      "empty": "Sei in pari.",
+      "bell": "Notifiche",
+      "unread": "{count, plural, =0 {Nessuna notifica non letta} one {# notifica non letta} other {# notifiche non lette}}",
+      "viewAll": "Vedi tutte le notifiche",
+      "templates": {
+        "depositRequested": {
+          "title": "Richiesta di deposito ricevuta",
+          "body": "La tua richiesta di deposito {reference} è in attesa di verifica. Il saldo cambia solo dopo la conferma dei fondi."
+        },
+        "depositCompleted": {
+          "title": "Deposito confermato",
+          "body": "Il deposito {reference} è stato confermato e accreditato sul saldo disponibile."
+        },
+        "depositRejected": {
+          "title": "Deposito non confermato",
+          "body": "Non è stato possibile confermare il deposito {reference}. Apri un ticket di assistenza se hai domande."
+        },
+        "withdrawalRequested": {
+          "title": "Richiesta di prelievo ricevuta",
+          "body": "Il prelievo {reference} è in attesa di verifica. L'importo resta trattenuto finché non viene completato o rifiutato."
+        },
+        "withdrawalApproved": {
+          "title": "Prelievo approvato",
+          "body": "Il prelievo {reference} è stato approvato ed è in attesa della conferma di pagamento."
+        },
+        "withdrawalCompleted": {
+          "title": "Prelievo completato",
+          "body": "Il prelievo {reference} è stato pagato."
+        },
+        "withdrawalRejected": {
+          "title": "Prelievo rifiutato",
+          "body": "Il prelievo {reference} è stato rifiutato e i fondi sono tornati nel saldo disponibile."
+        },
+        "investmentOpened": {
+          "title": "Posizione aperta",
+          "body": "La posizione {plan} {reference} è attiva e scade il {date}."
+        },
+        "investmentMatured": {
+          "title": "Posizione scaduta",
+          "body": "La posizione {reference} è giunta al termine della durata. Il capitale è tornato nel saldo disponibile."
+        },
+        "supportReply": {
+          "title": "Nuova risposta su {reference}",
+          "body": "Il nostro team di assistenza ha risposto al tuo ticket."
+        },
+        "accountSuspended": {
+          "title": "Account sospeso",
+          "body": "Il tuo account è stato sospeso. Contatta l'assistenza per i dettagli."
+        },
+        "accountReactivated": {
+          "title": "Account riattivato",
+          "body": "Il tuo account è di nuovo attivo."
+        }
+      }
+    },
+    "support": {
+      "title": "Assistenza",
+      "description": "Apri un ticket e il nostro team risponde qui. Ogni messaggio resta nel ticket.",
+      "new": "Nuovo ticket",
+      "newTitle": "Apri un ticket di assistenza",
+      "subject": "Oggetto",
+      "category": "Categoria",
+      "categories": {
+        "account": "Account",
+        "deposit": "Deposito",
+        "withdrawal": "Prelievo",
+        "investment": "Posizioni",
+        "security": "Sicurezza",
+        "other": "Altro"
+      },
+      "message": "Messaggio",
+      "messageHint": "Indica eventuali ID di riferimento (ad esempio DEP-…) per aiutarci a trovare la richiesta.",
+      "submit": "Apri ticket",
+      "created": "Ticket {reference} aperto",
+      "empty": "Ancora nessun ticket. Aprine uno quando hai bisogno di aiuto.",
+      "reply": "Rispondi",
+      "replyPlaceholder": "Scrivi una risposta…",
+      "send": "Invia risposta",
+      "sent": "Risposta inviata",
+      "close": "Chiudi ticket",
+      "closed": "Ticket chiuso",
+      "closedNote": "Questo ticket è chiuso. Aprine uno nuovo se hai ancora bisogno di aiuto.",
+      "you": "Tu",
+      "staff": "Team di assistenza",
+      "back": "Tutti i ticket",
+      "faqTitle": "Risposte rapide",
+      "faqBody": "Molte domande su depositi, prelievi e posizioni trovano risposta nelle FAQ.",
+      "faqLink": "Leggi le FAQ"
+    },
+    "settings": {
+      "title": "Impostazioni",
+      "description": "Gestisci profilo, sicurezza, notifiche e preferenze.",
+      "tabs": {
+        "profile": "Profilo",
+        "security": "Sicurezza",
+        "notifications": "Notifiche",
+        "preferences": "Preferenze"
+      },
+      "profile": {
+        "title": "Profilo",
+        "description": "Il tuo nome e i tuoi recapiti.",
+        "email": "Indirizzo email",
+        "emailHint": "Contatta l'assistenza per cambiare l'email del tuo account.",
+        "username": "Nome utente",
+        "referral": "Il tuo codice invito",
+        "memberSince": "Iscritto dal",
+        "saved": "Profilo salvato",
+        "phoneUnverified": "Non verificato"
+      },
+      "security": {
+        "passwordTitle": "Password",
+        "passwordDescription": "Cambiare la password ti disconnette dalle altre sessioni.",
+        "newPassword": "Nuova password",
+        "updatePassword": "Aggiorna password",
+        "passwordUpdated": "Password aggiornata",
+        "mfaTitle": "Accesso in due passaggi",
+        "mfaDescription": "Richiedi un codice da un'app di autenticazione a ogni accesso.",
+        "mfaOn": "Attivo",
+        "mfaOff": "Disattivo",
+        "mfaEnable": "Configura l'autenticatore",
+        "mfaDisable": "Disattiva",
+        "mfaScan": "Scansiona questo codice QR con un'app di autenticazione come 1Password, Google Authenticator o Authy, poi inserisci il codice a 6 cifre mostrato.",
+        "mfaSecret": "Non riesci a scansionare? Inserisci questa chiave manualmente:",
+        "mfaVerify": "Verifica e attiva",
+        "mfaEnabled": "L'accesso in due passaggi è attivo",
+        "mfaDisabled": "L'accesso in due passaggi è disattivato",
+        "mfaDisableTitle": "Disattivare l'accesso in due passaggi?",
+        "mfaDisableBody": "Il tuo account sarà protetto solo dalla password.",
+        "sessionsTitle": "Sessioni",
+        "sessionsDescription": "Esci da tutti i browser e dispositivi, compreso questo.",
+        "signOutAll": "Esci ovunque"
+      },
+      "notifications": {
+        "title": "Notifiche email",
+        "description": "Le notifiche nell'app sono sempre attive. Scegli quali email ricevere.",
+        "email_deposits": "Aggiornamenti sui depositi",
+        "email_withdrawals": "Aggiornamenti sui prelievi",
+        "email_investments": "Apertura e scadenza delle posizioni",
+        "email_security": "Avvisi di sicurezza",
+        "email_security_hint": "Modifiche della password e protezione dell'accesso",
+        "email_product": "Aggiornamento mensile di prodotto",
+        "saved": "Preferenze di notifica salvate"
+      },
+      "preferences": {
+        "title": "Preferenze",
+        "description": "Una volta salvate, lingua e aspetto ti seguono su tutti i dispositivi.",
+        "language": "Lingua",
+        "theme": "Tema",
+        "saved": "Preferenze salvate"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "Ogni cifra è registrata.",
+    "panelPoints": {
+      "review": "Depositi e prelievi sono controllati da una persona prima che i saldi cambino.",
+      "ledger": "Ogni movimento riceve un ID di riferimento tracciabile nella tua cronologia.",
+      "security": "Accesso in due passaggi e isolamento dei dati a livello di riga proteggono il tuo account."
+    },
+    "email": "Indirizzo email",
+    "password": "Password",
+    "confirmPassword": "Conferma password",
+    "fullName": "Nome e cognome",
+    "username": "Nome utente",
+    "usernameHint": "3–24 caratteri: lettere minuscole, numeri e trattini bassi.",
+    "phone": "Numero di telefono",
+    "phoneHint": "Usato per la sicurezza dell'account. Ti chiederemo il consenso prima di inviare SMS.",
+    "referral": "Codice invito",
+    "showPassword": "Mostra password",
+    "hidePassword": "Nascondi password",
+    "acceptTerms": "Accetto i <terms>Termini di servizio</terms> e l'<privacy>Informativa sulla privacy</privacy> e ho letto l'<risk>Informativa sui rischi</risk>.",
+    "login": {
+      "title": "Accedi",
+      "subtitle": "Bentornato. Inserisci i tuoi dati per continuare.",
+      "submit": "Accedi",
+      "submitting": "Accesso in corso…",
+      "forgot": "Password dimenticata?",
+      "noAccount": "Sei nuovo?",
+      "register": "Crea un account",
+      "signedOut": "Sei uscito dall'account.",
+      "notVerified": "Conferma il tuo indirizzo email prima di accedere. Possiamo inviarti di nuovo il link.",
+      "resend": "Invia di nuovo il link"
+    },
+    "register": {
+      "title": "Crea il tuo account",
+      "subtitle": "Bastano pochi minuti. Confermerai la tua email prima di poter accedere.",
+      "submit": "Crea account",
+      "submitting": "Creazione dell'account…",
+      "haveAccount": "Hai già un account?",
+      "login": "Accedi",
+      "closed": "Le nuove registrazioni sono sospese al momento. Riprova più tardi."
+    },
+    "strength": {
+      "label": "Robustezza della password",
+      "levels": [
+        "Troppo debole",
+        "Debole",
+        "Discreta",
+        "Buona",
+        "Forte"
+      ],
+      "rules": {
+        "length": "Almeno 10 caratteri",
+        "lower": "Una lettera minuscola",
+        "upper": "Una lettera maiuscola",
+        "number": "Un numero",
+        "symbol": "Un simbolo, come ! o #"
+      }
+    },
+    "verify": {
+      "title": "Controlla la tua casella di posta",
+      "body": "Abbiamo inviato un link di conferma a {email}. Aprilo su questo dispositivo per completare la creazione dell'account.",
+      "bodyNoEmail": "Apri il link di conferma che ti abbiamo inviato via email per completare la creazione dell'account.",
+      "duplicateNote": "Se esiste già un account per questo indirizzo, non viene inviata una nuova email: accedi o reimposta la password.",
+      "resend": "Invia di nuovo il link",
+      "resent": "Se l'indirizzo deve essere confermato, un nuovo link è in arrivo.",
+      "expiredTitle": "Il link non ha funzionato",
+      "expiredBody": "I link di conferma e di reimpostazione scadono dopo poco tempo e si possono usare una sola volta. Richiedine uno nuovo qui sotto.",
+      "backToLogin": "Torna all'accesso"
+    },
+    "forgot": {
+      "title": "Reimposta la password",
+      "subtitle": "Inserisci l'email con cui ti sei registrato e ti invieremo un link per reimpostarla.",
+      "submit": "Invia link",
+      "sent": "Se esiste un account con questa email, un link di reimpostazione è in arrivo. Scade tra un'ora.",
+      "back": "Torna all'accesso"
+    },
+    "reset": {
+      "title": "Scegli una nuova password",
+      "subtitle": "Usa una password che non hai mai usato qui.",
+      "submit": "Aggiorna password",
+      "success": "Password aggiornata. Hai effettuato l'accesso.",
+      "expired": "Questo link di reimpostazione è scaduto. Richiedine uno nuovo."
+    },
+    "logout": {
+      "title": "Uscire?",
+      "body": "Ti serviranno email e password per accedere di nuovo.",
+      "confirm": "Esci",
+      "everywhere": "Esci da tutti i dispositivi",
+      "cancel": "Resta connesso"
+    },
+    "mfa": {
+      "title": "Verifica in due passaggi",
+      "subtitle": "Inserisci il codice a 6 cifre dalla tua app di autenticazione.",
+      "code": "Codice di verifica",
+      "submit": "Verifica",
+      "invalid": "Il codice non corrisponde. Controlla l'app e riprova.",
+      "useAnother": "Esci e usa un altro account"
+    },
+    "admin": {
+      "title": "Accesso personale",
+      "subtitle": "Solo per il personale autorizzato. L'accesso è verificato in base al ruolo assegnato.",
+      "forbidden": "Questo account non ha accesso come personale.",
+      "customer": "Cerchi il tuo account? <link>Accesso clienti</link>"
+    }
+  },
+  "phone": {
+    "country": "Paese o regione",
+    "search": "Cerca un paese",
+    "noMatch": "Nessun paese corrispondente",
+    "number": "Numero di telefono"
+  },
+  "validation": {
+    "required": "Questo campo è obbligatorio.",
+    "emailInvalid": "Inserisci un indirizzo email valido.",
+    "passwordWeak": "Usa almeno 10 caratteri con lettere maiuscole e minuscole, un numero e un simbolo.",
+    "passwordTooLong": "Usa al massimo 128 caratteri.",
+    "passwordMismatch": "Le password non coincidono.",
+    "passwordBreached": "Questa password è comparsa in una violazione di dati. Scegline un'altra.",
+    "passwordSame": "Scegli una password diversa da quella attuale.",
+    "phoneInvalid": "Inserisci un numero valido per il paese selezionato.",
+    "usernameShort": "Usa almeno 3 caratteri.",
+    "usernameLong": "Usa al massimo 24 caratteri.",
+    "usernameChars": "Usa solo lettere minuscole, numeri e trattini bassi.",
+    "usernameTaken": "Questo nome utente è già in uso. Provane un altro.",
+    "nameShort": "Inserisci nome e cognome.",
+    "nameLong": "Usa al massimo 100 caratteri.",
+    "termsRequired": "Devi accettare i termini per creare un account.",
+    "consentRequired": "Spunta la casella per confermare.",
+    "referralInvalid": "I codici invito contengono solo lettere e numeri.",
+    "amountInvalid": "Inserisci un importo con al massimo 2 decimali.",
+    "amountPositive": "Inserisci un importo maggiore di zero.",
+    "methodInvalid": "Scegli un metodo di pagamento.",
+    "referenceLong": "Usa al massimo 140 caratteri.",
+    "noteLong": "Usa al massimo 500 caratteri.",
+    "destinationInvalid": "Inserisci un indirizzo di wallet valido (solo lettere e numeri).",
+    "planInvalid": "Scegli un piano.",
+    "invalidRequest": "Qualcosa in questa richiesta non è valido. Aggiorna la pagina e riprova.",
+    "subjectShort": "Usa almeno 4 caratteri.",
+    "subjectLong": "Usa al massimo 140 caratteri.",
+    "messageShort": "Scrivi almeno 10 caratteri.",
+    "messageLong": "Usa al massimo 4.000 caratteri.",
+    "slugInvalid": "Usa da 2 a 40 lettere minuscole, numeri e trattini.",
+    "descriptionShort": "Scrivi almeno 10 caratteri.",
+    "descriptionLong": "Usa al massimo 400 caratteri.",
+    "termInvalid": "Inserisci una durata tra 1 e 3.650 giorni.",
+    "rangeInvalid": "Il massimo deve essere maggiore del minimo.",
+    "targetBasisRequired": "Un rendimento obiettivo richiede entrambi i valori e una base pubblicata.",
+    "reasonRequired": "Indica un motivo (almeno 4 caratteri).",
+    "codeInvalid": "Inserisci il codice a 6 cifre."
+  },
+  "errors": {
+    "generic": "Si è verificato un problema da parte nostra. Riprova tra poco.",
+    "network": "Impossibile raggiungere il server. Controlla la connessione e riprova.",
+    "not_configured": "Gli account non sono ancora disponibili: il backend non è collegato.",
+    "rate_limited": "Troppi tentativi. Attendi qualche minuto e riprova.",
+    "validation": "Controlla i campi evidenziati.",
+    "unauthorized": "La sessione è scaduta. Accedi di nuovo.",
+    "forbidden": "Il tuo account non ha l'autorizzazione per farlo.",
+    "mfa_required": "Verifica con la tua app di autenticazione per continuare.",
+    "account_suspended": "Questo account è sospeso. Contatta l'assistenza.",
+    "maintenance": "Le nuove richieste sono sospese per manutenzione. Riprova più tardi.",
+    "invalid_credentials": "Email e password non corrispondono. Controllale e riprova.",
+    "email_not_confirmed": "Conferma il tuo indirizzo email prima di accedere.",
+    "registrations_closed": "Le nuove registrazioni sono sospese al momento.",
+    "reset_link_expired": "Questo link di reimpostazione è scaduto. Richiedine uno nuovo.",
+    "amount_invalid": "Inserisci un importo valido.",
+    "amount_below_min": "L'importo è inferiore al minimo.",
+    "amount_above_max": "L'importo è superiore al massimo.",
+    "amount_below_fee": "L'importo deve essere maggiore della commissione di prelievo.",
+    "insufficient_funds": "Il saldo disponibile è troppo basso per questo importo.",
+    "asset_invalid": "Questo asset non è disponibile per questa richiesta.",
+    "method_invalid": "Scegli un metodo di pagamento valido.",
+    "destination_invalid": "Controlla l'indirizzo di destinazione.",
+    "network_invalid": "Scegli una rete.",
+    "too_many_pending": "Hai troppe richieste aperte. Attendi prima che vengano verificate.",
+    "duplicate_request": "È appena stata inviata una richiesta identica. Controlla la cronologia prima di riprovare.",
+    "invalid_request": "Questa richiesta non è valida. Aggiorna la pagina e riprova.",
+    "invalid_status": "Questo elemento è già passato a un'altra fase e non può essere modificato così.",
+    "invalid_decision": "Scegli una decisione valida.",
+    "not_found": "Elemento non trovato.",
+    "plan_invalid": "Questo piano non è disponibile.",
+    "cancel_window_closed": "Le posizioni si possono annullare solo entro 24 ore dall'apertura.",
+    "self_review_forbidden": "Non puoi verificare una tua richiesta. Chiedi a un altro revisore.",
+    "self_action_forbidden": "Non puoi modificare il tuo account in questo modo.",
+    "reason_required": "Aggiungi un motivo prima di continuare.",
+    "payout_reference_required": "Aggiungi il riferimento del pagamento per segnarlo come completato.",
+    "credit_exceeds_request": "L'importo accreditato non può superare quello richiesto.",
+    "last_owner": "Non puoi rimuovere l'ultimo proprietario.",
+    "slug_taken": "Un altro piano usa già questa chiave.",
+    "ticket_closed": "Questo ticket è chiuso. Aprine uno nuovo se hai ancora bisogno di aiuto.",
+    "message_invalid": "Scrivi un messaggio tra 10 e 4.000 caratteri.",
+    "email_invalid": "Inserisci un indirizzo email valido.",
+    "consent_required": "Il consenso è obbligatorio.",
+    "balance_missing": "Il tuo account non è configurato del tutto. Contatta l'assistenza.",
+    "upload_invalid": "Carica un file PNG, JPEG, WebP o PDF fino a 5 MB."
+  },
+  "admin": {
+    "nav": {
+      "overview": "Panoramica",
+      "deposits": "Depositi",
+      "withdrawals": "Prelievi",
+      "investments": "Posizioni",
+      "transactions": "Registro",
+      "plans": "Piani",
+      "users": "Utenti",
+      "kyc": "Verifica dell'identità",
+      "support": "Assistenza",
+      "notifications": "Annunci",
+      "audit": "Registro di controllo",
+      "settings": "Impostazioni",
+      "exit": "Vista cliente",
+      "breadcrumb": "Percorso",
+      "sections": {
+        "money": "Denaro",
+        "people": "Persone",
+        "system": "Sistema"
+      }
+    },
+    "common": {
+      "search": "Cerca",
+      "searchPlaceholder": "Riferimento, email o nome",
+      "status": "Stato",
+      "allStatuses": "Tutti gli stati",
+      "apply": "Applica",
+      "reset": "Reimposta",
+      "sort": "Ordina",
+      "newest": "Più recenti",
+      "oldest": "Meno recenti",
+      "largest": "Importo maggiore",
+      "view": "Vedi",
+      "review": "Verifica",
+      "noPermission": "Il tuo ruolo può vedere questa pagina ma non modificarla.",
+      "mfaEnrol": "Gli account del personale dovrebbero usare l'accesso in due passaggi. Configuralo in Impostazioni → Sicurezza.",
+      "simulatedLabel": "Movimenti simulati — la modalità demo è attiva."
+    },
+    "overview": {
+      "title": "Panoramica operativa",
+      "description": "Dati in tempo reale calcolati dai registri della piattaforma.",
+      "usersTotal": "Utenti registrati",
+      "usersNew": "{count} nuovi negli ultimi 7 giorni",
+      "usersActive": "Attivi negli ultimi 30 giorni",
+      "usersSuspended": "{count} sospesi",
+      "depositsPending": "Depositi da verificare",
+      "withdrawalsOpen": "Prelievi aperti",
+      "investmentsActive": "Posizioni attive",
+      "investmentsDue": "{count} oltre la scadenza",
+      "ticketsOpen": "Ticket aperti",
+      "balancesTitle": "Saldi detenuti per i clienti",
+      "available": "Disponibile",
+      "held": "Trattenuto per prelievi",
+      "invested": "In posizioni",
+      "flowsTitle": "Flussi giornalieri, ultimi 30 giorni",
+      "flowsDescription": "Depositi confermati e prelievi pagati",
+      "activityTitle": "Attività recenti di personale e sistema",
+      "activityEmpty": "Ancora nessuna attività registrata.",
+      "queueTitle": "Coda di verifica",
+      "queueDeposits": "Deposito in attesa più vecchio",
+      "queueWithdrawals": "Prelievo aperto più vecchio",
+      "queueEmpty": "Niente in attesa.",
+      "processMaturities": "Chiudi le posizioni scadute",
+      "processed": "{count, plural, =0 {Nessuna posizione era in scadenza} one {# posizione chiusa} other {# posizioni chiuse}}"
+    },
+    "deposits": {
+      "title": "Verifica depositi",
+      "description": "Approva solo dopo aver confermato la ricezione dei fondi. L'approvazione accredita il saldo disponibile del cliente.",
+      "approve": "Approva e accredita",
+      "reject": "Rifiuta",
+      "approveTitle": "Approvare il deposito {reference}?",
+      "approveBody": "Conferma l'arrivo dei fondi. L'importo accreditato può essere inferiore a quello richiesto se è arrivato meno, mai superiore.",
+      "creditedAmount": "Importo ricevuto",
+      "rejectTitle": "Rifiutare il deposito {reference}?",
+      "rejectBody": "Non viene accreditato nulla. Il cliente vedrà il motivo che indichi.",
+      "reason": "Motivo",
+      "note": "Nota interna",
+      "approved": "Deposito approvato e accreditato",
+      "rejected": "Deposito rifiutato",
+      "selfReview": "È una tua richiesta: deve gestirla un altro revisore.",
+      "receipt": "Ricevuta",
+      "txReference": "Riferimento del trasferimento",
+      "customerNote": "Nota del cliente"
+    },
+    "withdrawals": {
+      "title": "Verifica prelievi",
+      "description": "Approva dopo i controlli, poi segna come completato quando il pagamento è confermato con il suo riferimento.",
+      "processing": "Segna in lavorazione",
+      "approve": "Approva",
+      "complete": "Segna come completato",
+      "reject": "Rifiuta e sblocca",
+      "completeTitle": "Segnare {reference} come pagato?",
+      "completeBody": "Fallo solo dopo che il pagamento è stato confermato. Inserisci la transazione o il riferimento del pagamento.",
+      "payoutReference": "Riferimento del pagamento",
+      "rejectTitle": "Rifiutare il prelievo {reference}?",
+      "rejectBody": "L'importo trattenuto torna nel saldo disponibile del cliente.",
+      "approveTitle": "Approvare il prelievo {reference}?",
+      "approveBody": "L'approvazione autorizza il pagamento. I fondi restano trattenuti finché non lo segni come completato.",
+      "updated": "Prelievo aggiornato"
+    },
+    "investments": {
+      "title": "Posizioni",
+      "description": "Tutte le posizioni dei clienti. Alla scadenza viene restituito solo il capitale.",
+      "due": "Oltre la scadenza"
+    },
+    "plans": {
+      "title": "Piani di investimento",
+      "description": "Le modifiche si applicano solo alle nuove posizioni. Quelle aperte mantengono le condizioni iniziali.",
+      "new": "Nuovo piano",
+      "edit": "Modifica",
+      "editTitle": "Modifica piano",
+      "newTitle": "Nuovo piano",
+      "name": "Nome",
+      "slug": "Chiave URL",
+      "description_": "Descrizione",
+      "min": "Importo minimo",
+      "max": "Importo massimo",
+      "currency": "Valuta",
+      "term": "Durata (giorni)",
+      "risk": "Livello di rischio",
+      "riskDescription": "Descrizione del rischio",
+      "targetMin": "Rendimento obiettivo da (%)",
+      "targetMax": "Rendimento obiettivo a (%)",
+      "targetBasis": "Base dell'obiettivo",
+      "targetHelp": "Lascia entrambi vuoti a meno che tu non pubblichi come viene calcolato l'obiettivo. Ai clienti l'obiettivo viene mostrato con la sua base e non è mai una garanzia.",
+      "active": "Aperto a nuove posizioni",
+      "order": "Ordine di visualizzazione",
+      "saved": "Piano salvato",
+      "inactive": "Chiuso",
+      "openPositions": "{count} aperte"
+    },
+    "users": {
+      "title": "Utenti",
+      "description": "Cerca account, esamina le attività e gestisci gli accessi.",
+      "joined": "Iscritto",
+      "roles": "Ruoli",
+      "balance": "Saldo totale",
+      "detailTitle": "Account",
+      "profile": "Profilo",
+      "activity": "Registrazioni recenti",
+      "requests": "Richieste aperte",
+      "suspend": "Sospendi account",
+      "reactivate": "Riattiva account",
+      "suspendTitle": "Sospendere questo account?",
+      "suspendBody": "Durante la sospensione il cliente non può accedere né muovere denaro. Indica un motivo per il registro di controllo.",
+      "reactivateTitle": "Riattivare questo account?",
+      "statusUpdated": "Stato dell'account aggiornato",
+      "rolesTitle": "Ruoli del personale",
+      "rolesHelp": "I proprietari gestiscono tutti i ruoli. Gli amministratori possono assegnare i ruoli finanza e assistenza. Nessuno può modificare i propri ruoli.",
+      "grant": "Assegna",
+      "revoke": "Revoca",
+      "roleUpdated": "Ruoli aggiornati",
+      "roleNames": {
+        "owner": "Proprietario",
+        "admin": "Amministratore",
+        "finance": "Revisore finanziario",
+        "support": "Assistenza"
+      },
+      "noRoles": "Cliente",
+      "statusReason": "Motivo"
+    },
+    "kyc": {
+      "title": "Verifica dell'identità",
+      "description": "La verifica dell'identità avviene tramite un fornitore di verifica conforme.",
+      "notConfigured": "Nessun fornitore di verifica dell'identità è collegato. Gli stati qui sotto cambiano solo quando un fornitore comunica i risultati: non si possono impostare a mano.",
+      "counts": "Account per stato di verifica"
+    },
+    "support": {
+      "title": "Ticket di assistenza",
+      "description": "Rispondi ai clienti e tieni ogni messaggio nel ticket.",
+      "assigned": "Assegnato",
+      "unassigned": "Non assegnato",
+      "customer": "Cliente",
+      "setStatus": "Stato",
+      "setPriority": "Priorità",
+      "priorities": {
+        "low": "Bassa",
+        "normal": "Normale",
+        "high": "Alta"
+      },
+      "updated": "Ticket aggiornato"
+    },
+    "notifications": {
+      "title": "Annunci",
+      "description": "Invia una notifica nell'app a tutti i clienti attivi o a un singolo account.",
+      "audience": "Destinatari",
+      "all": "Tutti i clienti attivi",
+      "one": "Un cliente",
+      "userEmail": "Email del cliente",
+      "userNotFound": "Nessun account corrisponde a questa email.",
+      "titleField": "Titolo",
+      "body": "Messaggio",
+      "send": "Invia annuncio",
+      "sent": "{count, plural, one {Inviato a # cliente} other {Inviato a # clienti}}",
+      "recent": "Inviati di recente"
+    },
+    "audit": {
+      "title": "Registro di controllo",
+      "description": "Registro non modificabile delle azioni del personale e degli eventi che cambiano i saldi.",
+      "actor": "Autore",
+      "action": "Azione",
+      "entity": "Entità",
+      "details": "Dettagli",
+      "system": "Sistema",
+      "filterAction": "L'azione contiene"
+    },
+    "settings": {
+      "title": "Impostazioni della piattaforma",
+      "description": "Limiti e opzioni usati dalle funzioni del database. Ogni modifica viene registrata.",
+      "limits": "Limiti e commissioni",
+      "switches": "Opzioni della piattaforma",
+      "assets": "Asset supportati",
+      "keys": {
+        "deposit_min": "Deposito minimo (USD)",
+        "deposit_max": "Deposito massimo (USD)",
+        "withdrawal_min": "Prelievo minimo (USD)",
+        "withdrawal_max": "Prelievo massimo (USD)",
+        "withdrawal_fee_flat": "Commissione di prelievo fissa (USD)",
+        "withdrawal_fee_percent": "Commissione di prelievo (%)",
+        "maintenance_mode": "Modalità manutenzione — sospende le nuove operazioni di denaro",
+        "registrations_open": "Consenti nuove registrazioni"
+      },
+      "assetActive": "Attivo",
+      "assetDeposits": "Depositi",
+      "assetWithdrawals": "Prelievi",
+      "saved": "Impostazione salvata"
+    }
+  }
+}

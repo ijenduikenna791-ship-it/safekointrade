@@ -138,7 +138,7 @@ export const profileSchema = z.object({
 });
 
 export const preferencesSchema = z.object({
-  locale: z.enum(["en", "fr", "es", "pt", "ar", "de", "zh", "yo"]),
+  locale: z.enum(["en", "fr", "es", "pt", "de", "it", "ru", "ar", "zh", "ja", "hi"]),
   theme: z.enum(["light", "dark", "system"]),
 });
 

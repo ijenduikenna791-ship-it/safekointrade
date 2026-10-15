@@ -80,7 +80,7 @@ export function SiteHeader() {
                 <Link
                   href={l.href}
                   className={cn(
-                    "rounded-md px-3 py-2 text-[0.95rem] font-medium transition-colors",
+                    "whitespace-nowrap rounded-md px-3 py-2 text-[0.95rem] font-medium transition-colors",
                     l.highlight
                       ? "ms-1 bg-brand-mint text-brand-teal hover:bg-brand-mint-hover"
                       : "text-ink hover:bg-surface-2 hover:text-brand-mint-ink"

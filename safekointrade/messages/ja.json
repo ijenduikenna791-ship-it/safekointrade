@@ -1,0 +1,1209 @@
+{
+  "meta": {
+    "title": "期間固定の暗号資産投資プラン",
+    "description": "期間固定の暗号資産投資プラン。すべての入金と出金を担当者が確認し、記録はいつでも検証できます。"
+  },
+  "common": {
+    "skipToContent": "本文へスキップ",
+    "loading": "読み込み中",
+    "close": "閉じる",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "変更を保存",
+    "saving": "保存中…",
+    "saved": "変更を保存しました",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "search": "検索",
+    "optional": "任意",
+    "required": "必須",
+    "retry": "再試行",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "viewAll": "すべて表示",
+    "details": "詳細",
+    "page": "{page} / {total} ページ",
+    "noResults": "この条件に一致する結果はありません。",
+    "simulationTitle": "デモモード",
+    "simulationNotice": "このプラットフォームの残高と資金の動きはシミュレーションです。認可を受けた決済事業者と接続するまで、実際のお金は動きません。",
+    "simulationShort": "シミュレーション",
+    "illustration": "イメージ",
+    "sampleData": "サンプルデータ",
+    "notConfiguredTitle": "バックエンド未接続",
+    "notConfigured": "Supabase のキーが設定されていません。.env.local に追加するとアカウント機能が有効になります(README 参照)。",
+    "genericError": "システムで問題が発生しました。しばらくしてからもう一度お試しください。",
+    "networkError": "サーバーに接続できませんでした。接続を確認してもう一度お試しください。",
+    "rateLimited": "試行回数が多すぎます。1分ほど待ってからお試しください。",
+    "unauthorized": "続行するにはログインしてください。",
+    "forbidden": "このアカウントにはこのページへのアクセス権がありません。",
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundBody": "お探しのページは存在しないか、移動した可能性があります。",
+    "goHome": "ホームへ",
+    "errorTitle": "ページを読み込めませんでした",
+    "errorBody": "予期しないエラーによりページを読み込めませんでした。もう一度お試しいただくか、後ほどアクセスしてください。",
+    "status": {
+      "pending": "保留中",
+      "processing": "処理中",
+      "approved": "承認済み",
+      "completed": "完了",
+      "active": "運用中",
+      "matured": "満期",
+      "rejected": "却下",
+      "cancelled": "キャンセル済み",
+      "failed": "失敗",
+      "open": "受付中",
+      "answered": "回答済み",
+      "closed": "終了",
+      "suspended": "停止中",
+      "verified": "確認済み",
+      "unverified": "未確認"
+    },
+    "risk": {
+      "low": "低リスク",
+      "moderate": "中リスク",
+      "high": "高リスク"
+    },
+    "photoCredit": "写真: {name} / Pexels",
+    "apply": "適用"
+  },
+  "theme": {
+    "label": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "language": {
+    "label": "言語",
+    "change": "言語を変更"
+  },
+  "nav": {
+    "markets": "マーケット",
+    "plans": "投資プラン",
+    "how": "仕組み",
+    "about": "会社概要",
+    "faq": "よくある質問",
+    "login": "ログイン",
+    "getStarted": "はじめる",
+    "dashboard": "ダッシュボード",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "primary": "メイン",
+    "home": "ホーム",
+    "signUp": "新規登録"
+  },
+  "startup": {
+    "loading": "{brand} を読み込み中"
+  },
+  "home": {
+    "hero": {
+      "title": "期間固定の暗号資産プランと、公開された記録。",
+      "body": "30日・90日・180日のプランを選び、入金、ポジション、満期まで、すべての動きを検証できる記録で確認できます。入金と出金はすべてスクリプトではなく人が確認します。",
+      "primary": "アカウントを作成",
+      "secondary": "プランを比較",
+      "note": "暗号資産は価格変動が大きく、投資したお金の一部または全部を失う可能性があります。",
+      "headline": "検証できる暗号資産プラン",
+      "learnMore": "詳しく見る"
+    },
+    "lifecycle": {
+      "label": "ポジションの流れ",
+      "plan": "Growth プラン",
+      "term": "期間 90日",
+      "amount": "ポジション額",
+      "day": "{total}日中 {day}日目",
+      "steps": {
+        "deposit": "入金確認済み",
+        "opened": "ポジション開始",
+        "running": "運用期間中",
+        "matures": "満期"
+      },
+      "caption": "各ステップは参照番号付きでアカウント履歴に記録されます。"
+    },
+    "ticker": {
+      "label": "リアルタイムの市場価格",
+      "unavailable": "現在、リアルタイム価格を取得できません。",
+      "source": "価格は CoinGecko 提供、毎分更新。"
+    },
+    "commitments": {
+      "title": "プラットフォームに組み込まれた約束",
+      "items": {
+        "terms": {
+          "value": "30・90・180",
+          "label": "日 — 期間はポジション開始時に確定します"
+        },
+        "review": {
+          "value": "すべての申請",
+          "label": "残高が変わる前に、入金と出金を担当者が確認します"
+        },
+        "audit": {
+          "value": "完全な監査記録",
+          "label": "残高の変更は、誰が・何を・いつ行ったかとともに記録されます"
+        },
+        "languages": {
+          "value": "11言語",
+          "label": "右から左に書くアラビア語、日本語、ヒンディー語にも対応"
+        }
+      }
+    },
+    "features": {
+      "title": "細かい条件まで読む方のために",
+      "body": "ダッシュボードに表示される内容はすべてアカウントの記録に基づいています。見栄えのために推定・丸め・作成した数字はありません。",
+      "items": {
+        "ledger": {
+          "title": "スコアボードではなく台帳",
+          "body": "入金、ポジション、出金のそれぞれに、追跡できる参照番号、ステータス、日時があります。"
+        },
+        "terms": {
+          "title": "期間固定のプラン",
+          "body": "プランを選び、範囲内の金額を指定します。期間は開始日に確定します。"
+        },
+        "review": {
+          "title": "資金の動きは人が確認",
+          "body": "財務担当者が、資金を確認したうえで入金を承認し、送金前に出金を承認します。"
+        },
+        "security": {
+          "title": "アカウント保護",
+          "body": "メール確認、厳格なパスワード規則、認証アプリによるログインでアカウントを守ります。"
+        },
+        "languages": {
+          "title": "あなたの言語と表示形式",
+          "body": "日付、数値、通貨は、プラットフォーム全体で選択した言語の形式で表示されます。"
+        },
+        "support": {
+          "title": "履歴が残るサポート",
+          "body": "ダッシュボードから問い合わせを作成すると、すべての返信がその中に保存されます。"
+        }
+      }
+    },
+    "plans": {
+      "title": "投資プランを比較",
+      "body": "金額の範囲と期間はプランごとに設定されています。金額と期間に合うものをお選びください。",
+      "range": "金額の範囲",
+      "term": "期間",
+      "days": "{count}日",
+      "asset": "建て通貨",
+      "target": "目標リターン",
+      "noTarget": "このプランには目標リターンが設定されていません",
+      "cta": "このプランを始める",
+      "sampleNote": "既定の設定を表示しています。データベース接続後に最新の設定が読み込まれます。",
+      "riskNote": "リスク表示は暗号資産市場の価格変動に対する度合いを示すもので、予測ではありません。"
+    },
+    "how": {
+      "title": "仕組み",
+      "body": "登録から出金まで4ステップ。各ステップがアカウントに記録されます。",
+      "steps": {
+        "account": {
+          "title": "アカウントを作成して確認",
+          "body": "メールアドレスと電話番号で登録し、メールアドレスを確認します。"
+        },
+        "deposit": {
+          "title": "入金を申請",
+          "body": "参照番号付きで入金を申請します。残高は担当者が資金を確認した後にのみ変わります。"
+        },
+        "invest": {
+          "title": "ポジションを開始",
+          "body": "利用可能残高の一部をプランに移します。期間はポジション開始時から始まります。"
+        },
+        "withdraw": {
+          "title": "満期後に出金",
+          "body": "期間が終わるとポジションは利用可能残高に戻り、出金を申請できます。"
+        }
+      },
+      "imageAlt": "価格チャートの画面を背景に金色のビットコインを持つ手"
+    },
+    "analytics": {
+      "title": "マーケット分析",
+      "body": "対応資産の30日間の価格推移を、リアルタイムの市場データから表示します。",
+      "range": "30日間の価格(USD)",
+      "change": "30日間の変動",
+      "unavailable": "現在、価格履歴を取得できません。しばらくしてからご確認ください。",
+      "dashboardTitle": "ダッシュボードをひと目で",
+      "dashboardBody": "利用可能・運用中・保留中の残高、保有ポジション、すべての取引を記録から直接表示します。"
+    },
+    "security": {
+      "title": "目に見えるセキュリティ",
+      "body": "保護はデータベースを起点に何層にも重ねられ、権限のある操作はすべて記録されます。",
+      "items": {
+        "rls": {
+          "title": "データの分離",
+          "body": "行レベルセキュリティにより、あなたの記録を見られるのはあなたと権限のある担当者だけです。"
+        },
+        "mfa": {
+          "title": "2段階ログイン",
+          "body": "認証アプリを追加すれば、パスワードだけではアカウントにログインできなくなります。"
+        },
+        "review": {
+          "title": "職務の分離",
+          "body": "自分の申請を自分で承認することはできず、財務操作は財務ロールに限られます。"
+        },
+        "audit": {
+          "title": "改ざんできない履歴",
+          "body": "管理者の操作と残高の変更は、変更できない監査ログに記録されます。"
+        }
+      }
+    },
+    "assets": {
+      "title": "対応資産",
+      "body": "ポジションは米ドル建てです。プラットフォームが追跡し、入金を受け付ける資産は以下のとおりです。",
+      "price": "価格",
+      "change24h": "24時間",
+      "noPrice": "—",
+      "network": "ネットワーク"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "items": {
+        "guaranteed": {
+          "q": "リターンは保証されていますか?",
+          "a": "いいえ。暗号資産は価格変動が大きく、投資したお金の一部または全部を失う可能性があります。目標リターンは、定義され公表されている場合にのみ表示され、目標は約束ではありません。"
+        },
+        "demo": {
+          "q": "現在、実際のお金は動いていますか?",
+          "a": "まだ動いていません。認可を受けた決済事業者と接続するまで、すべての入金、出金、ポジションはシミュレーションとして明示され、実際の資金は動きません。"
+        },
+        "deposit": {
+          "q": "入金はいつ残高に反映されますか?",
+          "a": "財務担当者が資金の着金を確認した後です。申請や領収書のアップロードだけでは残高は変わりません。"
+        },
+        "withdraw": {
+          "q": "出金の仕組みは?",
+          "a": "利用可能残高から出金を申請します。確認中は金額が保留され、送金が確認された時点で完了となります。"
+        },
+        "early": {
+          "q": "満期前にポジションを終了できますか?",
+          "a": "開始から24時間以内であればキャンセルできます。それ以降は満期まで継続します。"
+        },
+        "security": {
+          "q": "アカウントはどのように保護されていますか?",
+          "a": "メール確認、強力なパスワード、任意の2段階ログイン、行レベルのデータ分離、権限のある操作の完全な監査記録で保護されています。"
+        }
+      }
+    },
+    "newsletter": {
+      "title": "月1回のプロダクトニュース",
+      "body": "新しいプラン、プラットフォームの変更、市場メモをお届けします。助言を装った宣伝はありません。",
+      "email": "メールアドレス",
+      "placeholder": "you@example.com",
+      "consent": "月1回のニュースレターの受信に同意します。いつでも配信停止できます。",
+      "submit": "登録する",
+      "success": "登録しました。次号を受信トレイでお待ちください。",
+      "already": "このメールアドレスはすでに登録されています。",
+      "invalidEmail": "有効なメールアドレスを入力してください。",
+      "consentRequired": "登録を確認するにはチェックを入れてください。"
+    },
+    "cta": {
+      "title": "数分でアカウントを開設。",
+      "body": "ダッシュボードを見て、プランを比較し、各申請がどのように確認されるかを確かめてください。",
+      "primary": "アカウントを作成",
+      "secondary": "リスク開示を読む"
+    },
+    "platform": {
+      "title": "ひとつのアカウントですべて",
+      "body": "お金が利用可能か、運用中か、処理中か — ひとつのダッシュボードで正確に把握できます。",
+      "items": {
+        "dashboard": {
+          "title": "わかりやすいダッシュボード",
+          "body": "利用可能・運用中・保留中の残高、保有ポジション、すべての取引をひとつの場所に。"
+        },
+        "plans": {
+          "title": "期間固定のプラン",
+          "body": "30日・90日・180日から選択。期間はポジション開始日に確定します。"
+        },
+        "money": {
+          "title": "確認済みの資金移動",
+          "body": "入金は担当者の確認後に反映。出金は送金まで保留されます。"
+        },
+        "support": {
+          "title": "記録が残るサポート",
+          "body": "ダッシュボードから問い合わせを作成。すべての返信がその中に残ります。"
+        }
+      }
+    }
+  },
+  "footer": {
+    "product": "プロダクト",
+    "company": "会社",
+    "legal": "法的情報",
+    "support": "サポート",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "helpCentre": "ヘルプセンター",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "risk": "リスク開示",
+    "cookies": "Cookie ポリシー",
+    "riskWarning": "多くの法域で暗号資産は規制の対象外であり、価格変動が非常に大きい資産です。投資の価値は上がることも下がることもあり、投資額を下回る可能性があります。本サイトの内容は金融上の助言ではありません。",
+    "rights": "© {year} {company}. All rights reserved."
+  },
+  "about": {
+    "title": "{brand} について",
+    "lead": "私たちは、画面上の数字が常にその裏付けとなる記録と一致する暗号資産投資プラットフォームを作っています。",
+    "principlesTitle": "私たちの原則",
+    "principles": {
+      "records": {
+        "title": "マーケティングより記録",
+        "body": "表示する数字はすべて、追跡できるデータベースの記録に基づいています。検証できない数字は表示しません。"
+      },
+      "people": {
+        "title": "人が関わるプロセス",
+        "body": "フォームを送信しただけでお金が動くことはありません。訓練を受けた担当者が入金を確認し、出金を承認します。"
+      },
+      "plain": {
+        "title": "リスクをわかりやすく",
+        "body": "起こり得ることを率直にお伝えし、目標を約束として示すことはありません。"
+      }
+    },
+    "statusTitle": "現在のプラットフォームの状態",
+    "statusBody": "現在、プラットフォームはデモモードで運用しています。アカウント、プラン、確認フローはすべて機能していますが、認可を受けた決済・保管事業者と接続するまで残高はシミュレーションです。",
+    "imageAlt": "机で一緒に書類を確認する同僚たち"
+  },
+  "contact": {
+    "title": "お問い合わせとサポート",
+    "lead": "ログイン中のお客様は、ダッシュボードの問い合わせ機能が最も早く回答を得られる方法です。",
+    "ticketTitle": "問い合わせを作成",
+    "ticketBody": "問い合わせでは、すべてのメッセージが一か所にまとまり、サポートチームが回答します。",
+    "ticketCta": "サポートへ",
+    "emailTitle": "メール",
+    "complianceTitle": "コンプライアンス・データに関する請求",
+    "addressTitle": "登記上の住所"
+  },
+  "legal": {
+    "updated": "最終更新: {date}",
+    "draftNotice": "これはテンプレートです。公開前に資格を持つ法律専門家の確認が必要です。"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "概要",
+      "invest": "投資する",
+      "investments": "ポジション",
+      "deposits": "入金",
+      "withdrawals": "出金",
+      "transactions": "取引履歴",
+      "notifications": "通知",
+      "support": "サポート",
+      "settings": "設定",
+      "admin": "管理コンソール",
+      "logout": "ログアウト",
+      "collapse": "サイドバーを折りたたむ",
+      "expand": "サイドバーを展開",
+      "menu": "ナビゲーションを開く",
+      "closeMenu": "ナビゲーションを閉じる",
+      "account": "アカウントメニュー",
+      "breadcrumb": "パンくずリスト",
+      "home": "ダッシュボード",
+      "sections": {
+        "money": "お金",
+        "account": "アカウント"
+      }
+    },
+    "overview": {
+      "title": "概要",
+      "greeting": "おかえりなさい、{name} さん",
+      "description": "残高と最近の動きを、アカウントの記録から直接表示します。",
+      "total": "ポートフォリオ合計",
+      "totalHint": "利用可能・運用中・保留中の合計",
+      "available": "利用可能残高",
+      "availableHint": "投資または出金に利用可能",
+      "invested": "運用中",
+      "investedHint": "{count, plural, =0 {保有ポジションはありません} other {# 件のポジションで運用中}}",
+      "pending": "保留中",
+      "pendingHint": "出金と確認中の入金のために保留",
+      "historyTitle": "ポートフォリオ評価額",
+      "historyDescription": "記録された各取引後の合計残高",
+      "historyEmpty": "最初の入金が確認されると残高の履歴が始まります。",
+      "flowsTitle": "入金と出金",
+      "flowsDescription": "月ごとの確認済み金額",
+      "depositsLabel": "入金",
+      "withdrawalsLabel": "出金",
+      "flowsEmpty": "確認済みの入金・出金はまだありません。",
+      "summaryDeposited": "入金合計",
+      "summaryWithdrawn": "出金合計",
+      "recentTitle": "最近の取引",
+      "recentEmpty": "取引はまだありません。入金を申請して始めましょう。",
+      "positionsTitle": "運用中のポジション",
+      "positionsEmpty": "保有ポジションはありません。準備ができたらプランを選んでください。",
+      "quick": {
+        "deposit": "入金を申請",
+        "invest": "ポジションを開始",
+        "withdraw": "出金を申請"
+      },
+      "matured": "{count, plural, other {# 件のポジションが満期を迎えました}}。元本は利用可能残高に戻りました。",
+      "range": {
+        "label": "グラフの期間",
+        "week": "7日",
+        "month": "30日",
+        "all": "全期間"
+      },
+      "rangeChange": "この期間の変動",
+      "breakdownTitle": "残高の内訳",
+      "maturity": {
+        "title": "次の満期",
+        "daysLeft": "{count, plural, other {残り # 日}}",
+        "maturesOn": "{date} に満期",
+        "dayOf": "{total}日中 {day}日目",
+        "empty": "保有ポジションはありません。次の満期がここに表示されます。"
+      },
+      "risk": {
+        "title": "リスク構成",
+        "description": "保有ポジションごとの金額で算出",
+        "low": "保守的",
+        "moderate": "バランス型",
+        "high": "積極的",
+        "empty": "ポジションを開始するとリスク構成が表示されます。"
+      },
+      "markets": {
+        "title": "マーケット",
+        "description": "リアルタイム価格と7日間の推移",
+        "trend": "7日間の価格推移"
+      },
+      "gettingStarted": {
+        "title": "はじめに",
+        "description": "最初のポジションまで3ステップ。",
+        "done": "完了",
+        "steps": {
+          "request": "入金を申請",
+          "requestBody": "金額と送金方法を指定します。",
+          "confirmed": "入金確認",
+          "confirmedBody": "担当者が着金を確認します。",
+          "invest": "最初のポジションを開始",
+          "investBody": "プランと金額を選びます。"
+        }
+      }
+    },
+    "invest": {
+      "title": "ポジションを開始",
+      "description": "プランを選び、範囲内の金額を入力して、確定前に内容を確認してください。",
+      "choosePlan": "プランを選択",
+      "amount": "金額",
+      "amountHint": "{min} 〜 {max}",
+      "available": "利用可能: {amount}",
+      "review": "内容を確認",
+      "confirmTitle": "ポジションの確認",
+      "confirmBody": "金額は利用可能残高からプランに移されます。開始から24時間以内はキャンセルでき、それ以降は満期まで継続します。",
+      "plan": "プラン",
+      "term": "期間",
+      "matures": "満期日",
+      "returns": "リターン",
+      "noReturnsNote": "このプランには目標リターンが設定されていません。満期時に元本が利用可能残高に戻ります。",
+      "confirm": "ポジションを開始",
+      "success": "ポジションを開始しました",
+      "insufficient": "利用可能残高がこのプランの最低額を下回っています。先に入金を申請してください。",
+      "noPlans": "現在受付中のプランはありません。後ほどご確認ください。"
+    },
+    "positions": {
+      "title": "ポジション",
+      "description": "運用中、満期、キャンセル済みのポジション。",
+      "tabs": {
+        "active": "運用中",
+        "matured": "満期",
+        "cancelled": "キャンセル済み"
+      },
+      "progress": "{total}日中 {day}日目",
+      "opened": "開始日",
+      "matures": "満期日",
+      "maturedOn": "満期を迎えた日",
+      "cancelledOn": "キャンセル日",
+      "cancel": "ポジションをキャンセル",
+      "cancelTitle": "このポジションをキャンセルしますか?",
+      "cancelBody": "全額がすぐに利用可能残高に戻ります。この操作は取り消せません。",
+      "cancelConfirm": "ポジションをキャンセル",
+      "cancelled": "ポジションをキャンセルしました",
+      "cancelUntil": "{time} までキャンセル可能",
+      "empty": {
+        "active": "運用中のポジションはありません。",
+        "matured": "満期を迎えたポジションはまだありません。",
+        "cancelled": "キャンセルしたポジションはありません。"
+      },
+      "openNew": "ポジションを開始"
+    },
+    "deposits": {
+      "title": "入金",
+      "description": "入金を申請してから資金を送ってください。担当者が確認すると残高が更新されます。",
+      "formTitle": "入金を申請",
+      "amount": "金額(USD)",
+      "asset": "資産",
+      "method": "方法",
+      "methods": {
+        "crypto_transfer": "暗号資産送金",
+        "bank_transfer": "銀行振込"
+      },
+      "txReference": "トランザクションハッシュまたは振込番号",
+      "txReferenceHint": "担当者が送金を照合しやすくなります。",
+      "note": "担当者へのメモ",
+      "receipt": "領収書",
+      "receiptHint": "PNG、JPEG、WebP、PDF(5MBまで)。",
+      "submit": "入金を申請",
+      "success": "入金を申請しました。参照番号 {reference}。",
+      "pendingNote": "申請や領収書のアップロードだけでは残高は変わりません。担当者が着金を確認した後に入金されます。",
+      "historyTitle": "入金履歴",
+      "empty": "入金の申請はまだありません。",
+      "limits": "1回あたり最低 {min}、最大 {max}。",
+      "credited": "入金額",
+      "uploadReceipt": "領収書をアップロード",
+      "receiptUploaded": "領収書をアップロードしました",
+      "viewReceipt": "領収書を表示",
+      "instructionsTitle": "支払い方法",
+      "instructionsDemo": "認可を受けた決済事業者と接続すると、ここに支払い情報が表示されます。デモモードでは送金は不要です。担当者が申請を承認して確認済みの資金をシミュレーションします。",
+      "requested": "申請日",
+      "receiptMissing": "領収書なし",
+      "instructionsLive": "申請後、決済事業者の案内に従い、参照番号を記載して送金してください。"
+    },
+    "withdrawals": {
+      "title": "出金",
+      "description": "利用可能残高から出金します。確認中は金額が保留されます。",
+      "formTitle": "出金を申請",
+      "amount": "金額(USD)",
+      "asset": "資産",
+      "network": "ネットワーク",
+      "destination": "送金先ウォレットアドレス",
+      "destinationHint": "必ず再確認してください。誤ったアドレスへの送金は取り消せません。",
+      "fee": "手数料",
+      "net": "受取額",
+      "submit": "出金を申請",
+      "confirmTitle": "出金の確認",
+      "confirmBody": "出金が完了または却下されるまで、利用可能残高から {amount} が保留されます。",
+      "success": "出金を申請しました。参照番号 {reference}。",
+      "historyTitle": "出金履歴",
+      "empty": "出金はまだありません。",
+      "limits": "1回あたり最低 {min}、最大 {max}。手数料: {flat} + {percent}。",
+      "cancel": "申請をキャンセル",
+      "cancelTitle": "この出金をキャンセルしますか?",
+      "cancelBody": "保留中の金額は利用可能残高に戻ります。",
+      "cancelled": "出金をキャンセルしました",
+      "payoutReference": "送金参照番号",
+      "networkPlaceholder": "例: Ethereum (ERC-20)",
+      "availableNow": "現在の利用可能額: {amount}",
+      "feePreview": "手数料 {fee} · 受取額 {net}"
+    },
+    "transactions": {
+      "title": "取引履歴",
+      "description": "アカウントに記録されたすべての動き(新しい順)。",
+      "filterType": "種類",
+      "all": "すべての種類",
+      "types": {
+        "deposit": "入金",
+        "withdrawal_hold": "出金の保留",
+        "withdrawal_release": "出金保留の解除",
+        "withdrawal_payout": "出金の送金",
+        "investment_open": "ポジション開始",
+        "investment_cancel": "ポジションキャンセル",
+        "investment_maturity": "ポジション満期"
+      },
+      "empty": "一致する取引はありません。",
+      "detailTitle": "取引 {reference}",
+      "detailDescription": "アカウント台帳の恒久的な記録。",
+      "balanceAfter": "この記録後の残高",
+      "change": "変動",
+      "source": "関連する申請"
+    },
+    "table": {
+      "reference": "参照番号",
+      "date": "日付",
+      "type": "種類",
+      "amount": "金額",
+      "status": "ステータス",
+      "asset": "資産",
+      "plan": "プラン",
+      "description": "説明",
+      "available": "利用可能",
+      "held": "保留",
+      "invested": "運用中",
+      "actions": "操作",
+      "fee": "手数料",
+      "net": "差引額",
+      "destination": "送金先",
+      "user": "ユーザー",
+      "subject": "件名",
+      "updated": "更新日",
+      "category": "カテゴリ",
+      "priority": "優先度"
+    },
+    "pagination": {
+      "label": "ページ送り",
+      "previous": "前のページ",
+      "next": "次のページ",
+      "summary": "{total} 件中 {from}〜{to} 件を表示"
+    },
+    "notifications": {
+      "title": "通知",
+      "description": "申請、ポジション、アカウントに関するお知らせ。",
+      "markAll": "すべて既読にする",
+      "markRead": "既読にする",
+      "delete": "削除",
+      "empty": "新しい通知はありません。",
+      "bell": "通知",
+      "unread": "{count, plural, =0 {未読の通知はありません} other {未読の通知 # 件}}",
+      "viewAll": "すべての通知",
+      "templates": {
+        "depositRequested": {
+          "title": "入金申請を受け付けました",
+          "body": "入金申請 {reference} は確認待ちです。資金が確認されるまで残高は変わりません。"
+        },
+        "depositCompleted": {
+          "title": "入金を確認しました",
+          "body": "入金 {reference} を確認し、利用可能残高に反映しました。"
+        },
+        "depositRejected": {
+          "title": "入金を確認できませんでした",
+          "body": "入金 {reference} を確認できませんでした。ご不明な点はサポートへお問い合わせください。"
+        },
+        "withdrawalRequested": {
+          "title": "出金申請を受け付けました",
+          "body": "出金 {reference} は確認待ちです。完了または却下されるまで金額は保留されます。"
+        },
+        "withdrawalApproved": {
+          "title": "出金を承認しました",
+          "body": "出金 {reference} は承認され、送金確認を待っています。"
+        },
+        "withdrawalCompleted": {
+          "title": "出金が完了しました",
+          "body": "出金 {reference} を送金しました。"
+        },
+        "withdrawalRejected": {
+          "title": "出金が却下されました",
+          "body": "出金 {reference} は却下され、資金は利用可能残高に戻りました。"
+        },
+        "investmentOpened": {
+          "title": "ポジションを開始しました",
+          "body": "{plan} のポジション {reference} は運用中で、{date} に満期を迎えます。"
+        },
+        "investmentMatured": {
+          "title": "ポジションが満期を迎えました",
+          "body": "ポジション {reference} が満期を迎えました。元本は利用可能残高に戻りました。"
+        },
+        "supportReply": {
+          "title": "{reference} に新しい返信",
+          "body": "サポートチームが問い合わせに返信しました。"
+        },
+        "accountSuspended": {
+          "title": "アカウントが停止されました",
+          "body": "アカウントが停止されました。詳しくはサポートへお問い合わせください。"
+        },
+        "accountReactivated": {
+          "title": "アカウントが再開されました",
+          "body": "アカウントは再び有効になりました。"
+        }
+      }
+    },
+    "support": {
+      "title": "サポート",
+      "description": "問い合わせを作成すると、チームがここで返信します。すべてのメッセージが問い合わせ内に残ります。",
+      "new": "新しい問い合わせ",
+      "newTitle": "問い合わせを作成",
+      "subject": "件名",
+      "category": "カテゴリ",
+      "categories": {
+        "account": "アカウント",
+        "deposit": "入金",
+        "withdrawal": "出金",
+        "investment": "ポジション",
+        "security": "セキュリティ",
+        "other": "その他"
+      },
+      "message": "メッセージ",
+      "messageHint": "参照番号(例: DEP-…)を記載いただくと、すぐに確認できます。",
+      "submit": "問い合わせを作成",
+      "created": "問い合わせ {reference} を作成しました",
+      "empty": "問い合わせはまだありません。お困りの際は新しく作成してください。",
+      "reply": "返信",
+      "replyPlaceholder": "返信を入力…",
+      "send": "返信を送信",
+      "sent": "返信を送信しました",
+      "close": "問い合わせを終了",
+      "closed": "問い合わせを終了しました",
+      "closedNote": "この問い合わせは終了しています。引き続きサポートが必要な場合は新しく作成してください。",
+      "you": "あなた",
+      "staff": "サポートチーム",
+      "back": "すべての問い合わせ",
+      "faqTitle": "すぐわかる回答",
+      "faqBody": "入金、出金、ポジションに関する多くの質問は、よくある質問で回答しています。",
+      "faqLink": "よくある質問を見る"
+    },
+    "settings": {
+      "title": "設定",
+      "description": "プロフィール、セキュリティ、通知、各種設定を管理します。",
+      "tabs": {
+        "profile": "プロフィール",
+        "security": "セキュリティ",
+        "notifications": "通知",
+        "preferences": "表示設定"
+      },
+      "profile": {
+        "title": "プロフィール",
+        "description": "氏名と連絡先。",
+        "email": "メールアドレス",
+        "emailHint": "アカウントのメールアドレスを変更するにはサポートへお問い合わせください。",
+        "username": "ユーザー名",
+        "referral": "あなたの紹介コード",
+        "memberSince": "登録日",
+        "saved": "プロフィールを保存しました",
+        "phoneUnverified": "未確認"
+      },
+      "security": {
+        "passwordTitle": "パスワード",
+        "passwordDescription": "パスワードを変更すると、他のセッションはログアウトされます。",
+        "newPassword": "新しいパスワード",
+        "updatePassword": "パスワードを更新",
+        "passwordUpdated": "パスワードを更新しました",
+        "mfaTitle": "2段階ログイン",
+        "mfaDescription": "ログインのたびに認証アプリのコードを要求します。",
+        "mfaOn": "オン",
+        "mfaOff": "オフ",
+        "mfaEnable": "認証アプリを設定",
+        "mfaDisable": "オフにする",
+        "mfaScan": "1Password、Google Authenticator、Authy などの認証アプリでこの QR コードを読み取り、表示された6桁のコードを入力してください。",
+        "mfaSecret": "読み取れない場合は、このキーを手動で入力してください:",
+        "mfaVerify": "確認して有効にする",
+        "mfaEnabled": "2段階ログインを有効にしました",
+        "mfaDisabled": "2段階ログインを無効にしました",
+        "mfaDisableTitle": "2段階ログインをオフにしますか?",
+        "mfaDisableBody": "アカウントはパスワードだけで保護されることになります。",
+        "sessionsTitle": "セッション",
+        "sessionsDescription": "この端末を含む、すべてのブラウザと端末からログアウトします。",
+        "signOutAll": "すべてからログアウト"
+      },
+      "notifications": {
+        "title": "メール通知",
+        "description": "アプリ内通知は常にオンです。受け取るメールを選んでください。",
+        "email_deposits": "入金のお知らせ",
+        "email_withdrawals": "出金のお知らせ",
+        "email_investments": "ポジションの開始と満期",
+        "email_security": "セキュリティ通知",
+        "email_security_hint": "パスワード変更とログイン保護",
+        "email_product": "月1回のプロダクトニュース",
+        "saved": "通知設定を保存しました"
+      },
+      "preferences": {
+        "title": "表示設定",
+        "description": "保存すると、言語と表示はすべての端末で同じになります。",
+        "language": "言語",
+        "theme": "テーマ",
+        "saved": "表示設定を保存しました"
+      }
+    }
+  },
+  "auth": {
+    "panelTitle": "すべての数字は記録にあります。",
+    "panelPoints": {
+      "review": "残高が変わる前に、入金と出金を担当者が確認します。",
+      "ledger": "すべての動きに、履歴で確認できる参照番号が付きます。",
+      "security": "2段階ログインと行レベルのデータ分離でアカウントを守ります。"
+    },
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワード(確認)",
+    "fullName": "氏名",
+    "username": "ユーザー名",
+    "usernameHint": "3〜24文字の半角小文字、数字、アンダースコア。",
+    "phone": "電話番号",
+    "phoneHint": "アカウントのセキュリティに使用します。SMS を送る前に必ず確認します。",
+    "referral": "紹介コード",
+    "showPassword": "パスワードを表示",
+    "hidePassword": "パスワードを隠す",
+    "acceptTerms": "<terms>利用規約</terms>と<privacy>プライバシーポリシー</privacy>に同意し、<risk>リスク開示</risk>を読みました。",
+    "login": {
+      "title": "ログイン",
+      "subtitle": "おかえりなさい。続行するには情報を入力してください。",
+      "submit": "ログイン",
+      "submitting": "ログイン中…",
+      "forgot": "パスワードをお忘れですか?",
+      "noAccount": "はじめてご利用ですか?",
+      "register": "アカウントを作成",
+      "signedOut": "ログアウトしました。",
+      "notVerified": "ログインする前にメールアドレスを確認してください。確認リンクを再送できます。",
+      "resend": "確認リンクを再送"
+    },
+    "register": {
+      "title": "アカウントを作成",
+      "subtitle": "数分で完了します。ログイン前にメールアドレスの確認が必要です。",
+      "submit": "アカウントを作成",
+      "submitting": "アカウントを作成中…",
+      "haveAccount": "すでにアカウントをお持ちですか?",
+      "login": "ログイン",
+      "closed": "現在、新規登録を一時停止しています。後ほどお試しください。"
+    },
+    "strength": {
+      "label": "パスワードの強度",
+      "levels": [
+        "非常に弱い",
+        "弱い",
+        "普通",
+        "良い",
+        "強い"
+      ],
+      "rules": {
+        "length": "10文字以上",
+        "lower": "英小文字",
+        "upper": "英大文字",
+        "number": "数字",
+        "symbol": "! や # などの記号"
+      }
+    },
+    "verify": {
+      "title": "メールを確認してください",
+      "body": "{email} に確認リンクを送りました。この端末でリンクを開いて、アカウント作成を完了してください。",
+      "bodyNoEmail": "お送りしたメールの確認リンクを開いて、アカウント作成を完了してください。",
+      "duplicateNote": "このアドレスのアカウントがすでにある場合、新しいメールは届きません。ログインするか、パスワードを再設定してください。",
+      "resend": "確認リンクを再送",
+      "resent": "確認が必要なアドレスであれば、新しいリンクを送信しました。",
+      "expiredTitle": "リンクが無効です",
+      "expiredBody": "確認・再設定リンクはすぐに期限切れになり、一度しか使えません。以下から新しいリンクを請求してください。",
+      "backToLogin": "ログインに戻る"
+    },
+    "forgot": {
+      "title": "パスワードの再設定",
+      "subtitle": "登録したメールアドレスを入力すると、再設定リンクをお送りします。",
+      "submit": "再設定リンクを送信",
+      "sent": "このメールアドレスのアカウントがあれば、再設定リンクを送信しました。リンクの有効期限は1時間です。",
+      "back": "ログインに戻る"
+    },
+    "reset": {
+      "title": "新しいパスワードを設定",
+      "subtitle": "このサイトで使ったことのないパスワードにしてください。",
+      "submit": "パスワードを更新",
+      "success": "パスワードを更新しました。ログインしています。",
+      "expired": "この再設定リンクは期限切れです。新しいリンクを請求してください。"
+    },
+    "logout": {
+      "title": "ログアウトしますか?",
+      "body": "再度ログインするにはメールアドレスとパスワードが必要です。",
+      "confirm": "ログアウト",
+      "everywhere": "すべての端末からログアウト",
+      "cancel": "ログインしたままにする"
+    },
+    "mfa": {
+      "title": "2段階認証",
+      "subtitle": "認証アプリの6桁のコードを入力してください。",
+      "code": "認証コード",
+      "submit": "確認",
+      "invalid": "コードが一致しません。アプリを確認して、もう一度お試しください。",
+      "useAnother": "ログアウトして別のアカウントを使う"
+    },
+    "admin": {
+      "title": "スタッフログイン",
+      "subtitle": "権限のあるスタッフ専用です。割り当てられたロールでアクセスを確認します。",
+      "forbidden": "このアカウントにはスタッフ権限がありません。",
+      "customer": "お客様のアカウントをお探しですか? <link>お客様ログイン</link>"
+    }
+  },
+  "phone": {
+    "country": "国または地域",
+    "search": "国を検索",
+    "noMatch": "該当する国がありません",
+    "number": "電話番号"
+  },
+  "validation": {
+    "required": "この項目は必須です。",
+    "emailInvalid": "有効なメールアドレスを入力してください。",
+    "passwordWeak": "10文字以上で、英大文字・英小文字・数字・記号を含めてください。",
+    "passwordTooLong": "128文字以内で入力してください。",
+    "passwordMismatch": "パスワードが一致しません。",
+    "passwordBreached": "このパスワードは過去のデータ漏えいに含まれています。別のパスワードを選んでください。",
+    "passwordSame": "現在とは異なるパスワードを選んでください。",
+    "phoneInvalid": "選択した国の有効な電話番号を入力してください。",
+    "usernameShort": "3文字以上で入力してください。",
+    "usernameLong": "24文字以内で入力してください。",
+    "usernameChars": "半角小文字、数字、アンダースコアのみ使用できます。",
+    "usernameTaken": "このユーザー名は使用されています。別の名前をお試しください。",
+    "nameShort": "氏名を入力してください。",
+    "nameLong": "100文字以内で入力してください。",
+    "termsRequired": "アカウントを作成するには規約に同意してください。",
+    "consentRequired": "確認のためチェックを入れてください。",
+    "referralInvalid": "紹介コードは英数字のみです。",
+    "amountInvalid": "小数点以下2桁までの金額を入力してください。",
+    "amountPositive": "0より大きい金額を入力してください。",
+    "methodInvalid": "支払い方法を選んでください。",
+    "referenceLong": "140文字以内で入力してください。",
+    "noteLong": "500文字以内で入力してください。",
+    "destinationInvalid": "有効なウォレットアドレスを入力してください(英数字のみ)。",
+    "planInvalid": "プランを選んでください。",
+    "invalidRequest": "この申請に問題があります。ページを更新してもう一度お試しください。",
+    "subjectShort": "4文字以上で入力してください。",
+    "subjectLong": "140文字以内で入力してください。",
+    "messageShort": "10文字以上で入力してください。",
+    "messageLong": "4000文字以内で入力してください。",
+    "slugInvalid": "2〜40文字の半角小文字、数字、ハイフン。",
+    "descriptionShort": "10文字以上で入力してください。",
+    "descriptionLong": "400文字以内で入力してください。",
+    "termInvalid": "1〜3650日の期間を入力してください。",
+    "rangeInvalid": "最大額は最低額より大きくしてください。",
+    "targetBasisRequired": "目標リターンには、両方の値と公表された根拠が必要です。",
+    "reasonRequired": "理由を入力してください(4文字以上)。",
+    "codeInvalid": "6桁のコードを入力してください。"
+  },
+  "errors": {
+    "generic": "システムで問題が発生しました。しばらくしてからもう一度お試しください。",
+    "network": "サーバーに接続できませんでした。接続を確認してもう一度お試しください。",
+    "not_configured": "バックエンドが接続されていないため、アカウント機能はまだ利用できません。",
+    "rate_limited": "試行回数が多すぎます。数分待ってからお試しください。",
+    "validation": "強調表示された項目を確認してください。",
+    "unauthorized": "セッションの有効期限が切れました。再度ログインしてください。",
+    "forbidden": "このアカウントにはこの操作の権限がありません。",
+    "mfa_required": "続行するには認証アプリでログインを確認してください。",
+    "account_suspended": "このアカウントは停止されています。サポートへお問い合わせください。",
+    "maintenance": "メンテナンスのため新しい申請を一時停止しています。後ほどお試しください。",
+    "invalid_credentials": "メールアドレスとパスワードが一致しません。確認してもう一度お試しください。",
+    "email_not_confirmed": "ログインする前にメールアドレスを確認してください。",
+    "registrations_closed": "現在、新規登録を一時停止しています。",
+    "reset_link_expired": "この再設定リンクは期限切れです。新しいリンクを請求してください。",
+    "amount_invalid": "有効な金額を入力してください。",
+    "amount_below_min": "金額が最低額を下回っています。",
+    "amount_above_max": "金額が最大額を超えています。",
+    "amount_below_fee": "金額は出金手数料より大きくしてください。",
+    "insufficient_funds": "利用可能残高がこの金額に足りません。",
+    "asset_invalid": "この資産はこの申請に利用できません。",
+    "method_invalid": "有効な支払い方法を選んでください。",
+    "destination_invalid": "送金先アドレスを確認してください。",
+    "network_invalid": "ネットワークを選んでください。",
+    "too_many_pending": "未処理の申請が多すぎます。確認が終わるまでお待ちください。",
+    "duplicate_request": "同じ申請がたった今送信されました。再送する前に履歴を確認してください。",
+    "invalid_request": "この申請は無効です。ページを更新してもう一度お試しください。",
+    "invalid_status": "この項目はすでに別の段階に進んでいるため、この方法では変更できません。",
+    "invalid_decision": "有効な判断を選んでください。",
+    "not_found": "項目が見つかりませんでした。",
+    "plan_invalid": "このプランは利用できません。",
+    "cancel_window_closed": "ポジションは開始から24時間以内のみキャンセルできます。",
+    "self_review_forbidden": "自分の申請は確認できません。別の担当者に依頼してください。",
+    "self_action_forbidden": "自分のアカウントをこの方法で変更することはできません。",
+    "reason_required": "続行するには理由を入力してください。",
+    "payout_reference_required": "完了にするには送金参照番号を入力してください。",
+    "credit_exceeds_request": "入金額は申請額を超えられません。",
+    "last_owner": "最後のオーナーは削除できません。",
+    "slug_taken": "このキーは別のプランで使用されています。",
+    "ticket_closed": "この問い合わせは終了しています。引き続きサポートが必要な場合は新しく作成してください。",
+    "message_invalid": "10〜4000文字でメッセージを入力してください。",
+    "email_invalid": "有効なメールアドレスを入力してください。",
+    "consent_required": "同意が必要です。",
+    "balance_missing": "アカウントの設定が完了していません。サポートへお問い合わせください。",
+    "upload_invalid": "5MB以内の PNG、JPEG、WebP、PDF ファイルをアップロードしてください。"
+  },
+  "admin": {
+    "nav": {
+      "overview": "概要",
+      "deposits": "入金",
+      "withdrawals": "出金",
+      "investments": "ポジション",
+      "transactions": "台帳",
+      "plans": "プラン",
+      "users": "ユーザー",
+      "kyc": "本人確認",
+      "support": "サポート",
+      "notifications": "お知らせ",
+      "audit": "監査ログ",
+      "settings": "設定",
+      "exit": "顧客画面",
+      "breadcrumb": "パンくずリスト",
+      "sections": {
+        "money": "お金",
+        "people": "ユーザー",
+        "system": "システム"
+      }
+    },
+    "common": {
+      "search": "検索",
+      "searchPlaceholder": "参照番号、メール、氏名",
+      "status": "ステータス",
+      "allStatuses": "すべてのステータス",
+      "apply": "適用",
+      "reset": "リセット",
+      "sort": "並べ替え",
+      "newest": "新しい順",
+      "oldest": "古い順",
+      "largest": "金額の大きい順",
+      "view": "表示",
+      "review": "確認",
+      "noPermission": "あなたのロールではこのページの閲覧はできますが、変更はできません。",
+      "mfaEnrol": "スタッフアカウントは2段階ログインを使用してください。「設定 → セキュリティ」で設定できます。",
+      "simulatedLabel": "シミュレーションの資金移動 — デモモードが有効です。"
+    },
+    "overview": {
+      "title": "運用概要",
+      "description": "プラットフォームの記録から算出したリアルタイムの数値。",
+      "usersTotal": "登録ユーザー",
+      "usersNew": "過去7日間の新規 {count} 人",
+      "usersActive": "30日以内にアクティブ",
+      "usersSuspended": "{count} 件停止中",
+      "depositsPending": "確認待ちの入金",
+      "withdrawalsOpen": "未処理の出金",
+      "investmentsActive": "運用中のポジション",
+      "investmentsDue": "{count} 件満期到来",
+      "ticketsOpen": "未解決の問い合わせ",
+      "balancesTitle": "顧客資金",
+      "available": "利用可能",
+      "held": "出金のため保留",
+      "invested": "ポジション内",
+      "flowsTitle": "日次の資金の流れ(過去30日)",
+      "flowsDescription": "確認済みの入金と送金済みの出金",
+      "activityTitle": "最近のスタッフ・システムの操作",
+      "activityEmpty": "記録された操作はまだありません。",
+      "queueTitle": "確認キュー",
+      "queueDeposits": "最も古い確認待ちの入金",
+      "queueWithdrawals": "最も古い未処理の出金",
+      "queueEmpty": "待機中の項目はありません。",
+      "processMaturities": "満期のポジションを処理",
+      "processed": "{count, plural, =0 {満期のポジションはありませんでした} other {# 件のポジションを処理しました}}"
+    },
+    "deposits": {
+      "title": "入金の確認",
+      "description": "着金を確認してから承認してください。承認すると顧客の利用可能残高に入金されます。",
+      "approve": "承認して入金",
+      "reject": "却下",
+      "approveTitle": "入金 {reference} を承認しますか?",
+      "approveBody": "着金を確認してください。受領額が少ない場合は申請額より少なく入金できますが、多くはできません。",
+      "creditedAmount": "受領額",
+      "rejectTitle": "入金 {reference} を却下しますか?",
+      "rejectBody": "何も入金されません。入力した理由が顧客に表示されます。",
+      "reason": "理由",
+      "note": "社内メモ",
+      "approved": "入金を承認して反映しました",
+      "rejected": "入金を却下しました",
+      "selfReview": "これはあなた自身の申請です。別の担当者が処理する必要があります。",
+      "receipt": "領収書",
+      "txReference": "送金参照番号",
+      "customerNote": "顧客からのメモ"
+    },
+    "withdrawals": {
+      "title": "出金の確認",
+      "description": "確認後に承認し、参照番号で送金が確認できたら完了にします。",
+      "processing": "処理中にする",
+      "approve": "承認",
+      "complete": "完了にする",
+      "reject": "却下して保留解除",
+      "completeTitle": "{reference} を送金済みにしますか?",
+      "completeBody": "送金が確認できた後にのみ行ってください。トランザクションまたは送金参照番号を入力します。",
+      "payoutReference": "送金参照番号",
+      "rejectTitle": "出金 {reference} を却下しますか?",
+      "rejectBody": "保留中の金額は顧客の利用可能残高に戻ります。",
+      "approveTitle": "出金 {reference} を承認しますか?",
+      "approveBody": "承認すると送金が許可されます。完了にするまで資金は保留されたままです。",
+      "updated": "出金を更新しました"
+    },
+    "investments": {
+      "title": "ポジション",
+      "description": "すべての顧客ポジション。満期時には元本のみが戻ります。",
+      "due": "満期到来"
+    },
+    "plans": {
+      "title": "投資プラン",
+      "description": "変更は新しいポジションにのみ適用されます。既存のポジションは当初の条件を維持します。",
+      "new": "新しいプラン",
+      "edit": "編集",
+      "editTitle": "プランを編集",
+      "newTitle": "新しいプラン",
+      "name": "名前",
+      "slug": "URL キー",
+      "description_": "説明",
+      "min": "最低額",
+      "max": "最大額",
+      "currency": "通貨",
+      "term": "期間(日)",
+      "risk": "リスクレベル",
+      "riskDescription": "リスクの説明",
+      "targetMin": "目標リターン 下限(%)",
+      "targetMax": "目標リターン 上限(%)",
+      "targetBasis": "目標の根拠",
+      "targetHelp": "目標の算出方法を公表しない場合は、両方を空欄にしてください。顧客には根拠とともに目標が表示され、保証として示されることはありません。",
+      "active": "新しいポジションを受付",
+      "order": "表示順",
+      "saved": "プランを保存しました",
+      "inactive": "受付終了",
+      "openPositions": "{count} 件保有中"
+    },
+    "users": {
+      "title": "ユーザー",
+      "description": "アカウントを検索し、活動を確認し、アクセスを管理します。",
+      "joined": "登録日",
+      "roles": "ロール",
+      "balance": "合計残高",
+      "detailTitle": "アカウント",
+      "profile": "プロフィール",
+      "activity": "最近の台帳記録",
+      "requests": "未処理の申請",
+      "suspend": "アカウントを停止",
+      "reactivate": "アカウントを再開",
+      "suspendTitle": "このアカウントを停止しますか?",
+      "suspendBody": "停止中、顧客はログインも資金移動もできません。監査ログ用に理由を入力してください。",
+      "reactivateTitle": "このアカウントを再開しますか?",
+      "statusUpdated": "アカウントのステータスを更新しました",
+      "rolesTitle": "スタッフロール",
+      "rolesHelp": "オーナーはすべてのロールを管理できます。管理者は財務とサポートのロールを付与できます。自分のロールは誰も変更できません。",
+      "grant": "付与",
+      "revoke": "取り消し",
+      "roleUpdated": "ロールを更新しました",
+      "roleNames": {
+        "owner": "オーナー",
+        "admin": "管理者",
+        "finance": "財務担当",
+        "support": "サポート"
+      },
+      "noRoles": "顧客",
+      "statusReason": "理由"
+    },
+    "kyc": {
+      "title": "本人確認",
+      "description": "本人確認は、要件を満たす事業者を通じて行われます。",
+      "notConfigured": "本人確認事業者が接続されていません。以下のステータスは事業者の結果によってのみ変わり、手動では設定できません。",
+      "counts": "確認ステータス別のアカウント数"
+    },
+    "support": {
+      "title": "サポートの問い合わせ",
+      "description": "顧客に返信し、すべてのメッセージを問い合わせ内に残します。",
+      "assigned": "担当者",
+      "unassigned": "未割り当て",
+      "customer": "顧客",
+      "setStatus": "ステータス",
+      "setPriority": "優先度",
+      "priorities": {
+        "low": "低",
+        "normal": "通常",
+        "high": "高"
+      },
+      "updated": "問い合わせを更新しました"
+    },
+    "notifications": {
+      "title": "お知らせ",
+      "description": "すべての有効な顧客、または1つのアカウントにアプリ内通知を送ります。",
+      "audience": "送信先",
+      "all": "すべての有効な顧客",
+      "one": "1人の顧客",
+      "userEmail": "顧客のメールアドレス",
+      "userNotFound": "そのメールアドレスのアカウントは見つかりません。",
+      "titleField": "タイトル",
+      "body": "メッセージ",
+      "send": "お知らせを送信",
+      "sent": "{count, plural, other {# 人の顧客に送信しました}}",
+      "recent": "最近送信したもの"
+    },
+    "audit": {
+      "title": "監査ログ",
+      "description": "スタッフの操作と残高に影響するイベントの変更不可能な記録。",
+      "actor": "実行者",
+      "action": "操作",
+      "entity": "対象",
+      "details": "詳細",
+      "system": "システム",
+      "filterAction": "操作に含む文字"
+    },
+    "settings": {
+      "title": "プラットフォーム設定",
+      "description": "データベース関数が参照する上限とスイッチ。すべての変更が記録されます。",
+      "limits": "上限と手数料",
+      "switches": "プラットフォームのスイッチ",
+      "assets": "対応資産",
+      "keys": {
+        "deposit_min": "最低入金額(USD)",
+        "deposit_max": "最大入金額(USD)",
+        "withdrawal_min": "最低出金額(USD)",
+        "withdrawal_max": "最大出金額(USD)",
+        "withdrawal_fee_flat": "出金手数料・定額(USD)",
+        "withdrawal_fee_percent": "出金手数料(%)",
+        "maintenance_mode": "メンテナンスモード — 新しい資金操作を一時停止",
+        "registrations_open": "新規登録を許可"
+      },
+      "assetActive": "有効",
+      "assetDeposits": "入金",
+      "assetWithdrawals": "出金",
+      "saved": "設定を保存しました"
+    }
+  }
+}

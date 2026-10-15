@@ -138,9 +138,10 @@
   --color-brand-teal-hover: var(--brand-teal-hover);
   --color-brand-night: var(--brand-night);
 
-  --font-display: "Schibsted Grotesk", "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, "PingFang SC",
-    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-display: "Schibsted Grotesk", "IBM Plex Sans", "IBM Plex Sans Arabic", "IBM Plex Sans Devanagari", ui-sans-serif,
+    system-ui, "Hiragino Sans", "Yu Gothic UI", "Meiryo", "Noto Sans JP", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans Arabic", "IBM Plex Sans Devanagari", ui-sans-serif, system-ui,
+    "Hiragino Sans", "Yu Gothic UI", "Meiryo", "Noto Sans JP", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
 
   --radius-xs: 4px;
   --radius-sm: 6px;
@@ -321,3 +322,9 @@ html[data-splash="seen"] #startup-screen { display: none; }
 /* Scrollable but without a visible scrollbar (sidebar navigation). */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Japanese has no spaces: wrap headings at phrase boundaries, not mid-word. */
+:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
