@@ -337,6 +337,12 @@
           "title": "Un support tracé",
           "body": "Ouvrez un ticket depuis votre tableau de bord. Chaque réponse y reste rattachée."
         }
+      },
+      "mini": {
+        "term": "Durée de 90 jours",
+        "locked": "Verrouillée",
+        "userMsg": "Bonjour, mon dépôt DEP-7K2M9Q est toujours en attente.",
+        "staffMsg": "Merci ! Un vérificateur confirme les fonds en ce moment."
       }
     },
     "rates": {

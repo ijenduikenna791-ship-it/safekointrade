@@ -465,3 +465,61 @@ html[data-splash="seen"] #startup-screen { display: none; }
 }
 :is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .dash-cmd .ui-stat-label { letter-spacing: 0.02em; font-family: inherit; font-size: 0.75rem; }
 .dash-cmd table thead th { color: var(--ink-subtle); }
+
+/* ---------------------------------------------------------------------------
+   Public site on the dashboards' navy palette.
+   - Always-dark surfaces (rates bar, hero, footer, card scenes) are navy in
+     both modes.
+   - The theme switch still works: light mode keeps the white look; dark mode
+     becomes navy-black with blue accents and the dotted glow.
+--------------------------------------------------------------------------- */
+.site-public { --brand-night: #050914; }
+.dark .site-public,
+.site-public .dark,
+.site-public.dark {
+  --brand-mint: #4f8cff;
+  --brand-mint-hover: #74a5ff;
+  --brand-mint-ink: #74a5ff;
+  --brand-teal: #0b1730;
+  --brand-teal-hover: #13234a;
+  --brand-night: #050914;
+  --bg: #050914;
+  --surface: #0a1224;
+  --surface-2: #0f1a31;
+  --surface-3: #15223d;
+  --line: rgb(79 140 255 / 0.18);
+  --line-strong: rgb(79 140 255 / 0.32);
+  --ink: #e8eefb;
+  --ink-muted: #9aa8c4;
+  --ink-subtle: #7183a6;
+  --inverse: #050914;
+  --primary: #4f8cff;
+  --primary-ink: #050914;
+  --primary-hover: #74a5ff;
+  --brass: #74a5ff;
+  --brass-soft: rgb(79 140 255 / 0.12);
+  --brass-line: rgb(79 140 255 / 0.35);
+  --gain: #34d399;
+  --gain-soft: rgb(52 211 153 / 0.12);
+  --warn: #fb923c;
+  --warn-soft: rgb(251 146 60 / 0.12);
+  --focus: #74a5ff;
+  --chart-1: #4f8cff;
+  --chart-2: #a78bfa;
+  --chart-3: #34d399;
+  --chart-grid: rgb(79 140 255 / 0.12);
+}
+/* Text on blue buttons stays dark navy for contrast. */
+.dark .site-public :is(a, button).bg-brand-mint,
+.site-public .dark :is(a, button).bg-brand-mint { color: #050914; }
+/* Dark mode page background: same faint dots + washes as the dashboards. */
+.dark .site-public {
+  background-color: #050914;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgb(116 165 255 / 0.13) 1px, transparent 0),
+    radial-gradient(50% 40% at 85% 20%, rgb(79 140 255 / 0.08), transparent 70%),
+    radial-gradient(45% 40% at 10% 70%, rgb(167 139 250 / 0.07), transparent 70%);
+  background-size: 28px 28px, 100% 100%, 100% 100%;
+}
+.dark .site-public .ui-card,
+.dark .site-public main .bg-surface { background-color: rgb(10 18 36 / 0.82); backdrop-filter: blur(8px); }

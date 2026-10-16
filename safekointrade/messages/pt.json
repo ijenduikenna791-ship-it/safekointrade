@@ -337,6 +337,12 @@
           "title": "Suporte registrado",
           "body": "Abra um chamado pelo painel. Cada resposta fica vinculada a ele."
         }
+      },
+      "mini": {
+        "term": "Prazo de 90 dias",
+        "locked": "Fixado",
+        "userMsg": "Olá, meu depósito DEP-7K2M9Q ainda está pendente.",
+        "staffMsg": "Obrigado! Um revisor está confirmando os fundos agora."
       }
     },
     "rates": {

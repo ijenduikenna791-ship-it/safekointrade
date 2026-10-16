@@ -34,7 +34,7 @@ export function AppProviders({ children, dir = "ltr" }) {
     // before first paint — no flash of the wrong theme.
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
       storageKey="theme"

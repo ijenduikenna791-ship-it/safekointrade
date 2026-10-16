@@ -337,6 +337,12 @@
           "title": "Assistenza documentata",
           "body": "Apri un ticket dalla dashboard. Ogni risposta resta collegata a esso."
         }
+      },
+      "mini": {
+        "term": "Durata di 90 giorni",
+        "locked": "Bloccata",
+        "userMsg": "Ciao, il mio deposito DEP-7K2M9Q risulta ancora in attesa.",
+        "staffMsg": "Grazie! Un revisore sta confermando i fondi proprio ora."
       }
     },
     "rates": {

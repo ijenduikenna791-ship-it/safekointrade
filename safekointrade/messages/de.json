@@ -337,6 +337,12 @@
           "title": "Nachvollziehbarer Support",
           "body": "Eröffnen Sie ein Ticket im Dashboard. Jede Antwort bleibt daran gebunden."
         }
+      },
+      "mini": {
+        "term": "90 Tage Laufzeit",
+        "locked": "Fest",
+        "userMsg": "Hallo, meine Einzahlung DEP-7K2M9Q ist noch ausstehend.",
+        "staffMsg": "Danke! Ein Prüfer bestätigt gerade den Zahlungseingang."
       }
     },
     "rates": {

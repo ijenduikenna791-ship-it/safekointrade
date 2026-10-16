@@ -47,7 +47,7 @@ export function DeviceMockup() {
       aria-label={tl("label")}
     >
       {/* Desktop */}
-      <div className="rounded-[1.1rem] border border-line-strong bg-[#08131a] p-2 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] sm:p-3">
+      <div className="rounded-[1.1rem] border border-line-strong bg-[#060c1a] p-2 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] sm:p-3">
         <div className="overflow-hidden rounded-[0.6rem] border border-line bg-bg">
           {/* window bar */}
           <div className="flex items-center justify-between border-b border-line bg-surface px-3 py-2 sm:px-4">
@@ -138,7 +138,7 @@ export function DeviceMockup() {
         viewport={{ once: true, margin: "0px 0px -10% 0px" }}
       whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.8, ease }}
-        className="absolute bottom-0 end-1 w-[38%] max-w-[13.5rem] rounded-[1.4rem] border border-line-strong bg-[#08131a] p-1.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] sm:end-4 sm:p-2"
+        className="absolute bottom-0 end-1 w-[38%] max-w-[13.5rem] rounded-[1.4rem] border border-line-strong bg-[#060c1a] p-1.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] sm:end-4 sm:p-2"
       >
         <div className="overflow-hidden rounded-[1.05rem] border border-line bg-surface px-3 pb-4 pt-3 sm:px-4">
           <div aria-hidden="true" className="mx-auto mb-3 h-1 w-10 rounded-full bg-surface-3" />

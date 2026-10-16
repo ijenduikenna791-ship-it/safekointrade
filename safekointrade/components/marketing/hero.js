@@ -24,7 +24,7 @@ function CoinCard({ coin, unavailable, side, delay, className = "" }) {
       initial={reduce ? false : { opacity: 0, x: side === "start" ? -24 : 24 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay, ease }}
-      className={"rounded-xl border border-white/15 bg-[#06120f]/75 px-3 py-2.5 sm:px-4 sm:py-3 shadow-[0_18px_40px_-16px_rgb(0_0_0/0.8)] backdrop-blur-md " + className}
+      className={"rounded-xl border border-white/15 bg-[#050914]/75 px-3 py-2.5 sm:px-4 sm:py-3 shadow-[0_18px_40px_-16px_rgb(0_0_0/0.8)] backdrop-blur-md " + className}
     >
       <div className="flex items-center gap-3">
         <CryptoCoin symbol={coin.symbol} className="h-9 w-9 shrink-0 drop-shadow-[0_6px_14px_rgb(0_0_0/0.45)]" />
@@ -105,9 +105,9 @@ export function Hero({ coins = [] }) {
     <section className="dark relative isolate overflow-hidden bg-brand-night text-white">
       {/* aurora: layered blurred glows drifting slowly */}
       <div aria-hidden="true" className="absolute inset-0 -z-20">
-        <div className="aurora-a absolute -top-[20%] start-[8%] h-[70%] w-[55%] rounded-full bg-[radial-gradient(closest-side,rgb(46_204_140/0.42),transparent)] blur-3xl" />
-        <div className="aurora-b absolute -top-[10%] end-[2%] h-[60%] w-[45%] rounded-full bg-[radial-gradient(closest-side,rgb(30_150_110/0.38),transparent)] blur-3xl" />
-        <div className="absolute -bottom-[35%] start-1/2 h-[70%] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(closest-side,rgb(40_190_130/0.45),transparent)] blur-2xl rtl:translate-x-1/2" />
+        <div className="aurora-a absolute -top-[20%] start-[8%] h-[70%] w-[55%] rounded-full bg-[radial-gradient(closest-side,rgb(79_140_255/0.4),transparent)] blur-3xl" />
+        <div className="aurora-b absolute -top-[10%] end-[2%] h-[60%] w-[45%] rounded-full bg-[radial-gradient(closest-side,rgb(139_92_246/0.32),transparent)] blur-3xl" />
+        <div className="absolute -bottom-[35%] start-1/2 h-[70%] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(closest-side,rgb(59_123_255/0.42),transparent)] blur-2xl rtl:translate-x-1/2" />
       </div>
       <Starfield className="absolute inset-0 -z-10 h-full w-full" />
       <FloatingCoins />
@@ -145,7 +145,7 @@ export function Hero({ coins = [] }) {
           transition={{ duration: 0.9, delay: 0.35, ease }}
           className="relative mx-auto w-full max-w-2xl lg:max-w-none"
         >
-          <div aria-hidden="true" className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[radial-gradient(closest-side,rgb(60_227_163/0.28),transparent)] blur-2xl" />
+          <div aria-hidden="true" className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[radial-gradient(closest-side,rgb(79_140_255/0.3),transparent)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.9)]">
             <Image
               src={images.hero.src}
@@ -156,8 +156,8 @@ export function Hero({ coins = [] }) {
               sizes="(min-width: 1024px) 48vw, 92vw"
               className="aspect-[4/5] h-auto w-full object-cover sm:aspect-[4/3] lg:aspect-[5/6] xl:aspect-[1/1]"
             />
-            <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgb(5_15_13/0.05)_40%,rgb(5_15_13/0.7))]" />
-            <span className="absolute start-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#06120f]/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+            <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgb(5_9_20/0.05)_40%,rgb(5_9_20/0.72))]" />
+            <span className="absolute start-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#050914]/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
               <span className="relative flex h-2 w-2" aria-hidden="true">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-mint opacity-60 motion-reduce:animate-none" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-mint" />

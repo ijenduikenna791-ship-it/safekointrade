@@ -337,6 +337,12 @@
           "title": "Soporte con registro",
           "body": "Abre un ticket desde tu panel. Cada respuesta queda vinculada a él."
         }
+      },
+      "mini": {
+        "term": "Plazo de 90 días",
+        "locked": "Fijado",
+        "userMsg": "Hola, mi depósito DEP-7K2M9Q sigue pendiente.",
+        "staffMsg": "¡Gracias! Un revisor está confirmando los fondos ahora."
       }
     },
     "rates": {

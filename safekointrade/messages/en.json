@@ -337,6 +337,12 @@
           "title": "Support on the record",
           "body": "Open a ticket from your dashboard. Every reply stays attached to it."
         }
+      },
+      "mini": {
+        "term": "90-day term",
+        "locked": "Locked",
+        "userMsg": "Hi, my deposit DEP-7K2M9Q still says pending.",
+        "staffMsg": "Thanks! A reviewer is confirming the funds now."
       }
     },
     "rates": {
