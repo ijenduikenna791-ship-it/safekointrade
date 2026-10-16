@@ -65,7 +65,8 @@
       "high": "Hohes Risiko"
     },
     "photoCredit": "Foto: {name} / Pexels",
-    "apply": "Anwenden"
+    "apply": "Anwenden",
+    "simulationTag": "Simulierte Guthaben"
   },
   "theme": {
     "label": "Design",
@@ -90,7 +91,8 @@
     "closeMenu": "Menü schließen",
     "primary": "Hauptnavigation",
     "home": "Startseite",
-    "signUp": "Registrieren"
+    "signUp": "Registrieren",
+    "services": "Leistungen"
   },
   "startup": {
     "loading": "{brand} wird geladen"
@@ -103,7 +105,9 @@
       "secondary": "Pläne vergleichen",
       "note": "Krypto-Assets sind volatil. Sie können einen Teil oder Ihr gesamtes investiertes Geld verlieren.",
       "headline": "Krypto-Pläne, die Sie prüfen können",
-      "learnMore": "Mehr erfahren"
+      "learnMore": "Mehr erfahren",
+      "imageAlt": "Ein Händler prüft Marktcharts auf mehreren Monitoren am Schreibtisch",
+      "liveBadge": "Live-Märkte"
     },
     "lifecycle": {
       "label": "So verläuft eine Position",
@@ -276,15 +280,31 @@
         "security": {
           "q": "Wie ist mein Konto geschützt?",
           "a": "Bestätigte E-Mail, starke Passwörter, optionale Zwei-Schritt-Anmeldung, Datentrennung auf Zeilenebene und ein vollständiges Prüfprotokoll privilegierter Aktionen."
+        },
+        "minimum": {
+          "q": "Wie hoch ist der Mindestbetrag?",
+          "a": "Jeder Plan hat eigene Mindest- und Höchstbeträge, die auf den Karten oben stehen. Auch Einzahlungen haben einen Mindestbetrag, der im Einzahlungsformular angezeigt wird."
+        },
+        "kyc": {
+          "q": "Muss ich meine Identität bestätigen?",
+          "a": "Identitätsprüfungen werden mit einem lizenzierten Anbieter eingeführt. Wir informieren Sie im Kundenbereich, bevor etwas nötig ist; heute ist nichts erforderlich."
+        },
+        "reinvest": {
+          "q": "Kann ich nach Planende erneut anlegen?",
+          "a": "Ja. Am Ende der Laufzeit geht das Kapital auf Ihr verfügbares Guthaben zurück, und Sie können jederzeit eine neue Position eröffnen."
+        },
+        "referral": {
+          "q": "Gibt es ein Empfehlungsprogramm?",
+          "a": "Jedes Konto hat einen Empfehlungscode in den Einstellungen, den neue Konten bei der Registrierung angeben können. Prämien für Empfehlungen gibt es derzeit nicht."
         }
       }
     },
     "newsletter": {
-      "title": "Produkt-Neuigkeiten, monatlich",
-      "body": "Neue Pläne, Änderungen an der Plattform und Marktnotizen. Keine Werbung, die sich als Rat tarnt.",
+      "title": "Wöchentliche Marktberichte",
+      "body": "Eine kurze wöchentliche Notiz zu Märkten, neuen Plänen und Plattformänderungen. Keine Werbung als Ratschlag getarnt.",
       "email": "E-Mail-Adresse",
       "placeholder": "sie@beispiel.de",
-      "consent": "Ich möchte den monatlichen Newsletter erhalten und kann mich jederzeit abmelden.",
+      "consent": "Ich möchte den wöchentlichen Newsletter erhalten und kann mich jederzeit abmelden.",
       "submit": "Abonnieren",
       "success": "Abonniert. Achten Sie auf die nächste Ausgabe in Ihrem Postfach.",
       "already": "Diese E-Mail-Adresse ist bereits angemeldet.",
@@ -318,6 +338,25 @@
           "body": "Eröffnen Sie ein Ticket im Dashboard. Jede Antwort bleibt daran gebunden."
         }
       }
+    },
+    "rates": {
+      "label": "Live-Marktkurse",
+      "source": "Live-Preise von CoinGecko"
+    },
+    "calc": {
+      "title": "Plan-Rechner",
+      "body": "Sehen Sie, wie ein Betrag zu einem Plan passt, bevor Sie eine Position eröffnen.",
+      "plan": "Plan",
+      "amount": "Betrag",
+      "days": "{count} Tage",
+      "range": "Geben Sie für diesen Plan zwischen {min} und {max} ein.",
+      "term": "Laufzeit",
+      "ends": "Endet am",
+      "principal": "Kapital zurück am Ende",
+      "target": "Zielrendite über die Laufzeit",
+      "targetNote": "Ein Ziel, keine Garantie. Sie könnten weniger zurückbekommen, als Sie einzahlen.",
+      "noTarget": "Für diesen Plan ist keine Zielrendite veröffentlicht, daher wird nur Ihr Kapital angezeigt.",
+      "cta": "{plan}-Plan eröffnen"
     }
   },
   "footer": {
@@ -394,7 +433,8 @@
       "sections": {
         "money": "Geld",
         "account": "Konto"
-      }
+      },
+      "clientLabel": "Kundenbereich"
     },
     "overview": {
       "title": "Übersicht",
@@ -780,6 +820,74 @@
         "theme": "Design",
         "saved": "Präferenzen gespeichert"
       }
+    },
+    "cmd": {
+      "commandCenter": "Portfolio-Kommandozentrale",
+      "online": "Online",
+      "welcome": "Willkommen zurück, <n>{name}</n>",
+      "welcomeNoName": "Willkommen zurück",
+      "accountId": "Konto-ID",
+      "country": "Land",
+      "noCountry": "Nicht angegeben",
+      "kyc": {
+        "label": "Identitätsprüfung",
+        "status": {
+          "unverified": "Nicht begonnen",
+          "pending": "In Prüfung",
+          "rejected": "Nicht genehmigt"
+        },
+        "body": {
+          "unverified": "Die Identitätsprüfung wird hier freigeschaltet, sobald unser Anbieter angebunden ist. Sie müssen derzeit nichts tun.",
+          "pending": "Wir prüfen Ihre Angaben. Sie erhalten eine Benachrichtigung, sobald wir fertig sind.",
+          "rejected": "Ihre Prüfung wurde nicht genehmigt. Wenden Sie sich an den Support, um den Grund und die nächsten Schritte zu erfahren."
+        },
+        "contact": "Support kontaktieren",
+        "soon": "Demnächst"
+      },
+      "stats": {
+        "label": "Kontoübersicht",
+        "available": "Verfügbares Guthaben",
+        "availableHint": "Bereit zum Auszahlen oder Anlegen",
+        "invested": "Angelegt",
+        "investedHint": "In aktiven Positionen",
+        "deposits": "Einzahlungen gesamt",
+        "depositsHint": "Genehmigte, gutgeschriebene Einzahlungen",
+        "plan": "Aktiver Plan",
+        "noPlan": "Kein aktiver Plan",
+        "noPlanHint": "Wählen Sie unten einen Plan, um zu starten",
+        "planHint": "{count, plural, one {# aktive Position} other {# aktive Positionen}} · {days} Tage Laufzeit"
+      },
+      "quick": {
+        "title": "Schnelle Wallet-Aktionen",
+        "deposit": "Krypto einzahlen",
+        "withdraw": "Auszahlung anfordern",
+        "invest": "Position eröffnen",
+        "currencies": "Unterstützte Währungen"
+      },
+      "plans": {
+        "label": "Anlagepläne",
+        "title": "Aus Ihrem Guthaben anlegen",
+        "body": "Wählen Sie einen Plan und einen Betrag innerhalb seiner Spanne. Die Laufzeit steht ab dem Tag der Eröffnung fest.",
+        "min": "Minimum",
+        "max": "Maximum",
+        "term": "Laufzeit",
+        "days": "{count} Tage",
+        "target": "Zielrendite",
+        "noTarget": "Nicht festgelegt",
+        "cta": "Mit {amount} anlegen",
+        "empty": "Derzeit sind keine Pläne offen.",
+        "note": "Ziele sind keine Garantien. Kryptowerte sind volatil, und Sie können einen Teil oder Ihr gesamtes angelegtes Geld verlieren."
+      },
+      "history": {
+        "title": "Antragsverlauf",
+        "body": "Aktueller Status aller Ein- und Auszahlungsanträge Ihres Kontos.",
+        "search": "Referenz, Asset oder Status suchen",
+        "method": "Methode",
+        "deposit": "Einzahlung",
+        "withdrawal": "Auszahlung",
+        "empty": "Noch keine Anträge erfasst.",
+        "noMatch": "Keine Anträge entsprechen Ihrer Suche."
+      }
     }
   },
   "auth": {
@@ -1041,7 +1149,20 @@
       "queueWithdrawals": "Älteste offene Auszahlung",
       "queueEmpty": "Nichts in der Warteschlange.",
       "processMaturities": "Fällige Positionen abrechnen",
-      "processed": "{count, plural, =0 {Keine Position war fällig} one {# Position abgerechnet} other {# Positionen abgerechnet}}"
+      "processed": "{count, plural, =0 {Keine Position war fällig} one {# Position abgerechnet} other {# Positionen abgerechnet}}",
+      "console": {
+        "label": "Betriebskonsole",
+        "live": "Live",
+        "greeting": "Willkommen zurück, <n>{name}</n>",
+        "roles": "Ihre Rollen",
+        "mfa": "Zweistufige Anmeldung",
+        "mfaOn": "An",
+        "mfaOff": "Aus — in den Einstellungen einrichten",
+        "waiting": "{count, plural, one {# Antrag wartet auf Prüfung} other {# Anträge warten auf Prüfung}}",
+        "reviewDeposits": "Einzahlungen prüfen ({count})",
+        "reviewWithdrawals": "Auszahlungen prüfen ({count})",
+        "allClear": "Nichts wartet auf Prüfung."
+      }
     },
     "deposits": {
       "title": "Einzahlungsprüfung",
@@ -1205,5 +1326,15 @@
       "assetWithdrawals": "Auszahlungen",
       "saved": "Einstellung gespeichert"
     }
+  },
+  "wallet": {
+    "connect": "Wallet verbinden",
+    "connectedAs": "Verbundene Wallet {address}",
+    "useConnected": "Verbundene Wallet verwenden ({address})",
+    "connectToFill": "Wallet verbinden, um die Adresse auszufüllen",
+    "checkNetwork": "Aus Ihrer Wallet übernommen. Prüfen Sie vor dem Absenden, ob Asset und Netzwerk übereinstimmen."
+  },
+  "whatsapp": {
+    "chat": "Per WhatsApp chatten"
   }
 }

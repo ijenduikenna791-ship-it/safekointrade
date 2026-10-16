@@ -11,6 +11,8 @@ const palettes = {
   USDT: { light: "#7ff0c9", mid: "#26a17b", dark: "#126a50", glyph: "#effff9" },
   USDC: { light: "#8cc4ff", mid: "#2775ca", dark: "#174a85", glyph: "#f0f7ff" },
   SOL: { light: "#d7a4ff", mid: "#9945ff", dark: "#4b1e9e", glyph: "#14f195" },
+  BNB: { light: "#ffe08a", mid: "#f0b90b", dark: "#a67c00", glyph: "#2b2100" },
+  EURC: { light: "#9cc3ff", mid: "#2f6fe0", dark: "#173f8a", glyph: "#f0f6ff" },
 };
 
 function Glyph({ symbol, color }) {
@@ -52,6 +54,23 @@ function Glyph({ symbol, color }) {
           <path d="M36 32 H72 L64 40 H28 Z" />
           <path d="M28 46 H64 L72 54 H36 Z" />
           <path d="M36 60 H72 L64 68 H28 Z" />
+        </g>
+      );
+    case "BNB":
+      return (
+        <g fill={color}>
+          <path d="M50 24 L59 33 L50 42 L41 33 Z" />
+          <path d="M50 58 L59 67 L50 76 L41 67 Z" />
+          <path d="M33 41 L42 50 L33 59 L24 50 Z" />
+          <path d="M67 41 L76 50 L67 59 L58 50 Z" />
+          <path d="M50 44 L56 50 L50 56 L44 50 Z" />
+        </g>
+      );
+    case "EURC":
+      return (
+        <g fill="none" stroke={color} strokeWidth="5" strokeLinecap="round">
+          <path d="M63 34 C59 31 55 30 51 30 C40 30 33 39 33 50 C33 61 40 70 51 70 C55 70 59 69 63 66" />
+          <path d="M27 45 H52 M27 55 H52" strokeWidth="4.2" />
         </g>
       );
     default:

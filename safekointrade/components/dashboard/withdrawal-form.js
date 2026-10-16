@@ -5,7 +5,8 @@ import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { TriangleAlert } from "lucide-react";
+import { TriangleAlert, Wallet } from "lucide-react";
+import { shortAddress, useWallet } from "@/components/wallet/wallet-provider";
 import { useRouter } from "@/lib/i18n/navigation";
 import { withdrawalSchema } from "@/lib/validation/schemas";
 import { requestWithdrawalAction } from "@/lib/actions/user";
@@ -32,7 +33,10 @@ export function WithdrawalForm({ assets, settings, available }) {
   const [pending, setPending] = useState(null);
   const [busy, setBusy] = useState(false);
 
-  const { register, control, handleSubmit, reset, setError, formState: { errors } } = useForm({
+  const wallet = useWallet();
+  const tw = useTranslations("wallet");
+  const [filled, setFilled] = useState(false);
+  const { register, control, handleSubmit, reset, setError, setValue, formState: { errors } } = useForm({
     resolver: zodResolver(withdrawalSchema),
     defaultValues: {
       amount: "",
@@ -93,8 +97,32 @@ export function WithdrawalForm({ assets, settings, available }) {
           </Field>
         </div>
         <Field label={t("destination")} error={fe(errors.destination?.message)} hint={t("destinationHint")}>
-          {(a) => <Input {...a} autoComplete="off" spellCheck={false} dir="ltr" className="font-mono text-sm" {...register("destination")} />}
+          {(a) => <Input {...a} autoComplete="off" spellCheck={false} dir="ltr" className="font-mono text-sm" {...register("destination", { onChange: () => setFilled(false) })} />}
         </Field>
+        {wallet.enabled && (
+          <div className="-mt-1 flex flex-wrap items-center gap-2 text-sm">
+            {wallet.isConnected ? (
+              <button
+                type="button"
+                className="inline-flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1.5 text-xs font-medium hover:bg-surface-2"
+                onClick={() => {
+                  setValue("destination", wallet.address, { shouldValidate: true });
+                  if (wallet.chainName) setValue("network", wallet.chainName, { shouldValidate: true });
+                  setFilled(true);
+                }}
+              >
+                <Wallet className="h-3.5 w-3.5" aria-hidden="true" />
+                {tw("useConnected", { address: shortAddress(wallet.address) })}
+              </button>
+            ) : (
+              <button type="button" onClick={() => wallet.open()} className="inline-flex items-center gap-1.5 text-xs font-medium text-brass hover:underline">
+                <Wallet className="h-3.5 w-3.5" aria-hidden="true" />
+                {tw("connectToFill")}
+              </button>
+            )}
+            {filled && <span className="text-xs text-warn">{tw("checkNetwork")}</span>}
+          </div>
+        )}
 
         <dl className="divide-y divide-line rounded-md border border-line text-sm">
           <div className="flex justify-between px-4 py-2.5">

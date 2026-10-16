@@ -64,7 +64,7 @@ export async function PlatformCards() {
   const status = { pending: ts("pending"), approved: ts("approved"), completed: ts("completed") };
 
   return (
-    <section aria-labelledby="platform-title" className="container-page py-20 sm:py-28">
+    <section id="services" aria-labelledby="platform-title" className="container-page scroll-mt-24 py-20 sm:py-28">
       <SectionHeading id="platform-title" title={t("title")} body={t("body")} align="center" />
 
       <div className="mt-14">

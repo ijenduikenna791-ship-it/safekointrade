@@ -13,6 +13,9 @@
  *  - aboutReview 7433869  landscape 6404×4269. Colleagues reviewing documents —
  *                illustrates manual review. Credited, never captioned as "our team".
  *  - aboutWork   8062306  landscape 5942×3961. Colleagues with charts and laptops.
+ *  - hero        5831522  landscape 6016×4016. Trader at a multi-monitor desk —
+ *                calm, professional, no exchange branding claimed. Framed beside
+ *                the headline on desktop, below it on mobile.
  *
  * Images are served through next/image (AVIF/WebP, responsive sizes) from
  * images.pexels.com. Rejected: logo-heavy exchange screenshots (imply
@@ -21,6 +24,7 @@
 const pexels = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg`;
 
 export const images = {
+  hero: { src: pexels(5831522), width: 6016, height: 4016, credit: "AlphaTradeZone", page: "https://www.pexels.com/photo/5831522/" },
   howItWorks: { src: pexels(6770513), width: 4000, height: 6000, credit: "Alesia Kozik", page: "https://www.pexels.com/photo/6770513/" },
   cta: { src: pexels(5831339), width: 5313, height: 3547, credit: "AlphaTradeZone", page: "https://www.pexels.com/photo/5831339/" },
   aboutReview: { src: pexels(7433869), width: 6404, height: 4269, credit: "Vlada Karpovich", page: "https://www.pexels.com/photo/7433869/" },

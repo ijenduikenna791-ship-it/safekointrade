@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
-const keys = ["guaranteed", "demo", "deposit", "withdraw", "early", "security"];
+const keys = ["guaranteed", "demo", "minimum", "deposit", "withdraw", "kyc", "reinvest", "early", "referral", "security"];
 
 function Item({ k, t }) {
   const [open, setOpen] = useState(false);

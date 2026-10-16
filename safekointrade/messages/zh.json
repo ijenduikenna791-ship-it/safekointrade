@@ -65,7 +65,8 @@
       "high": "高风险"
     },
     "photoCredit": "图片：{name} / Pexels",
-    "apply": "应用"
+    "apply": "应用",
+    "simulationTag": "模拟余额"
   },
   "theme": {
     "label": "主题",
@@ -90,7 +91,8 @@
     "closeMenu": "关闭菜单",
     "primary": "主导航",
     "home": "首页",
-    "signUp": "注册"
+    "signUp": "注册",
+    "services": "服务"
   },
   "startup": {
     "loading": "正在加载 {brand}"
@@ -103,7 +105,9 @@
       "secondary": "比较计划",
       "note": "加密资产波动剧烈。您可能损失部分或全部投资本金。",
       "headline": "可审计的加密货币计划",
-      "learnMore": "了解更多"
+      "learnMore": "了解更多",
+      "imageAlt": "一位交易员在办公桌前查看多块屏幕上的市场图表",
+      "liveBadge": "实时行情"
     },
     "lifecycle": {
       "label": "一笔持仓的流程",
@@ -276,15 +280,31 @@
         "security": {
           "q": "我的账户如何受到保护？",
           "a": "已验证的邮箱、强密码、可选的两步登录、行级数据隔离，以及完整的特权操作审计日志。"
+        },
+        "minimum": {
+          "q": "起投金额是多少？",
+          "a": "每个计划都有自己的最低和最高金额，见上方卡片。入金也有最低金额，会在入金表单中显示。"
+        },
+        "kyc": {
+          "q": "需要验证身份吗？",
+          "a": "身份验证将随持牌服务商一同推出。需要之前我们会在控制台通知您，目前无需任何操作。"
+        },
+        "reinvest": {
+          "q": "计划结束后可以再投资吗？",
+          "a": "可以。期限结束时本金会返还到可用余额，您可随时用它开立新的持仓。"
+        },
+        "referral": {
+          "q": "有推荐计划吗？",
+          "a": "每个账户在设置中都有推荐码，新账户注册时可以填写。目前不提供推荐奖励。"
         }
       }
     },
     "newsletter": {
-      "title": "每月产品动态",
-      "body": "新计划、平台变化和市场札记。不会有伪装成建议的推销。",
+      "title": "每周市场洞察",
+      "body": "每周一篇简短笔记，介绍市场、新计划和平台变化。不做伪装成建议的推销。",
       "email": "邮箱地址",
       "placeholder": "you@example.com",
-      "consent": "我同意接收每月动态，并可随时退订。",
+      "consent": "我同意接收每周简报，并可随时退订。",
       "submit": "订阅",
       "success": "订阅成功。请留意下一期邮件。",
       "already": "该邮箱已订阅。",
@@ -318,6 +338,25 @@
           "body": "在仪表板中提交工单，每条回复都会保留在工单中。"
         }
       }
+    },
+    "rates": {
+      "label": "实时行情",
+      "source": "实时价格来自 CoinGecko"
+    },
+    "calc": {
+      "title": "计划计算器",
+      "body": "在开立持仓前，看看某个金额如何匹配计划。",
+      "plan": "计划",
+      "amount": "金额",
+      "days": "{count} 天",
+      "range": "此计划请输入 {min} 至 {max}。",
+      "term": "期限",
+      "ends": "结束日期",
+      "principal": "到期返还本金",
+      "target": "期限内目标收益",
+      "targetNote": "这是目标，不是保证。您收回的金额可能少于投入。",
+      "noTarget": "此计划未公布目标收益，因此仅显示本金。",
+      "cta": "开立 {plan} 计划"
     }
   },
   "footer": {
@@ -394,7 +433,8 @@
       "sections": {
         "money": "资金",
         "account": "账户"
-      }
+      },
+      "clientLabel": "客户控制台"
     },
     "overview": {
       "title": "概览",
@@ -780,6 +820,74 @@
         "theme": "主题",
         "saved": "偏好已保存"
       }
+    },
+    "cmd": {
+      "commandCenter": "投资组合控制中心",
+      "online": "在线",
+      "welcome": "欢迎回来，<n>{name}</n>",
+      "welcomeNoName": "欢迎回来",
+      "accountId": "账户 ID",
+      "country": "国家/地区",
+      "noCountry": "未设置",
+      "kyc": {
+        "label": "身份验证",
+        "status": {
+          "unverified": "未开始",
+          "pending": "审核中",
+          "rejected": "未通过"
+        },
+        "body": {
+          "unverified": "接入身份验证服务商后，可在此处进行身份验证。目前您无需任何操作。",
+          "pending": "我们正在审核您的资料，完成后会通知您。",
+          "rejected": "您的身份验证未通过。请联系客服了解原因及后续步骤。"
+        },
+        "contact": "联系客服",
+        "soon": "即将推出"
+      },
+      "stats": {
+        "label": "账户概览",
+        "available": "可用余额",
+        "availableHint": "可提现或投资",
+        "invested": "已投资",
+        "investedHint": "在活跃持仓中",
+        "deposits": "累计入金",
+        "depositsHint": "已批准并入账的入金",
+        "plan": "当前计划",
+        "noPlan": "暂无活跃计划",
+        "noPlanHint": "在下方选择一个计划开始",
+        "planHint": "{count, plural, other {# 笔活跃持仓}} · 期限 {days} 天"
+      },
+      "quick": {
+        "title": "快捷钱包操作",
+        "deposit": "存入加密货币",
+        "withdraw": "申请提现",
+        "invest": "开立持仓",
+        "currencies": "支持的币种"
+      },
+      "plans": {
+        "label": "投资计划",
+        "title": "用余额投资",
+        "body": "选择计划并在其范围内输入金额。期限自开立持仓之日起固定。",
+        "min": "最低",
+        "max": "最高",
+        "term": "期限",
+        "days": "{count} 天",
+        "target": "目标收益",
+        "noTarget": "未设置",
+        "cta": "投资 {amount}",
+        "empty": "目前没有开放的计划。",
+        "note": "目标不是保证。加密资产波动较大，您可能损失部分或全部投资资金。"
+      },
+      "history": {
+        "title": "申请记录",
+        "body": "您账户中每笔入金和提现申请的实时状态。",
+        "search": "搜索编号、资产或状态",
+        "method": "方式",
+        "deposit": "入金",
+        "withdrawal": "提现",
+        "empty": "暂无申请记录。",
+        "noMatch": "没有符合搜索条件的申请。"
+      }
     }
   },
   "auth": {
@@ -1041,7 +1149,20 @@
       "queueWithdrawals": "最早的未完成提款",
       "queueEmpty": "没有待处理事项。",
       "processMaturities": "结算到期持仓",
-      "processed": "{count, plural, =0 {没有到期的持仓} other {已结算 # 笔持仓}}"
+      "processed": "{count, plural, =0 {没有到期的持仓} other {已结算 # 笔持仓}}",
+      "console": {
+        "label": "运营控制台",
+        "live": "实时",
+        "greeting": "欢迎回来，<n>{name}</n>",
+        "roles": "您的角色",
+        "mfa": "两步登录",
+        "mfaOn": "已开启",
+        "mfaOff": "未开启 — 请在设置中开启",
+        "waiting": "{count, plural, other {有 # 个申请待审核}}",
+        "reviewDeposits": "审核入金（{count}）",
+        "reviewWithdrawals": "审核提现（{count}）",
+        "allClear": "没有待审核的申请。"
+      }
     },
     "deposits": {
       "title": "存款审核",
@@ -1205,5 +1326,15 @@
       "assetWithdrawals": "提款",
       "saved": "设置已保存"
     }
+  },
+  "wallet": {
+    "connect": "连接钱包",
+    "connectedAs": "已连接钱包 {address}",
+    "useConnected": "使用已连接的钱包（{address}）",
+    "connectToFill": "连接钱包以自动填写地址",
+    "checkNetwork": "已从您的钱包填写。提交前请确认资产和网络一致。"
+  },
+  "whatsapp": {
+    "chat": "通过 WhatsApp 联系"
   }
 }

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
-import { Building2, ChartCandlestick, CircleHelp, Layers, LayoutDashboard, LogIn, Menu, UserPlus, Workflow, X } from "lucide-react";
+import { Building2, CircleHelp, House, Layers, LayoutDashboard, LayoutGrid, LogIn, Menu, UserPlus, X } from "lucide-react";
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { Logo } from "@/components/ui/logo";
 import { buttonClasses } from "@/components/ui/button";
@@ -13,10 +13,10 @@ import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
 
 const links = [
-  { href: "/#markets", key: "markets", icon: ChartCandlestick },
-  { href: "/#plans", key: "plans", icon: Layers, highlight: true },
-  { href: "/#how", key: "how", icon: Workflow },
+  { href: "/", key: "home", icon: House },
   { href: "/about", key: "about", icon: Building2 },
+  { href: "/#services", key: "services", icon: LayoutGrid },
+  { href: "/#plans", key: "plans", icon: Layers, highlight: true },
   { href: "/#faq", key: "faq", icon: CircleHelp },
 ];
 

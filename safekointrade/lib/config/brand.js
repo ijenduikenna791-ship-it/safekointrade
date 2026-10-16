@@ -10,6 +10,9 @@ export const brand = {
   supportEmail: "support@example.com",
   complianceEmail: "compliance@example.com",
   address: "Registered address to be confirmed",
+  // WhatsApp support, international format without spaces or symbols.
+  whatsapp: "19383020548",
+  whatsappDisplay: "+1 (938) 302-0548",
   // Demo mode labels every money flow as simulated. Keep this `true` until
   // custody, payment provider and licensing are in place (see README).
   demoMode: process.env.NEXT_PUBLIC_DEMO_MODE !== "false",

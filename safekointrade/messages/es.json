@@ -65,7 +65,8 @@
       "high": "Riesgo alto"
     },
     "photoCredit": "Foto: {name} / Pexels",
-    "apply": "Aplicar"
+    "apply": "Aplicar",
+    "simulationTag": "Saldos simulados"
   },
   "theme": {
     "label": "Tema",
@@ -90,7 +91,8 @@
     "closeMenu": "Cerrar menú",
     "primary": "Principal",
     "home": "Inicio",
-    "signUp": "Regístrate"
+    "signUp": "Regístrate",
+    "services": "Servicios"
   },
   "startup": {
     "loading": "Cargando {brand}"
@@ -103,7 +105,9 @@
       "secondary": "Comparar planes",
       "note": "Los criptoactivos son volátiles. Puedes perder parte o la totalidad del dinero que inviertes.",
       "headline": "Planes cripto que puedes auditar",
-      "learnMore": "Más información"
+      "learnMore": "Más información",
+      "imageAlt": "Un trader revisando gráficos de mercado en varios monitores en su escritorio",
+      "liveBadge": "Mercados en vivo"
     },
     "lifecycle": {
       "label": "Cómo avanza una posición",
@@ -276,15 +280,31 @@
         "security": {
           "q": "¿Cómo se protege mi cuenta?",
           "a": "Correo verificado, contraseñas robustas, inicio de sesión en dos pasos opcional, aislamiento de datos a nivel de fila y un registro de auditoría completo de las acciones privilegiadas."
+        },
+        "minimum": {
+          "q": "¿Cuál es el mínimo para empezar?",
+          "a": "Cada plan fija su propio mínimo y máximo, que ves en las tarjetas de arriba. Los depósitos también tienen un mínimo, indicado en el formulario de depósito."
+        },
+        "kyc": {
+          "q": "¿Tendré que verificar mi identidad?",
+          "a": "La verificación de identidad llegará con un proveedor autorizado. Te avisaremos en tu panel antes de que sea necesaria; hoy no hace falta nada."
+        },
+        "reinvest": {
+          "q": "¿Puedo reinvertir cuando termina un plan?",
+          "a": "Sí. Al terminar el plazo, el capital vuelve a tu saldo disponible y puedes abrir una nueva posición cuando quieras."
+        },
+        "referral": {
+          "q": "¿Hay un programa de referidos?",
+          "a": "Cada cuenta tiene un código de referido en Ajustes y las cuentas nuevas pueden introducirlo al registrarse. Por ahora no se ofrecen recompensas por referidos."
         }
       }
     },
     "newsletter": {
-      "title": "Novedades del producto, cada mes",
-      "body": "Nuevos planes, cambios en la plataforma y notas de mercado. Nada de publicidad disfrazada de consejo.",
+      "title": "Análisis semanal del mercado",
+      "body": "Una nota breve cada semana sobre los mercados, nuevos planes y cambios en la plataforma. Sin publicidad disfrazada de consejo.",
       "email": "Correo electrónico",
       "placeholder": "tu@ejemplo.com",
-      "consent": "Acepto recibir el boletín mensual y puedo darme de baja en cualquier momento.",
+      "consent": "Acepto recibir el boletín semanal y puedo darme de baja cuando quiera.",
       "submit": "Suscribirme",
       "success": "Suscripción confirmada. Busca el próximo boletín en tu bandeja de entrada.",
       "already": "Este correo ya está suscrito.",
@@ -318,6 +338,25 @@
           "body": "Abre un ticket desde tu panel. Cada respuesta queda vinculada a él."
         }
       }
+    },
+    "rates": {
+      "label": "Cotizaciones en vivo",
+      "source": "Precios en vivo de CoinGecko"
+    },
+    "calc": {
+      "title": "Calculadora de planes",
+      "body": "Mira cómo encaja un importe en un plan antes de abrir una posición.",
+      "plan": "Plan",
+      "amount": "Importe",
+      "days": "{count} días",
+      "range": "Introduce entre {min} y {max} para este plan.",
+      "term": "Plazo",
+      "ends": "Termina el",
+      "principal": "Capital devuelto al final",
+      "target": "Rentabilidad objetivo del plazo",
+      "targetNote": "Un objetivo, no una garantía. Podrías recuperar menos de lo que inviertes.",
+      "noTarget": "Este plan no tiene rentabilidad objetivo publicada, así que solo se muestra tu capital.",
+      "cta": "Abrir el plan {plan}"
     }
   },
   "footer": {
@@ -394,7 +433,8 @@
       "sections": {
         "money": "Dinero",
         "account": "Cuenta"
-      }
+      },
+      "clientLabel": "Panel del cliente"
     },
     "overview": {
       "title": "Resumen",
@@ -780,6 +820,74 @@
         "theme": "Tema",
         "saved": "Preferencias guardadas"
       }
+    },
+    "cmd": {
+      "commandCenter": "Centro de control de la cartera",
+      "online": "En línea",
+      "welcome": "Bienvenido de nuevo, <n>{name}</n>",
+      "welcomeNoName": "Bienvenido de nuevo",
+      "accountId": "ID de cuenta",
+      "country": "País",
+      "noCountry": "Sin indicar",
+      "kyc": {
+        "label": "Verificación de identidad",
+        "status": {
+          "unverified": "Sin iniciar",
+          "pending": "En revisión",
+          "rejected": "No aprobada"
+        },
+        "body": {
+          "unverified": "La verificación de identidad se abrirá aquí cuando conectemos a nuestro proveedor. Por ahora no tienes que hacer nada.",
+          "pending": "Estamos revisando tus datos. Recibirás una notificación cuando terminemos.",
+          "rejected": "Tu verificación no fue aprobada. Contacta con soporte para saber por qué y qué hacer a continuación."
+        },
+        "contact": "Contactar con soporte",
+        "soon": "Próximamente"
+      },
+      "stats": {
+        "label": "Resumen de la cuenta",
+        "available": "Saldo disponible",
+        "availableHint": "Listo para retirar o invertir",
+        "invested": "Invertido",
+        "investedHint": "En posiciones activas",
+        "deposits": "Depósitos totales",
+        "depositsHint": "Depósitos aprobados abonados en tu cuenta",
+        "plan": "Plan activo",
+        "noPlan": "Sin plan activo",
+        "noPlanHint": "Elige un plan abajo para empezar",
+        "planHint": "{count, plural, one {# posición activa} other {# posiciones activas}} · plazo de {days} días"
+      },
+      "quick": {
+        "title": "Operaciones rápidas de la billetera",
+        "deposit": "Depositar cripto",
+        "withdraw": "Solicitar retiro",
+        "invest": "Abrir una posición",
+        "currencies": "Monedas admitidas"
+      },
+      "plans": {
+        "label": "Planes de inversión",
+        "title": "Invierte desde tu saldo",
+        "body": "Elige un plan y un importe dentro de su rango. El plazo se fija el día en que abres la posición.",
+        "min": "Mínimo",
+        "max": "Máximo",
+        "term": "Plazo",
+        "days": "{count} días",
+        "target": "Rentabilidad objetivo",
+        "noTarget": "No definida",
+        "cta": "Invertir {amount}",
+        "empty": "No hay planes abiertos en este momento.",
+        "note": "Los objetivos no son garantías. Los criptoactivos son volátiles y podrías perder parte o la totalidad del dinero que inviertes."
+      },
+      "history": {
+        "title": "Historial de solicitudes",
+        "body": "Estado en tiempo real de cada solicitud de depósito y retiro de tu cuenta.",
+        "search": "Buscar referencia, activo o estado",
+        "method": "Método",
+        "deposit": "Depósito",
+        "withdrawal": "Retiro",
+        "empty": "Aún no hay solicitudes registradas.",
+        "noMatch": "Ninguna solicitud coincide con tu búsqueda."
+      }
     }
   },
   "auth": {
@@ -1041,7 +1149,20 @@
       "queueWithdrawals": "Retiro abierto más antiguo",
       "queueEmpty": "Nada en espera.",
       "processMaturities": "Liquidar posiciones vencidas",
-      "processed": "{count, plural, =0 {No había posiciones vencidas} one {# posición liquidada} other {# posiciones liquidadas}}"
+      "processed": "{count, plural, =0 {No había posiciones vencidas} one {# posición liquidada} other {# posiciones liquidadas}}",
+      "console": {
+        "label": "Consola de operaciones",
+        "live": "En vivo",
+        "greeting": "Bienvenido de nuevo, <n>{name}</n>",
+        "roles": "Tus roles",
+        "mfa": "Inicio de sesión en dos pasos",
+        "mfaOn": "Activado",
+        "mfaOff": "Desactivado — configúralo en Ajustes",
+        "waiting": "{count, plural, one {# solicitud espera revisión} other {# solicitudes esperan revisión}}",
+        "reviewDeposits": "Revisar depósitos ({count})",
+        "reviewWithdrawals": "Revisar retiros ({count})",
+        "allClear": "No hay nada pendiente de revisión."
+      }
     },
     "deposits": {
       "title": "Revisión de depósitos",
@@ -1205,5 +1326,15 @@
       "assetWithdrawals": "Retiros",
       "saved": "Ajuste guardado"
     }
+  },
+  "wallet": {
+    "connect": "Conectar billetera",
+    "connectedAs": "Billetera conectada {address}",
+    "useConnected": "Usar la billetera conectada ({address})",
+    "connectToFill": "Conecta una billetera para rellenar tu dirección",
+    "checkNetwork": "Rellenado desde tu billetera. Comprueba que el activo y la red coincidan antes de enviar."
+  },
+  "whatsapp": {
+    "chat": "Chatear por WhatsApp"
   }
 }

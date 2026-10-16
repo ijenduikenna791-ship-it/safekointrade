@@ -13,14 +13,36 @@ export function PageHeader({ title, description, actions, className }) {
 }
 
 /** A single figure with its label — no chart, so it's a tile, not a plot. */
-export function StatTile({ label, value, hint, icon: Icon, emphasis = false, className }) {
+const TINTS = { blue: "#4f8cff", green: "#34d399", cyan: "#22d3ee", purple: "#a78bfa", orange: "#fb923c" };
+
+/**
+ * tint (optional): blue | green | cyan | purple | orange — colours the value and
+ * icon by meaning inside the dashboards' command theme.
+ */
+export function StatTile({ label, value, hint, icon: Icon, emphasis = false, tint, className }) {
+  const c = tint ? TINTS[tint] : null;
   return (
-    <div className={cn("min-w-0 rounded-lg border border-line bg-surface p-4 sm:p-5", emphasis && "border-brass-line", className)}>
+    <div
+      className={cn("ui-card min-w-0 rounded-lg border border-line bg-surface p-4 sm:p-5", c && "ui-card-tint", emphasis && !c && "border-brass-line", className)}
+      style={c ? { "--tint": c } : undefined}
+    >
       <div className="flex items-center justify-between gap-3">
-        <p className="text-sm text-ink-muted">{label}</p>
-        {Icon && <Icon className={cn("h-4 w-4", emphasis ? "text-brass" : "text-ink-subtle")} strokeWidth={1.8} aria-hidden="true" />}
+        <p className="ui-stat-label text-sm text-ink-muted">{label}</p>
+        {Icon &&
+          (c ? (
+            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg" style={{ background: `color-mix(in oklab, ${c} 15%, transparent)`, color: c }} aria-hidden="true">
+              <Icon className="h-4 w-4" strokeWidth={1.9} />
+            </span>
+          ) : (
+            <Icon className={cn("h-4 w-4", emphasis ? "text-brass" : "text-ink-subtle")} strokeWidth={1.8} aria-hidden="true" />
+          ))}
       </div>
-      <p className={cn("mt-2 truncate font-display font-semibold tracking-tight sm:mt-3", emphasis ? "text-2xl sm:text-3xl" : "text-lg sm:text-2xl")}>{value}</p>
+      <p
+        className={cn("mt-2 truncate font-display font-semibold tracking-tight sm:mt-3", emphasis ? "text-2xl sm:text-3xl" : "text-lg sm:text-2xl")}
+        style={c && tint !== "blue" ? { color: c } : undefined}
+      >
+        {value}
+      </p>
       {hint && <p className="mt-1.5 text-xs text-ink-subtle">{hint}</p>}
     </div>
   );

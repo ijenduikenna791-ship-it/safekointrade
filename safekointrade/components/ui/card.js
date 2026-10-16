@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/cn";
 
 export function Card({ className, children, as: Tag = "div", ...props }) {
   return (
-    <Tag className={cn("rounded-lg border border-line bg-surface shadow-sm", className)} {...props}>
+    <Tag className={cn("ui-card rounded-lg border border-line bg-surface shadow-sm", className)} {...props}>
       {children}
     </Tag>
   );

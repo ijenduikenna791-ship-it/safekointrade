@@ -47,7 +47,7 @@ async function cg(path, { revalidate = 60 } = {}) {
 
 // Every page asks for the same canonical set, so one cached request serves
 // the ticker, hero cards, asset table and dashboard.
-const CORE_IDS = ["bitcoin", "ethereum", "solana", "tether", "usd-coin"];
+const CORE_IDS = ["binancecoin", "bitcoin", "ethereum", "euro-coin", "solana", "tether", "usd-coin"];
 
 /**
  * One request: price, 24h change and a 7-day hourly sparkline per coin.

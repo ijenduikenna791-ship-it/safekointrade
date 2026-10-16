@@ -32,6 +32,7 @@ export async function SiteFooter() {
       links: [
         { href: "/dashboard/support", label: t("helpCentre") },
         { href: `mailto:${brand.supportEmail}`, label: brand.supportEmail, external: true },
+        ...(brand.whatsapp ? [{ href: `https://wa.me/${brand.whatsapp}`, label: `WhatsApp ${brand.whatsappDisplay}`, external: true }] : []),
       ],
     },
     {

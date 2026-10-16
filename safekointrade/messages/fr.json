@@ -65,7 +65,8 @@
       "high": "Risque élevé"
     },
     "photoCredit": "Photo : {name} / Pexels",
-    "apply": "Appliquer"
+    "apply": "Appliquer",
+    "simulationTag": "Soldes simulés"
   },
   "theme": {
     "label": "Thème",
@@ -90,7 +91,8 @@
     "closeMenu": "Fermer le menu",
     "primary": "Principal",
     "home": "Accueil",
-    "signUp": "S'inscrire"
+    "signUp": "S'inscrire",
+    "services": "Services"
   },
   "startup": {
     "loading": "Chargement de {brand}"
@@ -103,7 +105,9 @@
       "secondary": "Comparer les plans",
       "note": "Les crypto-actifs sont volatils. Vous pouvez perdre tout ou partie de l'argent investi.",
       "headline": "Des plans crypto que vous pouvez vérifier",
-      "learnMore": "En savoir plus"
+      "learnMore": "En savoir plus",
+      "imageAlt": "Un trader consultant des graphiques de marché sur plusieurs écrans à son bureau",
+      "liveBadge": "Marchés en direct"
     },
     "lifecycle": {
       "label": "Le parcours d'une position",
@@ -276,15 +280,31 @@
         "security": {
           "q": "Comment mon compte est-il protégé ?",
           "a": "E-mail vérifié, mots de passe robustes, connexion en deux étapes en option, isolation des données au niveau des lignes et journal d'audit complet des actions privilégiées."
+        },
+        "minimum": {
+          "q": "Quel est le minimum pour commencer ?",
+          "a": "Chaque plan fixe son propre minimum et maximum, indiqués sur les cartes ci-dessus. Les dépôts ont aussi un minimum, affiché sur le formulaire de dépôt."
+        },
+        "kyc": {
+          "q": "Devrai-je vérifier mon identité ?",
+          "a": "La vérification d'identité sera mise en place avec un prestataire agréé. Nous vous préviendrons dans votre espace avant toute exigence ; rien n'est demandé aujourd'hui."
+        },
+        "reinvest": {
+          "q": "Puis-je réinvestir à la fin d'un plan ?",
+          "a": "Oui. À la fin de la durée, le capital revient sur votre solde disponible et vous pouvez ouvrir une nouvelle position quand vous le souhaitez."
+        },
+        "referral": {
+          "q": "Existe-t-il un programme de parrainage ?",
+          "a": "Chaque compte dispose d'un code de parrainage dans les Paramètres, que les nouveaux comptes peuvent saisir à l'inscription. Aucune récompense de parrainage n'est proposée pour le moment."
         }
       }
     },
     "newsletter": {
-      "title": "Les nouveautés, chaque mois",
-      "body": "Nouveaux plans, évolutions de la plateforme et notes de marché. Pas de publicité déguisée en conseil.",
+      "title": "Analyses de marché hebdomadaires",
+      "body": "Une courte note chaque semaine sur les marchés, les nouveaux plans et les évolutions de la plateforme. Pas de publicité déguisée en conseil.",
       "email": "Adresse e-mail",
       "placeholder": "vous@exemple.com",
-      "consent": "J'accepte de recevoir la lettre mensuelle et je peux me désinscrire à tout moment.",
+      "consent": "J'accepte de recevoir la lettre hebdomadaire et peux me désinscrire à tout moment.",
       "submit": "S'abonner",
       "success": "Abonnement confirmé. Surveillez votre boîte de réception pour la prochaine lettre.",
       "already": "Cette adresse est déjà abonnée.",
@@ -318,6 +338,25 @@
           "body": "Ouvrez un ticket depuis votre tableau de bord. Chaque réponse y reste rattachée."
         }
       }
+    },
+    "rates": {
+      "label": "Cours du marché en direct",
+      "source": "Prix en direct fournis par CoinGecko"
+    },
+    "calc": {
+      "title": "Simulateur de plan",
+      "body": "Voyez comment un montant s'intègre à un plan avant d'ouvrir une position.",
+      "plan": "Plan",
+      "amount": "Montant",
+      "days": "{count} jours",
+      "range": "Saisissez entre {min} et {max} pour ce plan.",
+      "term": "Durée",
+      "ends": "Se termine le",
+      "principal": "Capital restitué à la fin",
+      "target": "Rendement cible sur la durée",
+      "targetNote": "Un objectif, pas une garantie. Vous pourriez récupérer moins que votre mise.",
+      "noTarget": "Ce plan n'a pas de rendement cible publié : seul votre capital est affiché.",
+      "cta": "Ouvrir le plan {plan}"
     }
   },
   "footer": {
@@ -394,7 +433,8 @@
       "sections": {
         "money": "Argent",
         "account": "Compte"
-      }
+      },
+      "clientLabel": "Espace client"
     },
     "overview": {
       "title": "Vue d'ensemble",
@@ -780,6 +820,74 @@
         "theme": "Thème",
         "saved": "Préférences enregistrées"
       }
+    },
+    "cmd": {
+      "commandCenter": "Centre de pilotage du portefeuille",
+      "online": "En ligne",
+      "welcome": "Bon retour, <n>{name}</n>",
+      "welcomeNoName": "Bon retour",
+      "accountId": "ID du compte",
+      "country": "Pays",
+      "noCountry": "Non renseigné",
+      "kyc": {
+        "label": "Vérification d'identité",
+        "status": {
+          "unverified": "Non commencée",
+          "pending": "En cours d'examen",
+          "rejected": "Non approuvée"
+        },
+        "body": {
+          "unverified": "La vérification d'identité s'ouvrira ici dès que notre prestataire sera connecté. Vous n'avez rien à faire pour l'instant.",
+          "pending": "Nous examinons vos informations. Vous recevrez une notification une fois terminé.",
+          "rejected": "Votre vérification n'a pas été approuvée. Contactez le support pour en connaître la raison et la marche à suivre."
+        },
+        "contact": "Contacter le support",
+        "soon": "Bientôt disponible"
+      },
+      "stats": {
+        "label": "Résumé du compte",
+        "available": "Solde disponible",
+        "availableHint": "Prêt à être retiré ou investi",
+        "invested": "Investi",
+        "investedHint": "Placé dans des positions actives",
+        "deposits": "Total des dépôts",
+        "depositsHint": "Dépôts approuvés crédités sur votre compte",
+        "plan": "Plan actif",
+        "noPlan": "Aucun plan actif",
+        "noPlanHint": "Choisissez un plan ci-dessous pour commencer",
+        "planHint": "{count, plural, one {# position active} other {# positions actives}} · durée de {days} jours"
+      },
+      "quick": {
+        "title": "Opérations rapides du portefeuille",
+        "deposit": "Déposer des cryptos",
+        "withdraw": "Demander un retrait",
+        "invest": "Ouvrir une position",
+        "currencies": "Devises prises en charge"
+      },
+      "plans": {
+        "label": "Plans d'investissement",
+        "title": "Investir depuis votre solde",
+        "body": "Choisissez un plan et un montant dans sa fourchette. La durée est fixée le jour de l'ouverture de la position.",
+        "min": "Minimum",
+        "max": "Maximum",
+        "term": "Durée",
+        "days": "{count} jours",
+        "target": "Rendement cible",
+        "noTarget": "Non défini",
+        "cta": "Investir {amount}",
+        "empty": "Aucun plan n'est ouvert pour le moment.",
+        "note": "Les objectifs ne sont pas des garanties. Les crypto-actifs sont volatils et vous pouvez perdre tout ou partie de l'argent investi."
+      },
+      "history": {
+        "title": "Historique des demandes",
+        "body": "Statut en temps réel de chaque demande de dépôt et de retrait sur votre compte.",
+        "search": "Rechercher une référence, un actif ou un statut",
+        "method": "Méthode",
+        "deposit": "Dépôt",
+        "withdrawal": "Retrait",
+        "empty": "Aucune demande enregistrée pour l'instant.",
+        "noMatch": "Aucune demande ne correspond à votre recherche."
+      }
     }
   },
   "auth": {
@@ -1041,7 +1149,20 @@
       "queueWithdrawals": "Plus ancien retrait ouvert",
       "queueEmpty": "Rien en attente.",
       "processMaturities": "Régler les positions échues",
-      "processed": "{count, plural, =0 {Aucune position n'était échue} one {# position réglée} other {# positions réglées}}"
+      "processed": "{count, plural, =0 {Aucune position n'était échue} one {# position réglée} other {# positions réglées}}",
+      "console": {
+        "label": "Console des opérations",
+        "live": "En direct",
+        "greeting": "Bon retour, <n>{name}</n>",
+        "roles": "Vos rôles",
+        "mfa": "Connexion en deux étapes",
+        "mfaOn": "Activée",
+        "mfaOff": "Désactivée — à configurer dans Paramètres",
+        "waiting": "{count, plural, one {# demande attend un examen} other {# demandes attendent un examen}}",
+        "reviewDeposits": "Examiner les dépôts ({count})",
+        "reviewWithdrawals": "Examiner les retraits ({count})",
+        "allClear": "Rien n'attend d'examen."
+      }
     },
     "deposits": {
       "title": "Vérification des dépôts",
@@ -1205,5 +1326,15 @@
       "assetWithdrawals": "Retraits",
       "saved": "Paramètre enregistré"
     }
+  },
+  "wallet": {
+    "connect": "Connecter un portefeuille",
+    "connectedAs": "Portefeuille connecté {address}",
+    "useConnected": "Utiliser le portefeuille connecté ({address})",
+    "connectToFill": "Connectez un portefeuille pour remplir votre adresse",
+    "checkNetwork": "Rempli depuis votre portefeuille. Vérifiez que l'actif et le réseau correspondent avant d'envoyer."
+  },
+  "whatsapp": {
+    "chat": "Discuter sur WhatsApp"
   }
 }

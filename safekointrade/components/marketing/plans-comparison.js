@@ -4,6 +4,7 @@ import { Link } from "@/lib/i18n/navigation";
 import { buttonClasses } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "./section-heading";
+import { PlanCalculator } from "./plan-calculator";
 import { RevealGroup, RevealItem } from "@/components/animations/reveal";
 import { formatMoney, formatPercent } from "@/lib/utils/format";
 
@@ -63,6 +64,14 @@ export async function PlansComparison({ plans, isDefault }) {
             );
           })}
         </RevealGroup>
+
+        <PlanCalculator
+          today={new Date().toISOString()}
+          plans={plans.map((p) => ({
+            slug: p.slug, name: p.name, min_amount: p.min_amount, max_amount: p.max_amount, currency: p.currency,
+            term_days: p.term_days, target_return_min: p.target_return_min, target_return_max: p.target_return_max,
+          }))}
+        />
 
         <div className="mt-8 space-y-2 text-sm text-ink-subtle">
           <p className="flex items-start gap-2">

@@ -65,7 +65,8 @@
       "high": "High risk"
     },
     "photoCredit": "Photo: {name} / Pexels",
-    "apply": "Apply"
+    "apply": "Apply",
+    "simulationTag": "Simulated balances"
   },
   "theme": {
     "label": "Theme",
@@ -90,7 +91,8 @@
     "closeMenu": "Close menu",
     "primary": "Primary",
     "home": "Home",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "services": "Services"
   },
   "startup": {
     "loading": "Loading {brand}"
@@ -103,7 +105,9 @@
       "secondary": "Compare plans",
       "note": "Crypto assets are volatile. You can lose some or all of the money you invest.",
       "headline": "Crypto plans you can audit",
-      "learnMore": "Learn more"
+      "learnMore": "Learn more",
+      "imageAlt": "A trader reviewing market charts on several monitors at a desk",
+      "liveBadge": "Live markets"
     },
     "lifecycle": {
       "label": "How a position moves",
@@ -276,15 +280,31 @@
         "security": {
           "q": "How is my account protected?",
           "a": "Verified email, strong passwords, optional two-step sign-in, row-level data isolation and a full audit log of privileged actions."
+        },
+        "minimum": {
+          "q": "What is the minimum to get started?",
+          "a": "Each plan sets its own minimum and maximum, shown on the plan cards above. Deposits also have a platform minimum, which you'll see on the deposit form."
+        },
+        "kyc": {
+          "q": "Will I need to verify my identity?",
+          "a": "Identity checks will be introduced with a licensed verification provider. We'll let you know in your dashboard before anything is required, and nothing is needed today."
+        },
+        "reinvest": {
+          "q": "Can I reinvest when a plan ends?",
+          "a": "Yes. When a position reaches the end of its term, the principal returns to your available balance, and you can open a new position from it whenever you like."
+        },
+        "referral": {
+          "q": "Is there a referral programme?",
+          "a": "Every account has a referral code in Settings, and new accounts can enter one when they sign up. Referral rewards aren't offered at the moment."
         }
       }
     },
     "newsletter": {
-      "title": "Product updates, monthly",
-      "body": "New plans, platform changes and market notes. No promotions dressed up as advice.",
+      "title": "Weekly market insights",
+      "body": "A short weekly note on the markets, new plans and platform changes. No promotions dressed up as advice.",
       "email": "Email address",
       "placeholder": "you@example.com",
-      "consent": "I agree to receive the monthly update and can unsubscribe at any time.",
+      "consent": "I agree to receive the weekly newsletter and can unsubscribe at any time.",
       "submit": "Subscribe",
       "success": "Subscribed. Look out for the next update in your inbox.",
       "already": "This email is already subscribed.",
@@ -318,6 +338,25 @@
           "body": "Open a ticket from your dashboard. Every reply stays attached to it."
         }
       }
+    },
+    "rates": {
+      "label": "Live market rates",
+      "source": "Live prices from CoinGecko"
+    },
+    "calc": {
+      "title": "Plan calculator",
+      "body": "See how an amount fits a plan before you open a position.",
+      "plan": "Plan",
+      "amount": "Amount",
+      "days": "{count} days",
+      "range": "Enter between {min} and {max} for this plan.",
+      "term": "Term",
+      "ends": "Ends on",
+      "principal": "Principal back at the end",
+      "target": "Target return over the term",
+      "targetNote": "A target, not a guarantee. You could get back less than you put in.",
+      "noTarget": "This plan has no published target return, so only your principal is shown.",
+      "cta": "Open the {plan} plan"
     }
   },
   "footer": {
@@ -394,7 +433,8 @@
       "sections": {
         "money": "Money",
         "account": "Account"
-      }
+      },
+      "clientLabel": "Client dashboard"
     },
     "overview": {
       "title": "Overview",
@@ -780,6 +820,74 @@
         "theme": "Theme",
         "saved": "Preferences saved"
       }
+    },
+    "cmd": {
+      "commandCenter": "Portfolio command center",
+      "online": "Online",
+      "welcome": "Welcome back, <n>{name}</n>",
+      "welcomeNoName": "Welcome back",
+      "accountId": "Account ID",
+      "country": "Country",
+      "noCountry": "Not set",
+      "kyc": {
+        "label": "Identity verification",
+        "status": {
+          "unverified": "Not started",
+          "pending": "Under review",
+          "rejected": "Not approved"
+        },
+        "body": {
+          "unverified": "Identity checks will open here once our verification provider is connected. Nothing is needed from you yet.",
+          "pending": "We're reviewing your details. You'll get a notification when it's done.",
+          "rejected": "Your verification wasn't approved. Contact support to find out why and what to do next."
+        },
+        "contact": "Contact support",
+        "soon": "Coming soon"
+      },
+      "stats": {
+        "label": "Account summary",
+        "available": "Available balance",
+        "availableHint": "Ready to withdraw or invest",
+        "invested": "Invested",
+        "investedHint": "Held in active positions",
+        "deposits": "Total deposits",
+        "depositsHint": "Approved deposits credited to you",
+        "plan": "Active plan",
+        "noPlan": "No active plan",
+        "noPlanHint": "Choose a plan below to get started",
+        "planHint": "{count, plural, one {# active position} other {# active positions}} · {days}-day term"
+      },
+      "quick": {
+        "title": "Quick wallet operations",
+        "deposit": "Deposit crypto",
+        "withdraw": "Request withdrawal",
+        "invest": "Open a position",
+        "currencies": "Supported currencies"
+      },
+      "plans": {
+        "label": "Investment plans",
+        "title": "Invest from your balance",
+        "body": "Pick a plan and an amount within its range. The term is fixed from the day you open the position.",
+        "min": "Minimum",
+        "max": "Maximum",
+        "term": "Term",
+        "days": "{count} days",
+        "target": "Target return",
+        "noTarget": "Not set",
+        "cta": "Invest with {amount}",
+        "empty": "No plans are open right now.",
+        "note": "Targets are not guarantees. Crypto assets are volatile and you could lose some or all of the money you invest."
+      },
+      "history": {
+        "title": "Request history",
+        "body": "Live status of every deposit and withdrawal request on your account.",
+        "search": "Search reference, asset or status",
+        "method": "Method",
+        "deposit": "Deposit",
+        "withdrawal": "Withdrawal",
+        "empty": "No requests recorded yet.",
+        "noMatch": "No requests match your search."
+      }
     }
   },
   "auth": {
@@ -1041,7 +1149,20 @@
       "queueWithdrawals": "Oldest open withdrawal",
       "queueEmpty": "Nothing waiting.",
       "processMaturities": "Settle due positions",
-      "processed": "{count, plural, =0 {No positions were due} one {# position settled} other {# positions settled}}"
+      "processed": "{count, plural, =0 {No positions were due} one {# position settled} other {# positions settled}}",
+      "console": {
+        "label": "Operations console",
+        "live": "Live",
+        "greeting": "Welcome back, <n>{name}</n>",
+        "roles": "Your roles",
+        "mfa": "Two-step login",
+        "mfaOn": "On",
+        "mfaOff": "Off — set it up in Settings",
+        "waiting": "{count, plural, one {# request is waiting for review} other {# requests are waiting for review}}",
+        "reviewDeposits": "Review deposits ({count})",
+        "reviewWithdrawals": "Review withdrawals ({count})",
+        "allClear": "Nothing is waiting for review."
+      }
     },
     "deposits": {
       "title": "Deposit review",
@@ -1205,5 +1326,15 @@
       "assetWithdrawals": "Withdrawals",
       "saved": "Setting saved"
     }
+  },
+  "wallet": {
+    "connect": "Connect wallet",
+    "connectedAs": "Connected wallet {address}",
+    "useConnected": "Use connected wallet ({address})",
+    "connectToFill": "Connect a wallet to fill in your address",
+    "checkNetwork": "Filled in from your wallet. Make sure the asset and network match before you submit."
+  },
+  "whatsapp": {
+    "chat": "Chat on WhatsApp"
   }
 }

@@ -36,7 +36,7 @@ describe("translations", () => {
     for (const [key, msg] of Object.entries(flat)) {
       const fmt = new IntlMessageFormat(msg, localeMeta[locale].intl, undefined, { ignoreTag: false });
       // Supply any argument the message asks for: tags get a renderer, everything else a number.
-      const tags = new Set(["terms", "privacy", "risk", "link"]);
+      const tags = new Set(["terms", "privacy", "risk", "link", "n"]);
       const values = new Proxy({}, { has: () => true, get: (_, k) => (tags.has(k) ? (c) => c.join("") : 3) });
       expect(() => fmt.format(values), `${locale}:${key}`).not.toThrow();
     }

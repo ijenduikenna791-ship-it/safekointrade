@@ -6,6 +6,7 @@ import { SimulationBanner } from "@/components/layout/simulation-banner";
 import { NotConfigured } from "@/components/dashboard/not-configured";
 import { Alert } from "@/components/ui/feedback";
 import { PreferenceSync } from "@/components/dashboard/preference-sync";
+import { WalletProvider } from "@/components/wallet/wallet-provider";
 
 export const metadata = { robots: { index: false, follow: false } };
 
@@ -22,6 +23,7 @@ export default async function DashboardLayout({ children, params }) {
   const te = await getTranslations("errors");
 
   return (
+    <WalletProvider>
     <AppShell
       variant="user"
       viewer={{
@@ -39,5 +41,6 @@ export default async function DashboardLayout({ children, params }) {
       )}
       {children}
     </AppShell>
+    </WalletProvider>
   );
 }

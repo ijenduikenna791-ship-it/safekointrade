@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight, LogOut, Menu, Settings, ShieldCheck, User, X } from "lucide-react";
+import { ChevronRight, LogOut, Menu, MessageCircleMore, Settings, ShieldCheck, User, X } from "lucide-react";
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { Logo, LogoMark } from "@/components/ui/logo";
 import { Dropdown } from "@/components/ui/dropdown";
 import { LanguageSwitcher } from "@/components/navigation/language-switcher";
-import { ThemeToggle } from "@/components/navigation/theme-toggle";
 import { NotificationBell } from "@/components/dashboard/notification-bell";
+import { ConnectWalletButton } from "@/components/wallet/connect-button";
 import { userNav, adminNav } from "./nav-config";
 import { useRouter } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
@@ -145,14 +145,14 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
   return (
     // Fixed-height app frame: banner on top, sidebar fills the rest, only the
     // content column scrolls — so the sidebar never ends short of the window.
-    <div className={cn("relative flex h-dvh flex-col overflow-hidden", variant === "admin" ? "admin-console" : "site-public")}>
+    <div id="app-frame" className={cn("relative flex h-dvh flex-col overflow-hidden text-ink", variant === "admin" ? "dark dash-cmd admin-cmd admin-console" : "dark dash-cmd")}>
       <div className="shrink-0">{banner}</div>
       <div className="flex min-h-0 flex-1">
         {/* Desktop sidebar */}
         <aside
           className={cn(
             "hidden h-full shrink-0 flex-col border-e transition-[width] duration-200 lg:flex",
-            variant === "admin" ? "dark border-white/10 bg-brand-night text-ink" : "border-line bg-surface",
+            "cmd-chrome border-line",
             collapsed ? "w-[4.5rem]" : "w-64"
           )}
         >
@@ -162,6 +162,7 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
               {!collapsed && variant === "admin" && (
                 <span className="ms-10 mt-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#ff9d5c]">{tu("admin")}</span>
               )}
+              {!collapsed && variant === "user" && <span className="mono-label ms-10 mt-0.5 !text-[10px]">{tu("clientLabel")}</span>}
             </Link>
           </div>
           <div className="no-scrollbar flex-1 overflow-y-auto px-3 py-5">
@@ -186,7 +187,7 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
                 aria-label={tu("menu")}
                 className={cn(
                   "absolute inset-y-0 start-0 flex w-[min(20rem,85vw)] flex-col shadow-lg",
-                  variant === "admin" ? "dark bg-brand-night text-ink" : "bg-surface"
+                  "bg-surface"
                 )}
                 initial={{ x: offscreen }}
                 animate={{ x: 0 }}
@@ -209,7 +210,6 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
                 </div>
                 <div className="flex flex-wrap items-center gap-2 border-t border-line px-3 py-3 sm:hidden">
                   <LanguageSwitcher />
-                  <ThemeToggle />
                 </div>
                 <div className="border-t border-line p-3">
                   <Link href="/logout" className="flex h-10 items-center gap-3 rounded-md px-3 text-sm text-ink-muted hover:bg-surface-2 hover:text-ink">
@@ -225,7 +225,8 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
         <div id="app-scroll" className="relative flex min-w-0 flex-1 flex-col overflow-y-auto">
           <header
             className={cn(
-              "sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-line bg-bg/90 px-4 backdrop-blur-md sm:px-6",
+              "sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-line px-4 backdrop-blur-md sm:px-6",
+              "cmd-chrome",
               variant === "admin" && "border-t-[3px] border-t-brand-orange"
             )}
           >
@@ -248,9 +249,9 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
               <Breadcrumbs pathname={pathname} variant={variant} t={t} />
             </div>
             <div className="flex items-center gap-0.5">
+              {variant === "user" && <ConnectWalletButton className="me-1.5" />}
               <div className="hidden sm:flex sm:items-center sm:gap-0.5">
                 <LanguageSwitcher />
-                <ThemeToggle />
               </div>
               {variant === "user" && <NotificationBell userId={viewer?.id} initialUnread={unreadCount} />}
               <Dropdown
@@ -276,6 +277,16 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
           </main>
         </div>
       </div>
+      {variant === "user" && !pathname.startsWith("/dashboard/support") && (
+        <Link
+          href="/dashboard/support"
+          aria-label={tu("support")}
+          title={tu("support")}
+          className="fixed bottom-5 end-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#22c55e] text-[#04120a] shadow-[0_10px_30px_-6px_rgb(34_197_94/0.6)] transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e] sm:bottom-6 sm:end-6"
+        >
+          <MessageCircleMore className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
+        </Link>
+      )}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDownToLine, ArrowUpFromLine, Layers, LifeBuoy, Users } from "lucide-react";
+import { ArrowDownToLine, ArrowUpFromLine, CheckCircle2, KeyRound, Layers, LifeBuoy, UserCheck, Users } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
 import { requireStaff } from "@/lib/authorization/guards";
-import { PageHeader, StatTile } from "@/components/dashboard/page-header";
+import { StatTile } from "@/components/dashboard/page-header";
 import { ProcessMaturitiesButton } from "@/components/admin/admin-controls";
 import { DailyFlowsChart } from "@/components/admin/flows-chart";
 import { Card, CardBody, CardHeader } from "@/components/ui/card";
@@ -37,20 +37,90 @@ export default async function AdminOverview({ params, searchParams }) {
     supabase.from("withdrawal_requests").select("id, reference, amount, created_at").in("status", ["pending", "processing", "approved"]).order("created_at").limit(1).maybeSingle(),
   ]);
 
+  const tu = await getTranslations("admin.users.roleNames");
+  const { data: factors } = await supabase.auth.mfa.listFactors();
+  const hasMfa = Boolean(factors?.totp?.some((f) => f.status === "verified"));
+  const staffName = (staff.profile?.full_name || "").trim().split(/\s+/)[0] || "";
   if (error) return <Alert tone="error">{te(errorCode(error) === "mfa_required" ? "mfa_required" : "forbidden")}</Alert>;
   const flowRows = (flows.data || []).map((r) => ({ day: r.day, deposits: toNumber(r.deposits), withdrawals: toNumber(r.withdrawals) }));
 
   return (
     <>
-      <PageHeader title={t("title")} description={t("description")} actions={staff.can("finance.review") ? <ProcessMaturitiesButton /> : null} />
+      <section aria-labelledby="console-title" className="ui-card relative mb-5 overflow-hidden rounded-lg border border-line bg-surface p-5 sm:p-7">
+        <div aria-hidden="true" className="pointer-events-none absolute -end-16 -top-24 h-64 w-64 rounded-full bg-[radial-gradient(closest-side,rgb(255_157_92/0.22),transparent)]" />
+        <div className="relative flex flex-wrap items-start justify-between gap-4">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="mono-label">{t("console.label")}</p>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[rgb(52_211_153/0.35)] bg-[rgb(52_211_153/0.1)] px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--cmd-green)]">
+                <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-[var(--cmd-green)]" aria-hidden="true" />
+                {t("console.live")}
+              </span>
+            </div>
+            <h1 id="console-title" className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-4xl">
+              {staffName ? t.rich("console.greeting", { name: staffName, n: (c) => <span className="text-gradient">{c}</span> }) : t("title")}
+            </h1>
+            <p className="mt-1.5 max-w-[65ch] text-sm text-ink-muted">{t("description")}</p>
+            <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <div className="flex flex-wrap items-center gap-2">
+                <dt className="mono-label">{t("console.roles")}</dt>
+                <dd className="flex flex-wrap gap-1.5">
+                  {staff.roles.map((r) => (
+                    <span key={r} className="rounded-full border border-brass-line bg-brass-soft px-2 py-0.5 text-xs font-medium text-brass">{tu(r)}</span>
+                  ))}
+                </dd>
+              </div>
+              <div className="flex items-center gap-2">
+                <dt className="mono-label">{t("console.mfa")}</dt>
+                <dd className={hasMfa ? "inline-flex items-center gap-1 text-[var(--cmd-green)]" : "inline-flex items-center gap-1 text-[var(--cmd-orange)]"}>
+                  <KeyRound className="h-3.5 w-3.5" aria-hidden="true" />
+                  {hasMfa ? t("console.mfaOn") : t("console.mfaOff")}
+                </dd>
+              </div>
+            </dl>
+          </div>
+          {staff.can("finance.review") && <div className="relative shrink-0"><ProcessMaturitiesButton /></div>}
+        </div>
+      </section>
       {sp.denied === "1" && <Alert tone="warn" className="mb-6">{te("forbidden")}</Alert>}
 
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-        <StatTile label={t("usersTotal")} value={o.users_total} hint={t("usersNew", { count: o.users_new_7d })} icon={Users} />
-        <StatTile label={t("usersActive")} value={o.users_active_30d} hint={t("usersSuspended", { count: o.users_suspended })} icon={Users} />
-        <StatTile emphasis={o.deposits_pending > 0} label={t("depositsPending")} value={o.deposits_pending} hint={m(o.deposits_pending_amount)} icon={ArrowDownToLine} />
-        <StatTile emphasis={o.withdrawals_open > 0} label={t("withdrawalsOpen")} value={o.withdrawals_open} hint={m(o.withdrawals_open_amount)} icon={ArrowUpFromLine} />
-        <StatTile label={t("investmentsActive")} value={o.investments_active} hint={`${m(o.investments_active_amount)} · ${t("investmentsDue", { count: o.investments_due })}`} icon={Layers} />
+      {staff.can("finance.view") && (
+        <section
+          aria-label={t("queueTitle")}
+          className="ui-card ui-card-tint mb-5 flex flex-wrap items-center gap-3 rounded-lg border p-4 sm:p-5"
+          style={{ "--tint": o.deposits_pending + o.withdrawals_open > 0 ? "#fb923c" : "#34d399" }}
+        >
+          {o.deposits_pending + o.withdrawals_open > 0 ? (
+            <>
+              <p className="me-auto text-sm font-semibold">{t("console.waiting", { count: o.deposits_pending + o.withdrawals_open })}</p>
+              {o.deposits_pending > 0 && (
+                <Link href="/admin/deposits?status=pending" className="inline-flex h-10 items-center gap-2 rounded-lg bg-[linear-gradient(90deg,#3b7bff,#22d3ee)] px-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#03101f] hover:brightness-110">
+                  <ArrowDownToLine className="h-4 w-4" aria-hidden="true" />
+                  {t("console.reviewDeposits", { count: o.deposits_pending })}
+                </Link>
+              )}
+              {o.withdrawals_open > 0 && (
+                <Link href="/admin/withdrawals" className="inline-flex h-10 items-center gap-2 rounded-lg bg-[var(--cmd-orange)] px-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#1d0e04] hover:brightness-110">
+                  <ArrowUpFromLine className="h-4 w-4" aria-hidden="true" />
+                  {t("console.reviewWithdrawals", { count: o.withdrawals_open })}
+                </Link>
+              )}
+            </>
+          ) : (
+            <p className="inline-flex items-center gap-2 text-sm font-medium text-[var(--cmd-green)]">
+              <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+              {t("console.allClear")}
+            </p>
+          )}
+        </section>
+      )}
+
+      <section className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-5">
+        <StatTile tint="blue" label={t("usersTotal")} value={o.users_total} hint={t("usersNew", { count: o.users_new_7d })} icon={Users} />
+        <StatTile tint="purple" label={t("usersActive")} value={o.users_active_30d} hint={t("usersSuspended", { count: o.users_suspended })} icon={UserCheck} />
+        <StatTile tint="cyan" label={t("depositsPending")} value={o.deposits_pending} hint={m(o.deposits_pending_amount)} icon={ArrowDownToLine} />
+        <StatTile tint="orange" label={t("withdrawalsOpen")} value={o.withdrawals_open} hint={m(o.withdrawals_open_amount)} icon={ArrowUpFromLine} />
+        <StatTile tint="green" label={t("investmentsActive")} value={o.investments_active} hint={`${m(o.investments_active_amount)} · ${t("investmentsDue", { count: o.investments_due })}`} icon={Layers} />
       </section>
 
       <div className="mt-6 grid gap-6 xl:grid-cols-[1.5fr_1fr]">
@@ -65,13 +135,13 @@ export default async function AdminOverview({ params, searchParams }) {
             <CardHeader title={t("balancesTitle")} />
             <dl className="divide-y divide-line">
               {[
-                [t("available"), o.balances_available],
-                [t("held"), o.balances_held],
-                [t("invested"), o.balances_invested],
-              ].map(([k, v]) => (
-                <div key={k} className="flex justify-between px-5 py-3 text-sm">
-                  <dt className="text-ink-muted">{k}</dt>
-                  <dd className="tabular font-medium">{m(v)}</dd>
+                [t("available"), o.balances_available, "#4f8cff"],
+                [t("held"), o.balances_held, "#fb923c"],
+                [t("invested"), o.balances_invested, "#34d399"],
+              ].map(([k, v, c]) => (
+                <div key={k} className="flex items-center justify-between px-5 py-3 text-sm">
+                  <dt className="flex items-center gap-2 text-ink-muted"><span className="h-2 w-2 rounded-full" style={{ background: c }} aria-hidden="true" />{k}</dt>
+                  <dd className="tabular font-semibold" style={{ color: c }}>{m(v)}</dd>
                 </div>
               ))}
             </dl>

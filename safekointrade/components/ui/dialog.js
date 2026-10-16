@@ -89,6 +89,7 @@ export function Dialog({ open, onClose, title, description, children, className,
         </div>
       )}
     </AnimatePresence>,
-    document.body
+    // Inside the app frame so dialogs inherit its theme (dashboard / admin).
+    document.getElementById("app-frame") || document.body
   );
 }

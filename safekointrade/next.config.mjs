@@ -32,6 +32,11 @@ const nextConfig = {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
   turbopack: {
+    // Optional payment add-ons pulled in by WalletConnect's Base/Coinbase
+    // connector. They are never called here, so they resolve to an empty module.
+    resolveAlias: Object.fromEntries(
+      ["@x402/core/client", "@x402/evm", "@x402/evm/exact/client", "@x402/evm/upto/client", "@x402/svm/exact/client"].map((m) => [m, "./lib/wallet/empty-module.js"])
+    ),
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],

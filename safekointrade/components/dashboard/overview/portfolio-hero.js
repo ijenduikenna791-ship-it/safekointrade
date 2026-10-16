@@ -66,11 +66,11 @@ export function PortfolioHero({ points, total, now }) {
   return (
     <section
       aria-labelledby="portfolio-title"
-      className="dash-glow relative overflow-hidden rounded-2xl border border-line bg-surface p-5 sm:p-6"
+      className="glass relative overflow-hidden p-5 sm:p-6"
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h2 id="portfolio-title" className="text-sm text-ink-muted">{t("total")}</h2>
+          <h2 id="portfolio-title" className="mono-label">{t("total")}</h2>
           <p className="mt-1 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{fmtY(total)}</p>
           {series.length >= 2 && (
             <p className={cn("mt-1.5 inline-flex items-center gap-1 text-sm font-medium", up ? "text-gain" : "text-loss")}>
@@ -106,13 +106,13 @@ export function PortfolioHero({ points, total, now }) {
               <AreaChart data={series} margin={{ top: 10, right: 4, bottom: 0, left: 4 }}>
                 <defs>
                   <linearGradient id={`g-${gid}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#8b7cf6" stopOpacity={0.45} />
+                    <stop offset="0%" stopColor="#4f8cff" stopOpacity={0.45} />
                     <stop offset="45%" stopColor="var(--brass)" stopOpacity={0.18} />
                     <stop offset="100%" stopColor="var(--brass)" stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id={`s-${gid}`} x1="0" y1="0" x2="1" y2="0">
                     <stop offset="0%" stopColor="var(--brass)" />
-                    <stop offset="100%" stopColor="#8b7cf6" />
+                    <stop offset="100%" stopColor="#a78bfa" />
                   </linearGradient>
                 </defs>
                 <XAxis
@@ -139,7 +139,7 @@ export function PortfolioHero({ points, total, now }) {
                   strokeWidth={3}
                   fill={`url(#g-${gid})`}
                   className="chart-glow"
-                  activeDot={{ r: 6, stroke: "var(--surface)", strokeWidth: 2.5, fill: "#8b7cf6" }}
+                  activeDot={{ r: 6, stroke: "var(--surface)", strokeWidth: 2.5, fill: "#a78bfa" }}
                   isAnimationActive={false}
                 />
               </AreaChart>

@@ -328,3 +328,140 @@ html[data-splash="seen"] #startup-screen { display: none; }
   word-break: auto-phrase;
   text-wrap: balance;
 }
+
+/* ---------------------------------------------------------------------------
+   Customer dashboard: "command" theme — navy-black, glass cards, blue lines.
+   Applied with `dark dash-cmd` on the app frame, so it is always dark.
+   Meaning colours: blue = balance, green = invested/gain, cyan = deposits,
+   purple = plan, orange = attention.
+--------------------------------------------------------------------------- */
+.dash-cmd {
+  --cmd-blue: #4f8cff;
+  --cmd-green: #34d399;
+  --cmd-cyan: #22d3ee;
+  --cmd-purple: #a78bfa;
+  --cmd-orange: #fb923c;
+
+  --bg: #050914;
+  --surface: #0a1224;
+  --surface-2: #0f1a31;
+  --surface-3: #15223d;
+  --line: rgb(79 140 255 / 0.18);
+  --line-strong: rgb(79 140 255 / 0.32);
+  --ink: #e8eefb;
+  --ink-muted: #9aa8c4;
+  --ink-subtle: #7183a6;
+  --inverse: #050914;
+
+  --primary: #4f8cff;
+  --primary-ink: #050914;
+  --primary-hover: #74a5ff;
+  --brass: #74a5ff;
+  --brass-soft: rgb(79 140 255 / 0.12);
+  --brass-line: rgb(79 140 255 / 0.35);
+  --gain: #34d399;
+  --gain-soft: rgb(52 211 153 / 0.12);
+  --loss: #f87171;
+  --loss-soft: rgb(248 113 113 / 0.12);
+  --warn: #fb923c;
+  --warn-soft: rgb(251 146 60 / 0.12);
+  --info: #22d3ee;
+  --info-soft: rgb(34 211 238 / 0.1);
+  --focus: #74a5ff;
+  --chart-1: #4f8cff;
+  --chart-2: #a78bfa;
+  --chart-3: #34d399;
+  --chart-4: #fb923c;
+  --chart-grid: rgb(79 140 255 / 0.12);
+
+  background-color: var(--bg);
+  /* Faint glowing dots + two soft colour washes. */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgb(116 165 255 / 0.16) 1px, transparent 0),
+    radial-gradient(60% 50% at 90% -10%, rgb(79 140 255 / 0.16), transparent 70%),
+    radial-gradient(50% 45% at -5% 105%, rgb(167 139 250 / 0.12), transparent 70%);
+  background-size: 28px 28px, 100% 100%, 100% 100%;
+  background-attachment: local, fixed, fixed;
+}
+/* Sidebar, header and plain cards become glass over the dotted backdrop. */
+.dash-cmd .cmd-chrome { background-color: rgb(6 11 24 / 0.72); backdrop-filter: blur(12px); }
+.dash-cmd .glass {
+  background: linear-gradient(180deg, rgb(15 26 49 / 0.72), rgb(8 14 30 / 0.72));
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.04), 0 20px 40px -24px rgb(0 0 0 / 0.6);
+}
+.dash-cmd .glass-tint {
+  background:
+    radial-gradient(120% 80% at 100% 0%, color-mix(in oklab, var(--tint) 16%, transparent), transparent 60%),
+    linear-gradient(180deg, rgb(15 26 49 / 0.72), rgb(8 14 30 / 0.72));
+  border-color: color-mix(in oklab, var(--tint) 30%, transparent);
+}
+.dash-cmd .mono-label {
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+}
+/* Scripts without capitals (CJK, Arabic, Devanagari) keep normal spacing. */
+.dash-cmd:is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .mono-label,
+:is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .dash-cmd .mono-label { letter-spacing: 0.02em; font-family: inherit; font-size: 0.75rem; }
+.dash-cmd .text-gradient {
+  background: linear-gradient(90deg, #4f8cff, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes cmd-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: no-preference) {
+  .dash-cmd .pulse-dot { animation: cmd-pulse 2s ease-in-out infinite; }
+}
+:is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .dash-cmd :is([class*="tracking-"], .uppercase.font-mono) {
+  letter-spacing: 0.01em;
+}
+:is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .dash-cmd .uppercase.font-mono:not(td *) { font-family: inherit; }
+
+/* Admin console on the same navy command theme, with an orange accent so
+   staff always know they are in the back office. */
+.dash-cmd.admin-cmd {
+  --primary: #ff9d5c;
+  --primary-ink: #1d0e04;
+  --primary-hover: #ffb27f;
+  --brass: #ff9d5c;
+  --brass-soft: rgb(255 157 92 / 0.12);
+  --brass-line: rgb(255 157 92 / 0.38);
+  --focus: #ff9d5c;
+  --chart-1: #22d3ee;
+  --chart-2: #ff9d5c;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgb(116 165 255 / 0.14) 1px, transparent 0),
+    radial-gradient(60% 50% at 90% -10%, rgb(255 157 92 / 0.13), transparent 70%),
+    radial-gradient(50% 45% at -5% 105%, rgb(79 140 255 / 0.13), transparent 70%);
+}
+.dash-cmd.admin-cmd .text-gradient { background-image: linear-gradient(90deg, #ff9d5c, #4f8cff); }
+
+/* Shared cards and stat tiles become glass inside either dashboard. */
+.dash-cmd .ui-card {
+  background: linear-gradient(180deg, rgb(15 26 49 / 0.72), rgb(8 14 30 / 0.72));
+  border-color: var(--line);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.04), 0 20px 40px -24px rgb(0 0 0 / 0.6);
+}
+.dash-cmd .ui-card.ui-card-tint {
+  background:
+    radial-gradient(120% 80% at 100% 0%, color-mix(in oklab, var(--tint) 16%, transparent), transparent 60%),
+    linear-gradient(180deg, rgb(15 26 49 / 0.72), rgb(8 14 30 / 0.72));
+  border-color: color-mix(in oklab, var(--tint) 30%, transparent);
+}
+.dash-cmd .ui-stat-label {
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+}
+:is(:lang(ar), :lang(zh), :lang(ja), :lang(hi)) .dash-cmd .ui-stat-label { letter-spacing: 0.02em; font-family: inherit; font-size: 0.75rem; }
+.dash-cmd table thead th { color: var(--ink-subtle); }
