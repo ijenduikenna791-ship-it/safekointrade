@@ -100,14 +100,19 @@
   "home": {
     "hero": {
       "title": "Piani cripto a durata fissa con un registro aperto.",
-      "body": "Scegli un piano da 30, 90 o 180 giorni e segui ogni movimento — depositi, posizioni, scadenza — in un registro che puoi verificare. Ogni deposito e prelievo è controllato da persone, non da script.",
-      "primary": "Crea un account",
+      "body": "Scegli un piano da 30, 90 o 180 giorni, finanzialo con BTC, ETH, USDT o USDC e segui ogni deposito, posizione e prelievo in un registro verificabile riga per riga. Persone reali esaminano ogni richiesta prima che qualsiasi saldo si muova.",
+      "primary": "Apri un account gratuito",
       "secondary": "Confronta i piani",
       "note": "Le cripto-attività sono volatili. Puoi perdere in parte o del tutto il denaro che investi.",
-      "headline": "Piani cripto che puoi verificare",
+      "headline": "Investire in cripto, tutto a registro.",
       "learnMore": "Scopri di più",
       "imageAlt": "Un trader che esamina grafici di mercato su più monitor alla scrivania",
-      "liveBadge": "Mercati live"
+      "liveBadge": "Mercati live",
+      "points": {
+        "reviewed": "Ogni deposito verificato da una persona",
+        "terms": "Durata fissata dal primo giorno",
+        "ledger": "Un registro completo e verificabile"
+      }
     },
     "lifecycle": {
       "label": "Come evolve una posizione",

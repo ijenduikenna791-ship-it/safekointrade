@@ -100,14 +100,19 @@
   "home": {
     "hero": {
       "title": "Des plans crypto à durée fixe, avec un registre ouvert.",
-      "body": "Choisissez un plan de 30, 90 ou 180 jours et suivez chaque mouvement — dépôts, positions, échéance — dans un historique que vous pouvez auditer. Chaque dépôt et chaque retrait est vérifié par une personne, pas par un script.",
-      "primary": "Créer un compte",
+      "body": "Choisissez un plan de 30, 90 ou 180 jours, alimentez-le en BTC, ETH, USDT ou USDC, et suivez chaque dépôt, position et retrait dans un registre vérifiable ligne par ligne. De vraies personnes examinent chaque demande avant que le moindre solde ne bouge.",
+      "primary": "Ouvrir un compte gratuit",
       "secondary": "Comparer les plans",
       "note": "Les crypto-actifs sont volatils. Vous pouvez perdre tout ou partie de l'argent investi.",
-      "headline": "Des plans crypto que vous pouvez vérifier",
+      "headline": "Investir en crypto, tout est consigné.",
       "learnMore": "En savoir plus",
       "imageAlt": "Un trader consultant des graphiques de marché sur plusieurs écrans à son bureau",
-      "liveBadge": "Marchés en direct"
+      "liveBadge": "Marchés en direct",
+      "points": {
+        "reviewed": "Chaque dépôt vérifié par une personne",
+        "terms": "Durée fixée dès le premier jour",
+        "ledger": "Un registre complet et vérifiable"
+      }
     },
     "lifecycle": {
       "label": "Le parcours d'une position",

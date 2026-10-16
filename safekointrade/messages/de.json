@@ -100,14 +100,19 @@
   "home": {
     "hero": {
       "title": "Krypto-Pläne mit fester Laufzeit und offenem Kontobuch.",
-      "body": "Wählen Sie einen Plan über 30, 90 oder 180 Tage und verfolgen Sie jede Bewegung — Einzahlungen, Positionen, Fälligkeit — in einem Verlauf, den Sie prüfen können. Jede Ein- und Auszahlung prüft ein Mensch, kein Skript.",
-      "primary": "Konto eröffnen",
+      "body": "Wählen Sie einen Plan über 30, 90 oder 180 Tage, finanzieren Sie ihn mit BTC, ETH, USDT oder USDC und verfolgen Sie jede Einzahlung, Position und Auszahlung in einem Journal, das Sie Zeile für Zeile prüfen können. Echte Menschen prüfen jeden Antrag, bevor sich ein Guthaben bewegt.",
+      "primary": "Kostenloses Konto eröffnen",
       "secondary": "Pläne vergleichen",
       "note": "Krypto-Assets sind volatil. Sie können einen Teil oder Ihr gesamtes investiertes Geld verlieren.",
-      "headline": "Krypto-Pläne, die Sie prüfen können",
+      "headline": "Krypto anlegen – alles nachvollziehbar.",
       "learnMore": "Mehr erfahren",
       "imageAlt": "Ein Händler prüft Marktcharts auf mehreren Monitoren am Schreibtisch",
-      "liveBadge": "Live-Märkte"
+      "liveBadge": "Live-Märkte",
+      "points": {
+        "reviewed": "Jede Einzahlung von Menschen geprüft",
+        "terms": "Laufzeit ab Tag eins festgelegt",
+        "ledger": "Ein vollständiges, prüfbares Journal"
+      }
     },
     "lifecycle": {
       "label": "So verläuft eine Position",

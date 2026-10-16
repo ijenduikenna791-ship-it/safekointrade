@@ -27,10 +27,8 @@ export async function generateMetadata({ params }) {
 }
 
 export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f6f5" },
-    { media: "(prefers-color-scheme: dark)", color: "#0c1a22" },
-  ],
+  // Navy browser bar to match the startup screen and the default dark theme.
+  themeColor: "#050914",
 };
 
 

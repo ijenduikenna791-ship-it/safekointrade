@@ -100,14 +100,19 @@
   "home": {
     "hero": {
       "title": "Planes cripto con plazo fijo y un registro abierto.",
-      "body": "Elige un plan de 30, 90 o 180 días y sigue cada movimiento — depósitos, posiciones, vencimiento — en un historial que puedes auditar. Cada depósito y retiro lo revisa una persona, no un script.",
-      "primary": "Crear una cuenta",
+      "body": "Elige un plan de 30, 90 o 180 días, fínancialo con BTC, ETH, USDT o USDC y sigue cada depósito, posición y retiro en un registro que puedes revisar línea por línea. Personas reales revisan cada solicitud antes de que se mueva un solo saldo.",
+      "primary": "Abrir una cuenta gratis",
       "secondary": "Comparar planes",
       "note": "Los criptoactivos son volátiles. Puedes perder parte o la totalidad del dinero que inviertes.",
-      "headline": "Planes cripto que puedes auditar",
+      "headline": "Invertir en cripto, todo queda registrado.",
       "learnMore": "Más información",
       "imageAlt": "Un trader revisando gráficos de mercado en varios monitores en su escritorio",
-      "liveBadge": "Mercados en vivo"
+      "liveBadge": "Mercados en vivo",
+      "points": {
+        "reviewed": "Cada depósito revisado por una persona",
+        "terms": "Plazo fijado desde el primer día",
+        "ledger": "Un registro completo y verificable"
+      }
     },
     "lifecycle": {
       "label": "Cómo avanza una posición",

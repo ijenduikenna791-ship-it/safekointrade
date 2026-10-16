@@ -100,14 +100,19 @@
   "home": {
     "hero": {
       "title": "Crypto plans with a fixed term and an open ledger.",
-      "body": "Choose a 30, 90 or 180-day plan and follow every movement — deposits, positions, maturity — on a record you can audit. People, not scripts, review every deposit and withdrawal.",
-      "primary": "Create an account",
+      "body": "Pick a 30, 90 or 180-day plan, fund it with BTC, ETH, USDT or USDC, and follow every deposit, position and withdrawal in a ledger you can check line by line. Real people review each request before a single balance moves.",
+      "primary": "Open a free account",
       "secondary": "Compare plans",
       "note": "Crypto assets are volatile. You can lose some or all of the money you invest.",
-      "headline": "Crypto plans you can audit",
+      "headline": "Crypto investing, fully on the record.",
       "learnMore": "Learn more",
       "imageAlt": "A trader reviewing market charts on several monitors at a desk",
-      "liveBadge": "Live markets"
+      "liveBadge": "Live markets",
+      "points": {
+        "reviewed": "Every deposit reviewed by a person",
+        "terms": "Terms locked from day one",
+        "ledger": "A full ledger you can check"
+      }
     },
     "lifecycle": {
       "label": "How a position moves",

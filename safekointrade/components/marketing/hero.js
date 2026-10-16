@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, ShieldCheck, TrendingDown, TrendingUp } from "lucide-react";
+import { ArrowUpRight, Check, ShieldCheck, TrendingDown, TrendingUp } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
 import { buttonClasses } from "@/components/ui/button";
 import { Starfield } from "@/components/animations/starfield";
@@ -53,7 +53,7 @@ function CoinCard({ coin, unavailable, side, delay, className = "" }) {
 // Decorative coins around the headline. Sizes/positions are per breakpoint so
 // they frame the copy without covering it. `float-*` classes add a gentle bob.
 const FLOATERS = [
-  { symbol: "BTC", cls: "start-[2%] top-[6%] h-14 w-14 lg:h-20 lg:w-20", rot: -14, f: "float-a", show: "hidden sm:block" },
+  { symbol: "BTC", cls: "end-[2%] top-[3%] h-12 w-12 lg:h-16 lg:w-16", rot: -14, f: "float-a", show: "hidden sm:block" },
   { symbol: "ETH", cls: "start-[40%] top-[7%] h-12 w-12 lg:h-14 lg:w-14 opacity-75", rot: 12, f: "float-b", show: "hidden lg:block" },
   { symbol: "SOL", cls: "start-[44%] bottom-[5%] h-10 w-10 opacity-50 blur-[1.5px]", rot: 10, f: "float-c", show: "hidden lg:block" },
   { symbol: "USDT", cls: "end-[40%] top-[5%] h-9 w-9 opacity-40 blur-[2px]", rot: -8, f: "float-a", show: "hidden lg:block" },
@@ -116,23 +116,33 @@ export function Hero({ coins = [] }) {
         <div className="text-center lg:text-start">
           <motion.h1
             {...enter(0)}
-            className="mx-auto max-w-[14ch] font-display text-[2.9rem] font-bold leading-[0.98] tracking-[-0.045em] sm:text-7xl lg:mx-0 lg:text-[5.4rem]"
+            className="mx-auto max-w-[17ch] text-balance font-display text-[2.15rem] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:mx-0 lg:text-[3.4rem] xl:text-[3.75rem]"
           >
             {t("headline")}
           </motion.h1>
-          <motion.p {...enter(1)} className="mx-auto mt-6 max-w-[50ch] text-base text-white/80 sm:text-xl lg:mx-0">
+          <motion.p {...enter(1)} className="mx-auto mt-5 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/75 sm:text-[1.05rem] lg:mx-0">
             {t("body")}
           </motion.p>
-          <motion.div {...enter(2)} className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <Link href="/register" className={buttonClasses({ variant: "orange", size: "lg", className: "h-14 px-8 text-lg" })}>
+          <motion.div {...enter(2)} className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <Link href="/register" className={buttonClasses({ variant: "orange", size: "lg", className: "h-12 px-6" })}>
               {t("primary")}
-              <ArrowUpRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
+              <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
             </Link>
-            <Link href="/#plans" className={buttonClasses({ variant: "mint", size: "lg", className: "h-14 px-8 text-lg" })}>
+            <Link href="/#plans" className={buttonClasses({ variant: "mint", size: "lg", className: "h-12 px-6" })}>
               {t("secondary")}
             </Link>
           </motion.div>
-          <motion.p {...enter(3)} className="mx-auto mt-8 flex max-w-[50ch] items-start justify-center gap-2 text-sm text-white/55 lg:mx-0 lg:justify-start">
+          <motion.ul {...enter(3)} className="mx-auto mt-7 flex w-fit flex-col gap-2 text-start text-[13px] text-white/80 lg:mx-0">
+            {["reviewed", "terms", "ledger"].map((k) => (
+              <li key={k} className="flex items-center gap-2">
+                <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-mint/20 text-brand-mint" aria-hidden="true">
+                  <Check className="h-3 w-3" strokeWidth={3} />
+                </span>
+                {t(`points.${k}`)}
+              </li>
+            ))}
+          </motion.ul>
+          <motion.p {...enter(4)} className="mx-auto mt-6 flex max-w-[50ch] items-start justify-center gap-2 text-xs text-white/50 lg:mx-0 lg:justify-start">
             <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             {t("note")}
           </motion.p>
