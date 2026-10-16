@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowDownToLine, ArrowUpFromLine, CheckCircle2, KeyRound, Layers, LifeBuoy, UserCheck, Users } from "lucide-react";
+import { ArrowDownToLine, ArrowUpFromLine, CalendarClock, CheckCircle2, KeyRound, Layers, LifeBuoy, UserCheck, Users } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
 import { requireStaff } from "@/lib/authorization/guards";
 import { StatTile } from "@/components/dashboard/page-header";
@@ -9,6 +9,9 @@ import { Card, CardBody, CardHeader } from "@/components/ui/card";
 import { Alert } from "@/components/ui/feedback";
 import { formatDate, formatMoney, toNumber } from "@/lib/utils/format";
 import { errorCode } from "@/lib/database/errors";
+
+const OPEN_WITHDRAWAL = ["pending", "processing", "approved"];
+const OVERDUE_HOURS = 24;
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -21,20 +24,50 @@ export default async function AdminOverview({ params, searchParams }) {
   const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations("admin.overview");
+  const ts = await getTranslations("admin.overview.summary");
   const te = await getTranslations("errors");
   const tc = await getTranslations("common");
   const staff = await requireStaff("admin.view");
   const { supabase } = staff;
   const m = (v) => formatMoney(v, { locale });
+  const finance = staff.can("finance.view");
 
-  const [{ data: o, error }, flows, activity, oldestDeposit, oldestWithdrawal] = await Promise.all([
+  const todayStart = new Date();
+  todayStart.setUTCHours(0, 0, 0, 0);
+  const since = todayStart.toISOString();
+  const overdueBefore = new Date(Date.now() - OVERDUE_HOURS * 3600 * 1000).toISOString();
+  const none = Promise.resolve({ data: null, count: 0 });
+
+  const [
+    { data: o, error },
+    flows,
+    activity,
+    oldestDeposit,
+    oldestWithdrawal,
+    depositsToday,
+    withdrawalsToday,
+    overdueDeposits,
+    overdueWithdrawals,
+    depositAssets,
+    activeWallets,
+  ] = await Promise.all([
     supabase.rpc("admin_overview"),
-    staff.can("finance.view") ? supabase.rpc("admin_daily_flows", { p_days: 30 }) : Promise.resolve({ data: null }),
+    finance ? supabase.rpc("admin_daily_flows", { p_days: 30 }) : Promise.resolve({ data: null }),
     staff.can("audit.view")
       ? supabase.from("audit_logs").select("id, action, entity_type, entity_id, created_at").order("created_at", { ascending: false }).limit(8)
       : Promise.resolve({ data: null }),
     supabase.from("deposit_requests").select("id, reference, amount, created_at").eq("status", "pending").order("created_at").limit(1).maybeSingle(),
-    supabase.from("withdrawal_requests").select("id, reference, amount, created_at").in("status", ["pending", "processing", "approved"]).order("created_at").limit(1).maybeSingle(),
+    supabase.from("withdrawal_requests").select("id, reference, amount, created_at").in("status", OPEN_WITHDRAWAL).order("created_at").limit(1).maybeSingle(),
+    finance ? supabase.from("deposit_requests").select("amount").gte("created_at", since).limit(1000) : none,
+    finance ? supabase.from("withdrawal_requests").select("amount").gte("created_at", since).limit(1000) : none,
+    finance
+      ? supabase.from("deposit_requests").select("id", { count: "exact", head: true }).eq("status", "pending").lt("created_at", overdueBefore)
+      : none,
+    finance
+      ? supabase.from("withdrawal_requests").select("id", { count: "exact", head: true }).in("status", OPEN_WITHDRAWAL).lt("created_at", overdueBefore)
+      : none,
+    finance ? supabase.from("supported_assets").select("symbol, name").eq("is_active", true).eq("accepts_deposits", true) : none,
+    finance ? supabase.from("deposit_wallets").select("asset_symbol").eq("is_active", true) : none,
   ]);
 
   const tu = await getTranslations("admin.users.roleNames");
@@ -43,6 +76,20 @@ export default async function AdminOverview({ params, searchParams }) {
   const staffName = (staff.profile?.full_name || "").trim().split(/\s+/)[0] || "";
   if (error) return <Alert tone="error">{te(errorCode(error) === "mfa_required" ? "mfa_required" : "forbidden")}</Alert>;
   const flowRows = (flows.data || []).map((r) => ({ day: r.day, deposits: toNumber(r.deposits), withdrawals: toNumber(r.withdrawals) }));
+
+  const sum = (rows) => (rows || []).reduce((s, r) => s + toNumber(r.amount), 0);
+  const depToday = depositsToday.data || [];
+  const wdToday = withdrawalsToday.data || [];
+  const overdueDep = overdueDeposits.count || 0;
+  const overdueWd = overdueWithdrawals.count || 0;
+  const walletSymbols = new Set((activeWallets.data || []).map((w) => w.asset_symbol));
+  const missingAddress = (depositAssets.data || []).filter((a) => !walletSymbols.has(a.symbol));
+
+  const waited = (createdAt) => {
+    const hours = Math.floor((Date.now() - new Date(createdAt).getTime()) / 3600000);
+    const label = hours < 1 ? ts("waitingNow") : hours < 48 ? ts("waitingHours", { n: hours }) : ts("waitingDays", { n: Math.floor(hours / 24) });
+    return { label, late: hours >= OVERDUE_HOURS };
+  };
 
   return (
     <>
@@ -84,7 +131,27 @@ export default async function AdminOverview({ params, searchParams }) {
       </section>
       {sp.denied === "1" && <Alert tone="warn" className="mb-6">{te("forbidden")}</Alert>}
 
-      {staff.can("finance.view") && (
+      {finance && overdueDep + overdueWd > 0 && (
+        <Alert tone="warn" className="mb-5">
+          <span className="font-semibold">{ts("overdueTitle", { hours: OVERDUE_HOURS })}</span>{" "}
+          {overdueDep > 0 && (
+            <Link href="/admin/deposits?status=pending&sort=oldest" className="underline">{ts("overdueDeposits", { count: overdueDep })}</Link>
+          )}
+          {overdueDep > 0 && overdueWd > 0 && " · "}
+          {overdueWd > 0 && (
+            <Link href="/admin/withdrawals" className="underline">{ts("overdueWithdrawals", { count: overdueWd })}</Link>
+          )}
+        </Alert>
+      )}
+
+      {finance && missingAddress.length > 0 && (
+        <Alert tone="warn" className="mb-5">
+          {ts("missingAddress", { coins: missingAddress.map((a) => `${a.name} (${a.symbol})`).join(", ") })}{" "}
+          <Link href="/admin/deposit-addresses" className="font-semibold underline">{ts("fixAddresses")}</Link>
+        </Alert>
+      )}
+
+      {finance && (
         <section
           aria-label={t("queueTitle")}
           className="ui-card ui-card-tint mb-5 flex flex-wrap items-center gap-3 rounded-lg border p-4 sm:p-5"
@@ -112,6 +179,13 @@ export default async function AdminOverview({ params, searchParams }) {
               {t("console.allClear")}
             </p>
           )}
+        </section>
+      )}
+
+      {finance && (
+        <section className="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+          <StatTile tint="cyan" label={ts("depositsToday")} value={depToday.length} hint={m(sum(depToday))} icon={CalendarClock} />
+          <StatTile tint="orange" label={ts("withdrawalsToday")} value={wdToday.length} hint={m(sum(wdToday))} icon={CalendarClock} />
         </section>
       )}
 
@@ -152,19 +226,25 @@ export default async function AdminOverview({ params, searchParams }) {
               {[
                 [t("queueDeposits"), oldestDeposit.data, "/admin/deposits"],
                 [t("queueWithdrawals"), oldestWithdrawal.data, "/admin/withdrawals"],
-              ].map(([label, row, href]) => (
-                <li key={label} className="px-5 py-3">
-                  <p className="text-ink-subtle">{label}</p>
-                  {row ? (
-                    <Link href={href} className="mt-0.5 flex justify-between gap-3 font-medium hover:text-brass">
-                      <span className="tabular">{row.reference}</span>
-                      <span className="tabular">{m(row.amount)} · {formatDate(row.created_at, { locale })}</span>
-                    </Link>
-                  ) : (
-                    <p className="mt-0.5 text-ink-muted">{t("queueEmpty")}</p>
-                  )}
-                </li>
-              ))}
+              ].map(([label, row, href]) => {
+                const w = row ? waited(row.created_at) : null;
+                return (
+                  <li key={label} className="px-5 py-3">
+                    <p className="text-ink-subtle">{label}</p>
+                    {row ? (
+                      <Link href={href} className="mt-0.5 block font-medium hover:text-brass">
+                        <span className="flex justify-between gap-3">
+                          <span className="tabular">{row.reference}</span>
+                          <span className="tabular">{m(row.amount)} · {formatDate(row.created_at, { locale })}</span>
+                        </span>
+                        <span className={`mt-0.5 block text-xs ${w.late ? "text-amber-400" : "text-ink-subtle"}`}>{w.label}</span>
+                      </Link>
+                    ) : (
+                      <p className="mt-0.5 text-ink-muted">{t("queueEmpty")}</p>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </Card>
         </div>

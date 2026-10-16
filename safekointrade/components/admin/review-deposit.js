@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { FileText } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import { useRouter } from "@/lib/i18n/navigation";
 import { reviewDepositAction, staffReceiptUrlAction } from "@/lib/actions/admin";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,23 @@ import { Dialog } from "@/components/ui/dialog";
 import { Field, Input, Textarea } from "@/components/ui/field";
 import { Alert } from "@/components/ui/feedback";
 import { formatDate, formatMoney } from "@/lib/utils/format";
+import { explorerAddressUrl, explorerTxUrl } from "@/lib/utils/explorer";
 import { useActionToast } from "./admin-controls";
+
+function ExplorerLink({ href, label }) {
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-sky-400 hover:underline"
+    >
+      {label}
+      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+    </a>
+  );
+}
 
 export function ReviewDeposit({ deposit: d, canReview, selfReview }) {
   const t = useTranslations("admin.deposits");
@@ -26,6 +42,12 @@ export function ReviewDeposit({ deposit: d, canReview, selfReview }) {
   const [amount, setAmount] = useState(d.amount);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
+
+  const isCrypto = d.method === "crypto_transfer";
+  const toAddress = d.deposit_wallet?.address || null;
+  const txUrl = isCrypto ? explorerTxUrl(d.asset_symbol, d.network, d.tx_reference) : null;
+  const toUrl = isCrypto ? explorerAddressUrl(d.asset_symbol, d.network, toAddress) : null;
+  const fromUrl = isCrypto ? explorerAddressUrl(d.asset_symbol, d.network, d.from_address) : null;
 
   const submit = async () => {
     setBusy(true);
@@ -42,6 +64,54 @@ export function ReviewDeposit({ deposit: d, canReview, selfReview }) {
     if (check(res)) window.open(res.data.url, "_blank", "noopener,noreferrer");
   };
 
+  const mono = (value) => <span className="break-all font-mono text-xs">{value}</span>;
+
+  const rows = [
+    [td("amount"), formatMoney(d.amount, { locale })],
+    [td("asset"), `${d.asset_symbol} · ${td(`methods.${d.method}`)}`],
+    ...(isCrypto
+      ? [
+          [t("network"), d.network || "—"],
+          [
+            t("toAddress"),
+            toAddress ? (
+              <div>
+                {mono(toAddress)}
+                <div><ExplorerLink href={toUrl} label={t("viewOnExplorer")} /></div>
+              </div>
+            ) : "—",
+          ],
+          [
+            t("fromAddress"),
+            d.from_address ? (
+              <div>
+                {mono(d.from_address)}
+                <div><ExplorerLink href={fromUrl} label={t("viewOnExplorer")} /></div>
+              </div>
+            ) : t("notProvided"),
+          ],
+        ]
+      : []),
+    [
+      t("txReference"),
+      d.tx_reference ? (
+        <div>
+          {mono(d.tx_reference)}
+          <div>
+            {txUrl ? (
+              <ExplorerLink href={txUrl} label={t("viewOnExplorer")} />
+            ) : (
+              isCrypto && <span className="mt-1 inline-block text-xs text-amber-400">{t("txNotHash")}</span>
+            )}
+          </div>
+        </div>
+      ) : "—",
+    ],
+    [t("customerNote"), d.note || "—"],
+    [td("requested"), formatDate(d.created_at, { locale, withTime: true })],
+    [ta("status"), tc(`status.${d.status}`)],
+  ];
+
   return (
     <>
       <Button size="sm" variant={d.status === "pending" && canReview ? "primary" : "ghost"} onClick={() => { setMode(null); setOpen(true); }}>
@@ -57,17 +127,10 @@ export function ReviewDeposit({ deposit: d, canReview, selfReview }) {
         {!mode && (
           <>
             <dl className="divide-y divide-line rounded-md border border-line text-sm">
-              {[
-                [td("amount"), formatMoney(d.amount, { locale })],
-                [td("asset"), `${d.asset_symbol} · ${td(`methods.${d.method}`)}`],
-                [t("txReference"), d.tx_reference || "—"],
-                [t("customerNote"), d.note || "—"],
-                [td("requested"), formatDate(d.created_at, { locale, withTime: true })],
-                [ta("status"), tc(`status.${d.status}`)],
-              ].map(([k, v]) => (
+              {rows.map(([k, v]) => (
                 <div key={k} className="grid grid-cols-[9rem_1fr] gap-3 px-4 py-2.5">
                   <dt className="text-ink-subtle">{k}</dt>
-                  <dd className="break-words">{v}</dd>
+                  <dd className="min-w-0 break-words">{v}</dd>
                 </div>
               ))}
             </dl>
@@ -81,10 +144,13 @@ export function ReviewDeposit({ deposit: d, canReview, selfReview }) {
               selfReview ? (
                 <Alert tone="warn" className="mt-4">{t("selfReview")}</Alert>
               ) : (
-                <div className="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
-                  <Button variant="danger-outline" onClick={() => setMode("reject")}>{t("reject")}</Button>
-                  <Button variant="success" onClick={() => setMode("approve")}>{t("approve")}</Button>
-                </div>
+                <>
+                  {isCrypto && <Alert tone="info" className="mt-4">{t("checkTip")}</Alert>}
+                  <div className="mt-6 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+                    <Button variant="danger-outline" onClick={() => setMode("reject")}>{t("reject")}</Button>
+                    <Button variant="success" onClick={() => setMode("approve")}>{t("approve")}</Button>
+                  </div>
+                </>
               )
             )}
           </>

@@ -1231,6 +1231,18 @@
         "reviewDeposits": "入金を確認（{count}）",
         "reviewWithdrawals": "出金を確認（{count}）",
         "allClear": "確認待ちの申請はありません。"
+      },
+      "summary": {
+        "overdueTitle": "Waiting more than {hours} hours:",
+        "overdueDeposits": "{count, plural, one {# deposit} other {# deposits}}",
+        "overdueWithdrawals": "{count, plural, one {# withdrawal} other {# withdrawals}}",
+        "missingAddress": "Deposits are on but there's no active deposit address for: {coins}. Customers will see \"No deposit address\".",
+        "fixAddresses": "Fix in Deposit addresses",
+        "depositsToday": "Deposit requests today",
+        "withdrawalsToday": "Withdrawal requests today",
+        "waitingNow": "Just now",
+        "waitingHours": "{n}h waiting",
+        "waitingDays": "{n}d waiting"
       }
     },
     "deposits": {
@@ -1254,7 +1266,11 @@
       "wallets": "Wallets",
       "toAddress": "To",
       "fromAddress": "From",
-      "notProvided": "Not provided"
+      "notProvided": "Not provided",
+      "network": "Network",
+      "viewOnExplorer": "View on explorer",
+      "txNotHash": "Not a transaction hash. Check it manually.",
+      "checkTip": "Before approving, open the transaction and confirm it was sent to our address, on the right network, for the right amount, with enough confirmations."
     },
     "withdrawals": {
       "title": "出金の確認",
