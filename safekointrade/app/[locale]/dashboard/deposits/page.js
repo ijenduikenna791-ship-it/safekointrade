@@ -5,6 +5,7 @@ import { getPublicSettings } from "@/lib/database/settings";
 import { brand } from "@/lib/config/brand";
 import { PageHeader } from "@/components/dashboard/page-header";
 import { DepositForm } from "@/components/dashboard/deposit-form";
+import { DepositProgress } from "@/components/dashboard/deposit-progress";
 import { ReceiptControls } from "@/components/dashboard/receipt-controls";
 import { Card, CardBody, CardHeader } from "@/components/ui/card";
 import { StatusBadge } from "@/components/ui/badge";
@@ -30,14 +31,45 @@ export default async function DepositsPage({ params, searchParams }) {
   const { supabase } = await getViewer();
   const lc = await getLocale();
 
-  const [{ data: assets }, settings, { data: rows, count }] = await Promise.all([
-    supabase.from("supported_assets").select("symbol, name").eq("is_active", true).eq("accepts_deposits", true).order("sort_order"),
+  const [
+    { data: assets },
+    settings,
+    { data: rows, count },
+    { data: depositWallets },
+    { data: savedWallets },
+    { data: latestPending },
+  ] = await Promise.all([
+    supabase
+      .from("supported_assets")
+      .select("symbol, name")
+      .eq("is_active", true)
+      .eq("accepts_deposits", true)
+      .order("sort_order"),
     getPublicSettings(supabase),
     supabase
       .from("deposit_requests")
-      .select("id, reference, amount, credited_amount, asset_symbol, method, status, receipt_path, review_note, created_at", { count: "exact" })
+      .select(
+        "id, reference, amount, credited_amount, asset_symbol, network, method, status, receipt_path, review_note, created_at",
+        { count: "exact" }
+      )
       .order("created_at", { ascending: false })
       .range(from, to),
+    supabase
+      .from("deposit_wallets")
+      .select("id, asset_symbol, network, address, memo")
+      .eq("is_active", true)
+      .order("sort_order"),
+    supabase
+      .from("user_wallets")
+      .select("id, label, asset_symbol, network, address")
+      .order("created_at", { ascending: false }),
+    supabase
+      .from("deposit_requests")
+      .select("id, reference, amount, asset_symbol, network, tx_reference, receipt_path, status, created_at")
+      .eq("status", "pending")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
   ]);
 
   const columns = [
@@ -52,7 +84,16 @@ export default async function DepositsPage({ params, searchParams }) {
         </div>
       ),
     },
-    { key: "asset", header: tt("asset"), cell: (r) => `${r.asset_symbol} · ${t(`methods.${r.method}`)}` },
+    {
+      key: "asset",
+      header: tt("asset"),
+      cell: (r) => (
+        <div>
+          <p>{r.asset_symbol} · {t(`methods.${r.method}`)}</p>
+          {r.network && <p className="text-xs text-ink-subtle">{r.network}</p>}
+        </div>
+      ),
+    },
     {
       key: "amount",
       header: tt("amount"),
@@ -88,16 +129,25 @@ export default async function DepositsPage({ params, searchParams }) {
     <>
       <PageHeader title={t("title")} description={t("description")} />
       <div className="grid gap-6 xl:grid-cols-[minmax(0,26rem)_1fr]">
-        <Card className="self-start">
-          <CardHeader title={t("formTitle")} />
-          <CardBody>
-            <DepositForm
-              assets={assets || []}
-              limits={{ min: settings.deposit_min, max: settings.deposit_max }}
-              demoMode={brand.demoMode}
-            />
-          </CardBody>
-        </Card>
+        <div className="space-y-6 self-start">
+          <Card>
+            <CardHeader title={t("formTitle")} />
+            <CardBody>
+              <DepositForm
+                assets={assets || []}
+                depositWallets={depositWallets || []}
+                savedWallets={savedWallets || []}
+                limits={{ min: settings.deposit_min, max: settings.deposit_max }}
+                demoMode={brand.demoMode}
+              />
+            </CardBody>
+          </Card>
+          <Card>
+            <CardBody>
+              <DepositProgress deposit={latestPending || null} />
+            </CardBody>
+          </Card>
+        </div>
         <Card className="min-w-0 self-start">
           <CardHeader title={t("historyTitle")} />
           <DataTable

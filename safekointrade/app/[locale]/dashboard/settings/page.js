@@ -6,8 +6,9 @@ import { Card, CardBody } from "@/components/ui/card";
 import {
   NotificationSettings, PreferenceSettings, ProfileSettings, SecuritySettings,
 } from "@/components/dashboard/settings-forms";
+import { SavedWallets } from "@/components/dashboard/saved-wallets";
 
-const TABS = ["profile", "security", "notifications", "preferences"];
+const TABS = ["profile", "security", "wallets", "notifications", "preferences"];
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -26,6 +27,13 @@ export default async function SettingsPage({ params, searchParams }) {
     tab === "notifications"
       ? (await supabase.from("notification_preferences").select("*").eq("user_id", user.id).maybeSingle()).data
       : null;
+  const wallets =
+    tab === "wallets"
+      ? (await supabase
+          .from("user_wallets")
+          .select("id, label, asset_symbol, network, address, created_at")
+          .order("created_at", { ascending: false })).data || []
+      : [];
 
   return (
     <>
@@ -40,6 +48,7 @@ export default async function SettingsPage({ params, searchParams }) {
         <CardBody className="py-8 sm:px-8">
           {tab === "profile" && <ProfileSettings profile={profile} />}
           {tab === "security" && <SecuritySettings />}
+          {tab === "wallets" && <SavedWallets wallets={wallets} />}
           {tab === "notifications" && <NotificationSettings prefs={prefs} />}
           {tab === "preferences" && <PreferenceSettings profile={profile} />}
         </CardBody>

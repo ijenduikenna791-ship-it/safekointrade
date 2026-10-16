@@ -597,7 +597,47 @@
       "instructionsDemo": "Zahlungsdetails erscheinen hier, sobald ein lizenzierter Zahlungsdienstleister angebunden ist. Im Demo-Modus ist keine Überweisung nötig – ein Prüfer genehmigt Aufträge, um bestätigte Mittel zu simulieren.",
       "requested": "Angefordert",
       "receiptMissing": "Kein Beleg",
-      "instructionsLive": "Folgen Sie nach dem Absenden den Zahlungsdetails unseres Zahlungsdienstleisters und geben Sie Ihre Referenz-ID an."
+      "instructionsLive": "Folgen Sie nach dem Absenden den Zahlungsdetails unseres Zahlungsdienstleisters und geben Sie Ihre Referenz-ID an.",
+      "network": "Network",
+      "noNetworks": "No networks available",
+      "depositAddress": "Deposit address",
+      "addressHint": "Only send {asset} on the {network} network to this address. Sending another coin or network may result in loss of funds.",
+      "memo": "Memo / Tag",
+      "copy": "Copy address",
+      "copied": "Copied",
+      "addressCopied": "Address copied",
+      "copyFailed": "Couldn't copy. Please copy it manually.",
+      "noAddress": "No deposit address is set up for this coin yet. Please contact support.",
+      "fromWallet": "Sending from",
+      "fromWalletNone": "Skip / not sure",
+      "fromWalletNew": "+ Enter a new wallet address",
+      "fromAddress": "Your wallet address",
+      "fromAddressHint": "The address you are sending the funds from.",
+      "saveWallet": "Save this wallet for next time",
+      "walletLabel": "Wallet name",
+      "walletLabelPlaceholder": "e.g. My Trust Wallet",
+      "progress": {
+        "howTitle": "How deposits work",
+        "howSend": "Send your crypto",
+        "howSendDetail": "Copy the address above and send from your wallet. Only use the network shown.",
+        "howSubmit": "Submit this form",
+        "howSubmitDetail": "Enter the amount you sent. Adding the transaction hash helps us verify it faster.",
+        "howVerify": "We verify it on the blockchain",
+        "howVerifyDetail": "Once the network confirms your transaction, our team checks it.",
+        "howCredit": "Balance credited",
+        "howCreditDetail": "You'll get an email and the funds appear in your available balance.",
+        "trackingTitle": "Tracking {reference}",
+        "submitted": "Request submitted",
+        "txHash": "Transaction hash",
+        "txHashMissing": "Not added. Including it next time helps us verify faster.",
+        "receipt": "Receipt",
+        "receiptDone": "Uploaded",
+        "receiptMissing": "Optional. You can upload one from the history list.",
+        "review": "Team review",
+        "reviewDetail": "We're checking your transaction on the blockchain.",
+        "credited": "Balance credited",
+        "creditedDetail": "You'll get an email as soon as it's confirmed."
+      }
     },
     "withdrawals": {
       "title": "Auszahlungen",
@@ -777,7 +817,8 @@
         "profile": "Profil",
         "security": "Sicherheit",
         "notifications": "Benachrichtigungen",
-        "preferences": "Präferenzen"
+        "preferences": "Präferenzen",
+        "wallets": "Wallets"
       },
       "profile": {
         "title": "Profil",
@@ -830,6 +871,21 @@
         "language": "Sprache",
         "theme": "Design",
         "saved": "Präferenzen gespeichert"
+      },
+      "wallets": {
+        "title": "Saved wallets",
+        "hint": "Wallets you saved while making a deposit. Deleting one won't affect your past deposits.",
+        "empty": "You have no saved wallets yet. Tick \"Save this wallet\" when making a deposit to add one.",
+        "rename": "Rename",
+        "delete": "Delete",
+        "save": "Save",
+        "cancel": "Cancel",
+        "labelPlaceholder": "Wallet name",
+        "labelRequired": "Please enter a name",
+        "renamed": "Wallet renamed",
+        "deleted": "Wallet deleted",
+        "failed": "Something went wrong. Please try again.",
+        "confirmDelete": "Delete this wallet? Your past deposits won't be affected."
       }
     },
     "cmd": {
@@ -1048,7 +1104,8 @@
     "rangeInvalid": "Das Maximum muss größer als das Minimum sein.",
     "targetBasisRequired": "Ein Renditeziel braucht beide Werte und eine veröffentlichte Grundlage.",
     "reasonRequired": "Geben Sie einen Grund an (mindestens 4 Zeichen).",
-    "codeInvalid": "Geben Sie den 6-stelligen Code ein."
+    "codeInvalid": "Geben Sie den 6-stelligen Code ein.",
+    "networkTaken": "This coin already has an active address on this network. Turn the old one off first."
   },
   "errors": {
     "generic": "Bei uns ist etwas schiefgelaufen. Versuchen Sie es gleich noch einmal.",
@@ -1116,7 +1173,8 @@
         "money": "Geld",
         "people": "Personen",
         "system": "System"
-      }
+      },
+      "depositAddresses": "Deposit addresses"
     },
     "common": {
       "search": "Suchen",
@@ -1192,7 +1250,11 @@
       "selfReview": "Ihr eigener Auftrag – ein anderer Prüfer muss ihn bearbeiten.",
       "receipt": "Beleg",
       "txReference": "Überweisungsreferenz",
-      "customerNote": "Hinweis des Kunden"
+      "customerNote": "Hinweis des Kunden",
+      "wallets": "Wallets",
+      "toAddress": "To",
+      "fromAddress": "From",
+      "notProvided": "Not provided"
     },
     "withdrawals": {
       "title": "Auszahlungsprüfung",
@@ -1336,6 +1398,45 @@
       "assetDeposits": "Einzahlungen",
       "assetWithdrawals": "Auszahlungen",
       "saved": "Einstellung gespeichert"
+    },
+    "depositAddresses": {
+      "title": "Deposit addresses",
+      "description": "Wallet addresses customers send crypto to. Every change is recorded in the audit log.",
+      "warning": "Double-check every address before saving. Crypto sent to a wrong address cannot be recovered.",
+      "coinsTitle": "Coins accepting deposits",
+      "coinsHint": "Only coins switched on here appear on the customer deposit page.",
+      "depositsOn": "Deposits on",
+      "depositsOff": "Deposits off",
+      "noAddress": "No active address",
+      "coinUpdated": "Coin updated",
+      "addressesTitle": "Addresses",
+      "add": "Add address",
+      "newTitle": "New deposit address",
+      "editTitle": "Edit deposit address",
+      "asset": "Coin",
+      "network": "Network",
+      "networkHint": "Exactly as customers will see it, e.g. Bitcoin, Tron (TRC-20), Ethereum (ERC-20)",
+      "address": "Address",
+      "memo": "Memo / Tag",
+      "memoHint": "Only for coins that need one, like XRP",
+      "sortOrder": "Order",
+      "isActiveLabel": "Show this address to customers",
+      "status": "Status",
+      "actions": "Actions",
+      "active": "Active",
+      "inactive": "Off",
+      "save": "Save address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "enable": "Turn on",
+      "disable": "Turn off",
+      "saved": "Address saved",
+      "enabled": "Address turned on",
+      "disabled": "Address turned off",
+      "failed": "Something went wrong. Please try again.",
+      "networkTakenToast": "This coin already has an active address on that network. Turn the other one off first.",
+      "confirmChange": "You are changing a deposit address. New customer deposits will go to the new address. Continue?",
+      "empty": "No deposit addresses yet."
     }
   },
   "wallet": {

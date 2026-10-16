@@ -15,7 +15,7 @@ import { PlatformCards } from "@/components/marketing/platform-cards";
 import { getPublicPlans } from "@/lib/database/public-data";
 import { getPrices } from "@/lib/market/coingecko";
 import { brand } from "@/lib/config/brand";
-
+import EarningNotification from "@/components/EarningNotification";
 // Market data and plans refresh at most once a minute.
 export const revalidate = 60;
 
@@ -45,6 +45,7 @@ export default async function HomePage({ params }) {
       <Faq />
       <Newsletter />
       <FinalCta />
+      <EarningNotification />
     </>
   );
 }

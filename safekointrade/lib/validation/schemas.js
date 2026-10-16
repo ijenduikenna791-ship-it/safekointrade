@@ -103,14 +103,40 @@ export const amountSchema = z
 
 const idempotencyKey = z.string().uuid("invalidRequest");
 
-export const depositSchema = z.object({
-  amount: amountSchema,
-  assetSymbol: z.string().trim().toUpperCase().min(2).max(10),
-  method: z.enum(["crypto_transfer", "bank_transfer"], { error: "methodInvalid" }),
-  txReference: z.string().trim().max(140, "referenceLong").optional().or(z.literal("")),
-  note: z.string().trim().max(500, "noteLong").optional().or(z.literal("")),
-  idempotencyKey,
-});
+export const depositSchema = z
+  .object({
+    amount: amountSchema,
+    assetSymbol: z.string().trim().toUpperCase().min(2).max(10),
+    method: z.enum(["crypto_transfer", "bank_transfer"], { error: "methodInvalid" }),
+    network: z.string().trim().max(40).optional().or(z.literal("")),
+    depositWalletId: z.string().uuid("invalidRequest").optional().or(z.literal("")),
+    fromWalletId: z.union([z.string().uuid("invalidRequest"), z.literal("new"), z.literal("")]).optional(),
+    fromAddress: z
+      .string()
+      .trim()
+      .max(128, "destinationInvalid")
+      .regex(/^[A-Za-z0-9:._-]*$/, "destinationInvalid")
+      .optional()
+      .or(z.literal("")),
+    saveWallet: z.boolean().optional(),
+    walletLabel: z.string().trim().max(40, "nameLong").optional().or(z.literal("")),
+    txReference: z.string().trim().max(140, "referenceLong").optional().or(z.literal("")),
+    note: z.string().trim().max(500, "noteLong").optional().or(z.literal("")),
+    idempotencyKey,
+  })
+  .superRefine((d, ctx) => {
+    if (d.method === "crypto_transfer") {
+      if (!d.network || !d.depositWalletId) {
+        ctx.addIssue({ code: "custom", path: ["network"], message: "required" });
+      }
+      if (d.fromWalletId === "new" && (!d.fromAddress || d.fromAddress.length < 10)) {
+        ctx.addIssue({ code: "custom", path: ["fromAddress"], message: "destinationInvalid" });
+      }
+      if (d.fromWalletId === "new" && d.saveWallet && !d.walletLabel) {
+        ctx.addIssue({ code: "custom", path: ["walletLabel"], message: "required" });
+      }
+    }
+  });
 
 export const withdrawalSchema = z.object({
   amount: amountSchema,

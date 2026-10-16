@@ -1,6 +1,6 @@
 import {
   ArrowDownToLine, ArrowLeftRight, ArrowUpFromLine, Bell, CircleDollarSign, FileText, IdCard, Layers,
-  LayoutDashboard, LifeBuoy, Megaphone, PiggyBank, ScrollText, Settings, Users, Wallet,
+  LayoutDashboard, LifeBuoy, Megaphone, PiggyBank, QrCode, ScrollText, Settings, Users, Wallet,
 } from "lucide-react";
 
 /**
@@ -43,6 +43,7 @@ export const adminNav = [
     section: "money",
     items: [
       { href: "/admin/deposits", key: "deposits", icon: ArrowDownToLine, perm: "finance.view" },
+      { href: "/admin/deposit-addresses", key: "depositAddresses", icon: QrCode, perm: "settings.manage" },
       { href: "/admin/withdrawals", key: "withdrawals", icon: ArrowUpFromLine, perm: "finance.view" },
       { href: "/admin/investments", key: "investments", icon: Wallet, perm: "finance.view" },
       { href: "/admin/transactions", key: "transactions", icon: ArrowLeftRight, perm: "finance.view" },

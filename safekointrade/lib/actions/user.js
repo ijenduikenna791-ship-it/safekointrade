@@ -29,6 +29,34 @@ export async function requestDepositAction(input) {
   if (invalid) return invalid;
   if (!(await rateLimit(`deposit:${viewer.user.id}`, { limit: 10, windowSeconds: 3600 }))) return fail("rate_limited");
 
+  const isCrypto = v.method === "crypto_transfer";
+  const isNewWallet = isCrypto && v.fromWalletId === "new";
+
+  let fromWalletId = isCrypto && v.fromWalletId && v.fromWalletId !== "new" ? v.fromWalletId : null;
+  const fromAddress = isNewWallet ? v.fromAddress || null : null;
+
+  if (isNewWallet && v.saveWallet && fromAddress) {
+    const { data: existing } = await viewer.supabase
+      .from("user_wallets")
+      .select("id")
+      .eq("asset_symbol", v.assetSymbol)
+      .eq("network", v.network)
+      .eq("address", fromAddress)
+      .maybeSingle();
+
+    if (existing) {
+      fromWalletId = existing.id;
+    } else {
+      const { data: saved, error: saveError } = await viewer.supabase
+        .from("user_wallets")
+        .insert({ label: v.walletLabel, asset_symbol: v.assetSymbol, network: v.network, address: fromAddress })
+        .select("id")
+        .single();
+      if (saveError) return fail(errorCode(saveError));
+      fromWalletId = saved.id;
+    }
+  }
+
   const { data, error: dbError } = await viewer.supabase.rpc("request_deposit", {
     p_amount: v.amount,
     p_asset: v.assetSymbol,
@@ -38,6 +66,18 @@ export async function requestDepositAction(input) {
     p_idempotency_key: v.idempotencyKey,
   });
   if (dbError) return fail(errorCode(dbError));
+
+  if (isCrypto) {
+    const { error: attachError } = await viewer.supabase.rpc("attach_deposit_details", {
+      p_deposit: data.id,
+      p_network: v.network || null,
+      p_deposit_wallet: v.depositWalletId || null,
+      p_from_wallet: fromWalletId,
+      p_from_address: fromWalletId ? null : fromAddress,
+    });
+    if (attachError) return fail(errorCode(attachError));
+  }
+
   refresh();
   await notifyByEmail(viewer.supabase, viewer.user.id, "deposits", {
     subject: `Deposit request ${data.reference} received`,
@@ -276,5 +316,44 @@ export async function changePasswordAction(input) {
     text: "The password on your account was just changed and your other sessions were signed out. If this wasn't you, reset your password immediately and contact support.",
     cta: { href: "/forgot-password", label: "Reset password" },
   });
+  return ok();
+}
+
+
+// --- Saved wallets -------------------------------------------------------------------
+export async function renameWalletAction(input) {
+  const { viewer, error } = await actionUser();
+  if (error) return fail(error);
+  const schema = z.object({
+    id: z.string().uuid("invalidRequest"),
+    label: z.string().trim().min(1, "required").max(40, "nameLong"),
+  });
+  const { data: v, error: invalid } = parse(schema, input);
+  if (invalid) return invalid;
+  const { data, error: dbError } = await viewer.supabase
+    .from("user_wallets")
+    .update({ label: v.label })
+    .eq("id", v.id)
+    .eq("user_id", viewer.user.id)
+    .select("id");
+  if (dbError) return fail(errorCode(dbError));
+  if (!data?.length) return fail("not_found");
+  refresh();
+  return ok();
+}
+
+export async function deleteWalletAction(id) {
+  const { viewer, error } = await actionUser();
+  if (error) return fail(error);
+  if (!uuidSchema.safeParse(id).success) return fail("invalid_request");
+  const { data, error: dbError } = await viewer.supabase
+    .from("user_wallets")
+    .delete()
+    .eq("id", id)
+    .eq("user_id", viewer.user.id)
+    .select("id");
+  if (dbError) return fail(errorCode(dbError));
+  if (!data?.length) return fail("not_found");
+  refresh();
   return ok();
 }

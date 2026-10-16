@@ -34,7 +34,10 @@ export default async function AdminDepositsPage({ params, searchParams }) {
 
   let query = staff.supabase
     .from("deposit_requests")
-    .select("id, reference, user_id, amount, credited_amount, asset_symbol, method, tx_reference, note, receipt_path, status, review_note, created_at, user:profiles!deposit_requests_user_id_fkey(email, full_name)", { count: "exact" });
+    .select(
+      "id, reference, user_id, amount, credited_amount, asset_symbol, network, from_address, method, tx_reference, note, receipt_path, status, review_note, created_at, user:profiles!deposit_requests_user_id_fkey(email, full_name), deposit_wallet:deposit_wallets(address)",
+      { count: "exact" }
+    );
   if (status) query = query.eq("status", status);
   ({ query } = await applySearch(staff.supabase, query, sp.q));
   query = sort === "largest" ? query.order("amount", { ascending: false }) : query.order("created_at", { ascending: sort === "oldest" });
@@ -53,8 +56,45 @@ export default async function AdminDepositsPage({ params, searchParams }) {
         </div>
       ),
     },
-    { key: "user", header: tt("user"), cell: (r) => <div className="min-w-0"><p className="truncate">{r.user?.full_name || "—"}</p><p className="truncate text-xs text-ink-subtle">{r.user?.email}</p></div> },
-    { key: "asset", header: tt("asset"), cell: (r) => r.asset_symbol },
+    {
+      key: "user",
+      header: tt("user"),
+      cell: (r) => (
+        <div className="min-w-0">
+          <p className="truncate">{r.user?.full_name || "—"}</p>
+          <p className="truncate text-xs text-ink-subtle">{r.user?.email}</p>
+        </div>
+      ),
+    },
+    {
+      key: "asset",
+      header: tt("asset"),
+      cell: (r) => (
+        <div>
+          <p>{r.asset_symbol}</p>
+          {r.network && <p className="text-xs text-ink-subtle">{r.network}</p>}
+        </div>
+      ),
+    },
+    {
+      key: "wallets",
+      header: t("wallets"),
+      cell: (r) =>
+        r.method !== "crypto_transfer" ? (
+          "—"
+        ) : (
+          <div className="max-w-60 space-y-1 text-xs">
+            <p>
+              <span className="text-ink-subtle">{t("toAddress")}: </span>
+              <span className="break-all font-mono">{r.deposit_wallet?.address || "—"}</span>
+            </p>
+            <p>
+              <span className="text-ink-subtle">{t("fromAddress")}: </span>
+              <span className="break-all font-mono">{r.from_address || t("notProvided")}</span>
+            </p>
+          </div>
+        ),
+    },
     { key: "amount", header: tt("amount"), align: "end", cell: (r) => <span className="tabular font-medium">{formatMoney(r.amount, { locale })}</span> },
     { key: "status", header: tt("status"), cell: (r) => <StatusBadge status={r.status} label={tc(`status.${r.status}`)} /> },
     {

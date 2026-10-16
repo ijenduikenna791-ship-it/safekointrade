@@ -1,0 +1,82 @@
+﻿.earning-notification {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  bottom: 32px;
+  width: min(804px, calc(100% - 32px));
+  min-height: 150px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  background: #00efd0;
+  color: #050505;
+  border-radius: 22px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.25);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 24px);
+  transition: opacity 0.5s ease, transform 0.5s ease,
+    visibility 0.5s ease;
+  pointer-events: none;
+}
+
+.earning-notification--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.earning-notification p {
+  margin: 0;
+  font-size: clamp(21px, 3.2vw, 42px);
+  line-height: 1.25;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.earning-notification strong {
+  font-weight: 800;
+}
+
+.sample-label {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  vertical-align: middle;
+}
+
+.earning-amount,
+.earning-period {
+  color: #b88600;
+  font-weight: 800;
+}
+
+.earning-amount {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .earning-notification {
+    bottom: 18px;
+    width: calc(100% - 24px);
+    min-height: 100px;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  .earning-notification p {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .earning-notification {
+    transition: none;
+  }
+}

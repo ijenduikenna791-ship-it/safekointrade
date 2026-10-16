@@ -210,3 +210,63 @@ export async function setTicketStatusAction(input) {
   refresh();
   return ok();
 }
+
+
+// --- Deposit addresses ----------------------------------------------------------------
+const depositWalletSchema = z.object({
+  id: z.string().uuid("invalidRequest").optional().or(z.literal("")),
+  assetSymbol: z.string().trim().toUpperCase().regex(/^[A-Z0-9]{2,10}$/, "required"),
+  network: z.string().trim().min(2, "required").max(40, "nameLong"),
+  address: z
+    .string()
+    .trim()
+    .min(10, "destinationInvalid")
+    .max(128, "destinationInvalid")
+    .regex(/^[A-Za-z0-9:._-]+$/, "destinationInvalid"),
+  memo: z.string().trim().max(64, "referenceLong").optional().or(z.literal("")),
+  isActive: z.boolean(),
+  sortOrder: z.coerce.number().int().min(0).max(1000),
+});
+
+export async function upsertDepositWalletAction(input) {
+  const { viewer, error } = await actionStaff("settings.manage");
+  if (error) return fail(error);
+  const { data: v, error: invalid } = parse(depositWalletSchema, input);
+  if (invalid) return invalid;
+
+  if (v.isActive) {
+    let q = viewer.supabase
+      .from("deposit_wallets")
+      .select("id")
+      .eq("asset_symbol", v.assetSymbol)
+      .eq("network", v.network)
+      .eq("is_active", true);
+    if (v.id) q = q.neq("id", v.id);
+    const { data: clash } = await q.limit(1);
+    if (clash?.length) return fail("validation", { network: "networkTaken" });
+  }
+
+  const { data, error: dbError } = await viewer.supabase.rpc("upsert_deposit_wallet", {
+    p_id: v.id || null,
+    p_asset: v.assetSymbol,
+    p_network: v.network,
+    p_address: v.address,
+    p_memo: v.memo || null,
+    p_active: v.isActive,
+    p_sort: v.sortOrder,
+  });
+  if (dbError) return fail(errorCode(dbError));
+  refresh();
+  return ok({ id: data });
+}
+
+export async function setDepositWalletActiveAction(input) {
+  const { viewer, error } = await actionStaff("settings.manage");
+  if (error) return fail(error);
+  const { data: v, error: invalid } = parse(z.object({ id: z.string().uuid(), active: z.boolean() }), input);
+  if (invalid) return invalid;
+  const { error: dbError } = await viewer.supabase.rpc("set_deposit_wallet_active", { p_id: v.id, p_active: v.active });
+  if (dbError) return fail(errorCode(dbError));
+  refresh();
+  return ok();
+}
