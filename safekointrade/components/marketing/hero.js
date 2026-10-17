@@ -50,13 +50,13 @@ function CoinCard({ coin, unavailable, side, delay, className = "" }) {
   );
 }
 
-// Decorative coins around the headline. Sizes/positions are per breakpoint so
+// Decorative coins framing the headline. Sizes/positions are per breakpoint so
 // they frame the copy without covering it. `float-*` classes add a gentle bob.
 const FLOATERS = [
-  { symbol: "BTC", cls: "end-[2%] top-[3%] h-12 w-12 lg:h-16 lg:w-16", rot: -14, f: "float-a", show: "hidden sm:block" },
-  { symbol: "ETH", cls: "start-[40%] top-[7%] h-12 w-12 lg:h-14 lg:w-14 opacity-75", rot: 12, f: "float-b", show: "hidden lg:block" },
-  { symbol: "SOL", cls: "start-[44%] bottom-[5%] h-10 w-10 opacity-50 blur-[1.5px]", rot: 10, f: "float-c", show: "hidden lg:block" },
-  { symbol: "USDT", cls: "end-[40%] top-[5%] h-9 w-9 opacity-40 blur-[2px]", rot: -8, f: "float-a", show: "hidden lg:block" },
+  { symbol: "BTC", cls: "end-[6%] top-[4%] h-12 w-12 lg:h-16 lg:w-16", rot: -14, f: "float-a", show: "hidden sm:block" },
+  { symbol: "ETH", cls: "start-[6%] top-[10%] h-12 w-12 lg:h-14 lg:w-14 opacity-75", rot: 12, f: "float-b", show: "hidden lg:block" },
+  { symbol: "SOL", cls: "start-[12%] top-[42%] h-10 w-10 opacity-50 blur-[1.5px]", rot: 10, f: "float-c", show: "hidden lg:block" },
+  { symbol: "USDT", cls: "end-[12%] top-[38%] h-9 w-9 opacity-40 blur-[2px]", rot: -8, f: "float-a", show: "hidden lg:block" },
 ];
 
 function FloatingCoins() {
@@ -81,8 +81,8 @@ function FloatingCoins() {
 }
 
 /**
- * Night-sky hero with a green aurora. Account creation lives on /register —
- * this section only links to it.
+ * Centered night-sky hero with a green aurora. Account creation lives on
+ * /register — this section only links to it.
  */
 export function Hero({ coins = [] }) {
   const t = useTranslations("home.hero");
@@ -105,25 +105,25 @@ export function Hero({ coins = [] }) {
     <section className="dark relative isolate overflow-hidden bg-brand-night text-white">
       {/* aurora: layered blurred glows drifting slowly */}
       <div aria-hidden="true" className="absolute inset-0 -z-20">
-        <div className="aurora-a absolute -top-[20%] start-[8%] h-[70%] w-[55%] rounded-full bg-[radial-gradient(closest-side,rgb(79_140_255/0.4),transparent)] blur-3xl" />
-        <div className="aurora-b absolute -top-[10%] end-[2%] h-[60%] w-[45%] rounded-full bg-[radial-gradient(closest-side,rgb(139_92_246/0.32),transparent)] blur-3xl" />
+        <div className="aurora-a absolute -top-[15%] start-1/2 h-[60%] w-[60%] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(79_140_255/0.4),transparent)] blur-3xl rtl:translate-x-1/2" />
+        <div className="aurora-b absolute -top-[8%] end-[8%] h-[55%] w-[40%] rounded-full bg-[radial-gradient(closest-side,rgb(139_92_246/0.3),transparent)] blur-3xl" />
         <div className="absolute -bottom-[35%] start-1/2 h-[70%] w-[120%] -translate-x-1/2 rounded-[50%] bg-[radial-gradient(closest-side,rgb(59_123_255/0.42),transparent)] blur-2xl rtl:translate-x-1/2" />
       </div>
       <Starfield className="absolute inset-0 -z-10 h-full w-full" />
       <FloatingCoins />
 
-      <div className="container-page relative grid items-center gap-10 pb-12 pt-10 sm:gap-12 sm:py-20 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-24">
-        <div className="text-center lg:text-start">
+      <div className="container-page relative flex flex-col items-center gap-10 pb-16 pt-14 text-center sm:gap-12 sm:pb-20 sm:pt-20 lg:pt-24">
+        <div className="flex max-w-3xl flex-col items-center">
           <motion.h1
             {...enter(0)}
-            className="mx-auto max-w-[17ch] text-balance font-display text-[2.15rem] font-semibold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:mx-0 lg:text-[3.4rem] xl:text-[3.75rem]"
+            className="max-w-[18ch] text-balance font-display text-[2.3rem] font-semibold leading-[1.07] tracking-[-0.03em] sm:text-5xl lg:text-[3.75rem] xl:text-[4rem]"
           >
             {t("headline")}
           </motion.h1>
-          <motion.p {...enter(1)} className="mx-auto mt-5 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/75 sm:text-[1.05rem] lg:mx-0">
+          <motion.p {...enter(1)} className="mt-5 max-w-[56ch] text-[0.95rem] leading-relaxed text-white/75 sm:text-[1.05rem]">
             {t("body")}
           </motion.p>
-          <motion.div {...enter(2)} className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+          <motion.div {...enter(2)} className="mt-8 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
             <Link href="/register" className={buttonClasses({ variant: "orange", size: "lg", className: "h-12 w-full px-6 sm:w-auto" })}>
               {t("primary")}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
@@ -132,7 +132,7 @@ export function Hero({ coins = [] }) {
               {t("secondary")}
             </Link>
           </motion.div>
-          <motion.ul {...enter(3)} className="mx-auto mt-7 flex w-fit flex-col gap-2 text-start text-[13px] text-white/80 lg:mx-0">
+          <motion.ul {...enter(3)} className="mt-7 flex flex-col items-center gap-2 text-[13px] text-white/80 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6">
             {["reviewed", "terms", "ledger"].map((k) => (
               <li key={k} className="flex items-center gap-2">
                 <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-mint/20 text-brand-mint" aria-hidden="true">
@@ -142,7 +142,7 @@ export function Hero({ coins = [] }) {
               </li>
             ))}
           </motion.ul>
-          <motion.p {...enter(4)} className="mx-auto mt-6 flex max-w-[50ch] items-start justify-center gap-2 text-xs text-white/50 lg:mx-0 lg:justify-start">
+          <motion.p {...enter(4)} className="mt-6 flex max-w-[50ch] items-start justify-center gap-2 text-xs text-white/50">
             <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             {t("note")}
           </motion.p>
@@ -152,8 +152,8 @@ export function Hero({ coins = [] }) {
         <motion.figure
           initial={reduce ? false : { opacity: 0, y: 24, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.35, ease }}
-          className="relative mx-auto w-full max-w-2xl lg:max-w-none"
+          transition={{ duration: 0.9, delay: 0.45, ease }}
+          className="relative mx-auto w-full max-w-4xl"
         >
           <div aria-hidden="true" className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-[radial-gradient(closest-side,rgb(79_140_255/0.3),transparent)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.9)]">
@@ -163,8 +163,8 @@ export function Hero({ coins = [] }) {
               height={images.hero.height}
               alt={t("imageAlt")}
               priority
-              sizes="(min-width: 1024px) 48vw, 92vw"
-              className="aspect-[4/5] h-auto w-full object-cover sm:aspect-[4/3] lg:aspect-[5/6] xl:aspect-[1/1]"
+              sizes="(min-width: 1024px) 56rem, 92vw"
+              className="aspect-[4/3] h-auto w-full object-cover sm:aspect-[16/10] lg:aspect-[16/9]"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgb(5_9_20/0.05)_40%,rgb(5_9_20/0.72))]" />
             <span className="absolute start-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#050914]/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
