@@ -64,7 +64,7 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 border-b bg-surface transition-shadow duration-200",
+        "sticky top-0 z-40 border-b bg-surface/90 backdrop-blur transition-shadow duration-200",
         scrolled || open ? "border-line shadow-md" : "border-line/60"
       )}
     >
@@ -73,27 +73,29 @@ export function SiteHeader() {
           <Logo />
         </Link>
 
-        <nav aria-label={t("primary")} className="hidden flex-1 xl:block">
-          <ul className="flex items-center gap-1">
-            {links.map((l) => (
-              <li key={l.key}>
-                <Link
-                  href={l.href}
-                  className={cn(
-                    "group inline-flex items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-2 text-[0.95rem] font-medium transition-colors",
-                    l.highlight
-                      ? "ms-1 bg-brand-mint text-brand-teal hover:bg-brand-mint-hover"
-                      : "text-ink hover:bg-surface-2 hover:text-brand-mint-ink"
-                  )}
-                >
-                  <l.icon
-                    className={cn("h-4 w-4 shrink-0", l.highlight ? "text-brand-teal" : "text-ink-subtle group-hover:text-brand-mint-ink")}
-                    aria-hidden="true"
-                  />
-                  {t(l.key)}
-                </Link>
-              </li>
-            ))}
+        <nav aria-label={t("primary")} className="hidden flex-1 justify-center xl:flex">
+          <ul className="flex items-center gap-0.5 rounded-full border border-line bg-surface-2/60 p-1">
+            {links.map((l) => {
+              const active = pathname === l.href;
+              return (
+                <li key={l.key}>
+                  <Link
+                    href={l.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "inline-flex items-center whitespace-nowrap rounded-full px-4 py-2 text-[0.9rem] font-medium transition-colors",
+                      l.highlight
+                        ? "bg-brand-mint text-brand-teal hover:bg-brand-mint-hover"
+                        : active
+                          ? "bg-surface text-ink shadow-sm"
+                          : "text-ink-muted hover:bg-surface/70 hover:text-ink"
+                    )}
+                  >
+                    {t(l.key)}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 

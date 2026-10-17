@@ -112,7 +112,7 @@ export function Hero({ coins = [] }) {
       <Starfield className="absolute inset-0 -z-10 h-full w-full" />
       <FloatingCoins />
 
-      <div className="container-page relative grid min-h-[calc(100svh-7rem)] items-center gap-12 pb-20 pt-16 sm:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-24">
+      <div className="container-page relative grid items-center gap-10 pb-12 pt-10 sm:gap-12 sm:py-20 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-24">
         <div className="text-center lg:text-start">
           <motion.h1
             {...enter(0)}
@@ -123,12 +123,12 @@ export function Hero({ coins = [] }) {
           <motion.p {...enter(1)} className="mx-auto mt-5 max-w-[54ch] text-[0.95rem] leading-relaxed text-white/75 sm:text-[1.05rem] lg:mx-0">
             {t("body")}
           </motion.p>
-          <motion.div {...enter(2)} className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-            <Link href="/register" className={buttonClasses({ variant: "orange", size: "lg", className: "h-12 px-6" })}>
+          <motion.div {...enter(2)} className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+            <Link href="/register" className={buttonClasses({ variant: "orange", size: "lg", className: "h-12 w-full px-6 sm:w-auto" })}>
               {t("primary")}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden="true" />
             </Link>
-            <Link href="/#plans" className={buttonClasses({ variant: "mint", size: "lg", className: "h-12 px-6" })}>
+            <Link href="/#plans" className={buttonClasses({ variant: "mint", size: "lg", className: "h-12 w-full px-6 sm:w-auto" })}>
               {t("secondary")}
             </Link>
           </motion.div>
