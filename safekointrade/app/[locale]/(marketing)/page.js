@@ -1,4 +1,5 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+﻿import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Testimonials } from "@/components/marketing/testimonials";
 import { StartupScreen } from "@/components/animations/startup-screen";
 import { Hero } from "@/components/marketing/hero";
 import { MarketTicker } from "@/components/marketing/market-ticker";
@@ -24,7 +25,7 @@ export default async function HomePage({ params }) {
   setRequestLocale(locale);
   const t = await getTranslations("startup");
   const [{ plans, isDefault }, prices] = await Promise.all([getPublicPlans(), getPrices(["bitcoin", "ethereum"])]);
-  // Hero cards show live prices or an "unavailable" note — never placeholder numbers.
+  // Hero cards show live prices or an "unavailable" note â€” never placeholder numbers.
   const coins = [
     { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
     { id: "ethereum", symbol: "ETH", name: "Ethereum" },
@@ -41,6 +42,7 @@ export default async function HomePage({ params }) {
       <HowItWorks />
       <MarketAnalytics />
       <SecuritySection />
+      <Testimonials />
       <SupportedAssets />
       <Faq />
       <Newsletter />
@@ -49,3 +51,5 @@ export default async function HomePage({ params }) {
     </>
   );
 }
+
+

@@ -1,0 +1,54 @@
+﻿const testimonials = [
+  { id: 1, video: "/videos/testimonials/testimonee%201.mp4" },
+  { id: 2, video: "/videos/testimonials/testimonee%202.mp4" },
+  { id: 3, video: "/videos/testimonials/testimonee%203.mp4" },
+  { id: 4, video: "/videos/testimonials/testimonee%204.mp4" },
+  { id: 5, video: "/videos/testimonials/testimonee%205.mp4" },
+];
+
+export function Testimonials() {
+  return (
+    <section id="testimonials" className="border-y border-white/10 bg-[#050914] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="rounded-full border border-brand-mint/30 bg-brand-mint/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-mint">
+            Investor Stories
+          </span>
+          <h2 className="mt-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+            Get to know the <span className="text-brand-mint">people behind the stories.</span>
+          </h2>
+          <p className="mt-5 text-sm leading-7 text-neutral-400 sm:text-base">
+            Watch our investor video features and learn about their individual experiences.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((item) => (
+            <article key={item.id} className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1220] transition hover:-translate-y-1 hover:border-brand-mint/40">
+              <div className="aspect-video bg-black">
+                <video className="h-full w-full object-cover" controls playsInline preload="metadata" aria-label={`Investor video ${item.id}`}>
+                  <source src={item.video} type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+              </div>
+              <div className="flex items-center gap-3 p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand-mint/30 bg-brand-mint/10 text-sm font-bold text-brand-mint">
+                  {String(item.id).padStart(2, "0")}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white">Investor Video {String(item.id).padStart(2, "0")}</h3>
+                  <p className="mt-1 text-xs text-neutral-500">Video testimonial</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-6 text-neutral-500">
+          Testimonials reflect individual experiences and are not a guarantee of future investment performance. Cryptocurrency investments involve risk, including the possible loss of capital.
+        </p>
+      </div>
+    </section>
+  );
+}
+
