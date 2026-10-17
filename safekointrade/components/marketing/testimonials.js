@@ -11,7 +11,7 @@
   {
     id: 2,
     video: "/videos/testimonials/testimonee%202.mp4",
-    name: "James Whitfield",
+    name: "Sophia Lee",
     title: "Hedge Fund Analyst",
     location: "London, UK",
     amount: "$120,000",
@@ -29,19 +29,19 @@
   {
     id: 4,
     video: "/videos/testimonials/testimonee%204.mp4",
-    name: "David K. O'Connor",
+    name: "ava chen",
     title: "Commodities Trader",
     location: "Singapore",
-    amount: "",
+    amount: "$45,000",
     quote: "Combining Oil, Forex, and crypto trading under one unified dashboard is a game-changer for my portfolio.",
   },
   {
     id: 5,
     video: "/videos/testimonials/testimonee%205.mp4",
-    name: "Investor Video 05",
+    name: "ibrahim al-hassan",
     title: "Investor",
-    location: "",
-    amount: "",
+    location: "Dubai, UAE",
+    amount: "$50,000",
     quote: "Watch this investor video to hear their experience.",
   },
 ];
