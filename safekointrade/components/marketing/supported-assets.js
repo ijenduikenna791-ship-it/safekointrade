@@ -6,10 +6,9 @@ import { SectionHeading } from "./section-heading";
 import { formatMoney, formatPercent } from "@/lib/utils/format";
 import { cn } from "@/lib/utils/cn";
 
-export async function SupportedAssets() {
+export async function SupportedAssets({ assets }) {
   const t = await getTranslations("home.assets");
   const locale = await getLocale();
-  const assets = await getPublicAssets();
   const prices = await getPrices(assets.map((a) => a.coingecko_id).filter(Boolean));
 
   return (
@@ -59,3 +58,5 @@ export async function SupportedAssets() {
     </section>
   );
 }
+
+

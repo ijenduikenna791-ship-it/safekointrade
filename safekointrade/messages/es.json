@@ -101,8 +101,9 @@
     "hero": {
       "title": "Planes cripto con plazo fijo y un registro abierto.",
       "body": "Elige un plan de 30, 90 o 180 días, fínancialo con BTC, ETH, USDT o USDC y sigue cada depósito, posición y retiro en un registro que puedes revisar línea por línea. Personas reales revisan cada solicitud antes de que se mueva un solo saldo.",
-      "primary": "Abrir una cuenta gratis",
-      "secondary": "Comparar planes",
+      "primary": "Crear cuenta",
+      "secondary": "Unirse a SafeKoinTrade",
+      "invest": "Comprar e invertir ahora",
       "note": "Los criptoactivos son volátiles. Puedes perder parte o la totalidad del dinero que inviertes.",
       "headline": "Invertir en cripto, todo queda registrado.",
       "learnMore": "Más información",
@@ -281,6 +282,22 @@
         "early": {
           "q": "¿Puedo cerrar una posición antes de que termine el plazo?",
           "a": "Las posiciones se pueden cancelar en las 24 horas siguientes a su apertura. Después, siguen hasta su vencimiento."
+        },
+        "eligibility": {
+          "q": "¿Quién puede usar la plataforma?",
+          "a": "Debes tener al menos 18 años y estar legalmente autorizado para usar el servicio donde resides. La disponibilidad depende de las leyes locales y las sanciones. Consulta las condiciones antes de crear una cuenta."
+        },
+        "assets": {
+          "q": "¿Qué activos y redes se admiten?",
+          "a": "La sección de activos admitidos y el formulario de depósito muestran los activos habilitados actualmente. La disponibilidad de depósitos y retiros puede variar según el activo y la red. Comprueba siempre la red antes de enviar."
+        },
+        "fees": {
+          "q": "¿Qué comisiones pagaré?",
+          "a": "Las comisiones aplicables de la plataforma, incluidas las de retiro, se muestran antes de confirmar la solicitud. También pueden aplicarse comisiones de la red o de proveedores externos."
+        },
+        "calculation": {
+          "q": "¿Cómo se calcula un objetivo de rentabilidad?",
+          "a": "Si un plan publica un objetivo, se muestran su porcentaje y la base de cálculo. La calculadora aplica ese porcentaje a tu importe durante todo el plazo. Es una estimación, no una promesa; el resultado real puede ser menor e incluso implicar una pérdida del capital. No se calcula rentabilidad para planes sin un objetivo publicado."
         },
         "security": {
           "q": "¿Cómo se protege mi cuenta?",
@@ -1466,3 +1483,4 @@
     "chat": "Chatear por WhatsApp"
   }
 }
+

@@ -41,13 +41,13 @@ export function DeviceMockup() {
     <motion.figure
       initial={reduce ? false : { opacity: 0, y: 32 }}
       viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.45, ease }}
       className="relative mx-auto w-full max-w-4xl pb-10 text-start sm:pb-14"
       aria-label={tl("label")}
     >
       {/* Desktop */}
-      <div className="rounded-[1.1rem] border border-line-strong bg-[#060c1a] p-2 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] sm:p-3">
+      <div className="rounded-[1.1rem] border border-line-strong bg-[#0b090a] p-2 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] sm:p-3">
         <div className="overflow-hidden rounded-[0.6rem] border border-line bg-bg">
           {/* window bar */}
           <div className="flex items-center justify-between border-b border-line bg-surface px-3 py-2 sm:px-4">
@@ -57,7 +57,7 @@ export function DeviceMockup() {
             </div>
             <span className="inline-flex items-center gap-1 rounded-full border border-brass-line bg-brass-soft px-2 py-0.5 text-[0.65rem] font-medium text-brass sm:text-xs">
               <FlaskConical className="h-3 w-3" aria-hidden="true" />
-              {tc("illustration")}
+              {tc("sampleData")}
             </span>
           </div>
 
@@ -73,15 +73,15 @@ export function DeviceMockup() {
               <dl className="grid grid-cols-3 gap-2 sm:gap-3">
                 {["available", "invested", "pending"].map((k) => (
                   <div key={k} className="rounded-md border border-line bg-surface px-2 py-2 sm:px-3 sm:py-3">
-                    <dt className="truncate text-[0.6rem] text-ink-subtle sm:text-xs">{t(k)}</dt>
+                    <dt className="truncate text-[0.7rem] text-ink-subtle sm:text-sm">{t(k)}</dt>
                     <dd className="tabular mt-0.5 truncate text-xs font-semibold sm:text-base">{formatMoney(SAMPLE[k], { locale })}</dd>
                   </div>
                 ))}
               </dl>
 
               <div className="mt-3 rounded-md border border-line bg-surface p-3 sm:mt-4 sm:p-4">
-                <p className="text-[0.65rem] text-ink-subtle sm:text-xs">{t("historyTitle")}</p>
-                <svg viewBox="0 0 300 90" preserveAspectRatio="none" className="mt-2 h-16 w-full sm:h-28" aria-hidden="true">
+                <p className="text-xs text-ink-subtle sm:text-sm">{t("historyTitle")}</p>
+                <svg viewBox="0 0 300 90" preserveAspectRatio="none" className="mt-2 h-20 w-full sm:h-28" aria-hidden="true">
                   <defs>
                     <linearGradient id="mock-fill" x1="0" x2="0" y1="0" y2="1">
                       <stop offset="0%" stopColor="var(--gain)" stopOpacity="0.28" />
@@ -102,7 +102,7 @@ export function DeviceMockup() {
                     vectorEffect="non-scaling-stroke"
                     initial={reduce ? false : { pathLength: 0 }}
                     viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      whileInView={{ pathLength: 1 }}
+                    whileInView={{ pathLength: 1 }}
                     transition={{ duration: 1.6, delay: 0.9, ease }}
                   />
                 </svg>
@@ -138,7 +138,7 @@ export function DeviceMockup() {
         viewport={{ once: true, margin: "0px 0px -10% 0px" }}
       whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.8, ease }}
-        className="absolute bottom-0 end-1 w-[38%] max-w-[13.5rem] rounded-[1.4rem] border border-line-strong bg-[#060c1a] p-1.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] sm:end-4 sm:p-2"
+        className="absolute bottom-0 end-1 hidden w-[32%] max-w-[11.5rem] sm:block rounded-[1.4rem] border border-line-strong bg-[#060c1a] p-1.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] sm:end-4 sm:p-2"
       >
         <div className="overflow-hidden rounded-[1.05rem] border border-line bg-surface px-3 pb-4 pt-3 sm:px-4">
           <div aria-hidden="true" className="mx-auto mb-3 h-1 w-10 rounded-full bg-surface-3" />

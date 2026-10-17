@@ -101,8 +101,9 @@
     "hero": {
       "title": "Planos cripto com prazo fixo e registro aberto.",
       "body": "Escolha um plano de 30, 90 ou 180 dias, abasteça-o com BTC, ETH, USDT ou USDC e acompanhe cada depósito, posição e saque em um registro que você confere linha por linha. Pessoas de verdade analisam cada solicitação antes que qualquer saldo se mova.",
-      "primary": "Abrir conta grátis",
-      "secondary": "Comparar planos",
+      "primary": "Criar conta",
+      "secondary": "Junte-se à SafeKoinTrade",
+      "invest": "Investir agora",
       "note": "Criptoativos são voláteis. Você pode perder parte ou todo o dinheiro investido.",
       "headline": "Investir em cripto, tudo registrado.",
       "learnMore": "Saiba mais",
@@ -281,6 +282,22 @@
         "early": {
           "q": "Posso encerrar uma posição antes do fim do prazo?",
           "a": "As posições podem ser canceladas em até 24 horas após a abertura. Depois disso, seguem até o vencimento."
+        },
+        "eligibility": {
+          "q": "Quem pode utilizar a plataforma?",
+          "a": "É necessário ter pelo menos 18 anos e estar legalmente autorizado a utilizar o serviço no local onde reside. A disponibilidade depende das leis locais e das sanções. Consulte os Termos antes de criar uma conta."
+        },
+        "assets": {
+          "q": "Quais ativos e redes são aceitos?",
+          "a": "A seção de ativos aceitos e o formulário de depósito mostram os ativos habilitados no momento. A disponibilidade de depósitos e saques pode variar conforme o ativo e a rede. Sempre confirme a rede antes de enviar."
+        },
+        "fees": {
+          "q": "Quais taxas serão cobradas?",
+          "a": "As taxas aplicáveis da plataforma, incluindo as de saque, são exibidas antes da confirmação da solicitação. Também podem ser cobradas taxas da rede ou de provedores terceiros."
+        },
+        "calculation": {
+          "q": "Como é calculada uma meta de retorno?",
+          "a": "Quando um plano publica uma meta, são exibidos o percentual e a base de cálculo. A calculadora aplica esse percentual ao valor investido durante todo o prazo. É uma estimativa, não uma promessa; o resultado real pode ser menor e incluir perda do capital. Planos sem meta publicada não têm retorno calculado."
         },
         "security": {
           "q": "Como minha conta é protegida?",
@@ -1466,3 +1483,4 @@
     "chat": "Conversar no WhatsApp"
   }
 }
+

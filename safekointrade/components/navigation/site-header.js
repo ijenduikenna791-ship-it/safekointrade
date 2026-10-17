@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Building2, CircleHelp, House, Layers, LayoutDashboard, LayoutGrid, LogIn, Menu, UserPlus, X } from "lucide-react";
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { Logo } from "@/components/ui/logo";
@@ -37,6 +37,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
   const signedIn = useSignedIn();
 
   useEffect(() => {
@@ -124,7 +125,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="ms-auto grid h-10 w-10 place-items-center rounded-md text-ink hover:bg-surface-2 xl:hidden"
+          className="ms-auto grid h-11 w-11 place-items-center rounded-md text-ink hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus xl:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? t("closeMenu") : t("openMenu")}
@@ -138,19 +139,19 @@ export function SiteHeader() {
         {open && (
           <motion.div
             id="mobile-nav"
-            initial={{ opacity: 0, height: 0 }}
+            initial={reduceMotion ? false : { opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "calc(100dvh - 4.5rem)" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.22, ease: [0.25, 1, 0.5, 1] }}
+            exit={reduceMotion ? { opacity: 0, height: 0, transition: { duration: 0 } } : { opacity: 0, height: 0 }}
+            transition={reduceMotion ? { duration: 0 } : { duration: 0.22, ease: [0.25, 1, 0.5, 1] }}
             className="overflow-y-auto border-t border-line bg-surface xl:hidden"
           >
             <nav aria-label={t("primary")} className="container-page flex flex-col py-4">
               {links.map((l, i) => (
                 <motion.div
                   key={l.key}
-                  initial={{ opacity: 0, x: -8 }}
+                  initial={reduceMotion ? false : { opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.04 * i + 0.05 }}
+                  transition={reduceMotion ? { duration: 0 } : { delay: 0.04 * i + 0.05 }}
                 >
                   <Link
                     href={l.href}

@@ -1,4 +1,6 @@
-﻿const testimonials = [
+import { TestimonialVideo } from "./testimonial-video";
+
+const testimonials = [
   {
     id: 1,
     video: "/videos/testimonials/testimonee%201.mp4",
@@ -79,16 +81,8 @@ export function Testimonials() {
               className="group overflow-hidden rounded-[24px] border border-slate-700/70 bg-[#0e172b] shadow-[0_12px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-1 hover:border-sky-400/40"
             >
               <div className="relative aspect-video overflow-hidden bg-black">
-                <video
-                  className="h-full w-full object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  aria-label={`Investor video ${item.id}`}
-                >
-                  <source src={item.video} type="video/mp4" />
-                  Your browser does not support HTML video.
-                </video>
+                <TestimonialVideo src={item.video} id={item.id} />
+
 
                 {item.amount && (
                   <div className="pointer-events-none absolute left-3 top-3 rounded-full border border-emerald-400/20 bg-[#07101f]/95 px-3 py-1.5 text-xs font-bold text-emerald-400 shadow-lg sm:text-sm">
@@ -143,3 +137,4 @@ export function Testimonials() {
     </section>
   );
 }
+

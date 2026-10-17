@@ -101,8 +101,9 @@
     "hero": {
       "title": "Crypto plans with a fixed term and an open ledger.",
       "body": "Pick a 30, 90 or 180-day plan, fund it with BTC, ETH, USDT or USDC, and follow every deposit, position and withdrawal in a ledger you can check line by line. Real people review each request before a single balance moves.",
-      "primary": "Open a free account",
-      "secondary": "Compare plans",
+      "primary": "Create account",
+      "secondary": "Join SafeKoinTrade",
+      "invest": "Buy now & invest",
       "note": "Crypto assets are volatile. You can lose some or all of the money you invest.",
       "headline": "Crypto investing, fully on the record.",
       "learnMore": "Learn more",
@@ -281,6 +282,22 @@
         "early": {
           "q": "Can I close a position before the term ends?",
           "a": "Positions can be cancelled within 24 hours of opening. After that, they run until maturity."
+        },
+        "eligibility": {
+          "q": "Who is eligible to use the platform?",
+          "a": "You must be at least 18 and legally permitted to use the service where you live. Availability depends on local law and sanctions; check the Terms before creating an account."
+        },
+        "assets": {
+          "q": "Which assets and networks are supported?",
+          "a": "The Supported assets section and deposit form show assets currently enabled. Deposit and withdrawal availability may differ by asset and network. Always verify the network before sending."
+        },
+        "fees": {
+          "q": "What fees will I pay?",
+          "a": "Any applicable platform fees, including withdrawal fees, are shown before you confirm the request. Network or third-party provider fees may also apply."
+        },
+        "calculation": {
+          "q": "How is a return target calculated?",
+          "a": "If a plan publishes a target, its percentage range and calculation basis are shown. The calculator applies that percentage to your amount over the full term. It is an estimate, not a promise; actual results may be lower, including a loss of principal. Plans without a published target are not calculated."
         },
         "security": {
           "q": "How is my account protected?",
@@ -1466,3 +1483,4 @@
     "chat": "Chat on WhatsApp"
   }
 }
+

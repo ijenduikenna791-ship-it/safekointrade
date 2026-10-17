@@ -3,13 +3,35 @@
 import { useEffect, useState } from "react";
 import "./EarningNotification.css";
 
-const notifications = [
-  { country: "Cuba", amount: "$10,000" },
-  { country: "united states", amount: "$2,500" },
-  { country: "United Kingdom", amount: "$5,200" },
-  { country: "Canada", amount: "$1,800" },
-  { country: "Germany", amount: "$3,400" },
+const countries = [
+  "Cuba",
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Germany",
+  "France",
+  "Brazil",
+  "India",
+  "Japan",
+  "Australia",
+  "Nigeria",
+  "South Africa",
+  "Singapore",
+  "United Arab Emirates",
+  "Kenya",
+  "Mexico",
+  "Spain",
+  "Italy",
+  "Netherlands",
+  "Philippines",
 ];
+
+// Demo values only. Do not present these as confirmed customer earnings.
+const sampleAmounts = ["$10,000", "$2,500", "$5,200", "$1,800", "$3,400"];
+const notifications = countries.map((country, index) => ({
+  country,
+  amount: sampleAmounts[index % sampleAmounts.length],
+}));
 
 export default function EarningNotification() {
   const [current, setCurrent] = useState(0);
@@ -35,10 +57,7 @@ export default function EarningNotification() {
         nextTimer = setTimeout(() => {
           if (cancelled) return;
 
-          setCurrent((previous) =>
-            (previous + 1) % notifications.length
-          );
-
+          setCurrent((previous) => (previous + 1) % notifications.length);
           startNotification();
         }, 1200);
       }, 5000);
@@ -58,21 +77,19 @@ export default function EarningNotification() {
 
   return (
     <div
-      className={`earning-notification ${
-        visible ? "earning-notification--visible" : ""
-      }`}
+      className={`earning-notification ${visible ? "earning-notification--visible" : ""}`}
       role="status"
       aria-live="polite"
       aria-atomic="true"
     >
-      <p>
-        <span className="sample-label"></span>{" "}
-        Someone from <strong>{notification.country}</strong> just earned{" "}
-        <span className="earning-amount">
-          {notification.amount}
-        </span>
-        <span className="earning-period">.</span>
-      </p>
+      <span className="earning-indicator" aria-hidden="true" />
+      <div>
+        <span className="sample-label"></span>
+        <p>
+          Someone from <strong>{notification.country}</strong> just earned{" "}
+          <span className="earning-amount">{notification.amount}</span>.
+        </p>
+      </div>
     </div>
   );
 }

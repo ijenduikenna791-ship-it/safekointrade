@@ -101,8 +101,9 @@
     "hero": {
       "title": "Des plans crypto à durée fixe, avec un registre ouvert.",
       "body": "Choisissez un plan de 30, 90 ou 180 jours, alimentez-le en BTC, ETH, USDT ou USDC, et suivez chaque dépôt, position et retrait dans un registre vérifiable ligne par ligne. De vraies personnes examinent chaque demande avant que le moindre solde ne bouge.",
-      "primary": "Ouvrir un compte gratuit",
-      "secondary": "Comparer les plans",
+      "primary": "Créer un compte",
+      "secondary": "Rejoindre SafeKoinTrade",
+      "invest": "Investir maintenant",
       "note": "Les crypto-actifs sont volatils. Vous pouvez perdre tout ou partie de l'argent investi.",
       "headline": "Investir en crypto, tout est consigné.",
       "learnMore": "En savoir plus",
@@ -281,6 +282,22 @@
         "early": {
           "q": "Puis-je clôturer une position avant la fin de sa durée ?",
           "a": "Une position peut être annulée dans les 24 heures suivant son ouverture. Ensuite, elle court jusqu'à son échéance."
+        },
+        "eligibility": {
+          "q": "Qui peut utiliser la plateforme ?",
+          "a": "Vous devez avoir au moins 18 ans et être légalement autorisé à utiliser le service là où vous résidez. La disponibilité dépend des lois locales et des sanctions. Consultez les conditions avant de créer un compte."
+        },
+        "assets": {
+          "q": "Quels actifs et réseaux sont pris en charge ?",
+          "a": "La section des actifs pris en charge et le formulaire de dépôt affichent les actifs actuellement disponibles. Les dépôts et retraits peuvent varier selon l’actif et le réseau. Vérifiez toujours le réseau avant tout envoi."
+        },
+        "fees": {
+          "q": "Quels frais vais-je payer ?",
+          "a": "Les frais applicables de la plateforme, y compris les frais de retrait, sont affichés avant la confirmation. Des frais de réseau ou de prestataires tiers peuvent également s’appliquer."
+        },
+        "calculation": {
+          "q": "Comment un objectif de rendement est-il calculé ?",
+          "a": "Lorsqu’un plan publie un objectif, son pourcentage et sa base de calcul sont indiqués. Le calculateur applique ce pourcentage à votre montant sur toute la durée du plan. Il s’agit d’une estimation, pas d’une promesse ; le résultat réel peut être inférieur et entraîner une perte de capital. Aucun rendement n’est calculé pour les plans sans objectif publié."
         },
         "security": {
           "q": "Comment mon compte est-il protégé ?",
@@ -1466,3 +1483,4 @@
     "chat": "Discuter sur WhatsApp"
   }
 }
+

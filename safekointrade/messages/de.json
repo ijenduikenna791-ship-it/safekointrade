@@ -101,8 +101,9 @@
     "hero": {
       "title": "Krypto-Pläne mit fester Laufzeit und offenem Kontobuch.",
       "body": "Wählen Sie einen Plan über 30, 90 oder 180 Tage, finanzieren Sie ihn mit BTC, ETH, USDT oder USDC und verfolgen Sie jede Einzahlung, Position und Auszahlung in einem Journal, das Sie Zeile für Zeile prüfen können. Echte Menschen prüfen jeden Antrag, bevor sich ein Guthaben bewegt.",
-      "primary": "Kostenloses Konto eröffnen",
-      "secondary": "Pläne vergleichen",
+      "primary": "Konto erstellen",
+      "secondary": "SafeKoinTrade beitreten",
+      "invest": "Jetzt investieren",
       "note": "Krypto-Assets sind volatil. Sie können einen Teil oder Ihr gesamtes investiertes Geld verlieren.",
       "headline": "Krypto anlegen – alles nachvollziehbar.",
       "learnMore": "Mehr erfahren",
@@ -281,6 +282,22 @@
         "early": {
           "q": "Kann ich eine Position vor Laufzeitende schließen?",
           "a": "Positionen können innerhalb von 24 Stunden nach Eröffnung storniert werden. Danach laufen sie bis zur Fälligkeit."
+        },
+        "eligibility": {
+          "q": "Wer darf die Plattform nutzen?",
+          "a": "Sie müssen mindestens 18 Jahre alt sein und den Dienst an Ihrem Wohnort rechtmäßig nutzen dürfen. Die Verfügbarkeit hängt von lokalen Gesetzen und Sanktionen ab. Lesen Sie vor der Registrierung die Nutzungsbedingungen."
+        },
+        "assets": {
+          "q": "Welche Assets und Netzwerke werden unterstützt?",
+          "a": "Im Abschnitt „Unterstützte Assets“ und im Einzahlungsformular sehen Sie die aktuell verfügbaren Assets. Ein- und Auszahlungen können je nach Asset und Netzwerk variieren. Prüfen Sie vor dem Senden immer das Netzwerk."
+        },
+        "fees": {
+          "q": "Welche Gebühren fallen an?",
+          "a": "Anwendbare Plattformgebühren, einschließlich Auszahlungsgebühren, werden vor der Bestätigung angezeigt. Netzwerkgebühren oder Gebühren externer Anbieter können zusätzlich anfallen."
+        },
+        "calculation": {
+          "q": "Wie wird ein Renditeziel berechnet?",
+          "a": "Wenn ein Plan ein Ziel veröffentlicht, werden dessen Prozentsatz und Berechnungsgrundlage angezeigt. Der Rechner wendet diesen Prozentsatz über die gesamte Laufzeit auf Ihren Betrag an. Das ist eine Schätzung, keine Zusage; das tatsächliche Ergebnis kann niedriger sein und auch einen Kapitalverlust bedeuten. Für Pläne ohne veröffentlichtes Ziel wird keine Rendite berechnet."
         },
         "security": {
           "q": "Wie ist mein Konto geschützt?",
@@ -1466,3 +1483,4 @@
     "chat": "Per WhatsApp chatten"
   }
 }
+

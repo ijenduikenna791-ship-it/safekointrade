@@ -101,8 +101,9 @@
     "hero": {
       "title": "Piani cripto a durata fissa con un registro aperto.",
       "body": "Scegli un piano da 30, 90 o 180 giorni, finanzialo con BTC, ETH, USDT o USDC e segui ogni deposito, posizione e prelievo in un registro verificabile riga per riga. Persone reali esaminano ogni richiesta prima che qualsiasi saldo si muova.",
-      "primary": "Apri un account gratuito",
-      "secondary": "Confronta i piani",
+      "primary": "Crea un account",
+      "secondary": "Unisciti a SafeKoinTrade",
+      "invest": "Investi ora",
       "note": "Le cripto-attività sono volatili. Puoi perdere in parte o del tutto il denaro che investi.",
       "headline": "Investire in cripto, tutto a registro.",
       "learnMore": "Scopri di più",
@@ -281,6 +282,22 @@
         "early": {
           "q": "Posso chiudere una posizione prima della scadenza?",
           "a": "Le posizioni si possono annullare entro 24 ore dall'apertura. Dopo, proseguono fino alla scadenza."
+        },
+        "eligibility": {
+          "q": "Chi può usare la piattaforma?",
+          "a": "Devi avere almeno 18 anni e poter usare legalmente il servizio nel luogo in cui vivi. La disponibilità dipende dalle leggi locali e dalle sanzioni. Consulta i termini prima di creare un account."
+        },
+        "assets": {
+          "q": "Quali asset e reti sono supportati?",
+          "a": "La sezione degli asset supportati e il modulo di deposito mostrano gli asset attualmente abilitati. Depositi e prelievi possono variare in base all’asset e alla rete. Verifica sempre la rete prima di inviare."
+        },
+        "fees": {
+          "q": "Quali commissioni pagherò?",
+          "a": "Le commissioni applicabili della piattaforma, incluse quelle sui prelievi, sono mostrate prima di confermare la richiesta. Potrebbero applicarsi anche commissioni di rete o di fornitori terzi."
+        },
+        "calculation": {
+          "q": "Come viene calcolato un obiettivo di rendimento?",
+          "a": "Se un piano pubblica un obiettivo, ne mostra la percentuale e il criterio di calcolo. Il calcolatore applica tale percentuale all’importo per l’intera durata. È una stima, non una promessa; il risultato effettivo può essere inferiore e comportare una perdita del capitale. Per i piani senza obiettivo pubblicato non viene calcolato alcun rendimento."
         },
         "security": {
           "q": "Come è protetto il mio account?",
@@ -1466,3 +1483,4 @@
     "chat": "Scrivici su WhatsApp"
   }
 }
+

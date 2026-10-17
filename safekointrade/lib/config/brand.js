@@ -7,7 +7,7 @@ export const brand = {
   name: "SafeKoinTrade",
   legalName: "SafeKoinTrade Ltd.", // replace with your registered entity
   tagline: "Term-based crypto plans with every figure on the record.",
-  supportEmail: "support@example.com",
+  supportEmail: "safekointrade@gmail.com",
   complianceEmail: "compliance@example.com",
   address: "Registered address to be confirmed",
   // WhatsApp support, international format without spaces or symbols.
@@ -19,3 +19,4 @@ export const brand = {
 };
 
 export const SIMULATION_NOTICE_KEY = "common.simulationNotice";
+

@@ -1,4 +1,4 @@
-﻿import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Testimonials } from "@/components/marketing/testimonials";
 import { StartupScreen } from "@/components/animations/startup-screen";
 import { Hero } from "@/components/marketing/hero";
@@ -9,11 +9,12 @@ import { HowItWorks } from "@/components/marketing/how-it-works";
 import { MarketAnalytics } from "@/components/marketing/market-analytics";
 import { SecuritySection } from "@/components/marketing/security-section";
 import { SupportedAssets } from "@/components/marketing/supported-assets";
+import { PlatformProof } from "@/components/marketing/platform-proof";
 import { Faq } from "@/components/marketing/faq";
 import { Newsletter } from "@/components/marketing/newsletter";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { PlatformCards } from "@/components/marketing/platform-cards";
-import { getPublicPlans } from "@/lib/database/public-data";
+import { getPublicAssets, getPublicPlans } from "@/lib/database/public-data";
 import { getPrices } from "@/lib/market/coingecko";
 import { brand } from "@/lib/config/brand";
 import EarningNotification from "@/components/EarningNotification";
@@ -24,7 +25,7 @@ export default async function HomePage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("startup");
-  const [{ plans, isDefault }, prices] = await Promise.all([getPublicPlans(), getPrices(["bitcoin", "ethereum"])]);
+  const [{ plans, isDefault }, assets, prices] = await Promise.all([getPublicPlans(), getPublicAssets(), getPrices(["bitcoin", "ethereum"])]);
   // Hero cards show live prices or an "unavailable" note â€” never placeholder numbers.
   const coins = [
     { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
@@ -39,11 +40,12 @@ export default async function HomePage({ params }) {
       <PlatformCards />
       <Features />
       <PlansComparison plans={plans} isDefault={isDefault} />
+      <PlatformProof plans={plans} assets={assets} />
       <HowItWorks />
       <MarketAnalytics />
       <SecuritySection />
       <Testimonials />
-      <SupportedAssets />
+      <SupportedAssets assets={assets} />
       <Faq />
       <Newsletter />
       <FinalCta />
@@ -51,5 +53,6 @@ export default async function HomePage({ params }) {
     </>
   );
 }
+
 
 

@@ -57,7 +57,7 @@ export function StartupScreen({ loadingLabel = "Loading" }) {
         <motion.div
           id="startup-screen"
           key="startup"
-          className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-[#050914] bg-[radial-gradient(circle_at_1px_1px,rgb(116_165_255/0.14)_1px,transparent_0)] bg-[length:28px_28px] text-[#e8eefb]"
+          className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-[#0b090a] bg-[radial-gradient(circle_at_1px_1px,rgb(201_132_145/0.12)_1px,transparent_0)] bg-[length:28px_28px] text-[#f5eff0]"
           initial={false}
           exit={{ opacity: 0 }}
           transition={{ duration: reduce ? 0.15 : 0.55, ease: [0.25, 1, 0.5, 1] }}
@@ -70,7 +70,7 @@ export function StartupScreen({ loadingLabel = "Loading" }) {
               <motion.div
                 aria-hidden="true"
                 className="pointer-events-none absolute h-[70vmax] w-[70vmax] rounded-full"
-                style={{ background: "radial-gradient(circle, rgba(79,140,255,0.22), transparent 60%)" }}
+                style={{ background: "radial-gradient(circle, rgba(169,61,80,0.2), transparent 60%)" }}
                 initial={{ x: "-12%", y: "8%", opacity: 0 }}
                 animate={{ x: "10%", y: "-6%", opacity: 1 }}
                 transition={{ duration: 3.2, ease: "easeInOut" }}
@@ -78,7 +78,7 @@ export function StartupScreen({ loadingLabel = "Loading" }) {
               <motion.div
                 aria-hidden="true"
                 className="pointer-events-none absolute h-[55vmax] w-[55vmax] rounded-full"
-                style={{ background: "radial-gradient(circle, rgba(167,139,250,0.16), transparent 60%)" }}
+                style={{ background: "radial-gradient(circle, rgba(201,132,145,0.14), transparent 60%)" }}
                 initial={{ x: "14%", y: "12%", opacity: 0 }}
                 animate={{ x: "-8%", y: "4%", opacity: 1 }}
                 transition={{ duration: 3.2, ease: "easeInOut" }}
@@ -91,15 +91,15 @@ export function StartupScreen({ loadingLabel = "Loading" }) {
             exit={reduce ? {} : { scale: 0.96, y: -8 }}
             transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
           >
-            <svg viewBox="0 0 40 40" className="h-20 w-20 drop-shadow-[0_0_24px_rgba(79,140,255,0.55)]" aria-hidden="true">
+            <svg viewBox="0 0 40 40" className="h-20 w-20 drop-shadow-[0_0_24px_rgba(169,61,80,0.45)]" aria-hidden="true">
               <defs>
                 <linearGradient id="splash-fill" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#4f8cff" />
-                  <stop offset="100%" stopColor="#a78bfa" />
+                  <stop offset="0%" stopColor="#d27b8c" />
+                  <stop offset="100%" stopColor="#782d3c" />
                 </linearGradient>
               </defs>
               <motion.circle
-                cx="20" cy="20" r="18.5" fill="none" stroke="#74a5ff" strokeWidth="1.2"
+                cx="20" cy="20" r="18.5" fill="none" stroke="#e0a0aa" strokeWidth="1.2"
                 initial={reduce ? false : { pathLength: 0, rotate: -90 }}
                 animate={{ pathLength: 1, rotate: 0 }}
                 transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] }}
@@ -128,12 +128,12 @@ export function StartupScreen({ loadingLabel = "Loading" }) {
               transition={{ delay: 0.55, duration: 0.5 }}
             >
               {brand.name.replace(/Trade$/, "")}
-              <span className="bg-[linear-gradient(90deg,#4f8cff,#a78bfa)] bg-clip-text text-transparent">{brand.name.endsWith("Trade") ? "Trade" : ""}</span>
+              <span className="bg-[linear-gradient(90deg,#e0a0aa,#c34c60)] bg-clip-text text-transparent">{brand.name.endsWith("Trade") ? "Trade" : ""}</span>
             </motion.p>
 
             <div className="mt-8 h-0.5 w-44 overflow-hidden rounded-full bg-white/10" role="progressbar" aria-label={loadingLabel}>
               <motion.div
-                className="h-full w-1/3 rounded-full bg-[linear-gradient(90deg,#4f8cff,#22d3ee)]"
+                className="h-full w-1/3 rounded-full bg-[linear-gradient(90deg,#c34c60,#e0a0aa)]"
                 initial={{ x: "-100%" }}
                 animate={{ x: "300%" }}
                 transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}

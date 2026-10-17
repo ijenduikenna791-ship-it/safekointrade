@@ -24,11 +24,10 @@ export async function FinalCta() {
             {t("primary")}
             <ArrowUpRight className="h-5 w-5 rtl:-scale-x-100" aria-hidden="true" />
           </Link>
-          <Link href="/legal/risk" className={buttonClasses({ variant: "teal", size: "lg", className: "h-14 px-8 text-lg" })}>
-            {t("secondary")}
-          </Link>
+
         </div>
       </div>
     </section>
   );
 }
+

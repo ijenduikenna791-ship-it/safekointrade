@@ -1,14 +1,23 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "@/lib/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "./section-heading";
 import { RevealGroup, RevealItem } from "@/components/animations/reveal";
 import { images } from "@/lib/config/images";
 
-const steps = ["account", "deposit", "invest", "withdraw"];
+const steps = [
+  { key: "account", href: "/register", action: "account" },
+  { key: "deposit", href: "/dashboard/deposits", action: "deposit" },
+  { key: "invest", href: "/dashboard/invest", action: "invest" },
+  { key: "withdraw", href: "/dashboard/withdrawals", action: "withdraw" },
+];
 
 export async function HowItWorks() {
   const t = await getTranslations("home.how");
   const tc = await getTranslations("common");
+  const ta = await getTranslations("auth");
+  const tq = await getTranslations("dashboard.overview.quick");
   const img = images.howItWorks;
   return (
     <section id="how" aria-labelledby="how-title" className="container-page py-16 sm:py-24">
@@ -17,12 +26,16 @@ export async function HowItWorks() {
           <SectionHeading id="how-title" title={t("title")} body={t("body")} />
           {/* A real sequence, so numbered markers carry meaning here. */}
           <RevealGroup as="ol" className="mt-10">
-            {steps.map((key, i) => (
+            {steps.map(({ key, href, action }, i) => (
               <RevealItem key={key} as="li" className="grid grid-cols-[2.75rem_1fr] gap-4 border-t border-line py-6">
                 <span className="font-display text-2xl font-semibold text-brass">{i + 1}</span>
                 <div>
                   <h3 className="text-lg font-semibold">{t(`steps.${key}.title`)}</h3>
                   <p className="mt-1.5 text-ink-muted">{t(`steps.${key}.body`)}</p>
+                  <Link href={href} className="mt-3 inline-flex min-h-10 items-center gap-1 rounded-md text-sm font-medium text-brass underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+                    {action === "account" ? ta("register.title") : tq(action)}
+                    <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
                 </div>
               </RevealItem>
             ))}
@@ -46,3 +59,4 @@ export async function HowItWorks() {
     </section>
   );
 }
+
