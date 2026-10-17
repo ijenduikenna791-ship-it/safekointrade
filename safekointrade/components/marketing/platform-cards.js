@@ -12,7 +12,7 @@ const cards = [
   { key: "support", icon: LifeBuoy, image: images.cta },
 ];
 
-function PhotoFrame({ image, sizes, className, credit }) {
+function PhotoFrame({ image, sizes, className }) {
   return (
     <div className={`relative overflow-hidden bg-[#100b0d] ${className}`}>
       <Image
@@ -24,21 +24,12 @@ function PhotoFrame({ image, sizes, className, credit }) {
         className="object-cover transition-transform duration-700 group-hover:scale-[1.035] motion-reduce:transition-none"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#100b0d]/90 via-[#100b0d]/10 to-transparent" />
-      <a
-        href={image.page}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute bottom-3 end-3 rounded-full border border-white/20 bg-black/55 px-2.5 py-1 text-[11px] leading-4 text-white/90 backdrop-blur-sm hover:bg-black/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
-      >
-        {credit}
-      </a>
     </div>
   );
 }
 
 export async function PlatformCards() {
   const t = await getTranslations("home.platform");
-  const tc = await getTranslations("common");
 
   return (
     <section id="services" aria-labelledby="platform-title" className="container-page scroll-mt-24 py-16 sm:py-24">
@@ -54,16 +45,6 @@ export async function PlatformCards() {
           className="object-cover transition-transform duration-700 group-hover:scale-[1.02] motion-reduce:transition-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#100b0d]/80 via-[#100b0d]/30 to-[#100b0d]/5" />
-        <figcaption className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-4 sm:p-7">
-          <a
-            href={images.aboutWork.page}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/90 backdrop-blur-sm hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
-          >
-            {tc("photoCredit", { name: images.aboutWork.credit })}
-          </a>
-        </figcaption>
       </figure>
 
       <RevealGroup className="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-10 lg:grid-cols-4">
@@ -73,7 +54,6 @@ export async function PlatformCards() {
               image={image}
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
               className="h-44 sm:h-48"
-              credit={tc("photoCredit", { name: image.credit })}
             />
             <div className="flex flex-1 flex-col p-5 sm:p-6">
               <span className="grid h-10 w-10 place-items-center rounded-lg bg-brand-mint/15 text-brand-mint-ink">

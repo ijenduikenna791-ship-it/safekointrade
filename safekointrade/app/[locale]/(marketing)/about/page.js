@@ -15,7 +15,6 @@ export default async function AboutPage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
-  const tc = await getTranslations("common");
   const principles = ["records", "people", "plain"];
 
   return (
@@ -30,11 +29,6 @@ export default async function AboutPage({ params }) {
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-line bg-surface-3 sm:aspect-[21/9]">
             <Image src={images.aboutReview.src} alt={t("imageAlt")} fill priority sizes="(min-width: 1216px) 1152px, 100vw" className="object-cover" />
           </div>
-          <figcaption className="mt-2 text-xs text-ink-subtle">
-            <a href={images.aboutReview.page} target="_blank" rel="noopener noreferrer" className="hover:underline">
-              {tc("photoCredit", { name: images.aboutReview.credit })}
-            </a>
-          </figcaption>
         </figure>
       </section>
 

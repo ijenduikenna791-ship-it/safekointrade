@@ -14,8 +14,13 @@ export async function SupportedAssets({ assets }) {
   return (
     <section aria-labelledby="assets-title" className="container-page py-16 sm:py-24">
       <SectionHeading id="assets-title" title={t("title")} body={t("body")} />
-      <div className="mt-10 overflow-hidden rounded-lg border border-line bg-surface">
-        <table className="w-full text-sm">
+      <div
+        className="mt-10 overflow-x-auto overscroll-x-contain rounded-lg border border-line bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
+        role="region"
+        aria-label={t("title")}
+        tabIndex={0}
+      >
+        <table className="w-full min-w-[32rem] text-sm">
           <thead className="bg-surface-2 text-ink-subtle">
             <tr>
               <th scope="col" className="px-4 py-3 text-start font-medium sm:px-6">{t("title")}</th>

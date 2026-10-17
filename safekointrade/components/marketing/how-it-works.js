@@ -15,7 +15,6 @@ const steps = [
 
 export async function HowItWorks() {
   const t = await getTranslations("home.how");
-  const tc = await getTranslations("common");
   const ta = await getTranslations("auth");
   const tq = await getTranslations("dashboard.overview.quick");
   const img = images.howItWorks;
@@ -51,9 +50,6 @@ export async function HowItWorks() {
               className="object-cover"
             />
           </div>
-          <figcaption className="mt-2 text-xs text-ink-subtle">
-            <a href={img.page} className="underline-offset-2 hover:underline" rel="noopener noreferrer" target="_blank">{tc("photoCredit", { name: img.credit })}</a>
-          </figcaption>
         </figure>
       </div>
     </section>

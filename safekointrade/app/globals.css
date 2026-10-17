@@ -751,10 +751,34 @@ html[data-splash="seen"] #startup-screen { display: none; }
   .hero-price-stack > :last-child { align-self: flex-end; }
 }
 @media (max-width: 639px) {
-  .hero-stage { min-height: 23rem; }
-  .hero-sculpture { width: min(75vw, 19rem); }
+  .hero-layout { gap: 1.25rem; padding-block: 2.5rem 2.25rem; }
+  .hero-crimson h1 {
+    font-size: clamp(2.125rem, 10.5vw, 2.7rem);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+  }
+  .hero-stage { min-height: clamp(18rem, 74vw, 23rem); }
+  .hero-sculpture { width: min(72vw, 18rem); }
   .hero-price-stack { padding: 0; }
   .hero-price-stack > :last-child { align-self: flex-end; }
+  .hero-coin-card { width: min(48%, 13rem); padding-inline: 0.75rem; }
+  .hero-stage-caption { bottom: 0.35rem; width: 100%; font-size: 0.55rem; letter-spacing: 0.14em; text-align: center; }
+  #testimonials { padding-inline: 1rem; padding-block: 3.5rem; }
+  #testimonials article { border-radius: 1rem; }
+  #testimonials article .flex.items-start.justify-between { flex-direction: column; gap: 0.5rem; }
+  #testimonials article .text-right { text-align: left; }
+  .site-public .earning-notification {
+    inset-inline-start: max(12px, env(safe-area-inset-left, 0px));
+    bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+    width: min(340px, calc(100vw - 24px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
+  }
+  .site-public .whatsapp-float {
+    inset-inline-end: max(1rem, env(safe-area-inset-right, 0px));
+    bottom: max(1rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem));
+  }
+}
+@media (max-width: 639px) and (max-height: 520px) {
+  .site-public .earning-notification { bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .sculpture-ring-one { animation: sculpture-drift-a 20s ease-in-out infinite; }
