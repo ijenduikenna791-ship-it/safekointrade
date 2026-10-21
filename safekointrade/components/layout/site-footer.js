@@ -40,7 +40,6 @@ export async function SiteFooter() {
       links: [
         { href: "/legal/terms", label: t("terms") },
         { href: "/legal/privacy", label: t("privacy") },
-        { href: "/legal/risk", label: t("risk") },
         { href: "/legal/cookies", label: t("cookies") },
       ],
     },
