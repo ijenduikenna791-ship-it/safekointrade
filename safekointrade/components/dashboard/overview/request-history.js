@@ -52,7 +52,7 @@ export function RequestHistory({ rows }) {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder={t("search")}
-            className="h-10 w-full rounded-lg border border-line bg-[rgb(5_9_20/0.6)] pe-3 ps-9 text-sm text-ink placeholder:text-ink-subtle focus:border-[var(--cmd-blue)] focus:outline-none"
+            className="h-11 w-full rounded-lg border border-line bg-[rgb(5_9_20/0.6)] pe-3 ps-9 text-base text-ink placeholder:text-ink-subtle focus:border-[var(--cmd-blue)] focus:outline-none sm:h-10 sm:text-sm"
           />
         </label>
       </div>
@@ -65,7 +65,35 @@ export function RequestHistory({ rows }) {
           <p className="text-sm text-ink-muted">{t("empty")}</p>
         </div>
       ) : (
-        <div className="overflow-x-auto border-t border-line">
+        <>
+        <ul className="grid gap-3 border-t border-line p-3 md:hidden">
+          {filtered.map((r) => {
+            const Icon = r.kind === "deposit" ? ArrowDownToLine : ArrowUpFromLine;
+            return (
+              <li key={`${r.kind}-${r.id}`} className="min-w-0 rounded-xl border border-line bg-[rgb(5_9_20/0.45)] p-4">
+                <div className="flex min-w-0 items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="break-all font-mono text-xs font-semibold text-ink">{r.reference}</p>
+                    <p className="mt-1 flex items-center gap-1.5 text-xs text-ink-muted">
+                      <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                      <span>{t(r.kind)} · {r.asset}</span>
+                    </p>
+                  </div>
+                  <p className="shrink-0 text-end text-sm font-semibold tabular-nums">{formatMoney(r.amount, { locale })}</p>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-line pt-3">
+                  <span className={cn("rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider", STATUS_TONE[r.status] || STATUS_TONE.cancelled)}>
+                    {ts(r.status)}
+                  </span>
+                  <span className="text-xs text-ink-subtle">{formatDate(r.created_at, { locale, withTime: true })}</span>
+                </div>
+                <p className="mt-2 text-xs text-ink-subtle">{t("method")}: {methodLabel(r)}</p>
+              </li>
+            );
+          })}
+          {filtered.length === 0 && <li className="py-8 text-center text-sm text-ink-subtle">{t("noMatch")}</li>}
+        </ul>
+        <div className="hidden overflow-x-auto border-t border-line md:block">
           <table className="w-full min-w-[760px] text-sm">
             <thead>
               <tr className="text-start">
@@ -105,7 +133,8 @@ export function RequestHistory({ rows }) {
               )}
             </tbody>
           </table>
-        </div>
+          </div>
+        </>
       )}
     </section>
   );

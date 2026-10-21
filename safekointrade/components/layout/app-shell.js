@@ -245,7 +245,15 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
                 {tu("admin")}
               </span>
             )}
-            <div className="min-w-0 flex-1">
+            <Link
+              href={variant === "admin" ? "/admin" : "/dashboard"}
+              aria-label={t(variant === "admin" ? "nav.overview" : "nav.home")}
+              className="flex shrink-0 items-center gap-1.5 rounded-md px-1 py-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus sm:hidden"
+            >
+              <LogoMark className="h-7 w-7" />
+              {variant === "admin" && <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-[#ff9d5c]">{tu("admin")}</span>}
+            </Link>
+            <div className="hidden min-w-0 flex-1 sm:block">
               <Breadcrumbs pathname={pathname} variant={variant} t={t} />
             </div>
             <div className="flex items-center gap-0.5">
@@ -272,7 +280,14 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
               />
             </div>
           </header>
-          <main id="main" tabIndex={-1} className="flex-1 px-4 py-6 outline-none sm:px-6 lg:px-8 lg:py-8">
+          <main
+            id="main"
+            tabIndex={-1}
+            className={cn(
+              "flex-1 px-3 pt-5 outline-none sm:px-6 sm:py-6 lg:px-8 lg:py-8",
+              variant === "user" ? "pb-24 sm:pb-8" : "pb-8"
+            )}
+          >
             <div className="mx-auto w-full max-w-6xl">{children}</div>
           </main>
         </div>
@@ -282,7 +297,7 @@ export function AppShell({ variant = "user", viewer, allowed, unreadCount = 0, b
           href="/dashboard/support"
           aria-label={tu("support")}
           title={tu("support")}
-          className="fixed bottom-5 end-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#22c55e] text-[#04120a] shadow-[0_10px_30px_-6px_rgb(34_197_94/0.6)] transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e] sm:bottom-6 sm:end-6"
+          className="fixed bottom-[calc(0.875rem+env(safe-area-inset-bottom))] end-4 z-40 grid h-12 w-12 place-items-center rounded-full bg-[#22c55e] text-[#04120a] shadow-[0_10px_30px_-6px_rgb(34_197_94/0.6)] transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#22c55e] sm:bottom-6 sm:end-6 sm:h-14 sm:w-14"
         >
           <MessageCircleMore className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
         </Link>

@@ -102,14 +102,14 @@ export async function VerificationBanner({ status }) {
 
 function StatCard({ label, value, hint, icon: Icon, tint, valueClass, children }) {
   return (
-    <div className="glass glass-tint flex flex-col p-5" style={{ "--tint": TINT[tint] }}>
+    <div className="glass glass-tint flex min-w-0 flex-col p-4 sm:p-5" style={{ "--tint": TINT[tint] }}>
       <div className="flex items-start justify-between gap-3">
-        <p className="mono-label">{label}</p>
+        <p className="mono-label min-w-0">{label}</p>
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg" style={{ background: `color-mix(in oklab, ${TINT[tint]} 15%, transparent)`, color: TINT[tint] }} aria-hidden="true">
           <Icon className="h-[18px] w-[18px]" />
         </span>
       </div>
-      <p className={cn("mt-3 font-display text-2xl font-semibold tracking-tight sm:text-[1.7rem]", valueClass)}>{value}</p>
+      <p className={cn("mt-3 min-w-0 break-words font-display text-[clamp(1rem,5vw,1.5rem)] font-semibold tracking-tight sm:text-[1.7rem]", valueClass)}>{value}</p>
       {children}
       <p className="mt-1.5 text-xs text-ink-subtle">{hint}</p>
     </div>
@@ -121,7 +121,7 @@ export async function StatCards({ available, invested, deposited, positions, loc
   const fmt = (v) => formatMoney(v, { locale });
   const lead = positions[0];
   return (
-    <section aria-label={t("label")} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <section aria-label={t("label")} className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
       <StatCard label={t("available")} value={fmt(available)} hint={t("availableHint")} icon={Wallet} tint="blue" />
       <StatCard label={t("invested")} value={fmt(invested)} hint={t("investedHint")} icon={TrendingUp} tint="green" valueClass="text-[var(--cmd-green)]" />
       <StatCard label={t("deposits")} value={fmt(deposited)} hint={t("depositsHint")} icon={ArrowDownToLine} tint="cyan" valueClass="text-[var(--cmd-cyan)]" />

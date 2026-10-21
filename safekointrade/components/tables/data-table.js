@@ -36,17 +36,17 @@ export function DataTable({ columns, rows, rowKey = (r) => r.id, empty, caption,
         </table>
       </div>
 
-      <ul className="divide-y divide-line md:hidden">
+      <ul className="grid gap-3 p-3 md:hidden">
         {rows.map((row) => (
-          <li key={rowKey(row)} className="px-4 py-4">
-            <div className="mb-2">{primary.cell(row)}</div>
-            <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          <li key={rowKey(row)} className="min-w-0 rounded-lg border border-line bg-surface-2/40 p-4">
+            <div className="mb-3 min-w-0 border-b border-line pb-3">{primary.cell(row)}</div>
+            <dl className="grid min-w-0 grid-cols-2 gap-x-3 gap-y-3 text-sm">
               {columns
                 .filter((c) => c !== primary && !c.hideOnMobile)
                 .map((c) => (
-                  <div key={c.key} className={cn(c.align === "end" && "text-end")}>
-                    <dt className="text-xs text-ink-subtle">{c.header}</dt>
-                    <dd className="mt-0.5">{c.cell(row)}</dd>
+                  <div key={c.key} className={cn("min-w-0", c.align === "end" && "text-end")}>
+                    <dt className="truncate text-xs text-ink-subtle">{c.header}</dt>
+                    <dd className="mt-0.5 min-w-0 break-words">{c.cell(row)}</dd>
                   </div>
                 ))}
             </dl>

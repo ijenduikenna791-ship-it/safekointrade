@@ -4,7 +4,7 @@ import { forwardRef, useId } from "react";
 import { cn } from "@/lib/utils/cn";
 
 export const inputClasses =
-  "w-full h-11 rounded-sm border border-line bg-surface px-3 text-[0.95rem] text-ink placeholder:text-ink-subtle " +
+  "w-full h-11 rounded-sm border border-line bg-surface px-3 text-base text-ink placeholder:text-ink-subtle sm:text-[0.95rem] " +
   "transition-[border-color,box-shadow] duration-150 hover:border-line-strong " +
   "focus:border-brass focus:outline-none focus:ring-3 focus:ring-focus/25 " +
   "disabled:opacity-60 disabled:cursor-not-allowed " +

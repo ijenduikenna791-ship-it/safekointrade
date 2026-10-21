@@ -32,7 +32,7 @@ export default async function AdminKycPage({ params }) {
       <PageHeader title={t("title")} description={t("description")} />
       {!providerConfigured && <Alert tone="warn" className="mb-6">{t("notConfigured")}</Alert>}
       <h2 className="mb-3 text-sm font-medium text-ink-muted">{t("counts")}</h2>
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {STATUSES.map((s, i) => (
           <StatTile key={s} label={tc(`status.${s}`)} value={counts[i].count ?? 0} />
         ))}

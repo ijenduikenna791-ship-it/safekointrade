@@ -53,14 +53,14 @@ export default async function TransactionDetailPage({ params }) {
           <CardBody>
             <dl className="divide-y divide-line">
               {rows.map(([k, v]) => (
-                <div key={k} className="grid grid-cols-[8rem_1fr] gap-4 py-3 text-sm">
+                <div key={k} className="grid grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] gap-3 py-3 text-sm sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-4">
                   <dt className="text-ink-subtle">{k}</dt>
-                  <dd>{v}</dd>
+                  <dd className="min-w-0 break-words">{v}</dd>
                 </div>
               ))}
-              <div className="grid grid-cols-[8rem_1fr] gap-4 py-3 text-sm">
+              <div className="grid grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] gap-3 py-3 text-sm sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-4">
                 <dt className="text-ink-subtle">{t("source")}</dt>
-                <dd>
+                <dd className="min-w-0 break-words">
                   <Link href={sourceHref[r.source_type]} className="text-brass hover:underline">{tn(r.source_type === "investment" ? "investments" : `${r.source_type}s`)}</Link>
                 </dd>
               </div>
@@ -69,7 +69,30 @@ export default async function TransactionDetailPage({ params }) {
         </Card>
         <Card>
           <CardHeader title={t("balanceAfter")} />
-          <table className="w-full text-sm">
+          <div className="divide-y divide-line md:hidden">
+            {[
+              [tt("available"), r.delta_available, r.available_after],
+              [tt("held"), r.delta_held, r.held_after],
+              [tt("invested"), r.delta_invested, r.invested_after],
+            ].map(([label, change, after]) => (
+              <div key={label} className="px-4 py-3">
+                <h3 className="text-sm font-medium">{label}</h3>
+                <dl className="mt-2 grid grid-cols-2 gap-3 text-sm">
+                  <div className="min-w-0">
+                    <dt className="text-xs text-ink-subtle">{t("change")}</dt>
+                    <dd className="mt-0.5 tabular">{delta(change)}</dd>
+                  </div>
+                  <div className="min-w-0">
+                    <dt className="text-xs text-ink-subtle">{t("balanceAfter")}</dt>
+                    <dd className="mt-0.5 break-words tabular font-medium">{formatMoney(after, { locale })}</dd>
+                  </div>
+                </dl>
+              </div>
+            ))}
+          </div>
+          <div className="hidden overflow-x-auto md:block">
+          <table className="w-full min-w-[28rem] text-sm">
+            <caption className="sr-only">{t("balanceAfter")}</caption>
             <thead>
               <tr className="border-b border-line text-ink-subtle">
                 <th scope="col" className="px-5 py-3 text-start font-medium" />
@@ -91,6 +114,7 @@ export default async function TransactionDetailPage({ params }) {
               ))}
             </tbody>
           </table>
+          </div>
         </Card>
       </div>
     </>

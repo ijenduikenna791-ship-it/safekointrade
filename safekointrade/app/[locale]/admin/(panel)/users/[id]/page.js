@@ -55,7 +55,7 @@ export default async function AdminUserDetail({ params }) {
         }
       />
 
-      <section className="grid gap-4 sm:grid-cols-3">
+      <section className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
         <StatTile label={tt("available")} value={m(bal?.available)} />
         <StatTile label={tt("held")} value={m(bal?.held)} />
         <StatTile label={tt("invested")} value={m(bal?.invested)} />
@@ -76,9 +76,9 @@ export default async function AdminUserDetail({ params }) {
                 ["Referral", p.referral_code],
                 ...(p.status_reason ? [[t("statusReason"), p.status_reason]] : []),
               ].map(([k, v]) => (
-                <div key={k} className="grid grid-cols-[8rem_1fr] gap-3 py-2.5">
+                <div key={k} className="grid grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] gap-3 py-2.5 sm:grid-cols-[8rem_minmax(0,1fr)]">
                   <dt className="text-ink-subtle">{k}</dt>
-                  <dd className="break-words">{v}</dd>
+                  <dd className="min-w-0 break-words">{v}</dd>
                 </div>
               ))}
             </dl>

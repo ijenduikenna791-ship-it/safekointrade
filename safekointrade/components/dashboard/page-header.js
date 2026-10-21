@@ -2,12 +2,12 @@ import { cn } from "@/lib/utils/cn";
 
 export function PageHeader({ title, description, actions, className }) {
   return (
-    <div className={cn("mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between", className)}>
+    <div className={cn("mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-end sm:justify-between", className)}>
       <div className="min-w-0">
         <h1 className="text-2xl font-semibold tracking-[-0.025em] sm:text-3xl">{title}</h1>
         {description && <p className="mt-1.5 max-w-[65ch] text-ink-muted">{description}</p>}
       </div>
-      {actions && <div className="flex shrink-0 flex-wrap gap-2">{actions}</div>}
+      {actions && <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">{actions}</div>}
     </div>
   );
 }
@@ -23,11 +23,11 @@ export function StatTile({ label, value, hint, icon: Icon, emphasis = false, tin
   const c = tint ? TINTS[tint] : null;
   return (
     <div
-      className={cn("ui-card min-w-0 rounded-lg border border-line bg-surface p-4 sm:p-5", c && "ui-card-tint", emphasis && !c && "border-brass-line", className)}
+      className={cn("ui-card min-w-0 rounded-lg border border-line bg-surface p-3 sm:p-5", c && "ui-card-tint", emphasis && !c && "border-brass-line", className)}
       style={c ? { "--tint": c } : undefined}
     >
       <div className="flex items-center justify-between gap-3">
-        <p className="ui-stat-label text-sm text-ink-muted">{label}</p>
+        <p className="ui-stat-label min-w-0 text-xs text-ink-muted sm:text-sm">{label}</p>
         {Icon &&
           (c ? (
             <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg" style={{ background: `color-mix(in oklab, ${c} 15%, transparent)`, color: c }} aria-hidden="true">
@@ -38,7 +38,7 @@ export function StatTile({ label, value, hint, icon: Icon, emphasis = false, tin
           ))}
       </div>
       <p
-        className={cn("mt-2 truncate font-display font-semibold tracking-tight sm:mt-3", emphasis ? "text-2xl sm:text-3xl" : "text-lg sm:text-2xl")}
+        className={cn("tabular mt-2 min-w-0 break-words font-display font-semibold tracking-tight sm:mt-3", emphasis ? "text-xl sm:text-3xl" : "text-base sm:text-2xl")}
         style={c && tint !== "blue" ? { color: c } : undefined}
       >
         {value}
